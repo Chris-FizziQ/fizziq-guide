@@ -1,0 +1,2272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizziQ User Guide - Complete Guide to the Science App</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Complete FizziQ guide: transform your smartphone into a scientific laboratory. Sensors, measurements, experiment notebook, kinematic analysis. Tutorial for students and teachers.">
+    <meta name="keywords" content="FizziQ, science app, smartphone physics, mobile sensors, scientific experiments, portable laboratory, science education, practical work">
+    <meta name="author" content="FizziQ Labs">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://guide.fizziq.org/en/">
+
+    <!-- Open Graph (Facebook, LinkedIn) -->
+    <meta property="og:title" content="FizziQ User Guide - Complete Guide">
+    <meta property="og:description" content="Transform your smartphone into a scientific laboratory. Complete guide for students and teachers.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://guide.fizziq.org/en/">
+    <meta property="og:site_name" content="FizziQ Labs">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FizziQ User Guide - Complete Guide">
+    <meta name="twitter:description" content="Transform your smartphone into a scientific laboratory.">
+
+    <!-- Schema.org JSON-LD for AI visibility -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "FizziQ User Guide - Complete Guide to the Science App",
+        "description": "Complete guide to using FizziQ, the app that transforms your smartphone into a portable scientific laboratory. Sensors, measurements, experiment notebook, kinematic analysis.",
+        "author": {
+            "@type": "Organization",
+            "name": "FizziQ Labs",
+            "url": "https://fizziqlabs.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "FizziQ Labs"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://guide.fizziq.org/en/"
+        },
+        "articleSection": ["Education", "Science", "Technology"],
+        "keywords": ["FizziQ", "science app", "smartphone physics", "sensors", "scientific experiments", "portable laboratory"],
+        "inLanguage": "en",
+        "isAccessibleForFree": true,
+        "learningResourceType": "Practical guide",
+        "educationalLevel": ["Middle school", "High school", "Higher education"],
+        "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": ["student", "teacher"]
+        }
+    }
+    </script>
+
+    <!-- Schema.org HowTo for instructions -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to use FizziQ for scientific experiments",
+        "description": "Learn how to use the FizziQ app to conduct physics experiments with your smartphone.",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Installation",
+                "text": "Download FizziQ for free from the App Store or Google Play"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Choose an instrument",
+                "text": "Select a sensor from the 50+ available instruments"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Take a measurement",
+                "text": "Press the REC button to record your data"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Analyze the results",
+                "text": "View your measurements in the experiment notebook and export them"
+            }
+        ],
+        "tool": [
+            {
+                "@type": "HowToTool",
+                "name": "iOS/Android smartphone or tablet"
+            },
+            {
+                "@type": "HowToTool",
+                "name": "FizziQ app (free)"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org FAQPage for frequently asked questions -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is FizziQ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FizziQ is a free app that transforms your smartphone or tablet into a portable scientific laboratory, using built-in sensors to conduct physics, chemistry, and science experiments."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What sensors are available in FizziQ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FizziQ offers more than 50 instruments: accelerometer, gyroscope, magnetometer, barometer, light meter, sound level meter, GPS, and many other sensors depending on your device."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is FizziQ free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, FizziQ is completely free, ad-free, and has no in-app purchases. Available on iOS and Android."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Who is FizziQ for?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FizziQ is designed for middle school and high school students, teachers for practical work, and anyone curious about exploring the world with a scientific perspective."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #0066CC;
+            --primary-light: #E8F4FD;
+            --secondary: #34A853;
+            --accent: #F5A623;
+            --danger: #DC3545;
+            --bg: #FAFAFA;
+            --bg-white: #FFFFFF;
+            --text: #222;
+            --text-muted: #666;
+            --border: #DDD;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.45;
+            font-size: 13px;
+        }
+
+        /* Compact header */
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        header img {
+            width: 100px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        header h1 { font-size: 1.8rem; font-weight: 600; }
+        header .subtitle { font-size: 0.9rem; opacity: 0.9; margin-top: 0.2rem; }
+
+        /* Compact nav */
+        nav {
+            background: var(--bg-white);
+            padding: 0.4rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+            font-size: 11px;
+        }
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            list-style: none;
+            justify-content: center;
+        }
+        nav a {
+            padding: 0.25rem 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        nav a:hover { background: var(--primary-light); }
+
+        /* Main */
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        /* Sections */
+        section {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        h3 {
+            color: var(--text);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 1rem 0 0.4rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid #EEE;
+        }
+        h3:first-of-type { border-top: none; padding-top: 0; }
+
+        h4 {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 0.6rem 0 0.3rem;
+        }
+
+        p { margin-bottom: 0.5rem; }
+
+        /* COMPACT Images - thumbnail style */
+        .image-container {
+            float: right;
+            margin: 0 0 0.5rem 0.8rem;
+            text-align: center;
+        }
+        .image-container img {
+            width: 90px;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .image-container figcaption {
+            font-size: 9px;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        .image-grid {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            float: right;
+            margin: 0 0 0.5rem 0.8rem;
+        }
+        .image-grid .image-container {
+            float: none;
+            margin: 0;
+        }
+        .image-grid .image-container img { width: 70px; }
+
+        /* Clearfix */
+        h3::before, section::after { content: ""; display: table; clear: both; }
+
+        /* Compact lists */
+        ul, ol { margin: 0.3rem 0 0.5rem 1.2rem; }
+        li { margin-bottom: 0.15rem; }
+
+        /* Compact tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.5rem 0;
+            font-size: 11px;
+        }
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.5rem;
+            text-align: left;
+            font-weight: 500;
+        }
+        td {
+            padding: 0.25rem 0.5rem;
+            border-bottom: 1px solid #EEE;
+        }
+        tr:hover td { background: #F5F5F5; }
+
+        /* Compact boxes */
+        .info-box, .warning-box, .danger-box, .tip-box {
+            padding: 0.4rem 0.6rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+            font-size: 12px;
+            border-left: 3px solid;
+        }
+        .info-box { background: #E3F2FD; border-color: var(--primary); }
+        .warning-box { background: #FFF8E1; border-color: var(--accent); }
+        .danger-box { background: #FFEBEE; border-color: var(--danger); }
+        .tip-box { background: #E8F5E9; border-color: var(--secondary); }
+
+        /* Code */
+        code {
+            background: #F0F0F0;
+            padding: 0.1rem 0.3rem;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 11px;
+        }
+        pre {
+            background: #2D2D2D;
+            color: #EEE;
+            padding: 0.5rem;
+            border-radius: 4px;
+            overflow-x: auto;
+            margin: 0.5rem 0;
+            font-size: 10px;
+        }
+        pre code { background: none; padding: 0; }
+
+        /* Compact feature cards */
+        .feature-grid {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 0.5rem 0;
+        }
+        .feature-card {
+            background: #F5F5F5;
+            padding: 0.5rem;
+            border-radius: 6px;
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+        }
+        .feature-card .icon { font-size: 1.2rem; }
+        .feature-card h4 { font-size: 11px; margin: 0.2rem 0 0; color: var(--primary); }
+        .feature-card p { font-size: 10px; color: var(--text-muted); margin: 0; }
+
+        /* Compact steps */
+        .steps { counter-reset: step; list-style: none; margin-left: 0; }
+        .steps li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.3rem;
+        }
+        .steps li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.3rem;
+            height: 1.3rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 0.8rem;
+            font-size: 11px;
+        }
+        footer a { color: #7CB9E8; }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            header { flex-direction: column; text-align: center; gap: 0.5rem; }
+            header img { width: 80px; }
+            .image-container, .image-grid { float: none; margin: 0.5rem auto; }
+            section { padding: 0.8rem; }
+        }
+
+        /* Print */
+        @media print {
+            nav { display: none; }
+            section { border: none; box-shadow: none; page-break-inside: avoid; }
+            .image-container img { width: 60px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="../images/fizziq/illustration_fizziq_salle_tp.jpg" alt="FizziQ - Science App">
+    <div>
+        <h1>FizziQ</h1>
+        <p class="subtitle">Complete User Guide - Experimental Science App</p>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#interface">Interface</a></li>
+        <li><a href="#instruments">Instruments</a></li>
+        <li><a href="#measurements">Measurements</a></li>
+        <li><a href="#recording">Recording</a></li>
+        <li><a href="#notebook">Notebook</a></li>
+        <li><a href="#sensor-data">Sensor Data</a></li>
+        <li><a href="#tables">Tables</a></li>
+        <li><a href="#text-photos">Text/Photos</a></li>
+        <li><a href="#kinematics">Kinematics</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#askfizziq">AskFizziQ</a></li>
+        <li><a href="#bluetooth">Bluetooth</a></li>
+        <li><a href="#export">Export</a></li>
+        <li><a href="#activities">Activities</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#tips">Tips</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<!-- ==================== SECTION 1: INTRODUCTION ==================== -->
+<section id="introduction">
+    <h2>1. Introduction</h2>
+
+    <h3>1.1 What is FizziQ?</h3>
+    <p>FizziQ transforms your smartphone or tablet into a true <strong>portable scientific laboratory</strong>. The app uses the many built-in sensors in your device to conduct physics, chemistry, and life and earth science experiments.</p>
+
+    <h3>1.2 Who is FizziQ for?</h3>
+    <ul>
+        <li><strong>Students</strong>: from middle school to high school, to discover science interactively</li>
+        <li><strong>Teachers</strong>: to prepare and lead practical work sessions</li>
+        <li><strong>Curious minds</strong>: to explore the world around us with a scientific perspective</li>
+    </ul>
+
+    <h3>1.3 App Philosophy</h3>
+    <p>FizziQ is inspired by the scientific method:</p>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">🔬</div>
+            <h4>Observe</h4>
+            <p>Use sensors to measure phenomena</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">❓</div>
+            <h4>Question</h4>
+            <p>Formulate hypotheses</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🧪</div>
+            <h4>Experiment</h4>
+            <p>Record data</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📊</div>
+            <h4>Analyze</h4>
+            <p>Interpret results</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📤</div>
+            <h4>Communicate</h4>
+            <p>Share discoveries</p>
+        </div>
+    </div>
+
+    <h3>1.4 Available Languages</h3>
+    <p>FizziQ is available in <strong>20 languages</strong>: French, English, Spanish, Portuguese, German, Italian, Dutch, Swedish, Norwegian, Danish, Finnish, Hungarian, Estonian, Romanian, Ukrainian, Russian, Turkish, Arabic, and Malagasy.</p>
+
+    <h3>1.5 Safety Precautions</h3>
+    <p>Using FizziQ to conduct scientific experiments requires following certain essential precautions.</p>
+
+    <h4>Protect your device</h4>
+    <div class="warning-box">
+        <ul>
+            <li>Use an appropriate <strong>protective case</strong></li>
+            <li>Do not expose the device to <strong>liquids</strong> or <strong>extreme temperatures</strong></li>
+            <li><strong>Securely attach</strong> the device during motion experiments</li>
+            <li>Do not subject the device to <strong>violent impacts</strong></li>
+        </ul>
+    </div>
+
+    <h4>Protect others</h4>
+    <ul>
+        <li>Do not throw objects toward other people</li>
+        <li>Warn people around you before conducting a motion experiment</li>
+        <li>Clear the workspace of obstacles</li>
+    </ul>
+
+    <h4>Protect yourself</h4>
+    <ul>
+        <li>Do not take measurements in dangerous locations (roadside, heights, etc.)</li>
+        <li>Do not conduct experiments that could injure you</li>
+        <li>Stay aware of your surroundings during measurements</li>
+    </ul>
+
+    <div class="danger-box">
+        <strong>Liability disclaimer:</strong> The creators of the FizziQ app (Trapeze.digital) cannot be held responsible for any material or bodily damage that may result from using the app.
+    </div>
+
+    <h3>1.6 Recommendations for Using FizziQ in Class</h3>
+
+    <h4>1. Be confident</h4>
+    <p>The FizziQ app was designed for students, and its interface is similar to other digital tools they use daily.</p>
+
+    <h4>2. Put devices in airplane mode</h4>
+    <p>FizziQ does not need Internet access to work. In <strong>airplane mode</strong>, students will not be distracted by notifications and messages.</p>
+
+    <h4>3. Encourage group work</h4>
+    <p>Group work allows students less familiar with digital tools to learn the app while benefiting from others' discoveries.</p>
+
+    <h4>4. Let students familiarize themselves with the tool</h4>
+    <p>During the first session, plan <strong>10 to 15 minutes</strong> for students to familiarize themselves with the different features.</p>
+
+    <h4>5. Choose an appropriate protocol</h4>
+    <p>For your first session, choose a protocol that requires only <strong>one measuring instrument</strong>. You will find many examples at <a href="https://www.fizziq.org/protocoles">www.fizziq.org/protocoles</a>.</p>
+
+    <h4>6. Request a report</h4>
+    <p>FizziQ allows students to easily create synthetic documents including graphs, text, photos, and tables.</p>
+</section>
+
+<!-- ==================== SECTION 2: GETTING STARTED ==================== -->
+<section id="getting-started">
+    <h2>2. Getting Started</h2>
+
+    <h3>2.1 Installation</h3>
+    <p>FizziQ is available for free on:</p>
+    <ul>
+        <li><strong>iOS</strong>: App Store (iPhone and iPad)</li>
+        <li><strong>Android</strong>: Google Play Store</li>
+        <li><strong>Web</strong>: FizziQ Web (browser version)</li>
+    </ul>
+
+    <h3>2.2 First Launch</h3>
+    <p>On first launch, FizziQ:</p>
+    <ol class="steps">
+        <li>Automatically detects available sensors on your device</li>
+        <li>Requests necessary permissions (microphone, camera, location)</li>
+        <li>Displays the home screen</li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Note:</strong> Not all devices have the same sensors. FizziQ adapts its interface based on detected sensors.
+    </div>
+
+    <h3>2.3 Required Permissions</h3>
+    <table>
+        <thead>
+            <tr><th>Permission</th><th>Use</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Microphone</td><td>Sound level meter, frequency analyzer, amplitude (oscilloscope)</td></tr>
+            <tr><td>Camera</td><td>Colorimeter, photos, kinematic analysis</td></tr>
+            <tr><td>Location</td><td>GPS (latitude, longitude, altitude, speed)</td></tr>
+            <tr><td>Storage</td><td>Saving notebooks and export</td></tr>
+            <tr><td>Bluetooth</td><td>Connection to FizziQ Connect sensors</td></tr>
+        </tbody>
+    </table>
+
+    <h3>2.4 Home Screen Structure</h3>
+    <p>The home screen displays <strong>five tabs</strong> at the bottom of the screen:</p>
+
+    <div class="image-grid">
+        <div class="image-container">
+            <img src="../images/fizziq/08_menu_activites.png" alt="Activities">
+            <figcaption>Activities</figcaption>
+        </div>
+        <div class="image-container">
+            <img src="../images/fizziq/05_cahier_carte_observation.png" alt="Notebook">
+            <figcaption>Notebook</figcaption>
+        </div>
+        <div class="image-container">
+            <img src="../images/fizziq/02_menu_instruments.png" alt="Measurements">
+            <figcaption>Measurements</figcaption>
+        </div>
+        <div class="image-container">
+            <img src="../images/fizziq/06_menu_outils.png" alt="Tools">
+            <figcaption>Tools</figcaption>
+        </div>
+        <div class="image-container">
+            <img src="../images/fizziq/07_menu_reglages.png" alt="Settings">
+            <figcaption>Settings</figcaption>
+        </div>
+    </div>
+
+    <table>
+        <thead><tr><th>Tab</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Activities</strong></td><td>Experimental protocols and educational resources</td></tr>
+            <tr><td><strong>Notebook</strong></td><td>View and manage your observations</td></tr>
+            <tr><td><strong>Measurements</strong></td><td>Access to sensors and measurement tools</td></tr>
+            <tr><td><strong>Tools</strong></td><td>Synthesizer, library, calculator, etc.</td></tr>
+            <tr><td><strong>Settings</strong></td><td>Settings and configuration</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ==================== SECTION 3: INTERFACE ==================== -->
+<section id="interface">
+    <h2>3. The Main Interface</h2>
+
+    <h3>3.1 The Measurements Tab</h3>
+    <p>This is the heart of FizziQ. This screen allows you to:</p>
+    <ul>
+        <li>Select one or two measuring instruments</li>
+        <li>Visualize data in real time</li>
+        <li>Record observations</li>
+    </ul>
+
+    <div class="image-container">
+        <img src="../images/fizziq/02_menu_instruments.png" alt="Instruments menu">
+        <figcaption>Measuring instruments menu</figcaption>
+    </div>
+
+    <h4>Selecting an instrument</h4>
+    <ol class="steps">
+        <li>At the top of the screen, you see the <strong>name of the active instrument</strong></li>
+        <li><strong>Tap on this name</strong>: the instruments menu opens</li>
+        <li>The menu displays <strong>instrument categories</strong></li>
+        <li><strong>Tap on a category</strong> to expand it</li>
+        <li><strong>Tap on the desired instrument</strong> to select it</li>
+        <li>The menu closes and the display updates</li>
+        <li>The <strong>interface color</strong> changes according to the instrument</li>
+    </ol>
+
+    <h3>3.2 The Notebook Tab</h3>
+    <p>The experiment notebook contains all your observations, displayed as <strong>observation cards</strong>. Each card can contain:</p>
+    <ul>
+        <li>Data (graphs recorded by sensors)</li>
+        <li>Data tables</li>
+        <li>Photos and images</li>
+        <li>Notes and text comments</li>
+    </ul>
+
+    <h4>Navigating the notebook</h4>
+    <ul>
+        <li><strong>Scroll</strong>: swipe vertically to browse cards</li>
+        <li><strong>Select</strong>: tap on a card to see it in detail</li>
+        <li><strong>Reorganize</strong>: long press then drag</li>
+        <li><strong>Delete</strong>: swipe left or use the menu</li>
+    </ul>
+
+    <h3>3.3 The Tools Tab</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/06_menu_outils.png" alt="Tools Menu">
+        <figcaption>Scientific tools menu</figcaption>
+    </div>
+
+    <p>Access to complementary tools:</p>
+    <ul>
+        <li>Sound synthesizer</li>
+        <li>Color synthesis</li>
+        <li>Sound library</li>
+        <li>Scientific calculator</li>
+        <li>Automatic stopwatches</li>
+        <li>Triggers</li>
+        <li>AskFizziQ (AI assistant)</li>
+    </ul>
+
+    <h3>3.4 The Activities Tab</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/08_menu_activites.png" alt="Activities Menu">
+        <figcaption>Activities tab</figcaption>
+    </div>
+
+    <ul>
+        <li>Download educational activities</li>
+        <li>Read configuration QR codes</li>
+        <li>Access the resource database</li>
+    </ul>
+
+    <h3>3.5 The Settings Tab</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/07_menu_reglages.png" alt="Settings Menu">
+        <figcaption>Settings menu</figcaption>
+    </div>
+
+    <p>The Settings tab allows you to customize the app behavior:</p>
+    <ul>
+        <li><strong>Data</strong>: sampling frequency, signal filtering, quadratic adjustment</li>
+        <li><strong>Settings</strong>: screen orientation, sensor organization (by instrument or by theme), language</li>
+        <li><strong>Camera</strong>: LED for colorimetry, photo saving, camera selection</li>
+        <li><strong>Calibration</strong>: magnetometer and sound level meter adjustment</li>
+        <li><strong>System status</strong>: available sensors, app version, device information</li>
+    </ul>
+</section>
+
+<!-- ==================== SECTION 4: INSTRUMENTS ==================== -->
+<section id="instruments">
+    <h2>4. Measuring Instruments</h2>
+
+    <p>FizziQ offers more than <strong>50 measuring instruments</strong>. The menu can be organized by instrument or by theme.</p>
+
+    <h3>4.1 Instrument Menu Organization</h3>
+
+    <h4>Default organization: by measuring instrument</h4>
+    <table>
+        <thead><tr><th>Category</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><strong>External sensors</strong></td><td>FizziQ Connect Bluetooth sensors</td></tr>
+            <tr><td><strong>Accelerometer</strong></td><td>Acceleration measurements (linear, with g, absolute)</td></tr>
+            <tr><td><strong>Kinematic analysis</strong></td><td>Video and chronophotography</td></tr>
+            <tr><td><strong>Microphone</strong></td><td>Sound level meter, frequency, amplitude, spectrograph</td></tr>
+            <tr><td><strong>Light meter</strong></td><td>Light intensity measurement</td></tr>
+            <tr><td><strong>Colorimeter</strong></td><td>Color analysis (RGB, HSL, name)</td></tr>
+            <tr><td><strong>GPS</strong></td><td>Position, altitude, speed</td></tr>
+            <tr><td><strong>Compass</strong></td><td>Direction relative to magnetic north</td></tr>
+            <tr><td><strong>Inclinometer</strong></td><td>Tilt angles</td></tr>
+            <tr><td><strong>Theodolite</strong></td><td>Horizontal and vertical bearings</td></tr>
+            <tr><td><strong>Magnetometer</strong></td><td>Magnetic field</td></tr>
+            <tr><td><strong>Gyroscope</strong></td><td>Rotation speed</td></tr>
+            <tr><td><strong>Barometer</strong></td><td>Atmospheric pressure</td></tr>
+            <tr><td><strong>Pedometer</strong></td><td>Step counter</td></tr>
+        </tbody>
+    </table>
+
+    <h4>Alternative organization: by theme</h4>
+    <p>In <strong>Settings > Organize by theme</strong>, you can enable thematic organization:</p>
+    <table>
+        <thead><tr><th>Theme</th><th>Included instruments</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Kinematic analysis</strong></td><td>Video, chronophotography</td></tr>
+            <tr><td><strong>Sound</strong></td><td>Sound level meter, frequency, amplitude, spectrograph</td></tr>
+            <tr><td><strong>Motion</strong></td><td>Accelerometer, gyroscope, pedometer</td></tr>
+            <tr><td><strong>Light</strong></td><td>Light meter, colorimeter</td></tr>
+            <tr><td><strong>Position</strong></td><td>GPS (latitude, longitude, altitude, speed)</td></tr>
+            <tr><td><strong>Orientation</strong></td><td>Compass, inclinometer, theodolite</td></tr>
+            <tr><td><strong>Magnetism</strong></td><td>Magnetometer</td></tr>
+            <tr><td><strong>Environment</strong></td><td>Barometer</td></tr>
+        </tbody>
+    </table>
+
+    <h3>4.2 Microphone</h3>
+    <p>The smartphone microphone allows several types of acoustic measurements.</p>
+
+    <h4>Sound Level Meter</h4>
+    <ul>
+        <li><strong>Measurement</strong>: Sound level in decibels (dB)</li>
+        <li><strong>Range</strong>: 0 to 110 dB</li>
+        <li><strong>Use</strong>: Measure the sound volume of an environment</li>
+        <li><strong>Examples</strong>: Noise pollution, acoustic insulation, sound comparison</li>
+    </ul>
+
+    <h4>Dominant Frequency</h4>
+    <ul>
+        <li><strong>Measurement</strong>: Main sound frequency in Hertz (Hz)</li>
+        <li><strong>Range</strong>: 50 to 10,000 Hz</li>
+        <li><strong>Use</strong>: Identify the note played by an instrument</li>
+        <li><strong>Examples</strong>: Tune an instrument, study the human voice</li>
+    </ul>
+
+    <h4>Amplitude (oscilloscope view)</h4>
+    <ul>
+        <li><strong>Display</strong>: Real-time audio signal (waveform)</li>
+        <li><strong>Range</strong>: 0 to 10,000 ms or 0 to 100 ms (switchable)</li>
+        <li><strong>Use</strong>: Visualize the sound waveform</li>
+        <li><strong>Examples</strong>: Compare pure and complex sounds, observe beats</li>
+    </ul>
+
+    <h4>Spectrograph</h4>
+    <ul>
+        <li><strong>Display</strong>: Frequency spectrum of sound (FFT)</li>
+        <li><strong>Range</strong>: 0 to 5,000 Hz</li>
+        <li><strong>Use</strong>: Analyze harmonic composition</li>
+        <li><strong>Examples</strong>: Instrument timbre, voice analysis</li>
+    </ul>
+
+    <h4>Noise Level</h4>
+    <ul>
+        <li><strong>Measurement</strong>: Average ambient sound level (dB)</li>
+        <li><strong>Range</strong>: 0 to 110 dB</li>
+        <li><strong>Use</strong>: Measure average ambient noise in an environment</li>
+    </ul>
+
+    <h3>4.3 Accelerometer</h3>
+    <p>The accelerometer measures accelerations experienced by the phone.</p>
+
+    <h4>Linear Accelerometer X, Y, Z</h4>
+    <ul>
+        <li><strong>Measurement</strong>: Acceleration without gravity (m/s2)</li>
+        <li><strong>Axes</strong>: X (front-back), Y (left-right), Z (up-down)</li>
+        <li><strong>Examples</strong>: Free fall, oscillations, impacts</li>
+    </ul>
+
+    <h4>Accelerometer with gravity</h4>
+    <ul>
+        <li><strong>Measurement</strong>: Total acceleration including g (m/s2)</li>
+        <li><strong>At rest value</strong>: approx. 9.81 m/s2 (vertically)</li>
+    </ul>
+
+    <h4>Absolute Acceleration X, Y, Z</h4>
+    <ul>
+        <li><strong>Measurement</strong>: Acceleration in the Earth reference frame (m/s2)</li>
+        <li><strong>Difference</strong>: Independent of phone orientation</li>
+    </ul>
+
+    <h3>4.4 Gyroscope</h3>
+    <ul>
+        <li><strong>Measurement</strong>: Rotation speed (deg/s or rad/s)</li>
+        <li><strong>Axes</strong>: X (roll), Y (pitch), Z (yaw)</li>
+        <li><strong>Examples</strong>: Spinning top rotation, pendulum motion</li>
+    </ul>
+
+    <h3>4.5 Pedometer</h3>
+    <ul>
+        <li><strong>Measurement</strong>: Cumulative step count</li>
+        <li><strong>Examples</strong>: Stride study, distance calculation</li>
+    </ul>
+
+    <h3>4.6 Compass</h3>
+    <ul>
+        <li><strong>Measurement</strong>: Direction relative to magnetic north (deg)</li>
+        <li><strong>Range</strong>: 0 to 360 degrees</li>
+        <li><strong>Note</strong>: Hold the phone horizontally for accurate measurement</li>
+    </ul>
+
+    <h3>4.7 Inclinometer</h3>
+    <h4>Front-back inclinometer (pitch)</h4>
+    <ul>
+        <li><strong>Measurement</strong>: Longitudinal tilt angle (deg)</li>
+        <li><strong>Range</strong>: -90 to +90 degrees</li>
+    </ul>
+
+    <h4>Lateral inclinometer (roll)</h4>
+    <ul>
+        <li><strong>Measurement</strong>: Transverse tilt angle (deg)</li>
+        <li><strong>Range</strong>: -90 to +90 degrees</li>
+    </ul>
+
+    <h3>4.8 Theodolite</h3>
+    <h4>Horizontal bearing (Azimuth)</h4>
+    <ul>
+        <li><strong>Measurement</strong>: Direction of an object relative to north (deg)</li>
+        <li><strong>Range</strong>: 0 to 360 degrees</li>
+    </ul>
+
+    <h4>Vertical bearing (Elevation)</h4>
+    <ul>
+        <li><strong>Measurement</strong>: Angle above or below the horizon (deg)</li>
+        <li><strong>Range</strong>: -90 deg (nadir) to +90 deg (zenith)</li>
+    </ul>
+
+    <h3>4.9 GPS</h3>
+    <table>
+        <thead><tr><th>Measurement</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Latitude</strong></td><td>North-south position (-90 to +90 degrees)</td></tr>
+            <tr><td><strong>Longitude</strong></td><td>East-west position (-180 to +180 degrees)</td></tr>
+            <tr><td><strong>Altitude</strong></td><td>Height above sea level (m)</td></tr>
+            <tr><td><strong>GPS Speed</strong></td><td>Travel speed (m/s or km/h)</td></tr>
+            <tr><td><strong>GPS Accuracy</strong></td><td>Position uncertainty (m)</td></tr>
+        </tbody>
+    </table>
+
+    <h3>4.10 Magnetometer</h3>
+    <ul>
+        <li><strong>Magnetometer (magnitude)</strong>: Total magnetic field intensity (uT)</li>
+        <li><strong>Earth value</strong>: approx. 25 to 65 uT depending on location</li>
+        <li><strong>Magnetometer X, Y, Z</strong>: Magnetic field components</li>
+        <li><strong>Magnetic angle</strong>: Horizontal magnetic field direction</li>
+    </ul>
+
+    <h3>4.11 Light Meter</h3>
+    <ul>
+        <li><strong>Measurement</strong>: Illuminance in lux</li>
+        <li><strong>Range</strong>: 0 to 100,000+ lux</li>
+    </ul>
+    <table>
+        <thead><tr><th>Situation</th><th>Typical illuminance</th></tr></thead>
+        <tbody>
+            <tr><td>Moonless night</td><td>0.001 lux</td></tr>
+            <tr><td>Full moon</td><td>0.25 lux</td></tr>
+            <tr><td>Indoor lighting</td><td>300-500 lux</td></tr>
+            <tr><td>Cloudy day</td><td>10,000 lux</td></tr>
+            <tr><td>Full sunlight</td><td>100,000 lux</td></tr>
+        </tbody>
+    </table>
+
+    <h3>4.12 Colorimeter</h3>
+    <p>The colorimeter uses the camera to analyze colors.</p>
+    <table>
+        <thead><tr><th>Measurement</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Color (name)</strong></td><td>Name of detected color</td></tr>
+            <tr><td><strong>Hue (H)</strong></td><td>Position on color wheel (0 to 360 degrees)</td></tr>
+            <tr><td><strong>Saturation (S)</strong></td><td>Color purity (0% to 100%)</td></tr>
+            <tr><td><strong>Lightness (L)</strong></td><td>Color brightness (0% to 100%)</td></tr>
+            <tr><td><strong>R, G, B Intensity</strong></td><td>Red, green, blue components (0-255)</td></tr>
+            <tr><td><strong>Absorbance</strong></td><td>Optical absorbance (spectrophotometry)</td></tr>
+        </tbody>
+    </table>
+
+    <h3>4.13 Barometer</h3>
+    <ul>
+        <li><strong>Measurement</strong>: Pressure in hectopascals (hPa) or millibars</li>
+        <li><strong>Standard value</strong>: 1013.25 hPa at sea level</li>
+        <li><strong>Variation</strong>: approx. -12 hPa per 100 m altitude</li>
+        <li><strong>Note</strong>: Available only on certain devices</li>
+    </ul>
+
+    <h3>4.14 Kinematic Analysis</h3>
+    <h4>Video kinematics</h4>
+    <ul>
+        <li><strong>Function</strong>: Analyze motion in a video</li>
+        <li><strong>Measurements</strong>: Position (x, y), velocity, acceleration</li>
+    </ul>
+
+    <h4>Chronophotography</h4>
+    <ul>
+        <li><strong>Function</strong>: Analyze motion in a photo</li>
+        <li><strong>Measurements</strong>: Position (x, y), Velocity (Vx, Vy, V), Acceleration (Ax, Ay, A), Rotation (alpha), Energy (Ek, Ep, Em)</li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>Interface colors:</strong> The color changes according to the instrument: blue (accelerometer), green (sound), yellow (light), pink (GPS), red (magnetometer), orange (gyroscope).
+    </div>
+</section>
+
+<!-- ==================== SECTION 5: MEASUREMENTS ==================== -->
+<section id="measurements">
+    <h2>5. Measurement Display - First Steps</h2>
+
+    <h3>5.1 Accessing the Measurement Screen</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/02_menu_instruments.png" alt="Instruments menu">
+        <figcaption>Measuring instruments menu</figcaption>
+    </div>
+
+    <h4>From the home screen</h4>
+    <ol class="steps">
+        <li>Look at the <strong>bottom bar</strong> of the screen</li>
+        <li>Tap on the <strong>Measurements</strong> tab</li>
+        <li>The <strong>instruments menu</strong> is displayed</li>
+    </ol>
+
+    <h4>Selecting an instrument</h4>
+    <ol class="steps">
+        <li><strong>Tap on a category</strong> (e.g., Accelerometer)</li>
+        <li>The category expands and displays available instruments</li>
+        <li><strong>Tap on the desired instrument</strong> (e.g., Acceleration X)</li>
+        <li>The <strong>measurement screen</strong> is displayed</li>
+    </ol>
+
+    <h3>5.2 The Measurement Screen</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/03_ecran_mesure.png" alt="Measurement screen">
+        <figcaption>Main measurement screen</figcaption>
+    </div>
+
+    <h4>Screen elements</h4>
+
+    <p><strong>1. Top bar</strong></p>
+    <ul>
+        <li><strong>Back arrow</strong> : return to instruments menu</li>
+        <li><strong>Instrument name</strong>: indicates the active instrument</li>
+    </ul>
+
+    <p><strong>2. Circular dial (main display)</strong></p>
+    <ul>
+        <li><strong>Numerical value</strong>: real-time measurement</li>
+        <li><strong>Unit</strong>: unit of measurement</li>
+        <li>The value updates <strong>continuously</strong></li>
+    </ul>
+
+    <p><strong>3. Real-time graph</strong></p>
+    <ul>
+        <li>Displays the <strong>measurement evolution</strong> over time</li>
+        <li>The graph <strong>scrolls from right to left</strong></li>
+    </ul>
+
+    <p><strong>4. Action buttons (at the bottom)</strong></p>
+    <ul>
+        <li><strong>Capture button</strong>: capture an instant measurement</li>
+        <li><strong>REC button</strong>: start continuous recording</li>
+    </ul>
+
+    <h3>5.3 Practical Example: Measuring Acceleration</h3>
+
+    <h4>Step 1: Select the accelerometer</h4>
+    <ol>
+        <li>Tap on the <strong>Measurements</strong> tab</li>
+        <li>Tap on <strong>Accelerometer</strong></li>
+        <li>Tap on <strong>Acceleration X</strong></li>
+    </ol>
+
+    <h4>Step 2: Observe the measurement screen</h4>
+    <ul>
+        <li>The dial displays a value close to <strong>0 m/s2</strong> if the phone is stationary</li>
+        <li>The graph shows a <strong>flat line</strong></li>
+    </ul>
+
+    <h4>Step 3: Take a measurement</h4>
+    <ul>
+        <li><strong>Gently shake the phone</strong> left and right</li>
+        <li>Observe the dial: the value <strong>changes</strong></li>
+        <li>Observe the graph: a <strong>wavy curve</strong> appears</li>
+    </ul>
+
+    <h3>5.4 Changing Instruments</h3>
+    <p>From the measurement screen, several methods:</p>
+    <ul>
+        <li><strong>Method 1</strong>: Back arrow at top left</li>
+        <li><strong>Method 2</strong>: Tap on the circular dial</li>
+        <li><strong>Method 3</strong>: Tap on the graph</li>
+    </ul>
+</section>
+
+<!-- ==================== SECTION 6: RECORDING ==================== -->
+<section id="recording">
+    <h2>6. Recording Measurements</h2>
+
+    <h3>6.1 Recording Types</h3>
+    <table>
+        <thead><tr><th>Mode</th><th>Description</th><th>Result</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Continuous</strong></td><td>Records data as a function of time</td><td>Graph in notebook</td></tr>
+            <tr><td><strong>Instant</strong></td><td>Captures a single value</td><td>"Spot" card with value</td></tr>
+            <tr><td><strong>Dual sensor</strong></td><td>Records two quantities simultaneously</td><td>X-Y graph</td></tr>
+        </tbody>
+    </table>
+
+    <h3>6.2 Continuous Recording</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/04_enregistrement_en_cours.png" alt="Recording in progress">
+        <figcaption>Recording in progress</figcaption>
+    </div>
+
+    <h4>Recording procedure</h4>
+    <ol class="steps">
+        <li>Check that the desired instrument is displayed</li>
+        <li>Locate the <strong>red "REC" button</strong> at the bottom of the screen</li>
+        <li><strong>Tap on "REC"</strong> to start recording</li>
+        <li>The <strong>graph turns red</strong>, a <strong>clock</strong> is displayed</li>
+        <li>Perform your experiment during recording</li>
+        <li><strong>Tap on "STOP"</strong> to stop</li>
+        <li>The observation is <strong>automatically added</strong> to the notebook</li>
+    </ol>
+
+    <h3>6.3 Instant Measurement (spot capture)</h3>
+    <ol class="steps">
+        <li>Check that the desired instrument is displayed</li>
+        <li>Observe the <strong>displayed value</strong> in the dial</li>
+        <li>Wait for the value to <strong>stabilize</strong></li>
+        <li><strong>Tap on the capture button</strong></li>
+        <li>An <strong>instant observation card</strong> is added to the notebook</li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Multiple measurements:</strong> If multiple measurements of the same instrument are taken, a <strong>table</strong> is automatically created containing these measurements organized with the time they were taken and the measured value.
+    </div>
+
+    <h3>6.4 Dual Sensor Mode (Duo)</h3>
+    <p>Duo mode allows you to display and record <strong>two instruments simultaneously</strong>.</p>
+
+    <div class="image-container">
+        <img src="../images/fizziq/12_ecran_duo_deux_mesures.png" alt="Duo Mode">
+        <figcaption>Screen with two simultaneous measurements</figcaption>
+    </div>
+
+    <h4>Activating Duo mode</h4>
+    <ol class="steps">
+        <li>Tap on the <strong>Tools</strong> tab</li>
+        <li>Tap on <strong>Top screen</strong></li>
+        <li>Return to the measurement screen: <strong>two dials</strong> are displayed</li>
+        <li>Tap on the <strong>second dial</strong> to choose the second instrument</li>
+    </ol>
+
+    <h4>Usage examples</h4>
+    <ul>
+        <li><strong>Trajectory</strong>: Acceleration X vs Acceleration Y</li>
+        <li><strong>Kinematics</strong>: Position vs Time</li>
+        <li><strong>Electricity</strong>: Voltage vs Current (with external sensors)</li>
+    </ul>
+
+    <h3>6.5 Automatic Stopwatches and Triggers</h3>
+    <p>These tools are accessible from the <strong>Tools</strong> tab.</p>
+    <ul>
+        <li><strong>Stopwatches</strong>: measure time between two events</li>
+        <li><strong>Triggers</strong>: trigger an action when a condition is met</li>
+    </ul>
+
+    <h3>6.6 Recording Settings</h3>
+
+    <h4>Sampling frequency</h4>
+    <p>The standard sampling frequency corresponds to the maximum frequency for the selected sensor. This frequency can be configured in <strong>Settings > Data</strong>.</p>
+    <table>
+        <thead><tr><th>Sensor</th><th>Maximum frequency</th></tr></thead>
+        <tbody>
+            <tr><td>Microphone (oscilloscope)</td><td>Up to 40,000 Hz</td></tr>
+            <tr><td>Accelerometer</td><td>50-100 Hz</td></tr>
+            <tr><td>Gyroscope</td><td>50-100 Hz</td></tr>
+            <tr><td>Colorimeter</td><td>20-40 Hz</td></tr>
+            <tr><td>GPS</td><td>1 Hz</td></tr>
+            <tr><td>Barometer</td><td>1 Hz</td></tr>
+        </tbody>
+    </table>
+
+    <h4>Maximum recording duration</h4>
+    <div class="info-box">
+        FizziQ can record up to <strong>5000 data points</strong> per recording.
+        <ul>
+            <li>At 100 Hz: 5000 / 100 = <strong>50 seconds</strong></li>
+            <li>At 10 Hz: 5000 / 10 = <strong>500 seconds</strong> (approx. 8 minutes)</li>
+            <li>At 1 Hz: 5000 / 1 = <strong>5000 seconds</strong> (approx. 83 minutes)</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ==================== SECTION 7: NOTEBOOK ==================== -->
+<section id="notebook">
+    <h2>7. The Experiment Notebook</h2>
+
+    <h3>7.1 Notebook Concept</h3>
+    <p>The experiment notebook works like a digital scientific logbook. It contains all your <strong>observations</strong> in the form of <strong>observation cards</strong>.</p>
+
+    <div class="image-container">
+        <img src="../images/fizziq/05_cahier_carte_observation.png" alt="Observation card">
+        <figcaption>Observation card with graph</figcaption>
+    </div>
+
+    <p>Each card can contain:</p>
+    <ul>
+        <li><strong>Data</strong>: graphs recorded by sensors</li>
+        <li><strong>Tables</strong>: organized numerical data</li>
+        <li><strong>Photos</strong>: images taken during the experiment</li>
+        <li><strong>Text</strong>: notes, comments, hypotheses, conclusions</li>
+    </ul>
+
+    <h3>7.2 Observation Card Types</h3>
+    <table>
+        <thead><tr><th>Type</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Graph (single)</strong></td><td>One quantity as a function of time</td></tr>
+            <tr><td><strong>Graph (double)</strong></td><td>Two quantities, overlay or X-Y mode</td></tr>
+            <tr><td><strong>Instant (spot)</strong></td><td>Single captured value</td></tr>
+            <tr><td><strong>Text</strong></td><td>Free text area, LaTeX formulas</td></tr>
+            <tr><td><strong>Photo</strong></td><td>Image with rotation option</td></tr>
+            <tr><td><strong>Table</strong></td><td>Data with automatic formulas</td></tr>
+            <tr><td><strong>Spreadsheet</strong></td><td>Full integrated mini spreadsheet</td></tr>
+        </tbody>
+    </table>
+
+    <h3>7.3 Card Management</h3>
+
+    <h4>Renaming a card</h4>
+    <p>It is <strong>very important</strong> to name the different cards explicitly. This allows students to easily find their way in their experiment notebook and properly document their experimentation session.</p>
+
+    <h5>How to rename a card</h5>
+    <ol>
+        <li>Open the card in full screen</li>
+        <li><strong>Tap on the card title</strong></li>
+        <li>Type the new name</li>
+        <li>Confirm</li>
+    </ol>
+
+    <h4>Reorganizing cards</h4>
+    <ol>
+        <li>Tap on the <strong>reorganize</strong> icon at the top</li>
+        <li><strong>Long press</strong> on a card then <strong>drag it</strong></li>
+        <li>Release to drop</li>
+    </ol>
+
+    <h4>Deleting a card</h4>
+    <ul>
+        <li><strong>Method 1</strong>: Swipe left, then Delete button</li>
+        <li><strong>Method 2</strong>: Menu, then Delete</li>
+    </ul>
+
+    <div class="danger-box">
+        <strong>WARNING:</strong> When a card is deleted, it is <strong>permanently lost</strong>. There is no recycle bin.
+    </div>
+
+    <h3>7.4 Adding Observation Cards</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/34. ajout_carte_au _cahier_fizziq.PNG" alt="Add card">
+        <figcaption>Card addition menu to notebook</figcaption>
+    </div>
+
+    <p>There are several ways to add observation cards to your notebook:</p>
+
+    <h4>From the measurement screen</h4>
+    <p>Return to the <strong>Measurements</strong> tab and take new measurements. These will be automatically added to the notebook.</p>
+
+    <h4>From the floating + button</h4>
+    <p>Tap on the <strong>floating + button</strong> (square) located at the bottom right of the notebook window. This button allows you to add:</p>
+
+    <table>
+        <thead><tr><th>Option</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Text</strong></td><td>Add a text card to note your observations</td></tr>
+            <tr><td><strong>Table</strong></td><td>Create a data table</td></tr>
+            <tr><td><strong>Camera</strong></td><td>Take a photo and add it to the notebook</td></tr>
+            <tr><td><strong>Gallery</strong></td><td>Add an image from your photo gallery</td></tr>
+            <tr><td><strong>Observation</strong></td><td>Import a measurement via QR code from another device</td></tr>
+            <tr><td><strong>Instrument</strong></td><td>Return to measurement screen to take a new measurement</td></tr>
+        </tbody>
+    </table>
+
+    <h3>7.5 Exporting and Sharing Observation Data</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/33. export_carte_observation.PNG" alt="Export observation">
+        <figcaption>Observation card export</figcaption>
+    </div>
+
+    <p>To export observation data, open the card in full screen then tap on the <strong>share</strong> icon.</p>
+
+    <table>
+        <thead><tr><th>Option</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><strong>QR Code</strong></td><td>Instant sharing between smartphones, works without Internet</td></tr>
+            <tr><td><strong>CSV</strong></td><td>For Excel, LibreOffice, Google Sheets</td></tr>
+            <tr><td><strong>Python</strong></td><td>Export for Python analysis</td></tr>
+            <tr><td><strong>Image</strong></td><td>PNG capture for inserting in Word</td></tr>
+            <tr><td><strong>Add to notebook</strong></td><td>Copy to another notebook</td></tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <strong>QR Code sharing:</strong> Ideal in class! A student displays the QR code of their observation, others scan it to retrieve the data. Works even in <strong>airplane mode</strong>!
+    </div>
+
+    <h3>7.6 Exporting and Sharing the Notebook</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/30. Export_fizziq_cahier.PNG" alt="Notebook export">
+        <figcaption>Notebook export menu</figcaption>
+    </div>
+
+    <p>To export the entire notebook, tap on the <strong>share</strong> icon located at the top right, in the banner displaying the notebook name.</p>
+
+    <h4>Export options</h4>
+    <table>
+        <thead><tr><th>Format</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><strong>PDF</strong></td><td>Formatted document with customizable layout</td></tr>
+            <tr><td><strong>CSV</strong></td><td>All data in spreadsheet format</td></tr>
+            <tr><td><strong>Python</strong></td><td>Export for Python analysis</td></tr>
+            <tr><td><strong>Share notebook</strong></td><td>Share complete .fizziq file</td></tr>
+        </tbody>
+    </table>
+
+    <h4>Notebook PDF Export</h4>
+
+    <div class="image-grid">
+        <div class="image-container">
+            <img src="../images/fizziq/32. Export_pdf_fizziq_menu.PNG" alt="PDF Options">
+            <figcaption>PDF export options</figcaption>
+        </div>
+        <div class="image-container">
+            <img src="../images/fizziq/31. Export_pdf_fizziq_final.PNG" alt="Generated PDF">
+            <figcaption>PDF result</figcaption>
+        </div>
+    </div>
+
+    <p>When exporting to PDF, FizziQ asks you:</p>
+    <ul>
+        <li><strong>Notebook name</strong>: title that will appear on the document</li>
+        <li><strong>Author</strong>: document author name</li>
+        <li><strong>Number of columns</strong>: between 1 and 3 columns per page</li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>Scientific layout:</strong> Choosing the number of columns (2 or 3) allows you to structure your document like a professional scientific article.
+    </div>
+
+    <p>Once the PDF is generated, you can share it through all available means on your smartphone: <strong>email</strong>, <strong>WhatsApp</strong>, <strong>Messages</strong>, or save it to the <strong>cloud</strong> (Google Drive, iCloud, Dropbox...).</p>
+
+    <h3>7.7 Notebook Management</h3>
+    <ul>
+        <li><strong>Rename</strong>: Tap on the notebook name at the top</li>
+        <li><strong>Access all notebooks</strong>: Folder icon at the top left</li>
+        <li><strong>Create a new notebook</strong>: + icon in the list</li>
+        <li><strong>Automatic save</strong>: Notebooks are saved automatically</li>
+    </ul>
+</section>
+
+<!-- ==================== SECTION 8: SENSOR DATA ==================== -->
+<section id="sensor-data">
+    <h2>8. Sensor Data</h2>
+
+    <p>Sensor data contains a lot of information. It is presented as <strong>graphs</strong> that allow for quick and efficient visual analysis.</p>
+
+    <p>Data can also be exported in <strong>CSV</strong> or <strong>Python</strong> format for in-depth analysis in a spreadsheet or programming environment.</p>
+
+    <p>Graph display makes it easy to visualize large amounts of data and quickly identify trends and anomalies.</p>
+
+    <h3>8.1 Graph Analysis</h3>
+
+    <h4>Display mode</h4>
+    <p>A button allows you to select the graph display mode:</p>
+    <ul>
+        <li><strong>Line</strong>: classic curve display</li>
+        <li><strong>Statistics</strong>: displays occurrences for different measured values</li>
+    </ul>
+
+    <h4>Line mode commands</h4>
+    <table>
+        <thead><tr><th>Button</th><th>Function</th></tr></thead>
+        <tbody>
+            <tr><td><strong>+ / -</strong></td><td>Zoom in / out on vertical scale</td></tr>
+            <tr><td><strong>Up / Down arrows</strong></td><td>Recenter graph vertically</td></tr>
+            <tr><td><strong>Double slider</strong> (on right)</td><td>Zoom on part of graph on time axis (x-axis)</td></tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <strong>Tip:</strong> The <strong>+</strong> button that adds data to the experiment notebook can be moved if it obstructs graph reading.
+    </div>
+</section>
+
+<!-- ==================== SECTION 9: TABLES ==================== -->
+<section id="tables">
+    <h2>9. Tables</h2>
+
+    <h3>9.1 Concept</h3>
+    <p>FizziQ uses a <strong>scientific spreadsheet</strong> adapted to experimentation needs. Main difference from Excel: formulas use <strong>column names</strong> (t, x, y...) instead of cell references (A1, B2...).</p>
+
+    <h3>9.2 Creating a Table</h3>
+    <ol class="steps">
+        <li><strong>Notebook</strong> tab</li>
+        <li>Tap on <strong>+</strong></li>
+        <li>Select <strong>Table</strong></li>
+        <li>A table with 3 default columns is created</li>
+    </ol>
+
+    <h4>Renaming a column</h4>
+    <p>Tap on the column name. To add a unit: <code>t(s)</code> - the identifier is "t".</p>
+
+    <h4>Column header menu</h4>
+    <table>
+        <thead><tr><th>Option</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td>Sequential indices</td><td>Fill with 1, 2, 3, 4...</td></tr>
+            <tr><td>Set decimals</td><td>Number of displayed decimals</td></tr>
+            <tr><td>Copy to column</td><td>Copy a value to entire column</td></tr>
+            <tr><td>Delete</td><td>Delete the column</td></tr>
+        </tbody>
+    </table>
+
+    <h3>9.3 Formulas and Functions</h3>
+
+    <h4>Concept</h4>
+    <ul>
+        <li>Formulas start with <code>=</code></li>
+        <li>Reference a column by its <strong>name</strong> (e.g., B, t, x...)</li>
+        <li>The formula uses the value from the <strong>same row</strong></li>
+    </ul>
+
+    <h4>Example</h4>
+    <p>To calculate the sine of column B: <code>=SIN(B)</code></p>
+
+    <h4>Neighbor functions</h4>
+    <table>
+        <thead><tr><th>Function</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><code>PREC(col)</code> or <code>PREV(col)</code></td><td>Value from previous row</td></tr>
+            <tr><td><code>SUIV(col)</code> or <code>NEXT(col)</code></td><td>Value from next row</td></tr>
+        </tbody>
+    </table>
+
+    <h4>Mathematical operators</h4>
+    <table>
+        <thead><tr><th>Operator</th><th>Meaning</th></tr></thead>
+        <tbody>
+            <tr><td><code>+</code></td><td>Addition</td></tr>
+            <tr><td><code>-</code></td><td>Subtraction</td></tr>
+            <tr><td><code>*</code></td><td>Multiplication</td></tr>
+            <tr><td><code>/</code></td><td>Division</td></tr>
+            <tr><td><code>^</code></td><td>Power</td></tr>
+        </tbody>
+    </table>
+
+    <h4>Mathematical functions</h4>
+    <p><code>SIN</code>, <code>COS</code>, <code>TAN</code>, <code>ASIN</code>, <code>ACOS</code>, <code>ATAN</code>, <code>SQRT</code>, <code>ABS</code>, <code>LN</code>, <code>LOG</code>, <code>EXP</code></p>
+
+    <h4>Statistical functions</h4>
+    <ul>
+        <li><code>SOMME(col)</code> or <code>SUM(col)</code></li>
+        <li><code>MOYENNE(col)</code> or <code>AVERAGE(col)</code></li>
+        <li><code>ECARTYPE(col)</code> or <code>STDEV(col)</code></li>
+    </ul>
+
+    <h4>Differentiation functions</h4>
+    <ul>
+        <li><code>DIFF(y, x)</code>: First derivative dy/dx (velocity)</li>
+        <li><code>DIFF2(y, x)</code>: Second derivative d2y/dx2 (acceleration)</li>
+    </ul>
+
+    <div class="info-box">
+        <strong>Example:</strong> To calculate velocity: <code>=DIFF(x, t)</code>. For acceleration: <code>=DIFF2(x, t)</code>
+    </div>
+
+    <h3>9.4 Graph Visualization</h3>
+    <ol class="steps">
+        <li>Open the table in full screen</li>
+        <li>Tap on the <strong>Graph</strong> button</li>
+        <li>Choose the column for the X axis</li>
+        <li>Choose the column for the Y axis</li>
+        <li>The graph is displayed</li>
+    </ol>
+
+    <h4>Interpolation options</h4>
+    <ul>
+        <li><strong>Linear</strong>: regression line (y = ax + b)</li>
+        <li><strong>Logarithmic</strong></li>
+        <li><strong>Sinusoidal</strong></li>
+    </ul>
+</section>
+
+<!-- ==================== SECTION 10: TEXT AND PHOTOS ==================== -->
+<section id="text-photos">
+    <h2>10. Text and Photos</h2>
+
+    <p>This section describes how to add observation cards containing text or photos to your experiment notebook.</p>
+
+    <h3>10.1 Adding a Text Card</h3>
+
+    <h4>Creating a text card</h4>
+    <ol class="steps">
+        <li>Tap on the <strong>+</strong> button (floating at bottom right)</li>
+        <li>Tap on <strong>Text</strong></li>
+        <li>A text card is created</li>
+        <li>Tap in the card to write your comment</li>
+        <li>Confirm by tapping <strong>Confirm</strong></li>
+    </ol>
+
+    <h4>Writing mathematical formulas</h4>
+    <p>In a text card, you can write <strong>mathematical formulas</strong> using <strong>LaTeX</strong> format.</p>
+
+    <h5>How to create a formula</h5>
+    <ol class="steps">
+        <li>Type two dollar signs: <code>$$</code></li>
+        <li>Write your formula in LaTeX</li>
+        <li>Close the formula with <code>$$</code></li>
+        <li>Tap on <strong>Confirm</strong></li>
+        <li>The formula displays in mathematical notation</li>
+    </ol>
+
+    <h5>Example</h5>
+    <p>To write a fraction:</p>
+    <pre><code>$$F = \frac{2}{3} \times X$$</code></pre>
+    <p>Will display as a real mathematical formula with the fraction correctly formatted.</p>
+
+    <h5>Available symbols</h5>
+    <p>Many mathematical symbols are automatically recognized:</p>
+    <ul>
+        <li><strong>Functions</strong>: \log, \sin, \cos, \tan, \sqrt...</li>
+        <li><strong>Greek letters</strong>: \alpha, \beta, \gamma, \epsilon, \pi...</li>
+        <li><strong>Fractions</strong>: \frac{numerator}{denominator}</li>
+        <li><strong>Exponents and subscripts</strong>: x^2, x_i</li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>PDF Export:</strong> When the notebook is exported to PDF, formulas are rendered in their correct mathematical form.
+    </div>
+
+    <h3>10.2 Adding a Photo</h3>
+
+    <h4>Taking a photo or choosing an image</h4>
+    <ol class="steps">
+        <li>Tap on the <strong>+</strong> button</li>
+        <li>Choose <strong>Camera</strong> to take a new photo</li>
+        <li>Or choose <strong>Gallery</strong> to select an existing image</li>
+        <li>The photo is added to the experiment notebook</li>
+    </ol>
+
+    <h4>Rotating a photo</h4>
+    <p>If the photo is poorly framed, you can rotate it:</p>
+    <ul>
+        <li>Open the photo card</li>
+        <li>Tap on the <strong>Rotation</strong> button in the card banner</li>
+    </ul>
+
+    <div class="info-box">
+        <strong>Automatic copy:</strong> If the <strong>Copy photos to gallery</strong> option is checked in <strong>Settings</strong>, each photo taken will also be saved to your photo gallery.
+    </div>
+</section>
+
+<!-- ==================== SECTION 11: KINEMATICS ==================== -->
+<section id="kinematics">
+    <h2>11. Kinematic Analysis</h2>
+
+    <p>Kinematic analysis allows you to study <strong>object motion</strong> from videos or photos.</p>
+
+    <h3>11.1 Accessing Kinematic Analysis</h3>
+    <ol>
+        <li>Tap on the <strong>instrument name</strong> at the top</li>
+        <li>Select <strong>Kinematic analysis</strong></li>
+        <li>Choose: <strong>Video kinematics</strong> or <strong>Chronophotography</strong></li>
+    </ol>
+
+    <div class="image-container">
+        <img src="../images/fizziq/25_menu_cinematique_video.png" alt="Kinematics menu">
+        <figcaption>Video kinematics menu</figcaption>
+    </div>
+
+    <h3>11.2 Video Kinematics</h3>
+
+    <h4>Concept</h4>
+    <ol>
+        <li>Import or select a video</li>
+        <li>Define the pixel-to-meter conversion scale</li>
+        <li>Point the object position frame by frame</li>
+        <li>FizziQ automatically calculates position, velocity, and acceleration</li>
+    </ol>
+
+    <h4>Video sources</h4>
+    <table>
+        <thead><tr><th>Option</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><strong>My videos</strong></td><td>Videos from your library</td></tr>
+            <tr><td><strong>Video library</strong></td><td>~30 HD educational videos prepared by FizziQ</td></tr>
+            <tr><td><strong>Built-in videos</strong></td><td>Free fall, Parabola, Pendulum (pre-installed)</td></tr>
+            <tr><td><strong>Download</strong></td><td>Import from an Internet URL</td></tr>
+        </tbody>
+    </table>
+
+    <h4>Video library categories</h4>
+    <ul>
+        <li><strong>Sports</strong>: Pole vault, skiing, skating, tennis, diving, soccer...</li>
+        <li><strong>Mechanics</strong>: Free fall, uniform motion, accelerated motion, cycloid...</li>
+        <li><strong>Pendulums</strong>: Simple pendulum, Newton's pendulum</li>
+        <li><strong>Collisions</strong>: Impacts between objects</li>
+        <li><strong>Miscellaneous</strong>: Dye drop, SpaceX launches, vehicles...</li>
+    </ul>
+
+    <h4>Step 1: Define the scale</h4>
+
+    <div class="image-container">
+        <img src="../images/fizziq/28_cinematique_calibration_echelle.jpg" alt="Calibration">
+        <figcaption>Scale calibration</figcaption>
+    </div>
+
+    <ol class="steps">
+        <li>Two circles flash: <strong>Origin</strong> and <strong>End</strong></li>
+        <li>Move the "Origin" circle to the <strong>start</strong> of your reference object</li>
+        <li>Move the "End" circle to the <strong>end</strong></li>
+        <li>Tap on "Ruler length"</li>
+        <li>Enter the <strong>actual value</strong> (e.g., 1 for 1 meter)</li>
+        <li>Confirm</li>
+    </ol>
+
+    <h4>Advanced settings (gear button)</h4>
+    <table>
+        <thead><tr><th>Setting</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Frame rate</strong></td><td>Modify if not automatically recognized</td></tr>
+            <tr><td><strong>Sampling</strong></td><td>Take 1 frame out of 2 or 3</td></tr>
+            <tr><td><strong>Detach origin</strong></td><td>Place (0,0) elsewhere</td></tr>
+            <tr><td><strong>Rotation</strong></td><td>Rotate the image</td></tr>
+        </tbody>
+    </table>
+
+    <h4>Step 2: Track the motion</h4>
+
+    <div class="image-container">
+        <img src="../images/fizziq/29_cinematique_pointage_trajectoire.jpg" alt="Tracking">
+        <figcaption>Trajectory tracking</figcaption>
+    </div>
+
+    <ol class="steps">
+        <li><strong>Bring the target</strong> to the object to track</li>
+        <li><strong>Tap on the screen</strong> to record the position</li>
+        <li>The video advances to the next frame</li>
+        <li><strong>Repeat</strong> for each frame</li>
+    </ol>
+
+    <h4>Tracking screen buttons</h4>
+    <table>
+        <thead><tr><th>Button</th><th>Function</th></tr></thead>
+        <tbody>
+            <tr><td>Trash</td><td>Delete all references</td></tr>
+            <tr><td>Camera</td><td>Take a photo of the trajectory</td></tr>
+            <tr><td>Eye</td><td>Hide/show references</td></tr>
+            <tr><td>Left/Right arrows</td><td>Navigate through video</td></tr>
+            <tr><td>Result</td><td>View calculated data</td></tr>
+        </tbody>
+    </table>
+
+    <h4>Step 3: View results</h4>
+
+    <div class="image-container">
+        <img src="../images/fizziq/26_cinematique_selection_variables.jpg" alt="Variables">
+        <figcaption>Kinematic variable selection</figcaption>
+    </div>
+
+    <table>
+        <thead><tr><th>Category</th><th>Quantities</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Position</strong></td><td>x, y</td><td>Horizontal and vertical position (m)</td></tr>
+            <tr><td><strong>Velocity</strong></td><td>Vx, Vy, V</td><td>Components and magnitude (m/s)</td></tr>
+            <tr><td><strong>Acceleration</strong></td><td>Ax, Ay, A</td><td>Components and magnitude (m/s2)</td></tr>
+            <tr><td><strong>Rotation</strong></td><td>alpha</td><td>Rotation angle (degrees)</td></tr>
+            <tr><td><strong>Energy</strong></td><td>(Ek, Ep, Em)</td><td>Kinetic, potential, mechanical energies (J)</td></tr>
+        </tbody>
+    </table>
+
+    <h4>Tips for good analysis</h4>
+    <ul>
+        <li>Use a tripod to stabilize the camera</li>
+        <li>Film perpendicular to the plane of motion</li>
+        <li>Place a ruler or reference object in the frame</li>
+        <li>Use a contrasting background</li>
+        <li>Light the scene properly</li>
+    </ul>
+
+    <h3>11.3 Chronophotography</h3>
+    <p>Analyze a photo showing multiple successive positions of an object.</p>
+
+    <h4>Access options</h4>
+    <ul>
+        <li><strong>My images</strong>: photo from your gallery</li>
+        <li><strong>Photo library</strong>: educational chronophotographs</li>
+        <li><strong>Create from video</strong>: convert a video</li>
+    </ul>
+
+    <h3>11.4 Video to Chronophotography Conversion</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/18_outil_conversion_video_chronophotographie.png" alt="Conversion">
+        <figcaption>Chronophotography creation</figcaption>
+    </div>
+
+    <h4>Access</h4>
+    <ol>
+        <li><strong>Tools</strong> tab</li>
+        <li>Tap on <strong>Video Chrono</strong></li>
+    </ol>
+
+    <h4>Settings</h4>
+    <table>
+        <thead><tr><th>Setting</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Frame rate (FPS)</strong></td><td>Frames per second</td></tr>
+            <tr><td><strong>Interval</strong></td><td>Take 1 frame out of N (1 to 10)</td></tr>
+            <tr><td><strong>Sensitivity</strong></td><td>Motion detection (1 to 100)</td></tr>
+        </tbody>
+    </table>
+
+    <div class="tip-box">
+        <strong>Tips:</strong> Use a video with a fixed background and a well-contrasted object.
+    </div>
+</section>
+
+<!-- ==================== SECTION 12: TOOLS ==================== -->
+<section id="tools">
+    <h2>12. Experimentation Tools</h2>
+
+    <h3>12.1 Sound Synthesizer</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/09_outil_synthetiseur.png" alt="Synthesizer">
+        <figcaption>Sound synthesizer</figcaption>
+    </div>
+
+    <h4>Concept</h4>
+    <p>The synthesizer generates <strong>pure sine waves</strong> and allows you to superimpose <strong>up to 3 voices simultaneously</strong>.</p>
+
+    <h4>Usage</h4>
+    <ul>
+        <li><strong>+</strong> and <strong>-</strong> buttons: adjust frequency (Hz)</li>
+        <li><strong>Play</strong> button: start the sound</li>
+        <li><strong>Red</strong> button: stop</li>
+        <li><strong>Volume slider</strong>: adjust intensity</li>
+    </ul>
+
+    <div class="warning-box">
+        <strong>WARNING:</strong> Do not turn the volume up too high, it can damage your hearing!
+    </div>
+
+    <h4>Adding multiple voices</h4>
+    <ol>
+        <li>Tap on <strong>"Add another voice"</strong></li>
+        <li>For each voice: <strong>frequency</strong>, <strong>volume</strong>, <strong>phase shift</strong></li>
+    </ol>
+
+    <h4>Creating beats</h4>
+    <ol>
+        <li>Add a second voice</li>
+        <li>Set two <strong>slightly different</strong> frequencies (e.g., 440 Hz and 442 Hz)</li>
+        <li>Beat frequency = |f1 - f2|</li>
+    </ol>
+
+    <h3>12.2 Sound Library</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/10_outil_bibliotheque_sons.png" alt="Library">
+        <figcaption>Sound library</figcaption>
+    </div>
+
+    <p>Collection of <strong>calibrated sounds</strong> ready to use:</p>
+    <ul>
+        <li>Musical notes and tuning forks</li>
+        <li>Sounds for <strong>Doppler effect</strong></li>
+        <li>Sounds for <strong>Shepard effect</strong></li>
+        <li>Urban noises, sirens...</li>
+    </ul>
+
+    <h3>12.3 Color Synthesis</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/11_outil_melangeur_couleurs_rgb.png" alt="RGB Mixer">
+        <figcaption>RGB color mixer</figcaption>
+    </div>
+
+    <h4>Additive synthesis (RGB)</h4>
+    <p>Three sliders: <strong>Red (R)</strong>, <strong>Green (G)</strong>, <strong>Blue (B)</strong> from 0 to 255.</p>
+
+    <h4>Experiments</h4>
+    <ul>
+        <li>R(255) + G(255) + B(0) = <strong>Yellow</strong></li>
+        <li>R(255) + G(0) + B(255) = <strong>Magenta</strong></li>
+        <li>R(0) + G(255) + B(255) = <strong>Cyan</strong></li>
+        <li>All at 255 = <strong>White</strong></li>
+        <li>All at 0 = <strong>Black</strong></li>
+    </ul>
+
+    <h3>12.4 Sound Stopwatch</h3>
+
+    <div class="image-grid">
+        <div class="image-container">
+            <img src="../images/fizziq/13_outils_chronometres.png" alt="Stopwatches">
+            <figcaption>Stopwatch types</figcaption>
+        </div>
+        <div class="image-container">
+            <img src="../images/fizziq/14_chronometre_sonore_detail.png" alt="Sound stopwatch">
+            <figcaption>Sound stopwatch detail</figcaption>
+        </div>
+    </div>
+
+    <h4>Concept</h4>
+    <p>Automatically measure time between two sound events.</p>
+
+    <h4>Usage</h4>
+    <ol class="steps">
+        <li>Set the <strong>sensitivity</strong> (detection threshold)</li>
+        <li>Set the <strong>dead time</strong> (avoid rebounds)</li>
+        <li>Tap on <strong>Arm</strong></li>
+        <li><strong>First sound</strong> - the stopwatch starts</li>
+        <li><strong>Second sound</strong> - the stopwatch stops</li>
+    </ol>
+
+    <h4>Available stopwatch types</h4>
+    <table>
+        <thead><tr><th>Stopwatch</th><th>Detection</th></tr></thead>
+        <tbody>
+            <tr><td>Sound</td><td>Sounds (claps, impacts...)</td></tr>
+            <tr><td>Motion</td><td>Acceleration</td></tr>
+            <tr><td>Light</td><td>Light variations</td></tr>
+            <tr><td>Magnetic</td><td>Magnetic field variations</td></tr>
+        </tbody>
+    </table>
+
+    <h3>12.5 Triggers</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/15_outils_declencheurs.png" alt="Triggers">
+        <figcaption>Trigger configuration</figcaption>
+    </div>
+
+    <h4>Possible actions</h4>
+    <ul>
+        <li><strong>Delayed measurement</strong>: take a measurement after a delay</li>
+        <li><strong>Conditional recording</strong>: start/stop based on a condition</li>
+        <li><strong>Automatic capture</strong>: trigger a capture automatically</li>
+        <li><strong>Alarm</strong>: trigger a sound or vibration signal</li>
+    </ul>
+
+    <h4>Condition types</h4>
+    <ul>
+        <li><strong>Time-based</strong>: after a defined delay</li>
+        <li><strong>Sound</strong>: when sound exceeds a threshold</li>
+        <li><strong>Motion</strong>: when acceleration exceeds a threshold</li>
+        <li><strong>Light</strong>: when light changes</li>
+        <li><strong>Magnetic</strong>: when magnetic field varies</li>
+    </ul>
+
+    <h3>12.6 Scientific Calculator</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/17_outil_calculatrice_scientifique.png" alt="Calculator">
+        <figcaption>Built-in scientific calculator</figcaption>
+    </div>
+
+    <h4>Features</h4>
+    <ul>
+        <li>Basic operations (+, -, x, /, %)</li>
+        <li>Trigonometric functions (sin, cos, tan...)</li>
+        <li>Logarithms (ln, log)</li>
+        <li>Exponentials, powers, roots</li>
+        <li>Constants (pi, e)</li>
+        <li>Degrees/radians modes</li>
+    </ul>
+</section>
+
+<!-- ==================== SECTION 13: ASKFIZZIQ ==================== -->
+<section id="askfizziq">
+    <h2>13. AskFizziQ - The AI Assistant</h2>
+
+    <div class="image-container">
+        <img src="../images/fizziq/16_askfizziq_assistant_ia.png" alt="AskFizziQ">
+        <figcaption>AskFizziQ AI assistant</figcaption>
+    </div>
+
+    <h3>13.1 Access</h3>
+    <ol>
+        <li><strong>Tools</strong> tab</li>
+        <li>Tap on <strong>AskFizziQ</strong></li>
+    </ol>
+
+    <h3>13.2 Features</h3>
+    <ul>
+        <li><strong>Scientific questions</strong>: physics, chemistry, life sciences</li>
+        <li><strong>Analysis help</strong>: attach observations</li>
+        <li><strong>Experiment suggestions</strong>: guided protocols</li>
+    </ul>
+
+    <h3>13.3 Response Levels</h3>
+    <table>
+        <thead><tr><th>Mode</th><th>Characteristics</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Middle school</strong></td><td>Simple vocabulary, analogies, ages 11-15</td></tr>
+            <tr><td><strong>High school</strong></td><td>Mathematical formulas, rigor, ages 15-18</td></tr>
+            <tr><td><strong>Teacher</strong></td><td>Technical language, pedagogical suggestions</td></tr>
+        </tbody>
+    </table>
+
+    <h3>13.4 Attaching Observations</h3>
+    <ol class="steps">
+        <li>Tap on the <strong>paperclip</strong> icon</li>
+        <li>Check the observations to attach</li>
+        <li>Confirm</li>
+        <li>Type your question</li>
+        <li>The AI analyzes your data</li>
+    </ol>
+
+    <h3>13.5 Best Practices</h3>
+    <ul>
+        <li>Ask clear and precise questions</li>
+        <li>Provide necessary context</li>
+        <li>Verify important information</li>
+        <li>Use AI as a help tool</li>
+    </ul>
+</section>
+
+<!-- ==================== SECTION 14: BLUETOOTH ==================== -->
+<section id="bluetooth">
+    <h2>14. External Bluetooth Sensors</h2>
+
+    <h3>14.1 Connecting Microcontrollers</h3>
+    <p>You can connect an <strong>Arduino</strong> or <strong>micro:bit</strong> to FizziQ via Bluetooth Low Energy.</p>
+
+    <h4>Data format</h4>
+    <pre><code>sensorName:value</code></pre>
+    <p>Examples: <code>tem:23.5</code> (temperature), <code>hum:65</code> (humidity)</p>
+
+    <h4>Recognized prefixes</h4>
+    <table>
+        <thead><tr><th>Prefix</th><th>Type</th><th>Unit</th></tr></thead>
+        <tbody>
+            <tr><td>tem</td><td>Temperature</td><td>C</td></tr>
+            <tr><td>hum</td><td>Humidity</td><td>%</td></tr>
+            <tr><td>ten</td><td>Voltage</td><td>V</td></tr>
+            <tr><td>int</td><td>Current</td><td>A</td></tr>
+            <tr><td>pre</td><td>Pressure</td><td>hPa</td></tr>
+            <tr><td>lum</td><td>Luminosity</td><td>lux</td></tr>
+            <tr><td>co2</td><td>CO2</td><td>ppm</td></tr>
+            <tr><td>ph</td><td>pH</td><td>-</td></tr>
+        </tbody>
+    </table>
+
+    <p>Complete documentation: <a href="https://www.fizziq.org/connexion-de-capteurs-externes">www.fizziq.org/connexion-de-capteurs-externes</a></p>
+
+    <h3>14.2 FizziQ Connect</h3>
+    <p><strong>FizziQ Connect</strong> is a data acquisition box developed by the FizziQ team, based on M5Stack.</p>
+
+    <h4>Advantages</h4>
+    <table>
+        <thead><tr><th>Criteria</th><th>FizziQ Connect</th><th>Traditional DAQ</th></tr></thead>
+        <tbody>
+            <tr><td>Cost</td><td>Very low</td><td>High</td></tr>
+            <tr><td>Software</td><td>Free (FizziQ)</td><td>Paid license</td></tr>
+            <tr><td>Architecture</td><td>Open (Grove, I2C)</td><td>Proprietary</td></tr>
+            <tr><td>Pairing</td><td>Automatic</td><td>Configuration required</td></tr>
+        </tbody>
+    </table>
+
+    <h4>Radio Mode (unique innovation)</h4>
+    <p>Broadcasts measurements to <strong>all nearby smartphones</strong> simultaneously. Ideal for classroom demonstrations!</p>
+
+    <h4>Compatible probes</h4>
+    <ul>
+        <li>Waterproof temperature (-55C to +125C)</li>
+        <li>Infrared thermometer (-70C to +380C)</li>
+        <li>Light, distance, pH, CO2 sensors...</li>
+        <li>Ammeter (-4 to +4 A)</li>
+    </ul>
+
+    <h3>14.3 Smartphone Connection</h3>
+    <ol class="steps">
+        <li>In the <strong>Measurements</strong> screen, tap on the instrument name</li>
+        <li>Select <strong>External sensors</strong></li>
+        <li>Tap on <strong>Refresh</strong></li>
+        <li>Select your device</li>
+        <li>Sensors are <strong>automatically detected</strong></li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Important:</strong> No pairing procedure in phone settings is necessary. Everything is done from FizziQ!
+    </div>
+</section>
+
+<!-- ==================== SECTION 15: EXPORT ==================== -->
+<section id="export">
+    <h2>15. Export and Sharing</h2>
+
+    <h3>15.1 PDF Export</h3>
+    <ol>
+        <li>Open the card in full screen</li>
+        <li><strong>Share</strong> icon</li>
+        <li>Select <strong>PDF</strong></li>
+        <li>Share or save</li>
+    </ol>
+
+    <h3>15.2 CSV Export</h3>
+    <p>Universal text format compatible with Excel, LibreOffice, Google Sheets.</p>
+    <ol>
+        <li><strong>Share</strong> icon</li>
+        <li>Select <strong>CSV</strong></li>
+    </ol>
+
+    <h3>15.3 Image Export</h3>
+    <p><strong>Share > Image</strong> menu - PNG capture of the graph.</p>
+
+    <h3>15.4 FizziQ Files</h3>
+    <ul>
+        <li>Native <code>.fizziq</code> format</li>
+        <li>Contains all data</li>
+        <li>Can be reopened in FizziQ</li>
+    </ul>
+
+    <h3>15.5 Sharing Methods</h3>
+    <ul>
+        <li>Email, Messaging (WhatsApp, Messenger...)</li>
+        <li>AirDrop (iOS), Bluetooth</li>
+        <li>Cloud (Google Drive, Dropbox, iCloud)</li>
+        <li>QR Code (without Internet)</li>
+    </ul>
+</section>
+
+<!-- ==================== SECTION 16: ACTIVITIES ==================== -->
+<section id="activities">
+    <h2>16. Activities and QR Codes</h2>
+
+    <h3>16.1 Activity Catalog</h3>
+    <p>More than <strong>100 activities</strong> ready to use.</p>
+
+    <div class="image-grid">
+        <div class="image-container">
+            <img src="../images/fizziq/24_catalogue_activites.png" alt="Catalog">
+            <figcaption>Activity catalog</figcaption>
+        </div>
+        <div class="image-container">
+            <img src="../images/fizziq/23_protocole_activite_exemple.png" alt="Protocol">
+            <figcaption>Protocol example</figcaption>
+        </div>
+    </div>
+
+    <h4>Difficulty levels</h4>
+    <table>
+        <thead><tr><th>Level</th><th>Color</th><th>Audience</th></tr></thead>
+        <tbody>
+            <tr><td>Level 1</td><td>Green</td><td>Middle school</td></tr>
+            <tr><td>Level 2</td><td>Orange</td><td>Early high school</td></tr>
+            <tr><td>Level 3</td><td>Red</td><td>Late high school / Higher education</td></tr>
+        </tbody>
+    </table>
+
+    <h4>Available themes</h4>
+    <p>Mechanics, Acoustics, Optics, Electricity, Thermodynamics...</p>
+
+    <h3>16.2 Creating Your Own Activities</h3>
+    <ol class="steps">
+        <li><strong>Activities</strong> tab - <strong>+</strong></li>
+        <li>Select <strong>Create a new protocol</strong></li>
+        <li>Fill in: title, description, steps</li>
+        <li>Save</li>
+    </ol>
+
+    <h3>16.3 Sharing an Activity</h3>
+    <ul>
+        <li><strong>Add to notebook</strong></li>
+        <li><strong>Export to PDF</strong></li>
+        <li><strong>Share as QR code</strong> (limit: 1200 characters)</li>
+    </ul>
+
+    <h3>16.4 Scanning an Activity QR Code</h3>
+    <ol class="steps">
+        <li><strong>Activities</strong> tab - <strong>+</strong></li>
+        <li>Select <strong>Scan a QR code</strong></li>
+        <li>Point the camera at the QR code</li>
+        <li>The activity is added automatically</li>
+    </ol>
+
+    <div class="tip-box">
+        <strong>Advantage:</strong> No Internet connection is needed for FizziQ QR codes!
+    </div>
+</section>
+
+<!-- ==================== SECTION 17: SETTINGS ==================== -->
+<section id="settings">
+    <h2>17. Settings and Customization</h2>
+
+    <div class="image-grid">
+        <div class="image-container">
+            <img src="../images/fizziq/19_reglages_donnees.png" alt="Data settings">
+            <figcaption>Data settings</figcaption>
+        </div>
+        <div class="image-container">
+            <img src="../images/fizziq/20_reglages_parametres.png" alt="Settings">
+            <figcaption>General settings</figcaption>
+        </div>
+    </div>
+
+    <h3>17.1 Data</h3>
+    <table>
+        <thead><tr><th>Setting</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Sampling</strong></td><td>Acquisition frequency</td></tr>
+            <tr><td><strong>Quadratic adjustment</strong></td><td>For kinematics (high school)</td></tr>
+            <tr><td><strong>Signal filtering</strong></td><td>Exponential smoothing (intensity 1-99)</td></tr>
+        </tbody>
+    </table>
+
+    <h3>17.2 App Settings</h3>
+    <ul>
+        <li><strong>Screen orientation</strong>: horizontal/vertical</li>
+        <li><strong>Sensor organization</strong>: by instrument or by theme</li>
+        <li><strong>Language</strong>: 20 languages available</li>
+    </ul>
+
+    <h3>17.3 Camera</h3>
+    <ul>
+        <li><strong>LED for colorimetry</strong>: turns on flash</li>
+        <li><strong>Copy photos</strong>: saves to gallery</li>
+        <li><strong>Front camera</strong>: uses selfie camera</li>
+    </ul>
+
+    <h3>17.4 Calibration</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/21_reglages_calibration.png" alt="Calibration">
+        <figcaption>Calibration screen</figcaption>
+    </div>
+
+    <h4>Magnetometer</h4>
+    <p>Perform figure-8 rotations to recalibrate the compass.</p>
+
+    <h4>Sound level meter</h4>
+    <p>Use the slider to apply a dB offset.</p>
+
+    <h3>17.5 System Status</h3>
+
+    <div class="image-container">
+        <img src="../images/fizziq/22_reglages_infos_systeme_capteurs.png" alt="System">
+        <figcaption>System and sensor information</figcaption>
+    </div>
+
+    <p>Displays: detected sensors, OS version, model, FizziQ version.</p>
+</section>
+
+<!-- ==================== SECTION 18: TIPS ==================== -->
+<section id="tips">
+    <h2>18. Tips and Tricks</h2>
+
+    <h3>18.1 Optimizing Measurements</h3>
+
+    <h4>Accelerometer</h4>
+    <ul>
+        <li>Place the phone on a stable surface for zero</li>
+        <li>Securely attach the phone to the moving object</li>
+        <li>Use a shock-resistant case for impacts</li>
+    </ul>
+
+    <h4>Sound level meter</h4>
+    <ul>
+        <li>Move away from sources of parasitic noise</li>
+        <li>Do not cover the microphone</li>
+        <li>Calibrate with a reference sound</li>
+    </ul>
+
+    <h4>Colorimeter</h4>
+    <ul>
+        <li>Ensure constant lighting</li>
+        <li>Avoid reflections</li>
+        <li>Use a white background</li>
+    </ul>
+
+    <h4>GPS</h4>
+    <ul>
+        <li>Be outdoors with clear sky view</li>
+        <li>Wait for accuracy to stabilize</li>
+        <li>Avoid urban canyons</li>
+    </ul>
+
+    <h3>18.2 Saving Battery</h3>
+    <ul>
+        <li>Close FizziQ when not in use</li>
+        <li>Reduce sampling frequency</li>
+        <li>Disable GPS when not needed</li>
+    </ul>
+
+    <h3>18.3 Organizing Your Notebook</h3>
+    <ul>
+        <li>Give explicit titles</li>
+        <li>Add text notes</li>
+        <li>Create a notebook per theme</li>
+        <li>Delete unnecessary measurements</li>
+    </ul>
+
+    <h3>18.4 Troubleshooting</h3>
+    <table>
+        <thead><tr><th>Problem</th><th>Solution</th></tr></thead>
+        <tbody>
+            <tr><td>Sensor not working</td><td>Check permissions, restart the app</td></tr>
+            <tr><td>Incorrect values</td><td>Calibrate sensor, check orientation</td></tr>
+            <tr><td>App crashes</td><td>Update, free memory</td></tr>
+            <tr><td>Bluetooth not finding</td><td>Check sensor is on, move closer</td></tr>
+            <tr><td>Inaccurate GPS</td><td>Wait outdoors, clear sky view</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ==================== APPENDICES ==================== -->
+<section>
+    <h2>Appendices</h2>
+
+    <h3>A. Shortcuts and Gestures</h3>
+    <table>
+        <thead><tr><th>Gesture</th><th>Action</th></tr></thead>
+        <tbody>
+            <tr><td>Single tap</td><td>Select</td></tr>
+            <tr><td>Long press</td><td>Context menu / Reorganize</td></tr>
+            <tr><td>Swipe left</td><td>Delete</td></tr>
+            <tr><td>Pinch</td><td>Zoom out</td></tr>
+            <tr><td>Spread</td><td>Zoom in</td></tr>
+            <tr><td>Double tap</td><td>Reset zoom</td></tr>
+            <tr><td>Drag</td><td>Move / Navigate</td></tr>
+        </tbody>
+    </table>
+
+    <h3>B. Useful Formulas</h3>
+
+    <h4>Mechanics</h4>
+    <ul>
+        <li>Average velocity: v = delta_x / delta_t</li>
+        <li>Acceleration: a = delta_v / delta_t</li>
+        <li>Free fall: h = (1/2)gt^2</li>
+        <li>Simple pendulum: T = 2*pi*sqrt(L/g)</li>
+    </ul>
+
+    <h4>Acoustics</h4>
+    <ul>
+        <li>Speed of sound: v = d/t (approx. 340 m/s in air at 20C)</li>
+        <li>Frequency: f = 1/T</li>
+        <li>Beats: f_beat = |f1 - f2|</li>
+    </ul>
+
+    <h3>C. Contact and Resources</h3>
+    <ul>
+        <li><strong>Website</strong>: <a href="https://www.fizziq.org">www.fizziq.org</a></li>
+        <li><strong>Protocols</strong>: <a href="https://www.fizziq.org/activites">www.fizziq.org/activites</a></li>
+        <li><strong>Support</strong>: contact@fizziq.org</li>
+    </ul>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section id="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>Is FizziQ free?</h3>
+    <p>Yes, FizziQ is 100% free, ad-free, and has no in-app purchases. No account is required.</p>
+
+    <h3>Does FizziQ work without internet?</h3>
+    <p>Yes, FizziQ works entirely offline. A connection is only needed to share files or use the AskFizziQ assistant.</p>
+
+    <h3>Which devices are compatible?</h3>
+    <p>FizziQ works on iPhone, iPad, Android smartphones, and tablets. Available sensors depend on your device.</p>
+
+    <h3>How do I calibrate a sensor?</h3>
+    <p>Go to Settings, then Calibration, select the sensor, and follow the on-screen instructions (usually place the device flat and tap Calibrate).</p>
+
+    <h3>Why does my sensor show incorrect values?</h3>
+    <p>Try calibrating the sensor. Check that the device is correctly oriented. Some sensors require specific conditions (GPS outdoors, light meter without shadow, etc.).</p>
+
+    <h3>How do I export my data?</h3>
+    <p>In the experiment notebook, tap Share, choose the format (CSV, PDF, or FizziQ file), and select the destination (email, cloud, etc.).</p>
+
+    <h3>How do I use video kinematic analysis?</h3>
+    <p>In Tools, then Kinematics, import a video, calibrate the scale, point the object position frame by frame, and the data appears in the notebook.</p>
+
+    <h3>Is FizziQ Connect included?</h3>
+    <p>The FizziQ app is free and includes FizziQ Connect support. The FizziQ Connect box is separate hardware that needs to be acquired.</p>
+
+    <h3>What school level is it for?</h3>
+    <p>FizziQ is designed for science education from middle school to university. More than 100 ready-to-use activities are available at fizziq.org/activites.</p>
+
+    <h3>How do I contact support?</h3>
+    <p>Send an email to contact@fizziq.org or visit www.fizziq.org for more resources.</p>
+
+    <h3>What is the difference between FizziQ and other apps like Phyphox or Physics Toolbox?</h3>
+    <p>FizziQ, Phyphox, and Physics Toolbox are all excellent experimental science apps. Here is what distinguishes FizziQ:</p>
+    <ul>
+        <li><strong>Integrated experiment notebook</strong>: document your experiments with text, photos, and data in a single document exportable to PDF</li>
+        <li><strong>Video kinematic analysis</strong>: frame-by-frame tracking to study motion</li>
+        <li><strong>FizziQ Connect</strong>: extension with external Bluetooth sensors (exclusive to FizziQ)</li>
+        <li><strong>Ready-to-use protocols</strong>: 100+ educational activities on fizziq.org</li>
+        <li><strong>AskFizziQ</strong>: integrated AI assistant to guide experiments</li>
+        <li><strong>Designed in France</strong> with the La main a la pate Foundation</li>
+    </ul>
+    <p>All these apps are free and complementary depending on your educational needs.</p>
+</section>
+
+</main>
+
+<footer>
+    <p><strong>FizziQ</strong> - Experimental Science App</p>
+    <p>Developed by Trapeze.digital</p>
+    <p><a href="https://www.fizziq.org">www.fizziq.org</a></p>
+    <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">This user guide covers the current version of FizziQ. Some features may vary depending on your device and app version.</p>
+</footer>
+
+</body>
+</html>
