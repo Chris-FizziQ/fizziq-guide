@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizziQ Connect User Guide - Complete External Sensors Guide</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Complete FizziQ Connect guide: connect external sensors (M5 Stack, Grove, Seeed Studio) to FizziQ via Bluetooth. Temperature, CO2, pressure, pH and more.">
+    <meta name="keywords" content="FizziQ Connect, external sensors, M5 Stack, ESP32, Bluetooth BLE, Grove, Seeed Studio, science, education, I2C sensors">
+    <meta name="author" content="FizziQ Labs - Trapeze.digital">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://guide.fizziq.org/en/fizziq-connect/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="FizziQ Connect User Guide - External Sensors">
+    <meta property="og:description" content="Connect external sensors to FizziQ via Bluetooth. Complete guide for M5 Stack and Grove sensors.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://guide.fizziq.org/en/fizziq-connect/">
+    <meta property="og:site_name" content="FizziQ Labs">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "FizziQ Connect User Guide - Complete External Sensors Guide",
+        "description": "Complete guide for using FizziQ Connect and connecting external sensors to the FizziQ application via Bluetooth BLE.",
+        "author": {
+            "@type": "Organization",
+            "name": "Trapeze.digital",
+            "url": "https://www.trapeze.digital"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "FizziQ Labs"
+        },
+        "dateModified": "2025-12-15",
+        "inLanguage": "en"
+    }
+    </script>
+
+    <!-- Schema.org FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is FizziQ Connect?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FizziQ Connect is an educational tool based on the M5 Stack microcontroller that allows you to connect external sensors to the FizziQ application via Bluetooth Low Energy (BLE)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Which sensors are compatible with FizziQ Connect?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FizziQ Connect is compatible with I2C sensors (M5 Stack, Grove, Seeed Studio), analog sensors, and 1-Wire sensors like the DS18B20 temperature probe."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the battery life of FizziQ Connect?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Battery life varies depending on the sensors: approximately 8 hours with the Environment sensor, 4 hours with the e-CO2 sensor. It can be extended with Auto-off and reduced brightness modes."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #0066CC;
+            --primary-light: #E8F4FD;
+            --secondary: #34A853;
+            --accent: #F5A623;
+            --danger: #DC3545;
+            --bg: #FAFAFA;
+            --bg-white: #FFFFFF;
+            --text: #222;
+            --text-muted: #666;
+            --border: #DDD;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            font-size: 13px;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        header img {
+            width: 100px;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        header h1 { font-size: 1.8rem; font-weight: 600; }
+        header .subtitle { font-size: 0.9rem; opacity: 0.9; margin-top: 0.2rem; }
+
+        nav {
+            background: var(--bg-white);
+            padding: 0.4rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+            font-size: 11px;
+        }
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            list-style: none;
+            justify-content: center;
+        }
+        nav a {
+            padding: 0.25rem 0.5rem;
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 3px;
+        }
+        nav a:hover { background: var(--primary-light); }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        section {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1rem 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            padding-bottom: 0.3rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        h3 {
+            color: var(--text);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin: 1rem 0 0.4rem;
+            padding-top: 0.5rem;
+            border-top: 1px solid #EEE;
+        }
+        h3:first-of-type { border-top: none; padding-top: 0; }
+
+        h4 {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin: 0.6rem 0 0.3rem;
+        }
+
+        p { margin-bottom: 0.5rem; }
+
+        ul, ol { margin: 0.3rem 0 0.5rem 1.2rem; }
+        li { margin-bottom: 0.15rem; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.5rem 0;
+            font-size: 11px;
+        }
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 0.3rem 0.5rem;
+            text-align: left;
+            font-weight: 500;
+        }
+        td {
+            padding: 0.25rem 0.5rem;
+            border-bottom: 1px solid #EEE;
+        }
+        tr:hover td { background: #F5F5F5; }
+
+        .info-box, .warning-box, .danger-box, .tip-box {
+            padding: 0.5rem 0.7rem;
+            border-radius: 4px;
+            margin: 0.5rem 0;
+            font-size: 12px;
+            border-left: 3px solid;
+        }
+        .info-box { background: #E3F2FD; border-color: var(--primary); }
+        .warning-box { background: #FFF8E1; border-color: var(--accent); }
+        .danger-box { background: #FFEBEE; border-color: var(--danger); }
+        .tip-box { background: #E8F5E9; border-color: var(--secondary); }
+
+        code {
+            background: #F0F0F0;
+            padding: 0.1rem 0.3rem;
+            border-radius: 3px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 11px;
+        }
+
+        .feature-grid {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin: 0.5rem 0;
+        }
+        .feature-card {
+            background: #F5F5F5;
+            padding: 0.5rem;
+            border-radius: 6px;
+            text-align: center;
+            flex: 1;
+            min-width: 100px;
+        }
+        .feature-card .icon { font-size: 1.2rem; }
+        .feature-card h4 { font-size: 11px; margin: 0.2rem 0 0; color: var(--primary); }
+        .feature-card p { font-size: 10px; color: var(--text-muted); margin: 0; }
+
+        .steps { counter-reset: step; list-style: none; margin-left: 0; }
+        .steps li {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-bottom: 0.4rem;
+        }
+        .steps li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.3rem;
+            height: 1.3rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 10px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 1rem;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 12px;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+        .spec-item {
+            background: #F8F9FA;
+            padding: 0.4rem 0.6rem;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+        .spec-item strong { color: var(--primary); }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 0.8rem;
+            font-size: 11px;
+        }
+        footer a { color: #7CB9E8; }
+
+        @media (max-width: 600px) {
+            header { flex-direction: column; text-align: center; gap: 0.5rem; }
+            header img { width: 80px; }
+            section { padding: 0.8rem; }
+        }
+
+        @media print {
+            nav { display: none; }
+            section { border: none; box-shadow: none; page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="../../images/fizziq-connect/Illustration_fizziq_connect_salle_chimie.png" alt="FizziQ Connect - Sensor Device">
+    <div>
+        <h1>FizziQ Connect</h1>
+        <p class="subtitle">Complete User Guide - External Sensors via Bluetooth</p>
+    </div>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#contents">Contents</a></li>
+        <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#navigation">Navigation</a></li>
+        <li><a href="#recording">Recording</a></li>
+        <li><a href="#menus">Menus</a></li>
+        <li><a href="#sensors">Sensors</a></li>
+        <li><a href="#broadcast-modes">Modes</a></li>
+        <li><a href="#fizziq-connection">Connection</a></li>
+        <li><a href="#i2c-sensors">I2C Sensors</a></li>
+        <li><a href="#analog-sensors">Analog</a></li>
+        <li><a href="#troubleshooting">Troubleshooting</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<a href="../" class="back-link">← Back to FizziQ Labs Home</a>
+
+<!-- ==================== SECTION 1: INTRODUCTION ==================== -->
+<section id="introduction">
+    <h2>1. Introduction</h2>
+
+    <p><strong>FizziQ Connect</strong> is an educational and scientific tool designed to be used in conjunction with the FizziQ application. It is used to collect and analyze data from various external sensors to study and understand different scientific and environmental phenomena.</p>
+
+    <p>FizziQ Connect is based on the <strong>M5 Stack</strong> microcontroller, which is small, portable, autonomous, and allows connecting a wide range of sensors at affordable costs.</p>
+
+    <div class="info-box">
+        <strong>Current version:</strong> FizziQ Connect 2.2.0. Earlier versions may display slightly different screens.
+    </div>
+
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">🔌</div>
+            <h4>External Sensors</h4>
+            <p>I2C, analog, 1-Wire</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📡</div>
+            <h4>Bluetooth BLE</h4>
+            <p>Wireless connection</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📊</div>
+            <h4>Graphical Display</h4>
+            <p>Built-in touchscreen</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">💾</div>
+            <h4>Recording</h4>
+            <p>3000 data points max</p>
+        </div>
+    </div>
+</section>
+
+<!-- ==================== SECTION 2: CONTENTS ==================== -->
+<section id="contents">
+    <h2>2. Box Contents and Specifications</h2>
+
+    <h3>2.1 Box Contents</h3>
+    <ul>
+        <li>1 x <strong>M5 Core 2 AWS</strong> Microcontroller with FizziQ Connect software</li>
+        <li>1 x USB charging cable</li>
+    </ul>
+
+    <h3>2.2 Technical Specifications</h3>
+    <div class="spec-grid">
+        <div class="spec-item"><strong>Device:</strong> M5 Stack - ESP32</div>
+        <div class="spec-item"><strong>Software:</strong> FizziQ Connect 2.2.1 preloaded</div>
+        <div class="spec-item"><strong>Connection:</strong> BLE with FizziQ app</div>
+        <div class="spec-item"><strong>Power:</strong> USB-C - 5V</div>
+        <div class="spec-item"><strong>Sensor connections:</strong> Grove</div>
+        <div class="spec-item"><strong>Battery:</strong> 500 mAh included</div>
+        <div class="spec-item"><strong>Buttons:</strong> On/Off and Reset</div>
+        <div class="spec-item"><strong>Screen:</strong> 3 resistive multi-function buttons</div>
+    </div>
+
+    <h3>2.3 Safety Warnings</h3>
+    <div class="danger-box">
+        <ul>
+            <li>FizziQ Connect must be used <strong>only in a supervised educational setting</strong></li>
+            <li>Do not open the device or modify internal components</li>
+            <li>Do not expose to water, humidity, or extreme temperatures</li>
+            <li>Do not use sensors delivering voltage higher than <strong>3.3 V</strong> on the analog input</li>
+            <li>Use only USB cables compliant with 5V specifications</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ==================== SECTION 3: GETTING STARTED ==================== -->
+<section id="getting-started">
+    <h2>3. Getting Started</h2>
+
+    <ol class="steps">
+        <li><strong>Charge FizziQ Connect</strong> using the USB cable connected to a computer or charger for at least 30 minutes. A battery level indicator is displayed in the device's receive mode.</li>
+        <li><strong>Choose a sensor and connect it</strong> with a Grove cable provided in the corresponding port. There is a keyed connector to prevent incorrect connection.</li>
+        <li><strong>Turn on FizziQ Connect</strong> by pressing the On/Off button for a few seconds. To turn off, press and hold this button for six seconds.</li>
+        <li><strong>At startup</strong>, FizziQ Connect will search for and display the connected sensors. The type of connected sensor will appear on the screen.</li>
+        <li><strong>Once the search is complete</strong>, the sensor values will be displayed on the screen, along with the battery level.</li>
+    </ol>
+
+    <div class="warning-box">
+        <strong>WARNING:</strong> <strong>I2C</strong> sensors (red tips on M5 Stack) or <strong>1-Wire</strong> sensors (DS18B20 probe) must be connected to the <strong>Red port (port A)</strong>. <strong>Analog</strong> sensors (black tips) must be connected to the <strong>Black port (port B)</strong>.
+    </div>
+
+    <h3>3.1 Connecting a New Sensor</h3>
+    <p>To connect a new sensor:</p>
+    <ol>
+        <li>Disconnect the existing sensor</li>
+        <li>Connect the new sensor</li>
+        <li>Press the "Sensor Search" button at the bottom of the screen</li>
+    </ol>
+
+    <div class="tip-box">
+        <strong>Tip:</strong> It is possible to connect multiple sensors using the Hub multi-port module.
+    </div>
+</section>
+
+<!-- ==================== SECTION 4: NAVIGATION ==================== -->
+<section id="navigation">
+    <h2>4. Main Navigation</h2>
+
+    <p>When turning on the FizziQ Connect device, after analyzing the sensors and system, the main screen displays the measured values from the sensors in real-time.</p>
+
+    <p>At the bottom of the screen, three main options are available:</p>
+
+    <table>
+        <thead><tr><th>Button</th><th>Function</th></tr></thead>
+        <tbody>
+            <tr><td><strong>GRAPH</strong></td><td>Real-time graphical display of data</td></tr>
+            <tr><td><strong>REC</strong></td><td>Data recording</td></tr>
+            <tr><td><strong>MENU</strong></td><td>Access to configuration and export menus</td></tr>
+        </tbody>
+    </table>
+
+    <h3>4.1 Graphical Data Display</h3>
+    <p>By pressing <strong>GRAPH</strong>, you access the real-time display of measurements.</p>
+    <ul>
+        <li>If the capture interval is <strong>less than 250 ms</strong>, the data is grouped in a 100-point window, updated every 250 ms</li>
+        <li>If the interval is <strong>greater than 250 ms</strong>, the data is progressively updated at the capture rate</li>
+    </ul>
+
+    <p>The first graphical screen displays all measurements on a single graph. You can navigate sensor by sensor using the <strong>&lt;</strong> and <strong>&gt;</strong> buttons.</p>
+
+    <div class="info-box">
+        <strong>Note:</strong> During graphical display, data will not be sent via Bluetooth if the interval between measurements is less than 250 ms.
+    </div>
+</section>
+
+<!-- ==================== SECTION 5: RECORDING ==================== -->
+<section id="recording">
+    <h2>5. Data Recording</h2>
+
+    <p>Recording can be done in two ways:</p>
+
+    <h3>5.1 From the FizziQ Application</h3>
+    <ol>
+        <li>Connect the device to the application</li>
+        <li>The external sensors then appear as internal sensors</li>
+        <li>Data can be recorded directly in the application</li>
+    </ol>
+
+    <h3>5.2 Directly on the Device</h3>
+    <ol>
+        <li>Press <strong>REC</strong> to start a local recording</li>
+        <li>All data from all sensors is recorded</li>
+        <li>You can then select the data to transfer to FizziQ or export to SD card</li>
+    </ol>
+
+    <h3>5.3 Recording Settings</h3>
+    <table>
+        <thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Memory capacity</strong></td><td>3000 data points maximum</td></tr>
+            <tr><td><strong>Number of points selection</strong></td><td>Selected at the start of recording</td></tr>
+            <tr><td><strong>Countdown</strong></td><td>3 seconds before start</td></tr>
+            <tr><td><strong>Persistent memory</strong></td><td>Data saved even if the battery discharges</td></tr>
+        </tbody>
+    </table>
+
+    <h3>5.4 Using Recorded Data</h3>
+    <p>Once recording is complete, you can:</p>
+    <ul>
+        <li><strong>Export to FizziQ</strong> (if connected via Bluetooth BLE)</li>
+        <li><strong>Display the data</strong> graphically on the device</li>
+        <li><strong>Export to SD card</strong> in CSV format</li>
+        <li><strong>Delete the data</strong> from memory</li>
+    </ul>
+</section>
+
+<!-- ==================== SECTION 6: MENUS ==================== -->
+<section id="menus">
+    <h2>6. Menu Navigation</h2>
+
+    <p>The menus provide access to various FizziQ Connect features.</p>
+
+    <h3>6.1 Main Menu</h3>
+    <table>
+        <thead><tr><th>Option</th><th>Description</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Device name</strong></td><td>Identifies the device in the FizziQ Bluetooth menu</td></tr>
+            <tr><td><strong>Measurement interval</strong></td><td>250 ms, 1s, 2s, 5s, 60s or 300s (2-50 ms for certain sensors)</td></tr>
+            <tr><td><strong>Sensors</strong></td><td>Add/remove sensors, enable IMU or sound level, calibration</td></tr>
+            <tr><td><strong>Recording</strong></td><td>Record, export, plot, delete, recover data</td></tr>
+            <tr><td><strong>Broadcast</strong></td><td>Connect, Connect Plus, or Radio mode</td></tr>
+            <tr><td><strong>Other settings</strong></td><td>Brightness, auto-sleep, auto-CSV, graph smoothing, update</td></tr>
+        </tbody>
+    </table>
+
+    <h3>6.2 Sensors Submenu</h3>
+    <ul>
+        <li><strong>Add/remove an analog sensor</strong></li>
+        <li><strong>Add IMU data</strong> (absolute acceleration and Z-axis rotation)</li>
+        <li><strong>Add Sound Level</strong> (M5 Stack microphone, 50 ms interval)</li>
+        <li><strong>Instrument calibration</strong> (pH, temperature, etc.)</li>
+    </ul>
+
+    <h3>6.3 Other Settings Submenu</h3>
+    <ul>
+        <li><strong>Brightness</strong>: save battery</li>
+        <li><strong>Auto-sleep</strong>: power saving mode after 30 seconds (note: Bluetooth connection will be lost)</li>
+        <li><strong>Auto-CSV</strong>: CSV file automatically created on SD card</li>
+        <li><strong>Graph smoothing</strong>: quadratic adjustment of data</li>
+        <li><strong>Update</strong>: firmware update via WiFi</li>
+    </ul>
+
+    <h3>6.4 Menu Navigation</h3>
+    <table>
+        <thead><tr><th>Icon</th><th>Action</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Down arrow</strong></td><td>Next selection</td></tr>
+            <tr><td><strong>Validate</strong></td><td>Next choice in selection</td></tr>
+            <tr><td><strong>Back</strong></td><td>Previous screen</td></tr>
+            <tr><td><strong>Switch</strong></td><td>Navigate through available options</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ==================== SECTION 7: SENSORS ==================== -->
+<section id="sensors">
+    <h2>7. Sensor Types</h2>
+
+    <p>FizziQ Connect recognizes three types of sensors:</p>
+
+    <h3>7.1 I2C Sensors</h3>
+    <ul>
+        <li>Use two wires: SDA (data) and SCL (clock)</li>
+        <li>Allow connecting multiple sensors on the same bus</li>
+        <li>Automatically recognized by FizziQ Connect at initialization</li>
+        <li><strong>Red port (port A)</strong></li>
+    </ul>
+
+    <h3>7.2 Analog Sensors</h3>
+    <ul>
+        <li>Convert a physical measurement into a proportional electrical signal</li>
+        <li>Must be configured manually in the menu</li>
+        <li>Maximum voltage: <strong>3.3 V</strong></li>
+        <li><strong>Black port (port B)</strong></li>
+    </ul>
+
+    <h3>7.3 1-Wire Sensors</h3>
+    <ul>
+        <li>Require only one data line</li>
+        <li>Recognized sensor: <strong>DS18B20</strong> temperature probe</li>
+        <li><strong>Red port (port A)</strong></li>
+    </ul>
+
+    <div class="warning-box">
+        <strong>Important:</strong> Please ensure that the sensor is connected to the correct port, otherwise it will not be recognized.
+    </div>
+</section>
+
+<!-- ==================== SECTION 8: BROADCAST MODES ==================== -->
+<section id="broadcast-modes">
+    <h2>8. Broadcast Modes</h2>
+
+    <p>FizziQ Connect uses three data transmission modes via Bluetooth:</p>
+
+    <h3>8.1 Connect Mode (Point to Point)</h3>
+    <ul>
+        <li>Standard Bluetooth connection between <strong>one device</strong> and <strong>one apparatus</strong></li>
+        <li>Ideal for individual or group practical work</li>
+        <li>Broadcast frequency: up to <strong>10 Hz</strong></li>
+    </ul>
+
+    <h3>8.2 Connect Plus Mode (Version 2.2.0+)</h3>
+    <ul>
+        <li>Compresses data before sending</li>
+        <li>Broadcast of <strong>8 sensors simultaneously</strong> at <strong>20 Hz</strong></li>
+        <li>Requires FizziQ version 5.0.5 or higher</li>
+    </ul>
+
+    <h3>8.3 Radio Mode</h3>
+    <ul>
+        <li>Broadcast to an <strong>unlimited number of devices</strong> simultaneously</li>
+        <li>Ideal for classroom demonstrations</li>
+        <li>Broadcast frequency: <strong>2 Hz</strong></li>
+        <li>Not available on FizziQ Web</li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>Teaching tip:</strong> Radio mode allows a teacher to send the same data live to an entire class equipped with tablets or smartphones.
+    </div>
+
+    <div class="warning-box">
+        <strong>Warning:</strong> FizziQ Junior can only connect in <strong>Radio mode</strong>. Make sure to set the device to Radio mode to connect FizziQ Junior.
+    </div>
+</section>
+
+<!-- ==================== SECTION 9: CONNECTION TO FIZZIQ ==================== -->
+<section id="fizziq-connection">
+    <h2>9. Connection to the FizziQ Application</h2>
+
+    <p>FizziQ Connect connects to iOS and Android devices from the <strong>External Sensors</strong> menu, and to FizziQ Web (Chrome browser only) from the External Sensors tab.</p>
+
+    <ol class="steps">
+        <li>Open the <strong>FizziQ</strong> application and press <strong>"External sensors"</strong></li>
+        <li>The list of FizziQ Connect devices will appear automatically (Connect or Radio mode depending on configuration)</li>
+        <li>Select the FizziQ Connect device whose name is displayed (e.g., "FizziQ Connect VERS5") and press <strong>"Connect"</strong></li>
+        <li>A message confirms that FizziQ and FizziQ Connect are connected</li>
+        <li>Sensor data is now visible in the FizziQ instrument list</li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Note:</strong> If the device does not appear, press <strong>Refresh</strong> or <strong>Show other Bluetooth devices</strong>. Measurements not recognized by FizziQ will have the name <strong>UART</strong>.
+    </div>
+
+    <h3>9.1 Exporting Recorded Data</h3>
+    <p>FizziQ Connect can be a standalone tool for recording data over a long period.</p>
+    <ol>
+        <li>Connect FizziQ Connect to FizziQ</li>
+        <li>Go to <strong>Menu > Recording > Export</strong></li>
+        <li>The data will be transmitted in bulk and automatically saved in the experiment notebook</li>
+    </ol>
+
+    <div class="warning-box">
+        <strong>Warning:</strong> The recording data will be deleted when searching for new sensors.
+    </div>
+</section>
+
+<!-- ==================== SECTION 10: BATTERY LIFE ==================== -->
+<section id="battery-life">
+    <h2>10. Battery Life</h2>
+
+    <p>The battery life of FizziQ Connect depends on its use, connected sensors, acquisition frequency, and power-saving options.</p>
+
+    <table>
+        <thead><tr><th>Configuration</th><th>Battery Life</th></tr></thead>
+        <tbody>
+            <tr><td>Environment sensor, 1 Hz</td><td>~8 hours</td></tr>
+            <tr><td>e-CO2 sensor</td><td>~4 hours</td></tr>
+        </tbody>
+    </table>
+
+    <h3>10.1 Extending Battery Life</h3>
+    <ul>
+        <li>Use <strong>Auto-off</strong> mode (sleep after 60 or 120 seconds)</li>
+        <li>Reduce screen <strong>brightness</strong></li>
+        <li>Connect an <strong>external battery</strong> via USB-C</li>
+    </ul>
+
+    <div class="info-box">
+        <strong>Data recovery:</strong> If the battery becomes too low, the device will shut down after saving data. To recover them: <strong>Menu > Recordings > Recover</strong>
+    </div>
+</section>
+
+<!-- ==================== SECTION 11: I2C SENSORS ==================== -->
+<section id="i2c-sensors">
+    <h2>11. List of Compatible I2C Sensors</h2>
+
+    <p>I2C sensors must be connected to the <strong>Red port (port A)</strong> of the device.</p>
+
+    <table>
+        <thead><tr><th>Sensor</th><th>Measurement Type</th><th>Manufacturer</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Environment III Sensor</strong> (SHT30 - QMP6988)</td><td>Temperature (-40°C to 125°C), Humidity (0-100%), Pressure (300-1100 hPa)</td><td>M5 Stack</td></tr>
+            <tr><td><strong>TVOC - eCO2 Sensor</strong> (SGP30)</td><td>TVOC, e-CO2 (400-60,000 ppm)</td><td>M5 Stack</td></tr>
+            <tr><td><strong>Light Sensor</strong> (BH1750)</td><td>Luminosity (1-65,535 lux)</td><td>M5 Stack</td></tr>
+            <tr><td><strong>CO2 Sensor</strong> (SCD40)</td><td>CO2, temperature, humidity</td><td>M5 Stack</td></tr>
+            <tr><td><strong>Distance Sensor</strong> (VL53L0X)</td><td>Distance (&lt;2 m)</td><td>M5 Stack</td></tr>
+            <tr><td><strong>Voltage Sensor</strong> (ADS1115)</td><td>Voltage (±36 V)</td><td>M5 Stack</td></tr>
+            <tr><td><strong>Current Sensor</strong> (ADS1115)</td><td>Current (±4 A)</td><td>M5 Stack</td></tr>
+            <tr><td><strong>NCIR 2 Thermometer</strong> (MLX90614)</td><td>Infrared (-70°C to 380°C)</td><td>M5 Stack</td></tr>
+            <tr><td><strong>Scale</strong> (HX711)</td><td>Mass (&lt;5 kg)</td><td>M5 Stack</td></tr>
+            <tr><td><strong>Heart Rate</strong> (MAX30100)</td><td>Frequency</td><td>M5 Stack</td></tr>
+            <tr><td><strong>Oxygen Sensor</strong> (MIX8410)</td><td>O2 concentration (0-25%)</td><td>Seeed Studio</td></tr>
+            <tr><td><strong>Fine Particle Detector</strong> (HM3301)</td><td>Concentration (1-500 µg/m³)</td><td>Seeed Studio</td></tr>
+            <tr><td><strong>pH Sensor</strong> (Df-Robot + Pb Hub)</td><td>pH 0-15</td><td>Df-Robot + M5 Stack</td></tr>
+        </tbody>
+    </table>
+
+    <div class="warning-box">
+        <strong>WARNING:</strong> Some sensors like Df-Robot sensors may require polarity wire reversal. A polarity reversal can damage your FizziQ Connect device.
+    </div>
+</section>
+
+<!-- ==================== SECTION 12: ANALOG SENSORS ==================== -->
+<section id="analog-sensors">
+    <h2>12. List of Analog Sensors</h2>
+
+    <p>Analog sensors must be connected to the <strong>Black port (port B)</strong> and configured manually via <strong>Menu > Add a sensor</strong>.</p>
+
+    <p>To program a sensor, specify: <strong>name</strong>, <strong>unit</strong>, <strong>value at 0V</strong>, and <strong>value at 3.3V</strong>.</p>
+
+    <table>
+        <thead><tr><th>Sensor</th><th>Value at 0V</th><th>Value at 3.3V</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Pressure Sensor</strong> (M5Stack)</td><td>-110 kPa</td><td>220 kPa</td></tr>
+            <tr><td><strong>Force Sensor</strong> (Grove)</td><td>0 Newton</td><td>Maximum force (e.g., 10 N)</td></tr>
+            <tr><td><strong>Soil Moisture</strong> (Seeed Studio)</td><td>0% (dry soil)</td><td>100% (saturated soil)</td></tr>
+            <tr><td><strong>MQ-2 Gas Sensor</strong> (Seeed Studio)</td><td>0 ppm</td><td>Max concentration</td></tr>
+            <tr><td><strong>MQ-3 Gas Sensor</strong> (alcohol)</td><td>0 ppm</td><td>Max concentration</td></tr>
+            <tr><td><strong>NTC Temperature</strong> (Grove)</td><td>-40°C</td><td>125°C</td></tr>
+            <tr><td><strong>Air Quality</strong> (Seeed Studio)</td><td>0 AQI</td><td>Max AQI</td></tr>
+            <tr><td><strong>UV Sensor</strong> (Seeed Studio)</td><td>0</td><td>UV Index 11</td></tr>
+            <tr><td><strong>Turbidity</strong> (Grove)</td><td>0 NTU</td><td>3000 NTU</td></tr>
+            <tr><td><strong>Flame Sensor</strong> (Seeed Studio)</td><td>No flame</td><td>Intense flame</td></tr>
+            <tr><td><strong>EMG Detector</strong> (Seeed Studio)</td><td>No signal</td><td>Max signal</td></tr>
+            <tr><td><strong>Vibration Sensor</strong> (Seeed Studio)</td><td>No vibration</td><td>Max vibration</td></tr>
+            <tr><td><strong>Hall Effect</strong> (M5Stack)</td><td>No field</td><td>Max field</td></tr>
+            <tr><td><strong>pH Sensor</strong> (Df-Robot)</td><td>pH 0</td><td>pH 15</td></tr>
+        </tbody>
+    </table>
+</section>
+
+<!-- ==================== SECTION 13: 1-WIRE SENSORS ==================== -->
+<section id="1wire-sensors">
+    <h2>13. 1-Wire Sensor</h2>
+
+    <p>1-Wire sensors must be connected to the <strong>Red port (port A)</strong>.</p>
+
+    <h3>DS18B20 Temperature Probe</h3>
+    <p>The <strong>DS18B20</strong> is a programmable digital temperature sensor:</p>
+    <ul>
+        <li>Temperature range: <strong>-55°C to +125°C</strong></li>
+        <li>Accuracy: <strong>±0.5°C</strong> (in the range -10°C to +85°C)</li>
+        <li>Manufacturer: Maxim Integrated</li>
+    </ul>
+
+    <div class="warning-box">
+        <strong>Warning:</strong> Do not expose the plastic sheath to excessively high temperatures, as it may melt. You can connect two probe sensors simultaneously using the multi-port hub.
+    </div>
+</section>
+
+<!-- ==================== SECTION 14: MULTI-PORT HUBS ==================== -->
+<section id="multi-port-hubs">
+    <h2>14. Connecting Multiple Sensors</h2>
+
+    <p>It is possible to connect multiple sensors simultaneously using two methods:</p>
+
+    <h3>14.1 Multi-Port Hub (M5 Stack Unit Hub)</h3>
+    <ul>
+        <li>Simple way to connect multiple I2C sensors</li>
+        <li>Also allows connecting multiple DS18B20 probes</li>
+        <li>Does <strong>not</strong> allow mixing I2C sensors and DS18B20 probes</li>
+    </ul>
+
+    <h3>14.2 I2C Multiplexer (M5 Stack PaHub)</h3>
+    <ul>
+        <li>More flexible: each channel is separate</li>
+        <li>Allows connecting I2C sensors <strong>and</strong> temperature probes</li>
+        <li>Requires FizziQ 5.0.5+ and FizziQ Connect 2.2.0+</li>
+    </ul>
+
+    <h3>14.3 Voltmeter/Ammeter Sensor</h3>
+    <p>A specific kit-style device is available for connecting Voltmeter and Ammeter sensors to an electrical circuit with banana plugs.</p>
+
+    <ul>
+        <li>DC and AC current analysis</li>
+        <li>For AC current: interval set to <strong>2 ms</strong> (50 Hz frequency analysis)</li>
+        <li><strong>GRAPH</strong> button to view the real-time graph</li>
+    </ul>
+
+    <div class="danger-box">
+        <strong>WARNING:</strong> Respect polarities and the maximum voltages and currents specified by the manufacturer.
+    </div>
+</section>
+
+<!-- ==================== SECTION 15: TROUBLESHOOTING ==================== -->
+<section id="troubleshooting">
+    <h2>15. Troubleshooting</h2>
+
+    <table>
+        <thead><tr><th>Problem</th><th>Solution</th></tr></thead>
+        <tbody>
+            <tr><td>Sensors not detected</td><td>Check that sensors are properly connected to the correct port</td></tr>
+            <tr><td>FizziQ Connect does not appear in the app</td><td>Press Refresh or "Show other Bluetooth devices"</td></tr>
+            <tr><td>Cannot connect</td><td>Press button A to reset sensor detection</td></tr>
+            <tr><td>Device not responding</td><td>Hold the power button for 6 seconds to turn off, then turn on again</td></tr>
+            <tr><td>FizziQ application incompatible</td><td>Make sure the application is up to date</td></tr>
+        </tbody>
+    </table>
+
+    <div class="info-box">
+        <strong>Technical support:</strong> <a href="mailto:info@fizziqlab.org">info@fizziqlab.org</a>
+    </div>
+</section>
+
+<!-- ==================== SECTION 16: MAINTENANCE ==================== -->
+<section id="maintenance">
+    <h2>16. Maintenance and Care</h2>
+
+    <ul>
+        <li>FizziQ Connect and sensors can be damaged by splashes</li>
+        <li>Normal operating temperature: <strong>0-40°C</strong></li>
+        <li>Clean with a <strong>soft, dry cloth</strong> (no chemicals)</li>
+        <li>Store in a cool, dry place</li>
+        <li>Charge regularly to prevent complete battery discharge</li>
+    </ul>
+</section>
+
+<!-- ==================== SECTION 17: LEGAL INFORMATION ==================== -->
+<section id="legal-information">
+    <h2>17. Regulatory Information</h2>
+
+    <p>FizziQ Connect is an educational device designed for teaching and scientific experimentation. <strong>It is not intended for industrial, medical, or safety-critical use.</strong></p>
+
+    <h3>17.1 Certifications</h3>
+    <p>This product is based on the M5Stack Core 2 AWS module, CE certified:</p>
+    <ul>
+        <li>RED Directive 2014/53/EU (radio)</li>
+        <li>Directive 2014/30/EU (electromagnetic compatibility)</li>
+        <li>Directive 2011/65/EU (RoHS)</li>
+    </ul>
+
+    <h3>17.2 Limitation of Liability</h3>
+    <p>Trapeze.digital declines all responsibility for damages resulting from non-compliant use, connection of non-certified sensors, or modification of hardware or software.</p>
+
+    <h3>17.3 Contact</h3>
+    <p><strong>Trapeze.digital</strong><br>
+    5 rue de Mouchy, 78000 Versailles, France<br>
+    <a href="mailto:info@fizziqlab.org">info@fizziqlab.org</a><br>
+    <a href="https://www.fizziq.org">www.fizziq.org</a></p>
+
+    <p><em>This guide was last updated on December 15, 2025.</em></p>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section id="faq">
+    <h2>Frequently Asked Questions</h2>
+
+    <h3>What is FizziQ Connect?</h3>
+    <p>FizziQ Connect is a standalone device that allows you to connect external sensors to the FizziQ application via Bluetooth. It extends measurement capabilities beyond the sensors built into smartphones.</p>
+
+    <h3>Does FizziQ Connect work without the FizziQ application?</h3>
+    <p>Yes, FizziQ Connect can operate autonomously and display measurements on its built-in screen. However, connecting to the FizziQ application is recommended for recording and analyzing data.</p>
+
+    <h3>What types of sensors are compatible?</h3>
+    <p>FizziQ Connect supports three types of sensors: I2C (digital), analog (0-3.3V), and 1-Wire (such as DS18B20 temperature probes). Grove and M5Stack sensors are compatible.</p>
+
+    <h3>How do I connect FizziQ Connect to my smartphone?</h3>
+    <p>Turn on the device, open FizziQ on your smartphone, go to Instruments → FizziQ Connect, and select your device from the list of available Bluetooth devices.</p>
+
+    <h3>How many sensors can I connect simultaneously?</h3>
+    <p>FizziQ Connect has multiple ports: 1 I2C port (with chaining capability via multi-port hub), 2 analog ports, and 1 1-Wire port. The exact number depends on the type of sensors used.</p>
+
+    <h3>What is the battery life?</h3>
+    <p>FizziQ Connect has a 390 mAh battery providing approximately 2-3 hours of continuous use. A full charge takes about 2 hours via USB-C.</p>
+
+    <h3>What is broadcast mode?</h3>
+    <p>Broadcast mode allows multiple smartphones to simultaneously receive data from a single FizziQ Connect. Ideal for classroom demonstrations where all students can see measurements in real-time.</p>
+
+    <h3>Are sensors included with FizziQ Connect?</h3>
+    <p>No, sensors are sold separately. Check the list of compatible sensors at fizziq.org or in this guide.</p>
+
+    <h3>Is FizziQ Connect water-resistant?</h3>
+    <p>No, FizziQ Connect is not waterproof. Avoid splashes and excessive humidity.</p>
+
+    <h3>How do I update the firmware?</h3>
+    <p>Firmware updates are performed automatically when connecting to the FizziQ application if a new version is available.</p>
+</section>
+
+</main>
+
+<footer>
+    <p><strong>FizziQ Connect</strong> - Complete User Guide</p>
+    <p>Developed by <a href="https://www.trapeze.digital">Trapeze.digital</a></p>
+    <p><a href="https://www.fizziq.org">www.fizziq.org</a> | <a href="mailto:info@fizziqlab.org">info@fizziqlab.org</a></p>
+</footer>
+
+</body>
+</html>

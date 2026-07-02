@@ -25,8 +25,10 @@ FizziQ est développé par FizziQ Labs en partenariat avec la Fondation La main 
 
 ## Documentation disponible
 
-- Guide FizziQ : https://guide.fizziq.org/mode-emploi/
-- Guide FizziQ Connect : https://guide.fizziq.org/fizziq-connect/
+- Guide FizziQ (français) : https://guide.fizziq.org/fr/fizziq/
+- Guide FizziQ Connect (français) : https://guide.fizziq.org/fr/fizziq-connect/
+- FizziQ User Guide (English): https://guide.fizziq.org/en/fizziq/
+- FizziQ Connect User Guide (English): https://guide.fizziq.org/en/fizziq-connect/
 
 ## Questions fréquentes
 
