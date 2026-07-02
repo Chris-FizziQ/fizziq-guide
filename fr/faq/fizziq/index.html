@@ -5,10 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ FizziQ - Questions sur l'application mobile</title>
 
-    <meta name="description" content="Questions fréquentes sur l'application FizziQ : interface, capteurs, cahier d'expériences, enregistrement, export et analyse cinématique.">
-    <meta name="keywords" content="FizziQ, FAQ, application, mobile, capteurs, sciences">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Questions fréquentes sur l'application FizziQ : comment utiliser les capteurs du smartphone, enregistrer des mesures, exporter en CSV/PDF, analyser une vidéo.">
+    <meta name="keywords" content="FizziQ, FAQ, application sciences, capteurs smartphone, cahier expériences, export CSV, analyse cinématique">
+    <meta name="author" content="FizziQ Labs">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://guide.fizziq.org/fr/faq/fizziq/">
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="FAQ FizziQ - Application de sciences expérimentales">
+    <meta property="og:description" content="Comment utiliser FizziQ pour transformer votre smartphone en laboratoire de sciences ? Réponses aux questions fréquentes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guide.fizziq.org/fr/faq/fizziq/">
+    <meta property="og:site_name" content="FizziQ Guide">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FAQ FizziQ">
+    <meta name="twitter:description" content="Comment utiliser FizziQ ? Réponses aux questions fréquentes sur l'application de sciences.">
+
+    <!-- Schema.org: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.fizziq.org/#organization",
+        "name": "FizziQ Labs",
+        "url": "https://www.fizziq.org",
+        "description": "FizziQ Labs développe des applications éducatives pour l'enseignement des sciences expérimentales."
+    }
+    </script>
+
+    <!-- Schema.org: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "@id": "https://www.fizziq.org/#fizziq-app",
+        "name": "FizziQ",
+        "description": "FizziQ est une application gratuite (iOS et Android) qui transforme un smartphone en laboratoire de sciences. Elle utilise les capteurs intégrés du téléphone (accéléromètre, microphone, GPS, magnétomètre) pour réaliser des mesures scientifiques. Les données sont enregistrées dans un cahier d'expériences et peuvent être exportées en CSV ou PDF.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "iOS, Android",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "author": { "@id": "https://www.fizziq.org/#organization" }
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -16,10 +60,18 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "Comment accéder aux différents capteurs dans FizziQ ?",
+                "name": "Qu'est-ce que FizziQ ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Pour accéder aux capteurs, appuyez sur l'onglet Mesures en bas de l'écran, puis sur le bouton Instruments (icône +). Vous verrez la liste des 50+ capteurs disponibles classés par catégorie."
+                    "text": "FizziQ est une application gratuite (iOS et Android) qui transforme votre smartphone en laboratoire de sciences. Elle utilise les capteurs intégrés du téléphone (accéléromètre, microphone, GPS, magnétomètre, capteur de lumière) pour réaliser des mesures scientifiques."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment accéder aux capteurs dans FizziQ ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Appuyez sur l'onglet Mesures en bas de l'écran, puis sur Instruments (icône +). Vous verrez la liste des 50+ capteurs disponibles classés par catégorie : Mouvement, Son, Lumière, Environnement, Localisation."
                 }
             },
             {
@@ -35,7 +87,23 @@
                 "name": "Comment exporter mes données en CSV ou PDF ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Ouvrez votre expérience dans le cahier, appuyez sur l'icône de partage, puis sélectionnez Exporter en CSV ou Exporter en PDF selon vos besoins."
+                    "text": "Ouvrez votre expérience dans le cahier, appuyez sur l'icône de partage, puis sélectionnez Exporter en CSV (pour analyse dans Excel/Sheets) ou Exporter en PDF (pour un rapport complet avec graphiques)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment fonctionne l'analyse cinématique vidéo ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Allez dans Outils > Cinématique, importez une vidéo, définissez l'échelle avec une référence connue, puis pointez la position de l'objet image par image. FizziQ calcule automatiquement position, vitesse et accélération."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce que le cahier d'expériences FizziQ ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Le cahier d'expériences est l'espace central de FizziQ où vous organisez vos travaux scientifiques. Il contient vos mesures sous forme de graphiques, tableaux, photos et textes. Vous pouvez créer plusieurs expériences et les exporter."
                 }
             }
         ]

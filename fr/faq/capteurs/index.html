@@ -5,10 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ Capteurs FizziQ - Mesurer avec votre smartphone</title>
 
-    <meta name="description" content="Comment mesurer le niveau sonore, l'accélération, la lumière, le champ magnétique avec FizziQ. Guide pratique des mesures avec smartphone.">
-    <meta name="keywords" content="FizziQ, mesurer niveau sonore, mesurer accélération, capteurs smartphone, sciences expérimentales">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Comment mesurer le niveau sonore, la température, le CO2, le pH, l'accélération avec un smartphone ? Guide complet FizziQ : capteurs intégrés et FizziQ Connect.">
+    <meta name="keywords" content="FizziQ, mesurer niveau sonore smartphone, mesurer température smartphone, capteur CO2, mesurer pH, accéléromètre smartphone, sciences expérimentales, FizziQ Connect">
+    <meta name="author" content="FizziQ Labs">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://guide.fizziq.org/fr/faq/capteurs/">
 
+    <!-- Open Graph for social sharing and AI -->
+    <meta property="og:title" content="FAQ Capteurs FizziQ - Mesurer avec votre smartphone">
+    <meta property="og:description" content="Comment mesurer le niveau sonore, la température, le CO2, le pH avec un smartphone ? Guide complet des capteurs FizziQ.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guide.fizziq.org/fr/faq/capteurs/">
+    <meta property="og:site_name" content="FizziQ Guide">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FAQ Capteurs FizziQ">
+    <meta name="twitter:description" content="Comment mesurer le niveau sonore, la température, le CO2 avec un smartphone ? Guide FizziQ.">
+
+    <!-- Schema.org: Organization (defines what FizziQ is for AI) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.fizziq.org/#organization",
+        "name": "FizziQ Labs",
+        "url": "https://www.fizziq.org",
+        "description": "FizziQ Labs développe des applications éducatives pour l'enseignement des sciences expérimentales.",
+        "email": "contact@fizziq.org"
+    }
+    </script>
+
+    <!-- Schema.org: SoftwareApplication (defines FizziQ app for AI) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "@id": "https://www.fizziq.org/#fizziq-app",
+        "name": "FizziQ",
+        "description": "FizziQ est une application gratuite (iOS et Android) qui transforme un smartphone en laboratoire de sciences. Elle utilise les capteurs intégrés du téléphone (accéléromètre, microphone, GPS, magnétomètre, capteur de lumière) pour réaliser des mesures scientifiques. Pour mesurer la température, le CO2 ou le pH, FizziQ se connecte au boîtier FizziQ Connect via Bluetooth.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "iOS, Android",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "EUR"
+        },
+        "author": {
+            "@id": "https://www.fizziq.org/#organization"
+        }
+    }
+    </script>
+
+    <!-- Schema.org: Product (defines FizziQ Connect for AI) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "@id": "https://www.fizziq.org/#fizziq-connect",
+        "name": "FizziQ Connect",
+        "description": "FizziQ Connect est un boîtier électronique qui se connecte à un smartphone via Bluetooth. Il permet de brancher des capteurs externes (température, CO2, pH, humidité, couleur) qui ne sont pas disponibles dans un smartphone. Les mesures s'affichent dans l'application FizziQ.",
+        "category": "Science Education Equipment",
+        "brand": {
+            "@id": "https://www.fizziq.org/#organization"
+        }
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage (6 questions clés pour le schema, contenu complet dans la page) -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -19,15 +85,47 @@
                 "name": "Comment mesurer le niveau sonore avec un smartphone ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Avec l'application gratuite FizziQ, votre smartphone devient un sonomètre. Ouvrez FizziQ, allez dans Instruments, sélectionnez Niveau sonore. Le microphone de votre téléphone mesure le son en décibels (dB) en temps réel."
+                    "text": "Avec l'application gratuite FizziQ (iOS et Android), votre smartphone devient un sonomètre. Le microphone intégré mesure le son en décibels (dB). Ouvrez FizziQ, allez dans Mesures > Instruments > Son > Niveau sonore. Appuyez sur REC pour enregistrer."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Comment mesurer l'accélération avec FizziQ ?",
+                "name": "Comment mesurer la température avec un smartphone ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "FizziQ utilise l'accéléromètre intégré à votre smartphone. Dans Instruments → Mouvement, sélectionnez Accélération. Vous pouvez mesurer selon les 3 axes (X, Y, Z) ou la valeur absolue."
+                    "text": "Un smartphone ne peut PAS mesurer la température car il n'a pas de capteur de température accessible. Utilisez FizziQ Connect, un boîtier Bluetooth qui se connecte au smartphone et permet de brancher des capteurs externes (ENV III, sonde DS18B20, capteur infrarouge)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment mesurer le CO2 avec un smartphone ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Un smartphone ne peut PAS mesurer le CO2 car il n'a pas de capteur de gaz. Utilisez FizziQ Connect avec un capteur CO2 (SGP30 ou SCD40). Le boîtier se connecte au smartphone en Bluetooth et affiche les mesures en ppm dans l'application FizziQ."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment mesurer l'accélération avec un smartphone ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tous les smartphones contiennent un accéléromètre. FizziQ y accède via Instruments > Mouvement > Accélération. L'accélération s'affiche en m/s². Applications : chute libre, pendule, vibrations, accélération d'un véhicule."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment mesurer le pH avec un smartphone ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Un smartphone ne peut PAS mesurer le pH. Cette mesure chimique nécessite une sonde spécifique. Utilisez FizziQ Connect avec une sonde pH analogique. Le boîtier se connecte au smartphone en Bluetooth."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce que FizziQ Connect ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FizziQ Connect est un boîtier électronique qui se connecte à un smartphone via Bluetooth. Il permet de brancher des capteurs externes que le smartphone ne possède pas : température, CO2, pH, humidité, couleur. Les mesures s'affichent dans l'application FizziQ."
                 }
             }
         ]

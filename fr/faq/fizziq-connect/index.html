@@ -3,12 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ FizziQ Connect - Questions sur le boîtier de capteurs</title>
+    <title>FAQ FizziQ Connect - Boîtier de capteurs externes Bluetooth</title>
 
-    <meta name="description" content="Questions fréquentes sur FizziQ Connect : installation, connexion Bluetooth, capteurs I2C, analogiques, 1-Wire, autonomie et dépannage.">
-    <meta name="keywords" content="FizziQ Connect, FAQ, capteurs, Bluetooth, I2C, Grove, M5 Stack">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Questions fréquentes sur FizziQ Connect : comment connecter des capteurs externes (température, CO2, pH) à un smartphone via Bluetooth pour l'application FizziQ.">
+    <meta name="keywords" content="FizziQ Connect, capteurs externes, Bluetooth, température smartphone, capteur CO2, capteur pH, M5 Stack, Grove, I2C">
+    <meta name="author" content="FizziQ Labs">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://guide.fizziq.org/fr/faq/fizziq-connect/">
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="FAQ FizziQ Connect - Capteurs externes pour smartphone">
+    <meta property="og:description" content="Comment connecter des capteurs de température, CO2, pH à un smartphone ? FizziQ Connect est un boîtier Bluetooth pour l'application FizziQ.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guide.fizziq.org/fr/faq/fizziq-connect/">
+    <meta property="og:site_name" content="FizziQ Guide">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FAQ FizziQ Connect">
+    <meta name="twitter:description" content="Connecter des capteurs externes à un smartphone via Bluetooth avec FizziQ Connect.">
+
+    <!-- Schema.org: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.fizziq.org/#organization",
+        "name": "FizziQ Labs",
+        "url": "https://www.fizziq.org"
+    }
+    </script>
+
+    <!-- Schema.org: Product (FizziQ Connect) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "@id": "https://www.fizziq.org/#fizziq-connect",
+        "name": "FizziQ Connect",
+        "description": "FizziQ Connect est un boîtier électronique qui se connecte à un smartphone via Bluetooth Low Energy. Il permet de brancher des capteurs externes (température, CO2, pH, humidité, couleur) que le smartphone ne possède pas. Les mesures s'affichent dans l'application FizziQ. Basé sur le M5 Stack, il supporte les capteurs I2C, analogiques et 1-Wire.",
+        "category": "Science Education Equipment",
+        "brand": { "@id": "https://www.fizziq.org/#organization" }
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -19,15 +60,47 @@
                 "name": "Qu'est-ce que FizziQ Connect ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "FizziQ Connect est un boîtier éducatif basé sur le M5 Stack qui permet de connecter des capteurs externes à l'application FizziQ via Bluetooth Low Energy."
+                    "text": "FizziQ Connect est un boîtier électronique qui se connecte à un smartphone via Bluetooth. Il permet de brancher des capteurs externes (température, CO2, pH, humidité) que le smartphone ne possède pas. Les mesures s'affichent dans l'application FizziQ."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Quelle est l'autonomie de FizziQ Connect ?",
+                "name": "Pourquoi ai-je besoin de FizziQ Connect ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "L'autonomie varie selon les capteurs : environ 8 heures avec le capteur Environnement, 4 heures avec le capteur e-CO2."
+                    "text": "Un smartphone ne peut pas mesurer la température, le CO2, le pH ou l'humidité car il ne possède pas ces capteurs. FizziQ Connect comble cette lacune en permettant de brancher des capteurs externes qui communiquent avec l'application FizziQ via Bluetooth."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment connecter FizziQ Connect à mon smartphone ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Allumez FizziQ Connect, puis dans l'application FizziQ, allez dans Instruments > FizziQ Connect. Activez le Bluetooth si demandé et sélectionnez votre boîtier dans la liste. Les capteurs apparaissent automatiquement."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quels types de capteurs sont compatibles avec FizziQ Connect ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FizziQ Connect supporte 3 types de capteurs : capteurs I2C (M5 Stack, Grove, Seeed Studio), capteurs analogiques (0-3.3V comme les sondes pH), et capteurs 1-Wire (comme la sonde de température DS18B20)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quelle est l'autonomie de la batterie de FizziQ Connect ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "L'autonomie varie selon les capteurs : environ 8 heures avec le capteur Environnement, 4 heures avec le capteur CO2. Rechargez via USB-C en environ 2 heures."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "FizziQ Connect fonctionne-t-il sans smartphone ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui, FizziQ Connect peut fonctionner de manière autonome. L'écran intégré affiche les mesures en temps réel. La connexion Bluetooth au smartphone est optionnelle."
                 }
             }
         ]
