@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ Capteurs FizziQ - Tous les capteurs et instruments</title>
+    <title>FAQ Capteurs FizziQ - Mesurer avec votre smartphone</title>
 
-    <meta name="description" content="Questions fréquentes sur les capteurs FizziQ : accéléromètre, sonomètre, luxmètre, magnétomètre, GPS, pH, CO2, température et plus.">
-    <meta name="keywords" content="FizziQ, capteurs, accéléromètre, sonomètre, luxmètre, pH, CO2, température, GPS">
+    <meta name="description" content="Comment mesurer le niveau sonore, l'accélération, la lumière, le champ magnétique avec FizziQ. Guide pratique des mesures avec smartphone.">
+    <meta name="keywords" content="FizziQ, mesurer niveau sonore, mesurer accélération, capteurs smartphone, sciences expérimentales">
     <link rel="canonical" href="https://guide.fizziq.org/fr/faq/capteurs/">
 
     <script type="application/ld+json">
@@ -16,18 +16,18 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "Comment utiliser l'accéléromètre dans FizziQ ?",
+                "name": "Comment mesurer le niveau sonore avec un smartphone ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "L'accéléromètre mesure l'accélération selon 3 axes (X, Y, Z) ou en valeur absolue. Utilisez-le pour étudier la chute libre, les mouvements circulaires, les vibrations ou l'accélération d'un véhicule."
+                    "text": "Avec l'application gratuite FizziQ, votre smartphone devient un sonomètre. Ouvrez FizziQ, allez dans Instruments, sélectionnez Niveau sonore. Le microphone de votre téléphone mesure le son en décibels (dB) en temps réel."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Comment mesurer le CO2 avec FizziQ Connect ?",
+                "name": "Comment mesurer l'accélération avec FizziQ ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Utilisez le capteur e-CO2/TVOC (SGP30) ou le capteur SCD40. Branchez-le sur un port I2C. Le capteur nécessite quelques minutes de préchauffage pour des mesures précises."
+                    "text": "FizziQ utilise l'accéléromètre intégré à votre smartphone. Dans Instruments → Mouvement, sélectionnez Accélération. Vous pouvez mesurer selon les 3 axes (X, Y, Z) ou la valeur absolue."
                 }
             }
         ]
@@ -64,6 +64,8 @@
         .faq-answer strong { color: var(--ink); }
         .faq-answer a { color: var(--accent); text-decoration: none; font-weight: 500; }
         .faq-answer a:hover { text-decoration: underline; }
+        .faq-answer .steps { margin: 0.75rem 0; padding-left: 1.2rem; }
+        .faq-answer .steps li { margin-bottom: 0.3rem; }
         .related { margin-top: 3rem; padding: 1.5rem; background: var(--soft-blue); border-radius: 12px; }
         .related h3 { font-size: 1rem; color: var(--brand); margin-bottom: 0.75rem; }
         .related-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
@@ -78,13 +80,14 @@
 <header class="header">
     <div class="icon">📡</div>
     <h1>FAQ Capteurs</h1>
-    <p>Tous les capteurs FizziQ et FizziQ Connect</p>
+    <p>Mesurer avec FizziQ et FizziQ Connect</p>
 </header>
 
 <nav class="nav-bar">
     <a href="../">← Toutes les FAQ</a>
     <a href="../fizziq/">FizziQ App</a>
     <a href="../fizziq-connect/">FizziQ Connect</a>
+    <a href="../../../fr/fizziq/#instruments">Guide des instruments</a>
 </nav>
 
 <main class="main">
@@ -92,27 +95,60 @@
     <h2 class="section-title">🎵 Son et acoustique</h2>
     <div class="faq-list">
         <div class="faq-item">
-            <button class="faq-question">Comment utiliser le sonomètre ?<span class="chevron">▼</span></button>
+            <button class="faq-question">Comment mesurer le niveau sonore avec un smartphone ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                Le <strong>sonomètre</strong> mesure le niveau sonore en décibels (dB). Dans Instruments, sélectionnez Sonomètre. L'écran affiche le niveau en temps réel. Appuyez sur REC pour enregistrer l'évolution. Idéal pour étudier la pollution sonore ou comparer des sources sonores.
+                Votre smartphone peut mesurer le niveau sonore grâce à son microphone intégré. L'application <strong>FizziQ</strong> (gratuite sur iOS et Android) transforme votre téléphone en sonomètre.
+                <ol class="steps">
+                    <li>Ouvrez <strong>FizziQ</strong> sur votre smartphone ou tablette</li>
+                    <li>Appuyez sur l'onglet <strong>Mesures</strong> en bas de l'écran</li>
+                    <li>Appuyez sur <strong>Instruments</strong> (icône +)</li>
+                    <li>Dans la catégorie <strong>Son</strong>, sélectionnez <strong>Niveau sonore</strong></li>
+                    <li>Le niveau s'affiche en décibels (dB) en temps réel</li>
+                    <li>Appuyez sur <strong>REC</strong> pour enregistrer l'évolution du son</li>
+                </ol>
+                Idéal pour étudier la pollution sonore, comparer des sources sonores ou mesurer l'isolation acoustique.
+                <br><br><a href="../../../fr/fizziq/#instruments">→ Voir le guide complet des instruments</a>
             </div>
         </div>
         <div class="faq-item">
             <button class="faq-question">Comment mesurer la fréquence d'un son ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                Utilisez l'instrument <strong>Fréquence fondamentale</strong> ou le <strong>Spectrogramme</strong>. La fréquence fondamentale donne directement la note en Hz, tandis que le spectrogramme affiche toutes les fréquences présentes, permettant d'identifier les harmoniques.
+                FizziQ analyse le son capté par le microphone de votre smartphone pour déterminer sa fréquence.
+                <ol class="steps">
+                    <li>Dans FizziQ, allez dans <strong>Instruments</strong> → catégorie <strong>Son</strong></li>
+                    <li>Choisissez <strong>Fréquence fondamentale</strong> pour obtenir la note principale en Hz</li>
+                    <li>Ou choisissez <strong>Spectrogramme</strong> pour visualiser toutes les fréquences présentes</li>
+                </ol>
+                La fréquence fondamentale est idéale pour accorder un instrument ou identifier une note. Le spectrogramme permet d'analyser les harmoniques et la richesse d'un son.
+                <br><br><a href="../../../fr/fizziq/#instruments">→ Voir le guide complet des instruments</a>
             </div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">Comment utiliser le chronomètre sonore ?<span class="chevron">▼</span></button>
+            <button class="faq-question">Comment mesurer le temps entre deux sons ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                Le <strong>chronomètre sonore</strong> mesure le temps entre deux événements sonores. Dans Outils → Chronomètres, réglez le seuil de déclenchement en dB. Le chrono démarre au premier son et s'arrête au second. Idéal pour mesurer la vitesse du son.
+                FizziQ propose un <strong>chronomètre sonore</strong> qui démarre et s'arrête automatiquement en détectant un son.
+                <ol class="steps">
+                    <li>Dans FizziQ, allez dans <strong>Outils</strong> → <strong>Chronomètres</strong></li>
+                    <li>Sélectionnez <strong>Chronomètre sonore</strong></li>
+                    <li>Réglez le <strong>seuil de déclenchement</strong> en dB (ex: 60 dB)</li>
+                    <li>Le chrono démarre au premier son dépassant le seuil et s'arrête au second</li>
+                </ol>
+                Parfait pour mesurer la vitesse du son (avec l'écho) ou chronométrer des événements déclenchés par le son.
+                <br><br><a href="../../../fr/fizziq/#outils">→ Voir le guide des outils</a>
             </div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">Comment utiliser le synthétiseur de sons ?<span class="chevron">▼</span></button>
+            <button class="faq-question">Comment générer un son de fréquence précise ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                Le <strong>synthétiseur</strong> génère des sons de fréquence précise (20 Hz à 20 000 Hz). Dans Outils → Synthétiseur, réglez la fréquence, le volume et la forme d'onde (sinusoïdale, carrée, triangle). Parfait pour étudier les battements ou tester l'audition.
+                FizziQ inclut un <strong>synthétiseur de sons</strong> qui génère des fréquences précises via le haut-parleur du smartphone.
+                <ol class="steps">
+                    <li>Dans FizziQ, allez dans <strong>Outils</strong> → <strong>Synthétiseur</strong></li>
+                    <li>Réglez la <strong>fréquence</strong> (de 20 Hz à 20 000 Hz)</li>
+                    <li>Choisissez la <strong>forme d'onde</strong> : sinusoïdale, carrée ou triangle</li>
+                    <li>Ajustez le volume et appuyez sur Play</li>
+                </ol>
+                Idéal pour étudier les battements entre deux fréquences proches, les résonances acoustiques, ou tester les limites de l'audition.
+                <br><br><a href="../../../fr/fizziq/#outils">→ Voir le guide des outils</a>
             </div>
         </div>
     </div>
@@ -120,43 +156,102 @@
     <h2 class="section-title">🏃 Mouvement et accélération</h2>
     <div class="faq-list">
         <div class="faq-item">
-            <button class="faq-question">Comment utiliser l'accéléromètre ?<span class="chevron">▼</span></button>
+            <button class="faq-question">Comment mesurer l'accélération avec un smartphone ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                L'<strong>accéléromètre</strong> mesure l'accélération selon 3 axes (X, Y, Z) ou en valeur absolue. Utilisez-le pour étudier la chute libre (environ 0g en chute), les mouvements circulaires, les vibrations ou l'accélération d'un véhicule.
+                Tous les smartphones modernes contiennent un <strong>accéléromètre</strong>. FizziQ vous permet d'accéder à ce capteur pour vos expériences.
+                <ol class="steps">
+                    <li>Ouvrez <strong>FizziQ</strong> sur votre smartphone</li>
+                    <li>Allez dans <strong>Instruments</strong> → catégorie <strong>Mouvement</strong></li>
+                    <li>Choisissez <strong>Accélération X</strong>, <strong>Y</strong>, <strong>Z</strong> ou <strong>Absolue</strong></li>
+                    <li>L'accélération s'affiche en m/s² (ou en g)</li>
+                    <li>Appuyez sur <strong>REC</strong> pour enregistrer</li>
+                </ol>
+                Applications : chute libre (0g pendant la chute), mouvements circulaires (accélération centripète), vibrations, accélération d'un véhicule.
+                <br><br><a href="../../../fr/fizziq/#instruments">→ Voir le guide complet des instruments</a>
             </div>
         </div>
         <div class="faq-item">
             <button class="faq-question">Comment mesurer la période d'un pendule ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                Fixez le smartphone au pendule et utilisez l'accéléromètre. Enregistrez plusieurs oscillations, puis analysez le graphique pour mesurer le temps entre deux maxima. Vous pouvez aussi utiliser le chronomètre sonore si le pendule produit un clic régulier.
+                FizziQ utilise l'accéléromètre du smartphone pour enregistrer les oscillations d'un pendule.
+                <ol class="steps">
+                    <li>Fixez solidement le smartphone au pendule (avec du ruban adhésif par exemple)</li>
+                    <li>Dans FizziQ, sélectionnez <strong>Accélération</strong> (axe approprié ou absolue)</li>
+                    <li>Appuyez sur <strong>REC</strong> et laissez osciller le pendule</li>
+                    <li>Arrêtez l'enregistrement après plusieurs oscillations</li>
+                    <li>Dans le cahier, analysez le graphique pour mesurer la période entre deux maxima</li>
+                </ol>
+                Vous pouvez aussi utiliser le chronomètre sonore si le pendule produit un clic régulier à chaque passage.
+                <br><br><a href="../../../fr/fizziq/#donnees-capteurs">→ Voir le guide d'analyse des données</a>
             </div>
         </div>
         <div class="faq-item">
             <button class="faq-question">Comment mesurer la vitesse du son ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                Utilisez le chronomètre sonore avec deux appareils FizziQ placés à distance connue. Un clap déclenche les deux chronomètres avec un décalage. Mesurez le décalage temporel et divisez la distance par ce temps. Autre méthode : utilisez l'écho sur un mur.
+                FizziQ permet de mesurer la vitesse du son de plusieurs façons.
+                <br><br><strong>Méthode 1 : Avec l'écho</strong>
+                <ol class="steps">
+                    <li>Placez-vous face à un mur à distance connue (ex: 50 m)</li>
+                    <li>Utilisez le <strong>chronomètre sonore</strong></li>
+                    <li>Tapez dans vos mains : le chrono mesure le temps aller-retour de l'écho</li>
+                    <li>Vitesse = 2 × distance / temps</li>
+                </ol>
+                <strong>Méthode 2 : Avec deux smartphones</strong>
+                <ol class="steps">
+                    <li>Placez deux smartphones FizziQ à distance connue</li>
+                    <li>Lancez les deux chronomètres sonores</li>
+                    <li>Un clap déclenche les deux avec un léger décalage</li>
+                    <li>Vitesse = distance / décalage temporel</li>
+                </ol>
+                <a href="../../../fr/fizziq/#outils">→ Voir le guide des outils</a>
             </div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">Comment utiliser le GPS ?<span class="chevron">▼</span></button>
+            <button class="faq-question">Comment mesurer la position et la vitesse en extérieur ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                Le <strong>GPS</strong> mesure position, altitude, vitesse et distance parcourue. Dans Instruments → Localisation, choisissez la grandeur souhaitée. Activez la localisation sur votre appareil. Idéal pour des expériences en extérieur.
+                FizziQ accède au <strong>GPS</strong> de votre smartphone pour mesurer position, altitude, vitesse et distance.
+                <ol class="steps">
+                    <li>Activez la <strong>localisation</strong> dans les paramètres de votre téléphone</li>
+                    <li>Dans FizziQ, allez dans <strong>Instruments</strong> → catégorie <strong>Localisation</strong></li>
+                    <li>Choisissez : <strong>Latitude</strong>, <strong>Longitude</strong>, <strong>Altitude</strong>, <strong>Vitesse GPS</strong> ou <strong>Distance parcourue</strong></li>
+                    <li>Appuyez sur <strong>REC</strong> pour enregistrer votre trajet</li>
+                </ol>
+                Idéal pour les expériences en extérieur : étude du mouvement d'un vélo, randonnée avec mesure de dénivelé, cartographie.
+                <br><br><a href="../../../fr/fizziq/#instruments">→ Voir le guide complet des instruments</a>
             </div>
         </div>
     </div>
 
-    <h2 class="section-title">💡 Lumière et couleur</h2>
+    <h2 class="section-title">💡 Lumière</h2>
     <div class="faq-list">
         <div class="faq-item">
             <button class="faq-question">Comment mesurer l'intensité lumineuse ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                Le <strong>luxmètre</strong> utilise le capteur de luminosité pour mesurer l'éclairement en lux. Dans Instruments → Lumière, sélectionnez Luxmètre. Parfait pour comparer des sources lumineuses ou étudier l'atténuation avec la distance.
+                Votre smartphone possède un <strong>capteur de luminosité</strong> (utilisé pour ajuster la luminosité de l'écran). FizziQ l'utilise comme luxmètre.
+                <ol class="steps">
+                    <li>Dans FizziQ, allez dans <strong>Instruments</strong> → catégorie <strong>Lumière</strong></li>
+                    <li>Sélectionnez <strong>Luminosité</strong> (ou <strong>Éclairement</strong>)</li>
+                    <li>Le niveau s'affiche en lux</li>
+                    <li>Appuyez sur <strong>REC</strong> pour enregistrer les variations</li>
+                </ol>
+                Applications : comparer des sources lumineuses, vérifier la loi en 1/d², mesurer l'éclairage d'une pièce, étudier l'atténuation par différents matériaux.
+                <br><br><a href="../../../fr/fizziq/#instruments">→ Voir le guide complet des instruments</a>
             </div>
         </div>
         <div class="faq-item">
             <button class="faq-question">Comment mesurer la couleur de la lumière ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                Avec FizziQ Connect, le capteur <strong>Couleur</strong> (TCS34725) mesure les composantes Rouge, Vert, Bleu (RGB). Branchez-le sur un port I2C. Parfait pour étudier la synthèse additive des couleurs ou faire de la colorimétrie.
+                <strong>Un smartphone ne peut pas analyser précisément la couleur</strong> de la lumière. Son capteur de luminosité ne donne qu'une valeur globale en lux. Pour mesurer les composantes RGB (Rouge, Vert, Bleu), vous avez besoin du boîtier <strong>FizziQ Connect</strong> avec un capteur de couleur.
+                <br><br><strong>Qu'est-ce que FizziQ Connect ?</strong> C'est un petit boîtier électronique qui se connecte à votre smartphone en Bluetooth et permet de brancher des capteurs spécialisés.
+                <br><br><strong>Comment faire :</strong>
+                <ol class="steps">
+                    <li>Branchez le capteur de couleur (<strong>TCS34725</strong>) sur un port I2C de FizziQ Connect</li>
+                    <li>Allumez FizziQ Connect et ouvrez l'application FizziQ</li>
+                    <li>Connectez FizziQ Connect via Bluetooth</li>
+                    <li>Le capteur affiche les valeurs R, G, B et la luminosité globale</li>
+                </ol>
+                <strong>Applications :</strong> étudier la synthèse additive des couleurs, analyser la composition spectrale de sources lumineuses, faire de la colorimétrie, comparer des pigments.
+                <br><br><a href="../../../fr/fizziq-connect/">→ Voir le guide complet de FizziQ Connect</a>
             </div>
         </div>
     </div>
@@ -166,25 +261,53 @@
         <div class="faq-item">
             <button class="faq-question">Comment mesurer la température ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                Avec FizziQ Connect, plusieurs options : le <strong>capteur Environnement</strong> (température ambiante), le capteur <strong>Infrarouge</strong> (sans contact), ou la <strong>sonde DS18B20</strong> (immersion dans les liquides, -55°C à +125°C).
+                <strong>Un smartphone ne peut pas mesurer la température</strong> : il ne possède pas de capteur de température accessible aux applications. Pour cette mesure, vous avez besoin du boîtier <strong>FizziQ Connect</strong>.
+                <br><br><strong>Qu'est-ce que FizziQ Connect ?</strong> C'est un petit boîtier électronique qui se connecte à votre smartphone en Bluetooth. Il permet de brancher des capteurs externes (température, pH, CO2...) et d'afficher leurs mesures directement dans l'application FizziQ.
+                <br><br><strong>Capteurs de température disponibles :</strong>
+                <ul class="steps">
+                    <li><strong>Capteur Environnement</strong> (ENV III) : température ambiante + humidité + pression</li>
+                    <li><strong>Capteur Infrarouge</strong> (MLX90614) : température sans contact (pratique pour mesurer la température d'un objet)</li>
+                    <li><strong>Sonde DS18B20</strong> : sonde étanche pour plonger dans un liquide (-55°C à +125°C)</li>
+                </ul>
+                <strong>Comment faire :</strong>
+                <ol class="steps">
+                    <li>Branchez le capteur de température sur FizziQ Connect</li>
+                    <li>Allumez FizziQ Connect et ouvrez l'application FizziQ</li>
+                    <li>Appuyez sur <strong>Instruments</strong> puis <strong>FizziQ Connect</strong> pour connecter via Bluetooth</li>
+                    <li>Le capteur apparaît automatiquement et affiche la température en °C</li>
+                </ol>
+                <a href="../../../fr/fizziq-connect/">→ Voir le guide complet de FizziQ Connect</a>
             </div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">Comment utiliser la sonde DS18B20 ?<span class="chevron">▼</span></button>
+            <button class="faq-question">Comment mesurer l'humidité de l'air ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                La sonde <strong>DS18B20</strong> est un capteur 1-Wire étanche, idéal pour les liquides. Branchez-la sur le port 1-Wire (port Grove noir) de FizziQ Connect. Plage : -55°C à +125°C avec précision de 0.5°C.
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">Comment mesurer l'humidité ?<span class="chevron">▼</span></button>
-            <div class="faq-answer">
-                Le capteur <strong>Environnement</strong> (ENV III) mesure l'humidité relative en %. Il mesure aussi température et pression. Branchez-le sur un port I2C de FizziQ Connect. Idéal pour étudier la météo ou le confort thermique.
+                <strong>Un smartphone ne peut pas mesurer l'humidité</strong> : il ne possède pas d'hygromètre. Pour cette mesure, vous avez besoin du boîtier <strong>FizziQ Connect</strong> avec un capteur d'environnement.
+                <br><br><strong>Qu'est-ce que FizziQ Connect ?</strong> C'est un petit boîtier électronique qui se connecte à votre smartphone en Bluetooth et permet de brancher des capteurs externes.
+                <br><br><strong>Comment faire :</strong>
+                <ol class="steps">
+                    <li>Branchez le capteur <strong>Environnement</strong> (ENV III) sur un port I2C de FizziQ Connect</li>
+                    <li>Allumez FizziQ Connect et ouvrez l'application FizziQ</li>
+                    <li>Connectez FizziQ Connect via Bluetooth (menu Instruments)</li>
+                    <li>L'humidité relative s'affiche en pourcentage (%)</li>
+                </ol>
+                <strong>Bonus :</strong> ce capteur mesure aussi la température et la pression atmosphérique en une seule fois.
+                <br><br><strong>Applications :</strong> étudier la météo, le confort thermique d'une salle, les conditions de conservation d'aliments, ou la transpiration des plantes.
+                <br><br><a href="../../../fr/fizziq-connect/">→ Voir le guide complet de FizziQ Connect</a>
             </div>
         </div>
         <div class="faq-item">
             <button class="faq-question">Comment mesurer la pression atmosphérique ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                Le <strong>baromètre</strong> mesure la pression en hectopascals (hPa). Disponible dans l'app FizziQ (si votre appareil a ce capteur) ou via FizziQ Connect. Utilisez-le pour suivre la météo ou mesurer l'altitude relative.
+                Certains smartphones (notamment les modèles haut de gamme) intègrent un <strong>baromètre</strong>. FizziQ y accède automatiquement s'il est présent.
+                <ol class="steps">
+                    <li>Dans FizziQ, allez dans <strong>Instruments</strong> → catégorie <strong>Environnement</strong></li>
+                    <li>Sélectionnez <strong>Pression atmosphérique</strong></li>
+                    <li>La pression s'affiche en hectopascals (hPa)</li>
+                </ol>
+                Si votre smartphone n'a pas de baromètre, utilisez FizziQ Connect avec le capteur Environnement ou un capteur de pression dédié (BMP280).
+                <br><br>Applications : suivre les variations météo, mesurer l'altitude relative (la pression diminue d'environ 12 hPa par 100 m).
+                <br><br><a href="../../../fr/fizziq/#instruments">→ Voir le guide complet des instruments</a>
             </div>
         </div>
     </div>
@@ -194,47 +317,80 @@
         <div class="faq-item">
             <button class="faq-question">Comment mesurer le CO2 ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                Avec FizziQ Connect, utilisez le capteur <strong>e-CO2/TVOC</strong> (SGP30) ou le <strong>SCD40</strong>. Branchez sur un port I2C. Le capteur nécessite quelques minutes de préchauffage. Idéal pour étudier la qualité de l'air ou la respiration des plantes.
+                <strong>Un smartphone ne peut pas mesurer le CO2</strong> : aucun smartphone n'intègre de capteur de gaz. Pour cette mesure, vous avez besoin du boîtier <strong>FizziQ Connect</strong> avec un capteur CO2.
+                <br><br><strong>Qu'est-ce que FizziQ Connect ?</strong> C'est un petit boîtier électronique qui se connecte à votre smartphone en Bluetooth et permet de brancher des capteurs externes comme un capteur CO2.
+                <br><br><strong>Capteurs CO2 compatibles :</strong>
+                <ul class="steps">
+                    <li><strong>SGP30</strong> : mesure l'équivalent CO2 (e-CO2), économique mais moins précis</li>
+                    <li><strong>SCD40</strong> : capteur de CO2 réel (mesure directe), plus précis pour les expériences scientifiques</li>
+                </ul>
+                <strong>Comment faire :</strong>
+                <ol class="steps">
+                    <li>Branchez le capteur CO2 sur un port I2C de FizziQ Connect</li>
+                    <li>Allumez FizziQ Connect et ouvrez l'application FizziQ</li>
+                    <li>Connectez FizziQ Connect via Bluetooth (menu Instruments)</li>
+                    <li>Attendez 2-3 minutes de préchauffage pour des mesures fiables</li>
+                    <li>Le CO2 s'affiche en ppm (parties par million)</li>
+                </ol>
+                <strong>Applications :</strong> étudier la qualité de l'air d'une salle de classe, mesurer le CO2 produit par la respiration, observer la photosynthèse d'une plante (le CO2 diminue à la lumière), ou suivre la fermentation.
+                <br><br><a href="../../../fr/fizziq-connect/">→ Voir le guide complet de FizziQ Connect</a>
             </div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">Comment mesurer le pH ?<span class="chevron">▼</span></button>
+            <button class="faq-question">Comment mesurer le pH d'une solution ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                Utilisez une sonde pH analogique avec FizziQ Connect. Branchez sur le port analogique. <strong>Calibrez</strong> avec des solutions tampons (pH 4 et pH 7) avant utilisation. La valeur s'affiche en temps réel.
+                <strong>Un smartphone ne peut pas mesurer le pH</strong> : cette mesure chimique nécessite une sonde spécifique. Pour mesurer le pH avec FizziQ, vous avez besoin du boîtier <strong>FizziQ Connect</strong> avec une sonde pH.
+                <br><br><strong>Qu'est-ce que FizziQ Connect ?</strong> C'est un petit boîtier électronique qui se connecte à votre smartphone en Bluetooth. Il possède un port analogique sur lequel vous pouvez brancher une sonde pH.
+                <br><br><strong>Comment faire :</strong>
+                <ol class="steps">
+                    <li>Procurez-vous une sonde pH compatible (sortie analogique 0-3.3V)</li>
+                    <li>Branchez la sonde sur le <strong>port analogique</strong> de FizziQ Connect</li>
+                    <li>Allumez FizziQ Connect et connectez-le à l'application FizziQ via Bluetooth</li>
+                    <li><strong>Calibrez</strong> la sonde avec des solutions tampons (pH 4 et pH 7)</li>
+                    <li>Plongez la sonde dans votre solution et lisez le pH directement dans FizziQ</li>
+                </ol>
+                <strong>Conseils d'utilisation :</strong> rincez la sonde à l'eau distillée entre chaque mesure et conservez-la dans sa solution de stockage (jamais à sec).
+                <br><br><strong>Applications :</strong> suivi d'un dosage acide-base, mesure de l'acidité d'une solution, étude des réactions chimiques.
+                <br><br><a href="../../../fr/fizziq-connect/">→ Voir le guide complet de FizziQ Connect</a>
             </div>
         </div>
     </div>
 
-    <h2 class="section-title">📏 Distance et magnétisme</h2>
+    <h2 class="section-title">🧲 Magnétisme</h2>
     <div class="faq-list">
         <div class="faq-item">
-            <button class="faq-question">Comment mesurer la distance ?<span class="chevron">▼</span></button>
+            <button class="faq-question">Comment mesurer un champ magnétique ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                Avec FizziQ Connect, le capteur <strong>ToF (Time of Flight)</strong> VL53L0X mesure des distances jusqu'à 2 mètres avec précision millimétrique. Branchez sur un port I2C. Idéal pour la cinématique ou mesurer des hauteurs.
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">Comment utiliser le magnétomètre ?<span class="chevron">▼</span></button>
-            <div class="faq-answer">
-                Le <strong>magnétomètre</strong> mesure le champ magnétique en microteslas (µT). Il détecte le champ terrestre et les champs d'aimants ou courants électriques. Idéal pour cartographier un champ ou étudier les électroaimants.
+                Votre smartphone contient un <strong>magnétomètre</strong> (utilisé pour la boussole). FizziQ vous permet de mesurer le champ magnétique en microteslas (µT).
+                <ol class="steps">
+                    <li>Dans FizziQ, allez dans <strong>Instruments</strong> → catégorie <strong>Magnétisme</strong></li>
+                    <li>Sélectionnez <strong>Champ magnétique</strong> (X, Y, Z ou total)</li>
+                    <li>L'intensité s'affiche en µT</li>
+                    <li>Appuyez sur <strong>REC</strong> pour enregistrer les variations</li>
+                </ol>
+                Applications : cartographier le champ d'un aimant, étudier les électroaimants, mesurer le champ magnétique terrestre (environ 50 µT), détecter des objets métalliques.
+                <br><br><a href="../../../fr/fizziq/#instruments">→ Voir le guide complet des instruments</a>
             </div>
         </div>
     </div>
 
-    <h2 class="section-title">🔌 Capteurs FizziQ Connect</h2>
+    <h2 class="section-title">📏 Distance</h2>
     <div class="faq-list">
         <div class="faq-item">
-            <button class="faq-question">Quels capteurs I2C sont compatibles ?<span class="chevron">▼</span></button>
+            <button class="faq-question">Comment mesurer une distance avec précision ?<span class="chevron">▼</span></button>
             <div class="faq-answer">
-                FizziQ Connect reconnaît automatiquement : <strong>Environnement</strong> (ENV III), <strong>CO2</strong> (SGP30, SCD40), <strong>Lumière/Couleur</strong> (TCS34725), <strong>Pression</strong> (BMP280), <strong>Accéléromètre</strong> (MPU6050), <strong>Distance</strong> (ToF VL53L0X), <strong>Infrarouge</strong> (MLX90614) et bien d'autres.
-                <br><br><a href="../../../fr/fizziq-connect/#capteurs-i2c">→ Liste complète des capteurs</a>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="faq-question">Comment connecter des capteurs Bluetooth externes ?<span class="chevron">▼</span></button>
-            <div class="faq-answer">
-                Dans FizziQ, allez dans Instruments → FizziQ Connect, activez le Bluetooth, et sélectionnez votre boîtier. Les capteurs branchés sur FizziQ Connect apparaissent automatiquement dans la liste des instruments.
-                <br><br><a href="../../../fr/fizziq/#bluetooth">→ Voir le guide complet</a>
+                <strong>Un smartphone ne peut pas mesurer directement une distance</strong> avec précision (sauf par GPS en extérieur, mais avec une précision de quelques mètres seulement). Pour des mesures précises, vous avez besoin du boîtier <strong>FizziQ Connect</strong> avec un capteur de distance.
+                <br><br><strong>Qu'est-ce que FizziQ Connect ?</strong> C'est un petit boîtier électronique qui se connecte à votre smartphone en Bluetooth et permet de brancher des capteurs de précision.
+                <br><br><strong>Le capteur ToF (Time of Flight)</strong> mesure jusqu'à 2 mètres avec une précision millimétrique en envoyant un faisceau infrarouge.
+                <br><br><strong>Comment faire :</strong>
+                <ol class="steps">
+                    <li>Branchez le capteur ToF (<strong>VL53L0X</strong>) sur un port I2C de FizziQ Connect</li>
+                    <li>Allumez FizziQ Connect et ouvrez l'application FizziQ</li>
+                    <li>Connectez FizziQ Connect via Bluetooth</li>
+                    <li>La distance s'affiche en temps réel en millimètres</li>
+                </ol>
+                <strong>Applications :</strong> étudier la chute libre, mesurer la période d'un pendule, suivre le mouvement d'un mobile, créer des expériences de cinématique précises.
+                <br><br><a href="../../../fr/fizziq-connect/">→ Voir le guide complet de FizziQ Connect</a>
             </div>
         </div>
     </div>
@@ -245,6 +401,7 @@
             <a href="../fizziq/">FAQ FizziQ App</a>
             <a href="../fizziq-connect/">FAQ FizziQ Connect</a>
             <a href="../../../fr/fizziq/#instruments">Guide des instruments</a>
+            <a href="../../../fr/fizziq-connect/#capteurs-i2c">Capteurs I2C</a>
         </div>
     </div>
 </main>
