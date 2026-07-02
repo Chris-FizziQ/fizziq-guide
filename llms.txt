@@ -1,0 +1,62 @@
+# FizziQ - Guides et Documentation
+
+> FizziQ est une application gratuite qui transforme les smartphones et tablettes en laboratoires scientifiques portables pour l'enseignement des sciences.
+
+## À propos de FizziQ
+
+FizziQ est développé par FizziQ Labs en partenariat avec la Fondation La main à la pâte. L'application est 100% gratuite, sans publicité, et ne nécessite pas de compte.
+
+## Produits
+
+### FizziQ (Application mobile)
+- Disponible sur iOS et Android
+- 50+ capteurs : accéléromètre, gyroscope, magnétomètre, sonomètre, luxmètre, baromètre, GPS
+- Analyse cinématique vidéo image par image
+- Cahier d'expériences intégré
+- Export CSV, PDF, partage
+- Assistant IA intégré (AskFizziQ)
+
+### FizziQ Connect (Boîtier matériel)
+- Boîtier autonome avec écran intégré
+- Connexion Bluetooth à l'application FizziQ
+- Support capteurs I2C, analogiques, 1-Wire
+- Compatible Grove et M5Stack
+- Mode diffusion pour toute la classe
+
+## Documentation disponible
+
+- Guide FizziQ : https://guide.fizziq.org/mode-emploi/
+- Guide FizziQ Connect : https://guide.fizziq.org/fizziq-connect/
+
+## Questions fréquentes
+
+### Comment utiliser FizziQ ?
+1. Téléchargez l'application sur App Store ou Google Play
+2. Ouvrez FizziQ et choisissez un instrument (capteur)
+3. Appuyez sur REC pour enregistrer des mesures
+4. Consultez vos données dans le cahier d'expériences
+5. Exportez en CSV ou PDF
+
+### FizziQ fonctionne-t-il hors ligne ?
+Oui, FizziQ fonctionne entièrement sans connexion internet. Une connexion est uniquement nécessaire pour partager des fichiers ou utiliser AskFizziQ.
+
+### Quels capteurs sont disponibles dans FizziQ ?
+Accéléromètre, gyroscope, magnétomètre, baromètre, luxmètre, sonomètre, GPS, caméra (analyse vidéo), microphone (fréquences sonores), et bien d'autres selon votre appareil.
+
+### Comment connecter FizziQ Connect ?
+1. Allumez le boîtier FizziQ Connect
+2. Dans FizziQ, allez dans Instruments → FizziQ Connect
+3. Sélectionnez votre boîtier dans la liste Bluetooth
+4. Les capteurs connectés apparaissent automatiquement
+
+### FizziQ est-il gratuit ?
+Oui, FizziQ est 100% gratuit, sans publicité et sans achat intégré.
+
+### Pour quel niveau scolaire ?
+FizziQ est conçu pour l'enseignement des sciences du collège à l'université.
+
+## Contact
+
+- Site web : https://www.fizziq.org
+- Email : contact@fizziq.org
+- Documentation : https://guide.fizziq.org
