@@ -50,10 +50,42 @@
 
         h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; }
 
+        .lang-bar {
+            background: var(--brand-deep);
+            padding: 0.5rem 1.5rem;
+            display: flex;
+            justify-content: flex-end;
+            gap: 0.5rem;
+        }
+
+        .lang-btn {
+            padding: 0.4rem 1rem;
+            border: 2px solid rgba(255,255,255,0.3);
+            background: transparent;
+            color: rgba(255,255,255,0.7);
+            border-radius: 20px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .lang-btn:hover {
+            border-color: rgba(255,255,255,0.6);
+            color: white;
+        }
+
+        .lang-btn.active {
+            background: white;
+            color: var(--brand);
+            border-color: white;
+        }
+
         .header {
             background: var(--brand);
             color: white;
-            padding: 3rem 1.5rem;
+            padding: 2.5rem 1.5rem;
             text-align: center;
         }
 
@@ -72,22 +104,36 @@
 
         .main {
             flex: 1;
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 3rem 1.5rem;
+            padding: 2.5rem 1.5rem;
             width: 100%;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: var(--brand);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .section-title .icon {
+            font-size: 1.5rem;
         }
 
         .guides-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
         }
 
         .guide-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 20px;
+            border-radius: 16px;
             overflow: hidden;
             text-decoration: none;
             color: inherit;
@@ -96,36 +142,75 @@
 
         .guide-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 16px 40px rgba(41,49,79,0.12);
+            box-shadow: 0 12px 30px rgba(41,49,79,0.12);
         }
 
         .guide-card img {
             width: 100%;
-            height: 200px;
+            height: 160px;
             object-fit: cover;
         }
 
         .guide-card .content {
-            padding: 1.5rem;
+            padding: 1.25rem;
         }
 
         .guide-card h2 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 700;
             color: var(--brand);
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .guide-card p {
             color: var(--text-light);
-            font-size: 0.95rem;
-            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
         }
 
         .guide-card .cta {
             color: var(--accent);
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .faq-card {
+            background: var(--soft-blue);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            text-align: center;
+        }
+
+        .faq-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(41,49,79,0.1);
+        }
+
+        .faq-card .icon {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--brand);
+            margin-bottom: 0.25rem;
+        }
+
+        .faq-card .count {
+            font-size: 0.8rem;
+            color: var(--text-light);
         }
 
         footer {
@@ -144,64 +229,89 @@
         footer a:hover {
             text-decoration: underline;
         }
+
+        .hidden { display: none; }
     </style>
 </head>
 <body>
 
+<div class="lang-bar">
+    <button class="lang-btn active" data-lang="fr">Français</button>
+    <button class="lang-btn" data-lang="en">English</button>
+</div>
+
 <header class="header">
-    <h1>Guides FizziQ</h1>
-    <p>Modes d'emploi complets pour l'application FizziQ et le boîtier FizziQ Connect</p>
+    <h1 class="lang-text" data-fr="Guides FizziQ" data-en="FizziQ Guides">Guides FizziQ</h1>
+    <p class="lang-text" data-fr="Modes d'emploi complets pour l'application FizziQ et le boîtier FizziQ Connect" data-en="Complete user guides for the FizziQ app and FizziQ Connect sensor box">Modes d'emploi complets pour l'application FizziQ et le boîtier FizziQ Connect</p>
 </header>
 
 <main class="main">
+    <!-- Guides Section -->
+    <h2 class="section-title">
+        <span class="icon">📖</span>
+        <span class="lang-text" data-fr="Modes d'emploi" data-en="User Guides">Modes d'emploi</span>
+    </h2>
+
     <div class="guides-grid">
-        <a href="fr/fizziq/" class="guide-card">
+        <a href="fr/fizziq/" class="guide-card lang-link" data-fr="fr/fizziq/" data-en="en/fizziq/">
             <img src="images/fizziq/illustration_fizziq_salle_tp.jpg" alt="FizziQ">
             <div class="content">
-                <h2>Mode d'emploi FizziQ</h2>
-                <p>Guide complet de l'application : capteurs, mesures, cahier d'expériences, analyse cinématique, export et partage.</p>
-                <span class="cta">Consulter le guide →</span>
+                <h2 class="lang-text" data-fr="FizziQ" data-en="FizziQ">FizziQ</h2>
+                <p class="lang-text" data-fr="Guide complet de l'application : capteurs, mesures, cahier d'expériences, analyse cinématique, export." data-en="Complete app guide: sensors, measurements, experiment notebook, video kinematics, export.">Guide complet de l'application : capteurs, mesures, cahier d'expériences, analyse cinématique, export.</p>
+                <span class="cta lang-text" data-fr="Consulter le guide →" data-en="Read the guide →">Consulter le guide →</span>
             </div>
         </a>
-        <a href="fr/fizziq-connect/" class="guide-card">
+        <a href="fr/fizziq-connect/" class="guide-card lang-link" data-fr="fr/fizziq-connect/" data-en="en/fizziq-connect/">
             <img src="images/fizziq-connect/Illustration_fizziq_connect_salle_chimie.png" alt="FizziQ Connect">
             <div class="content">
-                <h2>Mode d'emploi FizziQ Connect</h2>
-                <p>Guide du boîtier de capteurs externes : installation, connexion Bluetooth, capteurs I2C, analogiques et 1-Wire.</p>
-                <span class="cta">Consulter le guide →</span>
+                <h2 class="lang-text" data-fr="FizziQ Connect" data-en="FizziQ Connect">FizziQ Connect</h2>
+                <p class="lang-text" data-fr="Guide du boîtier de capteurs externes : installation, connexion Bluetooth, capteurs I2C, analogiques et 1-Wire." data-en="External sensor box guide: setup, Bluetooth connection, I2C, analog and 1-Wire sensors.">Guide du boîtier de capteurs externes : installation, connexion Bluetooth, capteurs I2C, analogiques et 1-Wire.</p>
+                <span class="cta lang-text" data-fr="Consulter le guide →" data-en="Read the guide →">Consulter le guide →</span>
             </div>
         </a>
-        <a href="en/fizziq/" class="guide-card">
-            <img src="images/fizziq/illustration_fizziq_salle_tp.jpg" alt="FizziQ English">
-            <div class="content">
-                <h2>FizziQ User Guide (English)</h2>
-                <p>Complete guide to the app: sensors, measurements, experiment notebook, video kinematics, export and sharing.</p>
-                <span class="cta">Read the guide →</span>
-            </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <h2 class="section-title">
+        <span class="icon">❓</span>
+        <span class="lang-text" data-fr="Questions fréquentes" data-en="Frequently Asked Questions">Questions fréquentes</span>
+    </h2>
+
+    <div class="faq-grid">
+        <a href="fr/faq/fizziq/" class="faq-card lang-link" data-fr="fr/faq/fizziq/" data-en="en/faq/fizziq/">
+            <div class="icon">📱</div>
+            <h3>FizziQ</h3>
+            <span class="count">12 questions</span>
         </a>
-        <a href="en/fizziq-connect/" class="guide-card">
-            <img src="images/fizziq-connect/Illustration_fizziq_connect_salle_chimie.png" alt="FizziQ Connect English">
-            <div class="content">
-                <h2>FizziQ Connect User Guide (English)</h2>
-                <p>External sensor box guide: setup, Bluetooth connection, I2C, analog and 1-Wire sensors.</p>
-                <span class="cta">Read the guide →</span>
-            </div>
+        <a href="fr/faq/fizziq-connect/" class="faq-card lang-link" data-fr="fr/faq/fizziq-connect/" data-en="en/faq/fizziq-connect/">
+            <div class="icon">🔌</div>
+            <h3>FizziQ Connect</h3>
+            <span class="count">15 questions</span>
         </a>
-        <a href="fr/faq/" class="guide-card" style="background: var(--soft-blue);">
-            <div class="content" style="padding-top: 2rem;">
-                <h2 style="font-size: 2rem;">❓</h2>
-                <h2>FAQ FizziQ</h2>
-                <p>Questions fréquentes sur FizziQ, FizziQ Connect, les capteurs, les activités et l'utilisation en classe.</p>
-                <span class="cta">Voir les FAQ →</span>
-            </div>
+        <a href="fr/faq/capteurs/" class="faq-card lang-link" data-fr="fr/faq/capteurs/" data-en="en/faq/sensors/">
+            <div class="icon">📡</div>
+            <h3 class="lang-text" data-fr="Capteurs" data-en="Sensors">Capteurs</h3>
+            <span class="count">18 questions</span>
         </a>
-        <a href="en/faq/" class="guide-card" style="background: var(--soft-blue);">
-            <div class="content" style="padding-top: 2rem;">
-                <h2 style="font-size: 2rem;">❓</h2>
-                <h2>FizziQ FAQ (English)</h2>
-                <p>Frequently asked questions about FizziQ, FizziQ Connect, sensors, activities and classroom use.</p>
-                <span class="cta">View FAQ →</span>
-            </div>
+        <a href="fr/faq/activites/" class="faq-card lang-link" data-fr="fr/faq/activites/" data-en="en/faq/activities/">
+            <div class="icon">🧪</div>
+            <h3 class="lang-text" data-fr="Activités" data-en="Activities">Activités</h3>
+            <span class="count">5 questions</span>
+        </a>
+        <a href="fr/faq/pedagogie/" class="faq-card lang-link" data-fr="fr/faq/pedagogie/" data-en="en/faq/teaching/">
+            <div class="icon">🎓</div>
+            <h3 class="lang-text" data-fr="Pédagogie" data-en="Teaching">Pédagogie</h3>
+            <span class="count">5 questions</span>
+        </a>
+        <a href="fr/faq/fizziq-web/" class="faq-card lang-link" data-fr="fr/faq/fizziq-web/" data-en="en/faq/fizziq-web/">
+            <div class="icon">🌐</div>
+            <h3>FizziQ Web</h3>
+            <span class="count">1 question</span>
+        </a>
+        <a href="fr/faq/fizziq-junior/" class="faq-card lang-link" data-fr="fr/faq/fizziq-junior/" data-en="en/faq/fizziq-junior/">
+            <div class="icon">🧒</div>
+            <h3>FizziQ Junior</h3>
+            <span class="count">1 question</span>
         </a>
     </div>
 </main>
@@ -214,6 +324,37 @@
     </p>
     <p style="margin-top: 0.5rem; opacity: 0.6;">© 2025 FizziQ Labs</p>
 </footer>
+
+<script>
+    let currentLang = 'fr';
+
+    // Language switcher
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.dataset.lang;
+            if (lang === currentLang) return;
+
+            currentLang = lang;
+
+            // Update button states
+            document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Update text content
+            document.querySelectorAll('.lang-text').forEach(el => {
+                el.textContent = el.dataset[lang];
+            });
+
+            // Update links
+            document.querySelectorAll('.lang-link').forEach(el => {
+                el.href = el.dataset[lang];
+            });
+
+            // Update html lang attribute
+            document.documentElement.lang = lang;
+        });
+    });
+</script>
 
 </body>
 </html>
