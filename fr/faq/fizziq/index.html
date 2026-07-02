@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ FizziQ - Questions sur l'application mobile</title>
+
+    <meta name="description" content="Questions fréquentes sur l'application FizziQ : interface, capteurs, cahier d'expériences, enregistrement, export et analyse cinématique.">
+    <meta name="keywords" content="FizziQ, FAQ, application, mobile, capteurs, sciences">
+    <link rel="canonical" href="https://guide.fizziq.org/fr/faq/fizziq/">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Comment accéder aux différents capteurs dans FizziQ ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pour accéder aux capteurs, appuyez sur l'onglet Mesures en bas de l'écran, puis sur le bouton Instruments (icône +). Vous verrez la liste des 50+ capteurs disponibles classés par catégorie."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment enregistrer des mesures avec FizziQ ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sélectionnez un instrument, puis appuyez sur le bouton REC (rouge) pour démarrer l'enregistrement. Appuyez à nouveau pour arrêter. Vos données sont automatiquement sauvegardées dans le cahier d'expériences."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment exporter mes données en CSV ou PDF ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ouvrez votre expérience dans le cahier, appuyez sur l'icône de partage, puis sélectionnez Exporter en CSV ou Exporter en PDF selon vos besoins."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand: #3E5488;
+            --brand-deep: #2E3E63;
+            --accent: #DD7A43;
+            --ink: #242A3D;
+            --text-light: #5C6278;
+            --soft-blue: #EAEFF8;
+            --page-bg: #FBF8F3;
+            --card-bg: #FFFFFF;
+            --card-border: rgba(41,49,79,0.09);
+            --success: #34A853;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: Figtree, system-ui, -apple-system, sans-serif;
+            color: var(--ink);
+            background: var(--page-bg);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; }
+
+        .header {
+            background: var(--brand);
+            color: white;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+
+        .header .icon {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header h1 {
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1rem;
+            opacity: 0.9;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .nav-bar {
+            background: var(--soft-blue);
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-bar a {
+            color: var(--brand);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .nav-bar a:hover {
+            text-decoration: underline;
+        }
+
+        .main {
+            flex: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+            width: 100%;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--ink);
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: var(--soft-blue);
+        }
+
+        .faq-question .chevron {
+            font-size: 1.2rem;
+            color: var(--brand);
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+
+        .faq-item.open .faq-question .chevron {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 0 1.5rem 1.5rem;
+            color: var(--text-light);
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        .faq-answer a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        .faq-answer strong {
+            color: var(--ink);
+        }
+
+        .related {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            background: var(--soft-blue);
+            border-radius: 12px;
+        }
+
+        .related h3 {
+            font-size: 1rem;
+            color: var(--brand);
+            margin-bottom: 0.75rem;
+        }
+
+        .related-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .related-links a {
+            background: var(--card-bg);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--brand);
+            font-size: 0.9rem;
+            font-weight: 500;
+            border: 1px solid var(--card-border);
+        }
+
+        .related-links a:hover {
+            background: var(--brand);
+            color: white;
+        }
+
+        footer {
+            background: var(--ink);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="icon">📱</div>
+    <h1>FAQ FizziQ</h1>
+    <p>Questions fréquentes sur l'application mobile iOS et Android</p>
+</header>
+
+<nav class="nav-bar">
+    <a href="../">← Toutes les FAQ</a>
+    <a href="../fizziq-connect/">FizziQ Connect</a>
+    <a href="../capteurs/">Capteurs</a>
+    <a href="../activites/">Activités</a>
+    <a href="../../../fr/fizziq/">Guide complet</a>
+</nav>
+
+<main class="main">
+    <div class="faq-list">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment accéder aux différents capteurs dans FizziQ ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Pour accéder aux capteurs, appuyez sur l'onglet <strong>Mesures</strong> en bas de l'écran, puis sur le bouton <strong>Instruments</strong> (icône +). Vous verrez la liste des 50+ capteurs disponibles classés par catégorie : Mouvement, Son, Lumière, Environnement, etc. Sélectionnez le capteur souhaité pour commencer vos mesures.
+                <br><br><a href="../../../fr/fizziq/#instruments">→ Voir le guide complet sur les instruments</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment enregistrer des mesures avec FizziQ ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Pour enregistrer des mesures, sélectionnez d'abord un instrument, puis appuyez sur le bouton <strong>REC</strong> (rouge) pour démarrer l'enregistrement. Le bouton devient un carré pendant l'enregistrement. Appuyez à nouveau pour arrêter. Vos données sont automatiquement sauvegardées dans le cahier d'expériences.
+                <br><br><a href="../../../fr/fizziq/#enregistrement">→ Voir le guide complet sur l'enregistrement</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Qu'est-ce que le cahier d'expériences FizziQ ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Le <strong>cahier d'expériences</strong> est l'espace central de FizziQ où vous organisez vos travaux scientifiques. Il contient vos mesures sous forme de graphiques, tableaux, photos et textes. Vous pouvez créer plusieurs expériences, les renommer, et les exporter en PDF ou CSV.
+                <br><br><a href="../../../fr/fizziq/#cahier">→ Voir le guide complet sur le cahier</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment fonctionne l'analyse cinématique vidéo ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                L'<strong>analyse cinématique</strong> permet d'étudier le mouvement d'objets à partir d'une vidéo. Allez dans Outils → Cinématique, importez ou filmez une vidéo, définissez l'échelle avec une référence connue, puis pointez la position de l'objet image par image. FizziQ calcule automatiquement position, vitesse et accélération.
+                <br><br><a href="../../../fr/fizziq/#cinematique">→ Voir le guide complet sur la cinématique</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment exporter mes données en CSV ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Pour exporter en <strong>CSV</strong>, ouvrez votre expérience dans le cahier, appuyez sur l'icône de partage, puis sélectionnez <strong>Exporter en CSV</strong>. Le fichier contient toutes vos mesures avec horodatage, prêt à être ouvert dans Excel, Google Sheets ou tout logiciel d'analyse.
+                <br><br><a href="../../../fr/fizziq/#export">→ Voir le guide complet sur l'export</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment créer un rapport PDF avec FizziQ ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Pour générer un <strong>rapport PDF</strong>, ouvrez votre expérience, appuyez sur l'icône de partage et choisissez <strong>Exporter en PDF</strong>. Le PDF inclut tous vos graphiques, tableaux, photos et textes explicatifs. Parfait pour rendre un compte-rendu de TP ou documenter une expérience.
+                <br><br><a href="../../../fr/fizziq/#export">→ Voir le guide complet sur l'export</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment utiliser le mode Duo pour afficher deux mesures ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Le <strong>mode Duo</strong> permet d'afficher deux capteurs en même temps sur l'écran. Dans l'écran de mesure, appuyez sur l'icône Duo (deux carrés). Sélectionnez un second instrument. Les deux mesures s'affichent côte à côte et peuvent être enregistrées simultanément. Idéal pour corréler deux grandeurs physiques.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Qu'est-ce que AskFizziQ et comment l'utiliser ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <strong>AskFizziQ</strong> est l'assistant IA intégré à FizziQ. Il répond à vos questions sur les sciences et vous aide à interpréter vos mesures. Accédez-y via Outils → AskFizziQ. Posez une question en langage naturel et recevez une explication adaptée à votre niveau. Nécessite une connexion internet.
+                <br><br><a href="../../../fr/fizziq/#askfizziq">→ Voir le guide complet sur AskFizziQ</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment créer un tableau de données ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Pour créer un <strong>tableau de données</strong>, allez dans le cahier d'expériences, appuyez sur + et sélectionnez <strong>Tableau</strong>. Vous pouvez entrer des valeurs manuellement ou importer des données depuis vos enregistrements. Le tableau peut être modifié, trié et exporté.
+                <br><br><a href="../../../fr/fizziq/#tableaux">→ Voir le guide complet sur les tableaux</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment utiliser les déclencheurs automatiques ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Les <strong>déclencheurs</strong> permettent de démarrer ou arrêter l'enregistrement automatiquement selon un seuil. Dans Outils → Déclencheurs, définissez une condition (ex: son > 60 dB). L'enregistrement démarre quand la condition est remplie. Parfait pour capturer des événements brefs ou imprévisibles.
+                <br><br><a href="../../../fr/fizziq/#outils">→ Voir le guide complet sur les outils</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment ajouter des photos et du texte dans le cahier ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Dans le cahier d'expériences, appuyez sur <strong>+</strong> puis choisissez <strong>Photo</strong> pour prendre ou importer une image, ou <strong>Texte</strong> pour ajouter des observations et conclusions. Vous pouvez annoter les photos et formater le texte. Ces éléments seront inclus dans l'export PDF.
+                <br><br><a href="../../../fr/fizziq/#texte-photos">→ Voir le guide complet</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment analyser un graphique de mesures ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Dans le cahier, appuyez sur un graphique pour l'ouvrir en plein écran. Utilisez le <strong>zoom</strong> (pincement) pour examiner les détails. Appuyez sur un point pour voir ses coordonnées exactes. Vous pouvez aussi ajuster les axes, ajouter une courbe de tendance, et mesurer des intervalles.
+                <br><br><a href="../../../fr/fizziq/#donnees-capteurs">→ Voir le guide complet sur l'analyse</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="related">
+        <h3>Voir aussi</h3>
+        <div class="related-links">
+            <a href="../capteurs/">FAQ Capteurs</a>
+            <a href="../activites/">FAQ Activités</a>
+            <a href="../fizziq-connect/">FAQ FizziQ Connect</a>
+            <a href="../../../fr/fizziq/">Guide complet FizziQ</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>
+        <a href="https://www.fizziq.org" target="_blank">fizziq.org</a> ·
+        <a href="https://fizziqlabs.com" target="_blank">FizziQ Labs</a> ·
+        <a href="mailto:contact@fizziq.org">contact@fizziq.org</a>
+    </p>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.parentElement;
+            item.classList.toggle('open');
+        });
+    });
+</script>
+
+</body>
+</html>

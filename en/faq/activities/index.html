@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FizziQ FAQ - Frequently Asked Questions</title>
+
+    <meta name="description" content="Frequently asked questions about FizziQ: mobile app, FizziQ Connect, sensors, activities and educational use.">
+    <meta name="keywords" content="FizziQ, FAQ, questions, help, sensors, science, education">
+    <link rel="canonical" href="https://guide.fizziq.org/en/faq/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --brand: #3E5488; --brand-deep: #2E3E63; --accent: #DD7A43; --ink: #242A3D; --text-light: #5C6278; --soft-blue: #EAEFF8; --page-bg: #FBF8F3; --card-bg: #FFFFFF; --card-border: rgba(41,49,79,0.09); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Figtree, system-ui, sans-serif; color: var(--ink); background: var(--page-bg); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+        h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; }
+        .header { background: var(--brand); color: white; padding: 3rem 1.5rem; text-align: center; }
+        .header h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 0.5rem; }
+        .header p { font-size: 1.1rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+        .nav-back { background: var(--soft-blue); padding: 0.8rem 1.5rem; text-align: center; }
+        .nav-back a { color: var(--brand); text-decoration: none; font-weight: 500; }
+        .nav-back a:hover { text-decoration: underline; }
+        .main { flex: 1; max-width: 1000px; margin: 0 auto; padding: 3rem 1.5rem; width: 100%; }
+        .intro { text-align: center; margin-bottom: 3rem; }
+        .intro h2 { font-size: 1.5rem; color: var(--brand); margin-bottom: 0.5rem; }
+        .faq-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+        .faq-card { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 16px; padding: 1.5rem; text-decoration: none; color: inherit; transition: transform 0.3s, box-shadow 0.3s; display: flex; flex-direction: column; }
+        .faq-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(41,49,79,0.12); }
+        .faq-card .icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .faq-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--brand); margin-bottom: 0.5rem; }
+        .faq-card p { color: var(--text-light); font-size: 0.9rem; flex-grow: 1; }
+        .faq-card .count { margin-top: 1rem; font-size: 0.85rem; color: var(--accent); font-weight: 600; }
+        footer { background: var(--ink); color: rgba(255,255,255,0.7); text-align: center; padding: 2rem 1.5rem; font-size: 0.9rem; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1>FizziQ FAQ</h1>
+    <p>Find quick answers to your questions about FizziQ and its tools</p>
+</header>
+
+<nav class="nav-back">
+    <a href="../../">← Back to guides</a> ·
+    <a href="../../fr/faq/">Version française</a>
+</nav>
+
+<main class="main">
+    <div class="intro">
+        <h2>Choose a category</h2>
+        <p>Click a category to see questions and answers</p>
+    </div>
+
+    <div class="faq-grid">
+        <a href="fizziq/" class="faq-card">
+            <span class="icon">📱</span>
+            <h3>FizziQ</h3>
+            <p>The mobile app for iOS and Android: interface, experiment notebook, recording, export, kinematics, AskFizziQ.</p>
+            <span class="count">12 questions</span>
+        </a>
+
+        <a href="fizziq-connect/" class="faq-card">
+            <span class="icon">🔌</span>
+            <h3>FizziQ Connect</h3>
+            <p>The external sensor box: setup, Bluetooth connection, I2C sensors, battery life, firmware.</p>
+            <span class="count">15 questions</span>
+        </a>
+
+        <a href="fizziq-web/" class="faq-card">
+            <span class="icon">🌐</span>
+            <h3>FizziQ Web</h3>
+            <p>The browser version of FizziQ: compatibility, features, Chromebook, no installation needed.</p>
+            <span class="count">1 question</span>
+        </a>
+
+        <a href="fizziq-junior/" class="faq-card">
+            <span class="icon">🧒</span>
+            <h3>FizziQ Junior</h3>
+            <p>The version for elementary school: simplified interface, adapted sensors, grades K-5.</p>
+            <span class="count">1 question</span>
+        </a>
+
+        <a href="sensors/" class="faq-card">
+            <span class="icon">📡</span>
+            <h3>Sensors</h3>
+            <p>All FizziQ sensors: accelerometer, sound meter, light meter, pH, CO2, temperature, GPS and more.</p>
+            <span class="count">18 questions</span>
+        </a>
+
+        <a href="activities/" class="faq-card">
+            <span class="icon">🧪</span>
+            <h3>Activities</h3>
+            <p>Create and share activities: protocols, QR codes, experiment library.</p>
+            <span class="count">5 questions</span>
+        </a>
+
+        <a href="teaching/" class="faq-card">
+            <span class="icon">🎓</span>
+            <h3>Teaching</h3>
+            <p>Classroom use: student onboarding, class management, assessment, differentiation.</p>
+            <span class="count">5 questions</span>
+        </a>
+    </div>
+</main>
+
+<footer>
+    <p>
+        <a href="https://www.fizziq.org" target="_blank">fizziq.org</a> ·
+        <a href="https://fizziqlabs.com" target="_blank">FizziQ Labs</a> ·
+        <a href="mailto:contact@fizziq.org">contact@fizziq.org</a>
+    </p>
+</footer>
+
+</body>
+</html>

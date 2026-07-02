@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Activités FizziQ - Protocoles et expériences</title>
+
+    <meta name="description" content="Questions fréquentes sur les activités FizziQ : créer des protocoles, générer des QR codes, partager avec les élèves, bibliothèque d'expériences.">
+    <link rel="canonical" href="https://guide.fizziq.org/fr/faq/activites/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --brand: #3E5488; --accent: #DD7A43; --ink: #242A3D; --text-light: #5C6278; --soft-blue: #EAEFF8; --page-bg: #FBF8F3; --card-bg: #FFFFFF; --card-border: rgba(41,49,79,0.09); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Figtree, system-ui, sans-serif; color: var(--ink); background: var(--page-bg); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+        h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; }
+        .header { background: var(--brand); color: white; padding: 2.5rem 1.5rem; text-align: center; }
+        .header .icon { font-size: 3rem; margin-bottom: 0.5rem; }
+        .header h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 0.5rem; }
+        .header p { font-size: 1rem; opacity: 0.9; }
+        .nav-bar { background: var(--soft-blue); padding: 0.8rem 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .nav-bar a { color: var(--brand); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+        .nav-bar a:hover { text-decoration: underline; }
+        .main { flex: 1; max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; width: 100%; }
+        .faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+        .faq-item { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; overflow: hidden; }
+        .faq-question { width: 100%; padding: 1.2rem 1.5rem; background: none; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-family: inherit; font-size: 1rem; font-weight: 600; color: var(--ink); transition: background 0.2s; }
+        .faq-question:hover { background: var(--soft-blue); }
+        .faq-question .chevron { font-size: 1.2rem; color: var(--brand); transition: transform 0.3s; }
+        .faq-item.open .faq-question .chevron { transform: rotate(180deg); }
+        .faq-answer { display: none; padding: 0 1.5rem 1.5rem; color: var(--text-light); line-height: 1.7; }
+        .faq-item.open .faq-answer { display: block; }
+        .faq-answer strong { color: var(--ink); }
+        .faq-answer a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .faq-answer a:hover { text-decoration: underline; }
+        .related { margin-top: 3rem; padding: 1.5rem; background: var(--soft-blue); border-radius: 12px; }
+        .related h3 { font-size: 1rem; color: var(--brand); margin-bottom: 0.75rem; }
+        .related-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .related-links a { background: var(--card-bg); padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; color: var(--brand); font-size: 0.9rem; font-weight: 500; border: 1px solid var(--card-border); }
+        .related-links a:hover { background: var(--brand); color: white; }
+        footer { background: var(--ink); color: rgba(255,255,255,0.7); text-align: center; padding: 2rem 1.5rem; font-size: 0.9rem; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="icon">🧪</div>
+    <h1>FAQ Activités</h1>
+    <p>Créer et partager des protocoles d'expériences</p>
+</header>
+
+<nav class="nav-bar">
+    <a href="../">← Toutes les FAQ</a>
+    <a href="../fizziq/">FizziQ App</a>
+    <a href="../pedagogie/">Pédagogie</a>
+    <a href="../../../fr/fizziq/#activites">Guide des activités</a>
+</nav>
+
+<main class="main">
+    <div class="faq-list">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment créer une activité dans FizziQ ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Dans l'onglet <strong>Activités</strong>, appuyez sur + pour créer une nouvelle activité. Donnez un titre, un objectif, puis ajoutez les étapes du protocole. Chaque étape guide l'élève dans la réalisation de l'expérience. Un QR code est généré automatiquement pour partager l'activité.
+                <br><br><a href="../../../fr/fizziq/#activites">→ Voir le guide complet</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment partager une activité avec mes élèves ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Une fois l'activité créée, un <strong>QR code</strong> est généré. Affichez-le au tableau ou intégrez-le dans un document. Les élèves scannent ce code avec FizziQ pour charger l'activité sur leur appareil. Vous pouvez aussi partager le lien par email ou messagerie.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment créer un QR code sans utiliser l'application ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Utilisez un générateur de QR code en ligne. Le format FizziQ est :<br>
+                <code>Fizziq//Titre//Objectif//Étape 1//Étape 2//...</code><br><br>
+                Exemple : <code>Fizziq//Le son//Étude de la fréquence//Choisissez un instrument//Mesurez la fréquence</code><br><br>
+                Limite recommandée : 2000 caractères maximum.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Où trouver des activités prêtes à l'emploi ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                FizziQ propose une <strong>bibliothèque de plus de 100 protocoles</strong> prêts à l'emploi sur le site <a href="https://www.fizziq.org/activites" target="_blank">fizziq.org/activites</a>. Ces activités couvrent physique, chimie, SVT et sont classées par niveau (collège, lycée). Scannez le QR code pour les charger directement.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment modifier une activité existante ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Dans l'onglet Activités, sélectionnez l'activité à modifier. Appuyez sur l'icône de modification (crayon). Vous pouvez changer le titre, l'objectif et les étapes. Un nouveau QR code sera généré avec les modifications.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="related">
+        <h3>Voir aussi</h3>
+        <div class="related-links">
+            <a href="../pedagogie/">FAQ Pédagogie</a>
+            <a href="../fizziq/">FAQ FizziQ App</a>
+            <a href="https://www.fizziq.org/activites" target="_blank">Bibliothèque d'activités</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>
+        <a href="https://www.fizziq.org" target="_blank">fizziq.org</a> ·
+        <a href="mailto:contact@fizziq.org">contact@fizziq.org</a>
+    </p>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            button.parentElement.classList.toggle('open');
+        });
+    });
+</script>
+
+</body>
+</html>

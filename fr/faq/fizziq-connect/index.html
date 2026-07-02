@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ FizziQ Connect - Questions sur le boîtier de capteurs</title>
+
+    <meta name="description" content="Questions fréquentes sur FizziQ Connect : installation, connexion Bluetooth, capteurs I2C, analogiques, 1-Wire, autonomie et dépannage.">
+    <meta name="keywords" content="FizziQ Connect, FAQ, capteurs, Bluetooth, I2C, Grove, M5 Stack">
+    <link rel="canonical" href="https://guide.fizziq.org/fr/faq/fizziq-connect/">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce que FizziQ Connect ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FizziQ Connect est un boîtier éducatif basé sur le M5 Stack qui permet de connecter des capteurs externes à l'application FizziQ via Bluetooth Low Energy."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quelle est l'autonomie de FizziQ Connect ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "L'autonomie varie selon les capteurs : environ 8 heures avec le capteur Environnement, 4 heures avec le capteur e-CO2."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand: #3E5488;
+            --brand-deep: #2E3E63;
+            --accent: #DD7A43;
+            --ink: #242A3D;
+            --text-light: #5C6278;
+            --soft-blue: #EAEFF8;
+            --page-bg: #FBF8F3;
+            --card-bg: #FFFFFF;
+            --card-border: rgba(41,49,79,0.09);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: Figtree, system-ui, -apple-system, sans-serif;
+            color: var(--ink);
+            background: var(--page-bg);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; }
+
+        .header {
+            background: var(--brand);
+            color: white;
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+        }
+
+        .header .icon { font-size: 3rem; margin-bottom: 0.5rem; }
+        .header h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 0.5rem; }
+        .header p { font-size: 1rem; opacity: 0.9; max-width: 500px; margin: 0 auto; }
+
+        .nav-bar {
+            background: var(--soft-blue);
+            padding: 0.8rem 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-bar a { color: var(--brand); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+        .nav-bar a:hover { text-decoration: underline; }
+
+        .main { flex: 1; max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; width: 100%; }
+
+        .faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+
+        .faq-item {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.2rem 1.5rem;
+            background: none;
+            border: none;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+            font-family: inherit;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--ink);
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover { background: var(--soft-blue); }
+        .faq-question .chevron { font-size: 1.2rem; color: var(--brand); transition: transform 0.3s; flex-shrink: 0; }
+        .faq-item.open .faq-question .chevron { transform: rotate(180deg); }
+
+        .faq-answer { display: none; padding: 0 1.5rem 1.5rem; color: var(--text-light); line-height: 1.7; }
+        .faq-item.open .faq-answer { display: block; }
+        .faq-answer a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .faq-answer a:hover { text-decoration: underline; }
+        .faq-answer strong { color: var(--ink); }
+
+        .related { margin-top: 3rem; padding: 1.5rem; background: var(--soft-blue); border-radius: 12px; }
+        .related h3 { font-size: 1rem; color: var(--brand); margin-bottom: 0.75rem; }
+        .related-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .related-links a { background: var(--card-bg); padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; color: var(--brand); font-size: 0.9rem; font-weight: 500; border: 1px solid var(--card-border); }
+        .related-links a:hover { background: var(--brand); color: white; }
+
+        footer { background: var(--ink); color: rgba(255,255,255,0.7); text-align: center; padding: 2rem 1.5rem; font-size: 0.9rem; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="icon">🔌</div>
+    <h1>FAQ FizziQ Connect</h1>
+    <p>Questions fréquentes sur le boîtier de capteurs externes</p>
+</header>
+
+<nav class="nav-bar">
+    <a href="../">← Toutes les FAQ</a>
+    <a href="../fizziq/">FizziQ App</a>
+    <a href="../capteurs/">Capteurs</a>
+    <a href="../../../fr/fizziq-connect/">Guide complet</a>
+</nav>
+
+<main class="main">
+    <div class="faq-list">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Qu'est-ce que FizziQ Connect ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <strong>FizziQ Connect</strong> est un boîtier éducatif basé sur le microcontrôleur M5 Stack qui permet de connecter des capteurs externes à l'application FizziQ via Bluetooth Low Energy (BLE). Il dispose d'un écran intégré pour visualiser les mesures et peut fonctionner de manière autonome ou connecté à un smartphone/tablette.
+                <br><br><a href="../../../fr/fizziq-connect/#introduction">→ Voir le guide complet</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Que contient le coffret FizziQ Connect ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Le coffret contient : le <strong>boîtier M5 Stack</strong> avec écran, un <strong>câble USB-C</strong> pour la recharge, un <strong>capteur Environnement</strong> (température, humidité, pression) et un <strong>guide de démarrage rapide</strong>. D'autres capteurs peuvent être achetés séparément.
+                <br><br><a href="../../../fr/fizziq-connect/#contenu">→ Voir le guide complet</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment allumer et éteindre FizziQ Connect ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Pour <strong>allumer</strong>, appuyez sur le bouton latéral gauche pendant 2 secondes. L'écran affiche le logo FizziQ. Pour <strong>éteindre</strong>, maintenez le même bouton pendant 6 secondes. Le boîtier peut aussi s'éteindre automatiquement après une période d'inactivité.
+                <br><br><a href="../../../fr/fizziq-connect/#prise-en-main">→ Voir le guide complet</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment connecter FizziQ Connect à l'application FizziQ ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                1) Allumez FizziQ Connect<br>
+                2) Dans l'application FizziQ, allez dans <strong>Instruments → FizziQ Connect</strong><br>
+                3) Activez le Bluetooth si demandé<br>
+                4) Sélectionnez votre boîtier dans la liste<br>
+                Les capteurs apparaissent automatiquement dans FizziQ.
+                <br><br><a href="../../../fr/fizziq-connect/#connexion-fizziq">→ Voir le guide complet</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Quels types de capteurs sont compatibles ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                FizziQ Connect est compatible avec trois types de capteurs :<br>
+                • <strong>Capteurs I2C</strong> (M5 Stack, Grove, Seeed Studio)<br>
+                • <strong>Capteurs analogiques</strong> (0-3.3V)<br>
+                • <strong>Capteurs 1-Wire</strong> (ex: sonde DS18B20)<br>
+                Les capteurs se branchent sur les ports Grove du boîtier.
+                <br><br><a href="../../../fr/fizziq-connect/#capteurs">→ Voir le guide complet</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Quelle est l'autonomie de la batterie ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                L'autonomie varie selon les capteurs : environ <strong>8 heures</strong> avec le capteur Environnement, <strong>4 heures</strong> avec le capteur e-CO2. Pour prolonger l'autonomie, activez le mode Auto-off ou réduisez la luminosité de l'écran.
+                <br><br><a href="../../../fr/fizziq-connect/#autonomie">→ Voir le guide complet</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment recharger FizziQ Connect ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Rechargez avec le <strong>câble USB-C</strong> fourni, branché sur un chargeur USB ou un ordinateur. L'icône de batterie indique le niveau de charge. Une charge complète prend environ 2 heures. Vous pouvez utiliser le boîtier pendant la charge.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Qu'est-ce que le mode Diffusion ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Le <strong>mode Diffusion</strong> permet de partager les mesures du boîtier avec plusieurs appareils FizziQ simultanément. Idéal en classe : un seul capteur peut être visualisé par tous les élèves sur leurs smartphones. Activez ce mode dans les paramètres du boîtier.
+                <br><br><a href="../../../fr/fizziq-connect/#modes-diffusion">→ Voir le guide complet</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Peut-on connecter plusieurs capteurs simultanément ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Oui, vous pouvez connecter <strong>plusieurs capteurs I2C</strong> en utilisant un <strong>hub I2C</strong> (multiprise Grove). Chaque capteur est détecté automatiquement. Naviguez entre eux avec le bouton central. Les capteurs analogiques et 1-Wire utilisent des ports dédiés.
+                <br><br><a href="../../../fr/fizziq-connect/#multiprises">→ Voir le guide complet</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                FizziQ Connect fonctionne-t-il sans smartphone ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Oui, FizziQ Connect peut fonctionner de manière <strong>totalement autonome</strong>. L'écran intégré affiche les mesures en temps réel, et vous pouvez enregistrer des données dans la mémoire du boîtier. La connexion Bluetooth est optionnelle.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Peut-on utiliser FizziQ Connect avec un ordinateur ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Oui, FizziQ Connect fonctionne avec <strong>FizziQ Web</strong> sur ordinateur. L'ordinateur doit être équipé de <strong>Bluetooth</strong>. Sinon, utilisez un dongle Bluetooth USB. La connexion se fait de la même manière que sur smartphone.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Que faire si un capteur n'est pas détecté ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Si un capteur n'est pas détecté :<br>
+                1) Vérifiez que le câble Grove est bien branché des deux côtés<br>
+                2) Redémarrez le boîtier<br>
+                3) Vérifiez que le capteur est compatible (I2C, analogique ou 1-Wire)<br>
+                4) Essayez un autre port ou câble<br>
+                Certains capteurs nécessitent une mise à jour du firmware.
+                <br><br><a href="../../../fr/fizziq-connect/#depannage">→ Voir le guide de dépannage</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment mettre à jour le firmware ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Les mises à jour apportent de nouveaux capteurs et corrections. Connectez le boîtier à un ordinateur via USB-C, puis utilisez l'outil de mise à jour sur le site FizziQ. Suivez les instructions à l'écran. Ne débranchez pas pendant la mise à jour.
+                <br><br><a href="../../../fr/fizziq-connect/#maintenance">→ Voir le guide complet</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Où acheter des capteurs supplémentaires ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Les capteurs compatibles sont disponibles chez les distributeurs <strong>M5 Stack</strong>, <strong>Grove/Seeed Studio</strong>, et sur les sites d'électronique comme Gotronic, Kubii ou Amazon. Consultez la liste des capteurs compatibles sur le site FizziQ.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment utiliser FizziQ Connect pour une démonstration en classe ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Activez le <strong>mode Diffusion</strong> sur le boîtier. Tous les élèves peuvent alors se connecter au même boîtier depuis leur smartphone FizziQ et voir les mesures en temps réel. L'enseignant manipule le capteur pendant que chaque élève visualise les données.
+                <br><br><a href="../../../fr/fizziq-connect/#modes-diffusion">→ Voir le guide complet</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="related">
+        <h3>Voir aussi</h3>
+        <div class="related-links">
+            <a href="../capteurs/">FAQ Capteurs</a>
+            <a href="../fizziq/">FAQ FizziQ App</a>
+            <a href="../pedagogie/">FAQ Pédagogie</a>
+            <a href="../../../fr/fizziq-connect/">Guide complet FizziQ Connect</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>
+        <a href="https://www.fizziq.org" target="_blank">fizziq.org</a> ·
+        <a href="https://fizziqlabs.com" target="_blank">FizziQ Labs</a> ·
+        <a href="mailto:contact@fizziq.org">contact@fizziq.org</a>
+    </p>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const item = button.parentElement;
+            item.classList.toggle('open');
+        });
+    });
+</script>
+
+</body>
+</html>

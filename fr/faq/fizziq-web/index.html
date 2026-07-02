@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ FizziQ Web - Questions sur la version navigateur</title>
+
+    <meta name="description" content="Questions fréquentes sur FizziQ Web : la version navigateur de FizziQ pour Chromebook et ordinateurs.">
+    <link rel="canonical" href="https://guide.fizziq.org/fr/faq/fizziq-web/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --brand: #3E5488; --accent: #DD7A43; --ink: #242A3D; --text-light: #5C6278; --soft-blue: #EAEFF8; --page-bg: #FBF8F3; --card-bg: #FFFFFF; --card-border: rgba(41,49,79,0.09); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Figtree, system-ui, sans-serif; color: var(--ink); background: var(--page-bg); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+        h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; }
+        .header { background: var(--brand); color: white; padding: 2.5rem 1.5rem; text-align: center; }
+        .header .icon { font-size: 3rem; margin-bottom: 0.5rem; }
+        .header h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 0.5rem; }
+        .header p { font-size: 1rem; opacity: 0.9; }
+        .nav-bar { background: var(--soft-blue); padding: 0.8rem 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .nav-bar a { color: var(--brand); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+        .nav-bar a:hover { text-decoration: underline; }
+        .main { flex: 1; max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; width: 100%; }
+        .faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+        .faq-item { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; overflow: hidden; }
+        .faq-question { width: 100%; padding: 1.2rem 1.5rem; background: none; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-family: inherit; font-size: 1rem; font-weight: 600; color: var(--ink); transition: background 0.2s; }
+        .faq-question:hover { background: var(--soft-blue); }
+        .faq-question .chevron { font-size: 1.2rem; color: var(--brand); transition: transform 0.3s; }
+        .faq-item.open .faq-question .chevron { transform: rotate(180deg); }
+        .faq-answer { display: none; padding: 0 1.5rem 1.5rem; color: var(--text-light); line-height: 1.7; }
+        .faq-item.open .faq-answer { display: block; }
+        .faq-answer strong { color: var(--ink); }
+        .coming-soon { background: var(--soft-blue); padding: 2rem; border-radius: 12px; text-align: center; margin-top: 2rem; }
+        .coming-soon p { color: var(--text-light); }
+        footer { background: var(--ink); color: rgba(255,255,255,0.7); text-align: center; padding: 2rem 1.5rem; font-size: 0.9rem; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="icon">🌐</div>
+    <h1>FAQ FizziQ Web</h1>
+    <p>La version navigateur de FizziQ</p>
+</header>
+
+<nav class="nav-bar">
+    <a href="../">← Toutes les FAQ</a>
+    <a href="../fizziq/">FizziQ App</a>
+    <a href="../fizziq-connect/">FizziQ Connect</a>
+</nav>
+
+<main class="main">
+    <div class="faq-list">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Qu'est-ce que FizziQ Web ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <strong>FizziQ Web</strong> est la version navigateur de FizziQ, accessible depuis n'importe quel ordinateur sans installation. Idéal pour les Chromebooks et les environnements où l'installation d'applications n'est pas possible. Accédez à FizziQ Web sur <strong>web.fizziq.org</strong>.
+                <br><br>
+                FizziQ Web offre la plupart des fonctionnalités de l'application mobile : accès aux capteurs de l'ordinateur (microphone, caméra), cahier d'expériences, analyse de données, et connexion aux boîtiers FizziQ Connect via Bluetooth.
+            </div>
+        </div>
+
+    </div>
+
+    <div class="coming-soon">
+        <h3>Plus de questions à venir</h3>
+        <p>Cette section sera enrichie prochainement avec plus de questions sur FizziQ Web.</p>
+    </div>
+</main>
+
+<footer>
+    <p>
+        <a href="https://www.fizziq.org" target="_blank">fizziq.org</a> ·
+        <a href="mailto:contact@fizziq.org">contact@fizziq.org</a>
+    </p>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            button.parentElement.classList.toggle('open');
+        });
+    });
+</script>
+
+</body>
+</html>

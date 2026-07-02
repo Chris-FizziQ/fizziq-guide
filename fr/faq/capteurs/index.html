@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Capteurs FizziQ - Tous les capteurs et instruments</title>
+
+    <meta name="description" content="Questions fréquentes sur les capteurs FizziQ : accéléromètre, sonomètre, luxmètre, magnétomètre, GPS, pH, CO2, température et plus.">
+    <meta name="keywords" content="FizziQ, capteurs, accéléromètre, sonomètre, luxmètre, pH, CO2, température, GPS">
+    <link rel="canonical" href="https://guide.fizziq.org/fr/faq/capteurs/">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Comment utiliser l'accéléromètre dans FizziQ ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "L'accéléromètre mesure l'accélération selon 3 axes (X, Y, Z) ou en valeur absolue. Utilisez-le pour étudier la chute libre, les mouvements circulaires, les vibrations ou l'accélération d'un véhicule."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment mesurer le CO2 avec FizziQ Connect ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Utilisez le capteur e-CO2/TVOC (SGP30) ou le capteur SCD40. Branchez-le sur un port I2C. Le capteur nécessite quelques minutes de préchauffage pour des mesures précises."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --brand: #3E5488; --accent: #DD7A43; --ink: #242A3D; --text-light: #5C6278; --soft-blue: #EAEFF8; --page-bg: #FBF8F3; --card-bg: #FFFFFF; --card-border: rgba(41,49,79,0.09); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Figtree, system-ui, sans-serif; color: var(--ink); background: var(--page-bg); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+        h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; }
+        .header { background: var(--brand); color: white; padding: 2.5rem 1.5rem; text-align: center; }
+        .header .icon { font-size: 3rem; margin-bottom: 0.5rem; }
+        .header h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 0.5rem; }
+        .header p { font-size: 1rem; opacity: 0.9; }
+        .nav-bar { background: var(--soft-blue); padding: 0.8rem 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .nav-bar a { color: var(--brand); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+        .nav-bar a:hover { text-decoration: underline; }
+        .main { flex: 1; max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; width: 100%; }
+        .section-title { font-size: 1.1rem; color: var(--brand); margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--soft-blue); }
+        .section-title:first-of-type { margin-top: 0; }
+        .faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+        .faq-item { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; overflow: hidden; }
+        .faq-question { width: 100%; padding: 1.2rem 1.5rem; background: none; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-family: inherit; font-size: 1rem; font-weight: 600; color: var(--ink); transition: background 0.2s; }
+        .faq-question:hover { background: var(--soft-blue); }
+        .faq-question .chevron { font-size: 1.2rem; color: var(--brand); transition: transform 0.3s; }
+        .faq-item.open .faq-question .chevron { transform: rotate(180deg); }
+        .faq-answer { display: none; padding: 0 1.5rem 1.5rem; color: var(--text-light); line-height: 1.7; }
+        .faq-item.open .faq-answer { display: block; }
+        .faq-answer strong { color: var(--ink); }
+        .faq-answer a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .faq-answer a:hover { text-decoration: underline; }
+        .related { margin-top: 3rem; padding: 1.5rem; background: var(--soft-blue); border-radius: 12px; }
+        .related h3 { font-size: 1rem; color: var(--brand); margin-bottom: 0.75rem; }
+        .related-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .related-links a { background: var(--card-bg); padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; color: var(--brand); font-size: 0.9rem; font-weight: 500; border: 1px solid var(--card-border); }
+        .related-links a:hover { background: var(--brand); color: white; }
+        footer { background: var(--ink); color: rgba(255,255,255,0.7); text-align: center; padding: 2rem 1.5rem; font-size: 0.9rem; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="icon">📡</div>
+    <h1>FAQ Capteurs</h1>
+    <p>Tous les capteurs FizziQ et FizziQ Connect</p>
+</header>
+
+<nav class="nav-bar">
+    <a href="../">← Toutes les FAQ</a>
+    <a href="../fizziq/">FizziQ App</a>
+    <a href="../fizziq-connect/">FizziQ Connect</a>
+</nav>
+
+<main class="main">
+
+    <h2 class="section-title">🎵 Son et acoustique</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question">Comment utiliser le sonomètre ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Le <strong>sonomètre</strong> mesure le niveau sonore en décibels (dB). Dans Instruments, sélectionnez Sonomètre. L'écran affiche le niveau en temps réel. Appuyez sur REC pour enregistrer l'évolution. Idéal pour étudier la pollution sonore ou comparer des sources sonores.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Comment mesurer la fréquence d'un son ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Utilisez l'instrument <strong>Fréquence fondamentale</strong> ou le <strong>Spectrogramme</strong>. La fréquence fondamentale donne directement la note en Hz, tandis que le spectrogramme affiche toutes les fréquences présentes, permettant d'identifier les harmoniques.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Comment utiliser le chronomètre sonore ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Le <strong>chronomètre sonore</strong> mesure le temps entre deux événements sonores. Dans Outils → Chronomètres, réglez le seuil de déclenchement en dB. Le chrono démarre au premier son et s'arrête au second. Idéal pour mesurer la vitesse du son.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Comment utiliser le synthétiseur de sons ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Le <strong>synthétiseur</strong> génère des sons de fréquence précise (20 Hz à 20 000 Hz). Dans Outils → Synthétiseur, réglez la fréquence, le volume et la forme d'onde (sinusoïdale, carrée, triangle). Parfait pour étudier les battements ou tester l'audition.
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">🏃 Mouvement et accélération</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question">Comment utiliser l'accéléromètre ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                L'<strong>accéléromètre</strong> mesure l'accélération selon 3 axes (X, Y, Z) ou en valeur absolue. Utilisez-le pour étudier la chute libre (environ 0g en chute), les mouvements circulaires, les vibrations ou l'accélération d'un véhicule.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Comment mesurer la période d'un pendule ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Fixez le smartphone au pendule et utilisez l'accéléromètre. Enregistrez plusieurs oscillations, puis analysez le graphique pour mesurer le temps entre deux maxima. Vous pouvez aussi utiliser le chronomètre sonore si le pendule produit un clic régulier.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Comment mesurer la vitesse du son ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Utilisez le chronomètre sonore avec deux appareils FizziQ placés à distance connue. Un clap déclenche les deux chronomètres avec un décalage. Mesurez le décalage temporel et divisez la distance par ce temps. Autre méthode : utilisez l'écho sur un mur.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Comment utiliser le GPS ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Le <strong>GPS</strong> mesure position, altitude, vitesse et distance parcourue. Dans Instruments → Localisation, choisissez la grandeur souhaitée. Activez la localisation sur votre appareil. Idéal pour des expériences en extérieur.
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">💡 Lumière et couleur</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question">Comment mesurer l'intensité lumineuse ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Le <strong>luxmètre</strong> utilise le capteur de luminosité pour mesurer l'éclairement en lux. Dans Instruments → Lumière, sélectionnez Luxmètre. Parfait pour comparer des sources lumineuses ou étudier l'atténuation avec la distance.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Comment mesurer la couleur de la lumière ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Avec FizziQ Connect, le capteur <strong>Couleur</strong> (TCS34725) mesure les composantes Rouge, Vert, Bleu (RGB). Branchez-le sur un port I2C. Parfait pour étudier la synthèse additive des couleurs ou faire de la colorimétrie.
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">🌡️ Température et environnement</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question">Comment mesurer la température ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Avec FizziQ Connect, plusieurs options : le <strong>capteur Environnement</strong> (température ambiante), le capteur <strong>Infrarouge</strong> (sans contact), ou la <strong>sonde DS18B20</strong> (immersion dans les liquides, -55°C à +125°C).
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Comment utiliser la sonde DS18B20 ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                La sonde <strong>DS18B20</strong> est un capteur 1-Wire étanche, idéal pour les liquides. Branchez-la sur le port 1-Wire (port Grove noir) de FizziQ Connect. Plage : -55°C à +125°C avec précision de 0.5°C.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Comment mesurer l'humidité ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Le capteur <strong>Environnement</strong> (ENV III) mesure l'humidité relative en %. Il mesure aussi température et pression. Branchez-le sur un port I2C de FizziQ Connect. Idéal pour étudier la météo ou le confort thermique.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Comment mesurer la pression atmosphérique ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Le <strong>baromètre</strong> mesure la pression en hectopascals (hPa). Disponible dans l'app FizziQ (si votre appareil a ce capteur) ou via FizziQ Connect. Utilisez-le pour suivre la météo ou mesurer l'altitude relative.
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">🧪 Chimie et qualité de l'air</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question">Comment mesurer le CO2 ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Avec FizziQ Connect, utilisez le capteur <strong>e-CO2/TVOC</strong> (SGP30) ou le <strong>SCD40</strong>. Branchez sur un port I2C. Le capteur nécessite quelques minutes de préchauffage. Idéal pour étudier la qualité de l'air ou la respiration des plantes.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Comment mesurer le pH ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Utilisez une sonde pH analogique avec FizziQ Connect. Branchez sur le port analogique. <strong>Calibrez</strong> avec des solutions tampons (pH 4 et pH 7) avant utilisation. La valeur s'affiche en temps réel.
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">📏 Distance et magnétisme</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question">Comment mesurer la distance ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Avec FizziQ Connect, le capteur <strong>ToF (Time of Flight)</strong> VL53L0X mesure des distances jusqu'à 2 mètres avec précision millimétrique. Branchez sur un port I2C. Idéal pour la cinématique ou mesurer des hauteurs.
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Comment utiliser le magnétomètre ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Le <strong>magnétomètre</strong> mesure le champ magnétique en microteslas (µT). Il détecte le champ terrestre et les champs d'aimants ou courants électriques. Idéal pour cartographier un champ ou étudier les électroaimants.
+            </div>
+        </div>
+    </div>
+
+    <h2 class="section-title">🔌 Capteurs FizziQ Connect</h2>
+    <div class="faq-list">
+        <div class="faq-item">
+            <button class="faq-question">Quels capteurs I2C sont compatibles ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                FizziQ Connect reconnaît automatiquement : <strong>Environnement</strong> (ENV III), <strong>CO2</strong> (SGP30, SCD40), <strong>Lumière/Couleur</strong> (TCS34725), <strong>Pression</strong> (BMP280), <strong>Accéléromètre</strong> (MPU6050), <strong>Distance</strong> (ToF VL53L0X), <strong>Infrarouge</strong> (MLX90614) et bien d'autres.
+                <br><br><a href="../../../fr/fizziq-connect/#capteurs-i2c">→ Liste complète des capteurs</a>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">Comment connecter des capteurs Bluetooth externes ?<span class="chevron">▼</span></button>
+            <div class="faq-answer">
+                Dans FizziQ, allez dans Instruments → FizziQ Connect, activez le Bluetooth, et sélectionnez votre boîtier. Les capteurs branchés sur FizziQ Connect apparaissent automatiquement dans la liste des instruments.
+                <br><br><a href="../../../fr/fizziq/#bluetooth">→ Voir le guide complet</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="related">
+        <h3>Voir aussi</h3>
+        <div class="related-links">
+            <a href="../fizziq/">FAQ FizziQ App</a>
+            <a href="../fizziq-connect/">FAQ FizziQ Connect</a>
+            <a href="../../../fr/fizziq/#instruments">Guide des instruments</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>
+        <a href="https://www.fizziq.org" target="_blank">fizziq.org</a> ·
+        <a href="mailto:contact@fizziq.org">contact@fizziq.org</a>
+    </p>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            button.parentElement.classList.toggle('open');
+        });
+    });
+</script>
+
+</body>
+</html>

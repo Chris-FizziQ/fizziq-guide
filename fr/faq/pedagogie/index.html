@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Pédagogie FizziQ - Utilisation en classe</title>
+
+    <meta name="description" content="Questions fréquentes sur l'utilisation pédagogique de FizziQ : prise en main des élèves, gestion de classe, évaluation, différenciation.">
+    <link rel="canonical" href="https://guide.fizziq.org/fr/faq/pedagogie/">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root { --brand: #3E5488; --accent: #DD7A43; --ink: #242A3D; --text-light: #5C6278; --soft-blue: #EAEFF8; --page-bg: #FBF8F3; --card-bg: #FFFFFF; --card-border: rgba(41,49,79,0.09); }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Figtree, system-ui, sans-serif; color: var(--ink); background: var(--page-bg); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
+        h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; }
+        .header { background: var(--brand); color: white; padding: 2.5rem 1.5rem; text-align: center; }
+        .header .icon { font-size: 3rem; margin-bottom: 0.5rem; }
+        .header h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 0.5rem; }
+        .header p { font-size: 1rem; opacity: 0.9; }
+        .nav-bar { background: var(--soft-blue); padding: 0.8rem 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .nav-bar a { color: var(--brand); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
+        .nav-bar a:hover { text-decoration: underline; }
+        .main { flex: 1; max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; width: 100%; }
+        .faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
+        .faq-item { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; overflow: hidden; }
+        .faq-question { width: 100%; padding: 1.2rem 1.5rem; background: none; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-family: inherit; font-size: 1rem; font-weight: 600; color: var(--ink); transition: background 0.2s; }
+        .faq-question:hover { background: var(--soft-blue); }
+        .faq-question .chevron { font-size: 1.2rem; color: var(--brand); transition: transform 0.3s; }
+        .faq-item.open .faq-question .chevron { transform: rotate(180deg); }
+        .faq-answer { display: none; padding: 0 1.5rem 1.5rem; color: var(--text-light); line-height: 1.7; }
+        .faq-item.open .faq-answer { display: block; }
+        .faq-answer strong { color: var(--ink); }
+        .faq-answer a { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .faq-answer a:hover { text-decoration: underline; }
+        .related { margin-top: 3rem; padding: 1.5rem; background: var(--soft-blue); border-radius: 12px; }
+        .related h3 { font-size: 1rem; color: var(--brand); margin-bottom: 0.75rem; }
+        .related-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+        .related-links a { background: var(--card-bg); padding: 0.5rem 1rem; border-radius: 20px; text-decoration: none; color: var(--brand); font-size: 0.9rem; font-weight: 500; border: 1px solid var(--card-border); }
+        .related-links a:hover { background: var(--brand); color: white; }
+        footer { background: var(--ink); color: rgba(255,255,255,0.7); text-align: center; padding: 2rem 1.5rem; font-size: 0.9rem; }
+        footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="icon">🎓</div>
+    <h1>FAQ Pédagogie</h1>
+    <p>Utiliser FizziQ en classe</p>
+</header>
+
+<nav class="nav-bar">
+    <a href="../">← Toutes les FAQ</a>
+    <a href="../activites/">Activités</a>
+    <a href="../fizziq/">FizziQ App</a>
+    <a href="../fizziq-junior/">FizziQ Junior</a>
+</nav>
+
+<main class="main">
+    <div class="faq-list">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Les élèves peuvent-ils prendre en main facilement l'application ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Oui. L'ergonomie de FizziQ est pensée pour des utilisateurs jeunes : l'interface est intuitive, proche des outils numériques qu'ils utilisent déjà. Une brève phase de découverte (<strong>10-15 minutes</strong> lors de la première séance) suffit pour qu'ils soient autonomes.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment utiliser FizziQ Connect pour une démonstration en classe ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Activez le <strong>mode Diffusion</strong> sur le boîtier FizziQ Connect. Tous les élèves peuvent alors se connecter au même boîtier depuis leur smartphone et voir les mesures en temps réel. L'enseignant manipule le capteur pendant que chaque élève visualise les données sur son écran.
+                <br><br><a href="../fizziq-connect/">→ Voir la FAQ FizziQ Connect</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment récupérer les travaux des élèves ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Les élèves peuvent <strong>exporter leur cahier en PDF</strong> et vous l'envoyer par email, messagerie ou plateforme de classe (ENT, Google Classroom, etc.). Le PDF inclut tous les graphiques, tableaux, photos et textes explicatifs. L'export CSV permet aussi une analyse des données brutes.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                FizziQ fonctionne-t-il sans connexion internet ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Oui, <strong>FizziQ fonctionne entièrement hors ligne</strong>. Les élèves peuvent mesurer, enregistrer et analyser sans connexion. Une connexion est uniquement nécessaire pour partager des fichiers ou utiliser l'assistant AskFizziQ.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Pour quel niveau scolaire FizziQ est-il adapté ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                FizziQ est conçu pour l'enseignement des sciences <strong>du collège à l'université</strong>. Pour l'école primaire (cycles 2-3), utilisez <strong>FizziQ Junior</strong> avec une interface simplifiée et des capteurs adaptés.
+                <br><br><a href="../fizziq-junior/">→ Voir la FAQ FizziQ Junior</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="related">
+        <h3>Voir aussi</h3>
+        <div class="related-links">
+            <a href="../activites/">FAQ Activités</a>
+            <a href="../fizziq-junior/">FAQ FizziQ Junior</a>
+            <a href="https://www.fizziq.org/activites" target="_blank">Bibliothèque d'activités</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>
+        <a href="https://www.fizziq.org" target="_blank">fizziq.org</a> ·
+        <a href="mailto:contact@fizziq.org">contact@fizziq.org</a>
+    </p>
+</footer>
+
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            button.parentElement.classList.toggle('open');
+        });
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ FizziQ - Questions fréquentes</title>
+
+    <meta name="description" content="Questions fréquentes sur FizziQ : application mobile, FizziQ Connect, capteurs, activités et utilisation pédagogique.">
+    <meta name="keywords" content="FizziQ, FAQ, questions, aide, capteurs, sciences, éducation">
+    <link rel="canonical" href="https://guide.fizziq.org/fr/faq/">
+
+    <meta property="og:title" content="FAQ FizziQ - Questions fréquentes">
+    <meta property="og:description" content="Trouvez les réponses à vos questions sur FizziQ et ses outils.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guide.fizziq.org/fr/faq/">
+    <meta property="og:locale" content="fr_FR">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --brand: #3E5488;
+            --brand-deep: #2E3E63;
+            --accent: #DD7A43;
+            --ink: #242A3D;
+            --text-light: #5C6278;
+            --soft-blue: #EAEFF8;
+            --page-bg: #FBF8F3;
+            --card-bg: #FFFFFF;
+            --card-border: rgba(41,49,79,0.09);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: Figtree, system-ui, -apple-system, sans-serif;
+            color: var(--ink);
+            background: var(--page-bg);
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; }
+
+        .header {
+            background: var(--brand);
+            color: white;
+            padding: 3rem 1.5rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .nav-back {
+            background: var(--soft-blue);
+            padding: 0.8rem 1.5rem;
+            text-align: center;
+        }
+
+        .nav-back a {
+            color: var(--brand);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .nav-back a:hover {
+            text-decoration: underline;
+        }
+
+        .main {
+            flex: 1;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+            width: 100%;
+        }
+
+        .intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .intro h2 {
+            font-size: 1.5rem;
+            color: var(--brand);
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .faq-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .faq-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(41,49,79,0.12);
+        }
+
+        .faq-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--brand);
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-card p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            flex-grow: 1;
+        }
+
+        .faq-card .count {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        footer {
+            background: var(--ink);
+            color: rgba(255,255,255,0.7);
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <h1>FAQ FizziQ</h1>
+    <p>Trouvez rapidement les réponses à vos questions sur FizziQ et ses outils</p>
+</header>
+
+<nav class="nav-back">
+    <a href="../../">← Retour aux guides</a> ·
+    <a href="../../en/faq/">English version</a>
+</nav>
+
+<main class="main">
+    <div class="intro">
+        <h2>Choisissez une catégorie</h2>
+        <p>Cliquez sur une catégorie pour voir les questions et réponses</p>
+    </div>
+
+    <div class="faq-grid">
+        <a href="fizziq/" class="faq-card">
+            <span class="icon">📱</span>
+            <h3>FizziQ</h3>
+            <p>L'application mobile pour iOS et Android : interface, cahier d'expériences, enregistrement, export, cinématique, AskFizziQ.</p>
+            <span class="count">12 questions</span>
+        </a>
+
+        <a href="fizziq-connect/" class="faq-card">
+            <span class="icon">🔌</span>
+            <h3>FizziQ Connect</h3>
+            <p>Le boîtier de capteurs externes : installation, connexion Bluetooth, capteurs I2C, autonomie, firmware.</p>
+            <span class="count">15 questions</span>
+        </a>
+
+        <a href="fizziq-web/" class="faq-card">
+            <span class="icon">🌐</span>
+            <h3>FizziQ Web</h3>
+            <p>La version navigateur de FizziQ : compatibilité, fonctionnalités, Chromebook, utilisation sans installation.</p>
+            <span class="count">1 question</span>
+        </a>
+
+        <a href="fizziq-junior/" class="faq-card">
+            <span class="icon">🧒</span>
+            <h3>FizziQ Junior</h3>
+            <p>La version pour l'école primaire : interface simplifiée, capteurs adaptés, cycles 2 et 3.</p>
+            <span class="count">1 question</span>
+        </a>
+
+        <a href="capteurs/" class="faq-card">
+            <span class="icon">📡</span>
+            <h3>Capteurs</h3>
+            <p>Tous les capteurs FizziQ : accéléromètre, sonomètre, luxmètre, pH, CO2, température, GPS et plus.</p>
+            <span class="count">18 questions</span>
+        </a>
+
+        <a href="activites/" class="faq-card">
+            <span class="icon">🧪</span>
+            <h3>Activités</h3>
+            <p>Créer et partager des activités : protocoles, QR codes, bibliothèque d'expériences.</p>
+            <span class="count">5 questions</span>
+        </a>
+
+        <a href="pedagogie/" class="faq-card">
+            <span class="icon">🎓</span>
+            <h3>Pédagogie</h3>
+            <p>Utilisation en classe : prise en main élèves, gestion de classe, évaluation, différenciation.</p>
+            <span class="count">5 questions</span>
+        </a>
+    </div>
+</main>
+
+<footer>
+    <p>
+        <a href="https://www.fizziq.org" target="_blank">fizziq.org</a> ·
+        <a href="https://fizziqlabs.com" target="_blank">FizziQ Labs</a> ·
+        <a href="mailto:contact@fizziq.org">contact@fizziq.org</a>
+    </p>
+    <p style="margin-top: 0.5rem; opacity: 0.6;">© 2025 FizziQ Labs</p>
+</footer>
+
+</body>
+</html>
