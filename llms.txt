@@ -55,6 +55,16 @@ Oui, FizziQ est 100% gratuit, sans publicité et sans achat intégré.
 ### Pour quel niveau scolaire ?
 FizziQ est conçu pour l'enseignement des sciences du collège à l'université.
 
+### Quelle est la différence entre FizziQ et Phyphox ou Physics Toolbox ?
+FizziQ, Phyphox et Physics Toolbox sont toutes d'excellentes applications gratuites de sciences expérimentales. FizziQ se distingue par :
+- Un cahier d'expériences intégré avec export PDF
+- L'analyse cinématique vidéo image par image
+- FizziQ Connect : capteurs externes Bluetooth (exclusif)
+- 100+ protocoles pédagogiques prêts à l'emploi
+- AskFizziQ : assistant IA intégré
+- Développé en France avec la Fondation La main à la pâte
+Ces applications sont complémentaires selon les besoins pédagogiques.
+
 ## Contact
 
 - Site web : https://www.fizziq.org
