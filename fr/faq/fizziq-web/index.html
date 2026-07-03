@@ -3,24 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ FizziQ Web - Questions sur la version navigateur</title>
+    <title>FAQ FizziQ Web - 30 questions sur l'application web de sciences</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Questions frequentes sur FizziQ Web : utilisation sur ordinateur et Chromebook, analyse audio et video, simulations, capteurs externes, export PDF.">
-    <meta name="keywords" content="FizziQ Web, FAQ, Chromebook, analyse video, simulation physique, capteurs, rapport scientifique">
+    <meta name="description" content="30 questions frequentes sur FizziQ Web : utilisation sur Chromebook et ordinateur, analyse audio et video, simulations de physique, capteurs externes, export PDF, rapport scientifique.">
+    <meta name="keywords" content="FizziQ Web, FAQ, questions frequentes, Chromebook, analyse video, analyse audio, simulation physique, pendule, ressort, capteurs externes, Arduino, micro:bit, rapport scientifique, export PDF, sciences experimentales, college, lycee">
     <meta name="author" content="FizziQ Labs">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://guide.fizziq.org/fr/faq/fizziq-web/">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="FAQ FizziQ Web - Application web de sciences">
-    <meta property="og:description" content="Comment utiliser FizziQ Web pour des experiences scientifiques sur ordinateur ? Reponses aux questions frequentes.">
+    <meta property="og:title" content="FAQ FizziQ Web - 30 questions sur l'application web de sciences">
+    <meta property="og:description" content="Comment utiliser FizziQ Web pour des experiences scientifiques sur ordinateur ? 30 reponses aux questions frequentes : Chromebook, analyse video, simulations, capteurs, rapport PDF.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://guide.fizziq.org/fr/faq/fizziq-web/">
     <meta property="og:site_name" content="FizziQ Guide">
     <meta property="og:locale" content="fr_FR">
 
-    <!-- Schema.org: FAQPage -->
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="FAQ FizziQ Web - 30 questions">
+    <meta name="twitter:description" content="Reponses aux questions frequentes sur FizziQ Web : Chromebook, analyse video, simulations de physique, capteurs externes, rapport PDF.">
+
+    <!-- Schema.org: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://www.fizziq.org/#organization",
+        "name": "FizziQ Labs",
+        "url": "https://www.fizziq.org",
+        "description": "FizziQ Labs developpe des applications educatives gratuites pour l'enseignement des sciences experimentales au college et au lycee."
+    }
+    </script>
+
+    <!-- Schema.org: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "@id": "https://fizziqweb.web.app/#app",
+        "name": "FizziQ Web",
+        "description": "FizziQ Web est une application web gratuite qui transforme un ordinateur en laboratoire de sciences. Elle permet d'analyser le son et les videos, d'utiliser des simulations de physique (pendule, ressort, balistique, circuit electrique, ondes, gaz ideal), de connecter des capteurs externes (FizziQ Connect, Arduino, micro:bit) et de creer des rapports scientifiques avec formules LaTeX.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web Browser (Chrome, Edge, Firefox, Safari)",
+        "url": "https://fizziqweb.web.app",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+        "author": { "@id": "https://www.fizziq.org/#organization" },
+        "audience": {
+            "@type": "EducationalAudience",
+            "educationalRole": ["student", "teacher"],
+            "audienceType": "College, Lycee, Enseignement superieur"
+        }
+    }
+    </script>
+
+    <!-- Schema.org: FAQPage - Questions principales pour SEO -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -31,7 +69,7 @@
                 "name": "Qu'est-ce que FizziQ Web ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "FizziQ Web est une application web gratuite qui transforme votre ordinateur en laboratoire de sciences. Elle permet d'analyser des sons et des videos, d'utiliser des simulations de physique, de connecter des capteurs externes et de creer des rapports scientifiques. Accessible sur fizziqweb.web.app sans installation."
+                    "text": "FizziQ Web est une application web gratuite qui transforme votre ordinateur en laboratoire de sciences. Elle permet d'analyser des sons et des videos, d'utiliser des simulations de physique (pendule, ressort, balistique, circuits, ondes, gaz ideal), de connecter des capteurs externes (FizziQ Connect, Arduino, micro:bit) et de creer des rapports scientifiques. Accessible sur fizziqweb.web.app sans installation."
                 }
             },
             {
@@ -39,7 +77,7 @@
                 "name": "Quel navigateur utiliser pour FizziQ Web ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Utilisez Chrome ou Edge pour acceder a toutes les fonctionnalites, notamment la connexion Bluetooth avec FizziQ Connect. Firefox et Safari supportent l'analyse audio et video mais pas le Bluetooth Web."
+                    "text": "Utilisez Chrome ou Edge pour acceder a toutes les fonctionnalites, notamment la connexion Bluetooth avec FizziQ Connect et USB avec Arduino. Firefox et Safari supportent l'analyse audio, video et les simulations, mais pas le Bluetooth Web ni l'USB Serial."
                 }
             },
             {
@@ -47,9 +85,94 @@
                 "name": "FizziQ Web fonctionne-t-il sur Chromebook ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Oui, FizziQ Web fonctionne parfaitement sur Chromebook via le navigateur Chrome. C'est ideal pour les etablissements equipes de Chromebooks car aucune installation n'est requise."
+                    "text": "Oui, FizziQ Web fonctionne parfaitement sur Chromebook via le navigateur Chrome. C'est ideal pour les etablissements equipes de Chromebooks car aucune installation n'est requise. Toutes les fonctionnalites sont disponibles, y compris la connexion Bluetooth."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "FizziQ Web est-il gratuit ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui, FizziQ Web est entierement gratuit. Aucun abonnement, aucune publicite, aucune limitation de fonctionnalites. Toutes les fonctionnalites sont accessibles a tous, sans compte requis."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment analyser une video avec FizziQ Web ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Cliquez sur Experimenter puis Analyse video. Importez une video depuis votre ordinateur, definissez l'echelle avec une reference connue, puis pointez la position de l'objet image par image. FizziQ Web calcule automatiquement les positions, vitesses et accelerations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quelles simulations sont disponibles dans FizziQ Web ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FizziQ Web propose 10 simulations de physique : pendule (oscillations, periode), ressort (oscillations harmoniques), balistique (trajectoire de projectiles), plan incline, centrifugeuse, circuit electrique (RC, RL, RLC), ondes sur un lac (propagation, interferences), gaz parfait (thermodynamique PV=nRT), optique (lentilles, miroirs) et trois corps (gravitation)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment connecter un Arduino ou micro:bit a FizziQ Web ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Programmez votre microcontroleur pour envoyer des donnees au format FZ0:capteur:valeur. Branchez-le en USB, fermez l'IDE Arduino/MakeCode, puis dans FizziQ Web cliquez sur Experimenter, Capteurs externes, USB Serial et selectionnez le port."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment creer un rapport final dans FizziQ Web ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Enrichissez votre cahier d'experiences avec du texte et des photos, cliquez sur Editer le rapport, ajoutez du texte, des images et des formules LaTeX, inserez les observations du cahier (tableaux et graphiques), puis cliquez sur Finaliser. Exportez ensuite en PDF ou Word."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment utiliser les formules LaTeX dans FizziQ Web ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Dans l'editeur de rapport, cliquez sur le bouton Sigma ou tapez directement entre dollars : $E = mc^2$. Utilisez \\frac{a}{b} pour les fractions, \\sqrt{x} pour les racines carrees, x^2 pour les exposants."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment configurer le mode restreint pour les eleves ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Allez dans Reglages puis Personnalisation, activez le Mode personnalise et cochez uniquement les outils necessaires. Vous pouvez ensuite generer un lien de partage que les eleves ouvriront pour acceder directement a cette configuration."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Les donnees sont-elles stockees en ligne ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Non, toutes les donnees restent sur votre ordinateur. FizziQ Web ne transmet aucune donnee a des serveurs externes. Les fichiers sont stockes localement dans le navigateur. Exportez votre travail en fichier .fizziq ou PDF pour le conserver."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quelle est la difference entre FizziQ Web et l'application mobile FizziQ ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FizziQ mobile utilise les capteurs integres du smartphone (accelerometre, GPS, magnetometre). FizziQ Web offre l'analyse audio et video avancee, les simulations de physique, l'editeur de rapport avec LaTeX et un ecran plus grand. Les deux sont complementaires et peuvent echanger des donnees via QR Code."
                 }
             }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org: BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Guide FizziQ", "item": "https://guide.fizziq.org/" },
+            { "@type": "ListItem", "position": 2, "name": "FAQ", "item": "https://guide.fizziq.org/fr/faq/" },
+            { "@type": "ListItem", "position": 3, "name": "FizziQ Web", "item": "https://guide.fizziq.org/fr/faq/fizziq-web/" }
         ]
     }
     </script>
