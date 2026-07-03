@@ -239,6 +239,24 @@
             font-size: 12px;
         }
 
+        pre {
+            background: #2D2D2D;
+            color: #F8F8F2;
+            padding: 1rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            margin: 0.8rem 0;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+
         .feature-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -330,6 +348,7 @@
         <li><a href="#chronophotographies">Chronophotographies</a></li>
         <li><a href="#simulations">Simulations</a></li>
         <li><a href="#fizziq-connect">FizziQ Connect</a></li>
+        <li><a href="#microcontroleurs">Microcontrôleurs</a></li>
         <li><a href="#cahier">Cahier</a></li>
         <li><a href="#editeur">Editeur de documents</a></li>
         <li><a href="#tableur">Tableur</a></li>
@@ -993,11 +1012,298 @@
     </div>
 </section>
 
+<!-- ==================== MICROCONTROLEURS ==================== -->
+<section id="microcontroleurs">
+    <h2>8. Connexion de microcontrôleurs</h2>
+
+    <p>FizziQ Web permet d'afficher des données provenant de n'importe quel microcontrôleur (Arduino, ESP32, micro:bit, Raspberry Pi Pico...) connecté en USB. Le microcontrôleur envoie des lignes de texte dans un format spécifique que FizziQ Web reconnaît automatiquement.</p>
+
+    <div class="info-box">
+        <strong>Principe :</strong> FizziQ Web ne lit pas directement le capteur. Il lit les lignes de texte envoyées par le microcontrôleur via le port USB série. Votre programme doit lire la valeur du capteur, la convertir dans une unité utile, et envoyer une ligne au bon format.
+    </div>
+
+    <h3>8.1 Matériel compatible</h3>
+    <p>Tout microcontrôleur avec port USB ou port série USB :</p>
+    <ul>
+        <li><strong>Arduino</strong> : Uno, Nano, Mega</li>
+        <li><strong>ESP32</strong> ou <strong>ESP8266</strong></li>
+        <li><strong>micro:bit</strong></li>
+        <li><strong>Teensy</strong></li>
+        <li><strong>Raspberry Pi Pico</strong></li>
+    </ul>
+
+    <h3>8.2 Format USB attendu par FizziQ Web</h3>
+    <p>Chaque ligne de données doit respecter ce format :</p>
+    <pre><code>FZ[CANAL]:[LEGENDE]:[VALEUR]</code></pre>
+
+    <h4>Exemples de messages</h4>
+    <pre><code>FZ0:tem:25.3
+FZ0:hum:65.2
+FZ1:pre:1013.25
+FZ2:lum:450</code></pre>
+
+    <h4>Structure d'un message</h4>
+    <table>
+        <tr><th>Élément</th><th>Description</th><th>Exemple</th></tr>
+        <tr><td><code>FZ</code></td><td>Préfixe obligatoire</td><td>FZ</td></tr>
+        <tr><td><code>[CANAL]</code></td><td>Numéro de canal (0 à 5)</td><td>0, 1, 2...</td></tr>
+        <tr><td><code>[LEGENDE]</code></td><td>Abréviation du type de capteur</td><td>tem, hum, lum...</td></tr>
+        <tr><td><code>[VALEUR]</code></td><td>Valeur numérique mesurée</td><td>25.3</td></tr>
+    </table>
+
+    <h3>8.3 Légendes de capteurs reconnues</h3>
+    <p>FizziQ Web reconnaît ces abréviations standardisées (non sensible aux majuscules) :</p>
+
+    <table>
+        <tr><th>Légende</th><th>Grandeur</th><th>Unité</th></tr>
+        <tr><td><code>tem</code></td><td>Température</td><td>°C</td></tr>
+        <tr><td><code>pre</code></td><td>Pression atmosphérique</td><td>hPa</td></tr>
+        <tr><td><code>hum</code></td><td>Humidité relative</td><td>%</td></tr>
+        <tr><td><code>lum</code></td><td>Luminosité</td><td>lux</td></tr>
+        <tr><td><code>acc</code></td><td>Accélération</td><td>m/s²</td></tr>
+        <tr><td><code>dis</code></td><td>Distance</td><td>mm</td></tr>
+        <tr><td><code>son</code></td><td>Température sonde</td><td>°C</td></tr>
+        <tr><td><code>co2</code></td><td>Dioxyde de carbone</td><td>ppm</td></tr>
+        <tr><td><code>o2</code></td><td>Oxygène</td><td>%</td></tr>
+        <tr><td><code>ph</code></td><td>pH</td><td>-</td></tr>
+        <tr><td><code>uv</code></td><td>Indice UV</td><td>UV</td></tr>
+        <tr><td><code>tvo</code></td><td>COV totaux</td><td>ppb</td></tr>
+        <tr><td><code>inf</code></td><td>Température infrarouge</td><td>°C</td></tr>
+        <tr><td><code>wei</code></td><td>Masse</td><td>kg</td></tr>
+        <tr><td><code>ten</code></td><td>Tension électrique</td><td>V</td></tr>
+        <tr><td><code>int</code></td><td>Intensité électrique</td><td>A</td></tr>
+        <tr><td><code>mag</code></td><td>Champ magnétique</td><td>mT</td></tr>
+        <tr><td><code>pou</code></td><td>Pouls</td><td>bpm</td></tr>
+        <tr><td><code>rot</code></td><td>Rotation</td><td>rpm</td></tr>
+        <tr><td><code>niv</code></td><td>Niveau sonore</td><td>dB</td></tr>
+        <tr><td><code>pm2</code></td><td>Particules PM2.5</td><td>µg/m³</td></tr>
+        <tr><td><code>cv</code></td><td>Conductivité</td><td>mS/cm</td></tr>
+        <tr><td><code>wat</code></td><td>Puissance</td><td>W</td></tr>
+        <tr><td><code>an</code></td><td>Signal analogique</td><td>-</td></tr>
+        <tr><td><code>ext</code></td><td>Mesure personnalisée</td><td>-</td></tr>
+    </table>
+
+    <h3>8.4 Utiliser plusieurs canaux</h3>
+    <p>FizziQ Web gère <strong>6 canaux</strong> (0 à 5) pour distinguer plusieurs capteurs du même type :</p>
+    <pre><code>FZ0:tem:25.3    // Capteur température 1
+FZ1:tem:22.1    // Capteur température 2
+FZ2:tem:28.5    // Capteur température 3</code></pre>
+
+    <h3>8.5 Configuration du port série</h3>
+    <p>Pour une connexion USB stable :</p>
+    <ul>
+        <li><strong>Baud rate :</strong> 115200 (recommandé)</li>
+        <li><strong>Bits de données :</strong> 8</li>
+        <li><strong>Bit d'arrêt :</strong> 1</li>
+        <li><strong>Parité :</strong> aucune</li>
+    </ul>
+
+    <div class="warning-box">
+        <strong>Important :</strong> Fermez le moniteur série de l'Arduino IDE et toute autre application utilisant le port série avant de connecter FizziQ Web.
+    </div>
+
+    <h3>8.6 Programmer un Arduino</h3>
+
+    <h4>Premier test avec valeur fixe</h4>
+    <pre><code>void setup() {
+  Serial.begin(115200);
+}
+
+void loop() {
+  Serial.println("FZ0:tem:25.3");
+  delay(1000);
+}</code></pre>
+
+    <h4>Exemple avec capteur réel (DHT22)</h4>
+    <pre><code>#include &lt;DHT.h&gt;
+
+#define DHTPIN 2
+#define DHTTYPE DHT22
+
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(115200);
+  dht.begin();
+}
+
+void loop() {
+  float temp = dht.readTemperature();
+  float hum = dht.readHumidity();
+
+  if (!isnan(temp)) {
+    Serial.print("FZ0:tem:");
+    Serial.println(temp, 2);
+  }
+  delay(100);
+
+  if (!isnan(hum)) {
+    Serial.print("FZ0:hum:");
+    Serial.println(hum, 1);
+  }
+  delay(400);
+}</code></pre>
+
+    <h4>Exemple avec plusieurs capteurs</h4>
+    <pre><code>#define TEMP_PIN A0
+#define LIGHT_PIN A1
+
+void setup() {
+  Serial.begin(115200);
+}
+
+void loop() {
+  int rawTemp = analogRead(TEMP_PIN);
+  int rawLight = analogRead(LIGHT_PIN);
+
+  float temperature = rawTemp * (5.0 / 1023.0) * 100.0;
+  float lux = map(rawLight, 0, 1023, 0, 1000);
+
+  Serial.print("FZ0:tem:");
+  Serial.println(temperature, 2);
+  delay(100);
+
+  Serial.print("FZ0:lum:");
+  Serial.println(lux, 1);
+  delay(400);
+}</code></pre>
+
+    <h3>8.7 Programmer un ESP32</h3>
+    <pre><code>#define TEMP_PIN 34
+#define LIGHT_PIN 35
+
+void setup() {
+  Serial.begin(115200);
+}
+
+void loop() {
+  int rawTemp = analogRead(TEMP_PIN);
+  int rawLight = analogRead(LIGHT_PIN);
+
+  float voltage = (rawTemp / 4095.0) * 3.3;
+  float temperature = voltage * 100.0;
+  float lux = map(rawLight, 0, 4095, 0, 1000);
+
+  Serial.print("FZ0:tem:");
+  Serial.println(temperature, 2);
+  delay(100);
+
+  Serial.print("FZ0:lum:");
+  Serial.println(lux, 1);
+  delay(400);
+}</code></pre>
+
+    <h3>8.8 Programmer une micro:bit</h3>
+
+    <h4>JavaScript (MakeCode)</h4>
+    <pre><code>basic.forever(function () {
+    let temp = input.temperature()
+    serial.writeLine("FZ0:tem:" + temp)
+    basic.pause(100)
+
+    let lum = input.lightLevel()
+    serial.writeLine("FZ0:lum:" + lum)
+    basic.pause(400)
+})</code></pre>
+
+    <h4>Python (micro:bit)</h4>
+    <pre><code>from microbit import *
+
+while True:
+    print("FZ0:tem:" + str(temperature()))
+    sleep(100)
+    print("FZ0:lum:" + str(display.read_light_level() * 4))
+    sleep(400)</code></pre>
+
+    <h3>8.9 Fréquence d'envoi recommandée</h3>
+    <table>
+        <tr><th>Intervalle</th><th>Qualité</th></tr>
+        <tr><td>500 - 1000 ms</td><td>Idéal pour la plupart des usages</td></tr>
+        <tr><td>100 - 500 ms</td><td>Acceptable</td></tr>
+        <tr><td>&lt; 100 ms</td><td>Trop rapide, risque de perte de données</td></tr>
+        <tr><td>&gt; 5000 ms</td><td>Trop lent, graphique peu fluide</td></tr>
+    </table>
+
+    <div class="tip-box">
+        <strong>Conseil :</strong> Insérez un délai d'au moins 50 ms entre l'envoi des données pour assurer leur traitement correct par FizziQ Web.
+    </div>
+
+    <h3>8.10 Connexion à FizziQ Web</h3>
+    <ol class="steps">
+        <li>Branchez le microcontrôleur à l'ordinateur avec un câble USB <strong>de données</strong></li>
+        <li>Téléversez votre programme (Arduino IDE, PlatformIO, MakeCode...)</li>
+        <li>Fermez l'environnement de programmation</li>
+        <li>Ouvrez FizziQ Web dans Chrome ou Edge</li>
+        <li>Cliquez sur <strong>Expérimenter</strong> → <strong>Capteurs externes</strong></li>
+        <li>Cliquez sur <strong>USB Serial</strong></li>
+        <li>Sélectionnez le port correspondant au microcontrôleur</li>
+        <li>Les capteurs détectés s'affichent automatiquement</li>
+    </ol>
+
+    <h3>8.11 Dépannage microcontrôleurs</h3>
+    <table>
+        <tr><th>Problème</th><th>Causes possibles</th><th>Solutions</th></tr>
+        <tr>
+            <td>Aucune donnée n'apparaît</td>
+            <td>Format incorrect, préfixe FZ manquant, baud rate incorrect</td>
+            <td>Vérifiez le format, utilisez Serial.println(), testez avec valeur fixe</td>
+        </tr>
+        <tr>
+            <td>Valeurs incohérentes</td>
+            <td>Conversion erronée, capteur non calibré, bruit électrique</td>
+            <td>Relisez la documentation du capteur, vérifiez le câblage</td>
+        </tr>
+        <tr>
+            <td>Messages manquants</td>
+            <td>Envois trop rapides, buffer série plein</td>
+            <td>Augmentez l'intervalle d'envoi, insérez des délais entre les données</td>
+        </tr>
+        <tr>
+            <td>Port USB ne s'ouvre pas</td>
+            <td>Arduino IDE ouvert, autre application utilise le port</td>
+            <td>Fermez toutes les applications série, changez de câble USB</td>
+        </tr>
+        <tr>
+            <td>Microcontrôleur redémarre</td>
+            <td>Alimentation insuffisante, court-circuit</td>
+            <td>Vérifiez l'alimentation et le montage</td>
+        </tr>
+    </table>
+
+    <h3>8.12 Exemple d'activité : station météo</h3>
+    <p>Réalisez une petite station météo avec un microcontrôleur et quelques capteurs :</p>
+    <ul>
+        <li>Capteur de température</li>
+        <li>Capteur d'humidité</li>
+        <li>Capteur de lumière</li>
+    </ul>
+
+    <p>Le programme envoie :</p>
+    <pre><code>FZ0:tem:23.4
+FZ0:hum:58.1
+FZ0:lum:420</code></pre>
+
+    <p>Dans FizziQ Web, les élèves peuvent :</p>
+    <ul>
+        <li>Visualiser les mesures en temps réel</li>
+        <li>Enregistrer les données sur une durée</li>
+        <li>Tracer des graphiques d'évolution</li>
+        <li>Comparer différentes conditions expérimentales</li>
+        <li>Exporter les données pour analyse</li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>Messages de débogage :</strong> Les lignes commençant par <code>#</code> sont ignorées par FizziQ Web et peuvent servir au débogage :
+        <pre><code>Serial.println("# Capteur initialisé");
+Serial.println("# ERREUR: Capteur non trouvé");</code></pre>
+    </div>
+</section>
+
 <!-- ==================== CAHIER D'EXPERIENCES ==================== -->
 <section id="cahier">
-    <h2>8. Cahier d'experiences</h2>
+    <h2>9. Cahier d'experiences</h2>
 
-    <h3>8.1 Presentation</h3>
+    <h3>9.1 Presentation</h3>
     <p>Le <strong>cahier d'experiences</strong> est l'espace central ou vous organisez vos donnees, graphiques et observations. Toutes les mesures (audio, video, simulations, capteurs) y sont automatiquement ajoutees.</p>
 
     <div class="image-container">
@@ -1008,7 +1314,7 @@
         <figcaption>Cahier d'experiences avec observations et graphiques</figcaption>
     </div>
 
-    <h3>8.2 Structure du cahier</h3>
+    <h3>9.2 Structure du cahier</h3>
     <p>Le cahier est organise en <strong>observations</strong> numerotees :</p>
     <ul>
         <li>Chaque observation peut contenir des donnees, des graphiques, des images, du texte</li>
@@ -1016,7 +1322,7 @@
         <li>Cliquez sur <strong>+ Ajouter</strong> pour inserer une observation dans le document</li>
     </ul>
 
-    <h3>8.3 Types de contenus</h3>
+    <h3>9.3 Types de contenus</h3>
     <ul>
         <li><strong>Tableaux de donnees</strong> : donnees brutes des mesures</li>
         <li><strong>Graphiques</strong> : visualisation des relations entre grandeurs</li>
@@ -1025,7 +1331,7 @@
         <li><strong>Formules</strong> : equations mathematiques (voir editeur de documents)</li>
     </ul>
 
-    <h3>8.4 Manipulation des donnees</h3>
+    <h3>9.4 Manipulation des donnees</h3>
     <ul>
         <li><strong>Selection des variables</strong> : choisissez quelles colonnes afficher</li>
         <li><strong>Colonnes calculees</strong> : ajoutez des grandeurs derivees (formules)</li>
@@ -1033,7 +1339,7 @@
         <li><strong>Copier-coller</strong> : vers Excel, Google Sheets...</li>
     </ul>
 
-    <h3>8.5 Graphiques</h3>
+    <h3>9.5 Graphiques</h3>
     <p>Les graphiques sont generes automatiquement a partir des donnees :</p>
     <ul>
         <li><strong>Courbes</strong> : evolution temporelle, relations entre grandeurs</li>
@@ -1049,7 +1355,7 @@
         <li>Legende et titre</li>
     </ul>
 
-    <h3>8.6 Modelisation et ajustement de courbes</h3>
+    <h3>9.6 Modelisation et ajustement de courbes</h3>
     <p>FizziQ Web permet d'ajuster des modeles mathematiques aux donnees :</p>
     <table>
         <tr><th>Modele</th><th>Equation</th><th>Utilisation</th></tr>
@@ -1067,7 +1373,7 @@
 
 <!-- ==================== EDITEUR DE DOCUMENTS ==================== -->
 <section id="editeur">
-    <h2>9. Editeur de documents</h2>
+    <h2>10. Editeur de documents</h2>
 
     <p>L'<strong>editeur de documents</strong> permet de creer des rapports scientifiques complets, integrant texte, formules mathematiques, graphiques et images.</p>
 
@@ -1076,13 +1382,13 @@
         <figcaption>Editeur de documents avec graphique, image et formule mathematique</figcaption>
     </div>
 
-    <h3>9.1 Acces a l'editeur</h3>
+    <h3>10.1 Acces a l'editeur</h3>
     <ol class="steps">
         <li>Depuis le cahier, cliquez sur <strong>Editer le document</strong></li>
         <li>Ou allez dans <strong>Analyser</strong> → <strong>Editeur de documents</strong></li>
     </ol>
 
-    <h3>9.2 Fonctionnalites de l'editeur</h3>
+    <h3>10.2 Fonctionnalites de l'editeur</h3>
     <ul>
         <li><strong>Formatage du texte</strong> : gras, italique, souligne</li>
         <li><strong>Taille de police</strong> : selection de la taille (8pt - 72pt)</li>
@@ -1092,7 +1398,7 @@
         <li><strong>Insertion d'observations</strong> : depuis le panneau lateral</li>
     </ul>
 
-    <h3>9.3 Formules mathematiques (LaTeX)</h3>
+    <h3>10.3 Formules mathematiques (LaTeX)</h3>
     <p>L'editeur supporte la syntaxe LaTeX pour les formules :</p>
 
     <h4>Exemples de formules</h4>
@@ -1109,7 +1415,7 @@
         <strong>Reconnaissance automatique :</strong> L'editeur detecte automatiquement les formules et les convertit en rendu mathematique professionnel.
     </div>
 
-    <h3>9.4 Integration des observations</h3>
+    <h3>10.4 Integration des observations</h3>
     <p>Le panneau lateral gauche affiche toutes les observations du cahier :</p>
     <ol class="steps">
         <li>Reperer l'observation souhaitee (numero)</li>
@@ -1117,7 +1423,7 @@
         <li>L'observation (graphique, tableau, image) est inseree dans le document</li>
     </ol>
 
-    <h3>9.5 Exemple de rapport</h3>
+    <h3>10.5 Exemple de rapport</h3>
     <p>Un rapport scientifique typique comprend :</p>
     <ul>
         <li><strong>Titre</strong> : nom de l'experience</li>
@@ -1132,24 +1438,24 @@
 
 <!-- ==================== TABLEUR ==================== -->
 <section id="tableur">
-    <h2>10. Tableur scientifique</h2>
+    <h2>11. Tableur scientifique</h2>
 
     <p>Le <strong>tableur scientifique</strong> permet de creer et manipuler des donnees, d'effectuer des calculs et de generer des graphiques.</p>
 
-    <h3>10.1 Acces au tableur</h3>
+    <h3>11.1 Acces au tableur</h3>
     <ul>
         <li>Depuis <strong>Experimenter</strong> → <strong>Tableau de donnees</strong></li>
         <li>Ou directement depuis le cahier d'experiences</li>
     </ul>
 
-    <h3>10.2 Structure du tableur</h3>
+    <h3>11.2 Structure du tableur</h3>
     <ul>
         <li><strong>Jusqu'a trois colonnes</strong> de donnees</li>
         <li><strong>Types de cellules</strong> : valeurs numeriques, texte, formules</li>
         <li><strong>En-tetes</strong> : nom de la grandeur et unite</li>
     </ul>
 
-    <h3>10.3 Formules disponibles</h3>
+    <h3>11.3 Formules disponibles</h3>
     <p>Le tableur supporte de nombreuses fonctions mathematiques et statistiques :</p>
 
     <h4>Fonctions mathematiques</h4>
@@ -1170,7 +1476,7 @@
         <li><code>somme()</code> : somme des valeurs</li>
     </ul>
 
-    <h3>10.4 Colonnes calculees</h3>
+    <h3>11.4 Colonnes calculees</h3>
     <p>Ajoutez une colonne calculee a partir des autres colonnes :</p>
     <ol class="steps">
         <li>Cliquez sur <strong>Ajouter une colonne</strong></li>
@@ -1179,7 +1485,7 @@
         <li>La colonne est calculee automatiquement</li>
     </ol>
 
-    <h3>10.5 Generation de graphiques</h3>
+    <h3>11.5 Generation de graphiques</h3>
     <p>A partir des donnees du tableur :</p>
     <ol class="steps">
         <li>Selectionnez les colonnes a representer</li>
@@ -1191,9 +1497,9 @@
 
 <!-- ==================== OUTILS ==================== -->
 <section id="outils">
-    <h2>11. Outils supplementaires</h2>
+    <h2>12. Outils supplementaires</h2>
 
-    <h3>11.1 Calculatrice scientifique</h3>
+    <h3>12.1 Calculatrice scientifique</h3>
     <p>Une calculatrice complete pour les calculs rapides :</p>
     <ul>
         <li>Operations de base (+, -, ×, ÷)</li>
@@ -1202,7 +1508,7 @@
         <li>Historique des calculs</li>
     </ul>
 
-    <h3>11.2 Synthetiseur de sons</h3>
+    <h3>12.2 Synthetiseur de sons</h3>
     <p>Generez des sons de frequences precises :</p>
     <ul>
         <li><strong>Frequence</strong> : 20 Hz - 20 000 Hz</li>
@@ -1219,7 +1525,7 @@
         <li>Effet Doppler (avec deplacement de la source)</li>
     </ul>
 
-    <h3>11.3 Synthetiseur de couleurs (RGB)</h3>
+    <h3>12.3 Synthetiseur de couleurs (RGB)</h3>
     <p>Melangez les couleurs primaires de la lumiere :</p>
     <ul>
         <li><strong>Curseurs RGB</strong> : Rouge, Vert, Bleu (0-255)</li>
@@ -1234,7 +1540,7 @@
         <li>Couleurs complementaires</li>
     </ul>
 
-    <h3>11.4 Convertisseur video → chronophotographie</h3>
+    <h3>12.4 Convertisseur video → chronophotographie</h3>
     <p>Transformez une video en image chronophotographique :</p>
     <ol class="steps">
         <li>Chargez une video</li>
@@ -1244,7 +1550,7 @@
         <li>Exportez l'image resultante</li>
     </ol>
 
-    <h3>11.5 Interpreteur Python</h3>
+    <h3>12.5 Interpreteur Python</h3>
     <p>Un environnement Python integre pour les analyses avancees :</p>
     <ul>
         <li><strong>Editeur de code</strong> : coloration syntaxique</li>
@@ -1275,7 +1581,7 @@ plt.ylabel('Position (m)')
 plt.legend()
 plt.show()</code></pre>
 
-    <h3>11.6 Partage d'ecran</h3>
+    <h3>12.6 Partage d'ecran</h3>
     <p>Projetez FizziQ Web pour toute la classe :</p>
     <ul>
         <li>Affichage plein ecran</li>
@@ -1286,9 +1592,9 @@ plt.show()</code></pre>
 
 <!-- ==================== EXPORT ==================== -->
 <section id="export">
-    <h2>12. Export des donnees</h2>
+    <h2>13. Export des donnees</h2>
 
-    <h3>12.1 Formats disponibles</h3>
+    <h3>13.1 Formats disponibles</h3>
     <table>
         <tr><th>Format</th><th>Extension</th><th>Usage</th></tr>
         <tr><td><strong>PDF</strong></td><td>.pdf</td><td>Rapport complet avec graphiques et texte, impression</td></tr>
@@ -1299,7 +1605,7 @@ plt.show()</code></pre>
         <tr><td><strong>FizziQ</strong></td><td>.fizziq</td><td>Projet complet, compatible avec FizziQ mobile</td></tr>
     </table>
 
-    <h3>12.2 Export PDF</h3>
+    <h3>13.2 Export PDF</h3>
     <ol class="steps">
         <li>Ouvrez l'editeur de documents</li>
         <li>Verifiez la mise en page</li>
@@ -1307,7 +1613,7 @@ plt.show()</code></pre>
         <li>Le fichier est telecharge</li>
     </ol>
 
-    <h3>12.3 Export des donnees (CSV/Excel)</h3>
+    <h3>13.3 Export des donnees (CSV/Excel)</h3>
     <ol class="steps">
         <li>Dans le cahier, selectionnez le tableau de donnees</li>
         <li>Cliquez sur <strong>Exporter</strong></li>
@@ -1315,7 +1621,7 @@ plt.show()</code></pre>
         <li>Le fichier est telecharge</li>
     </ol>
 
-    <h3>12.4 Export Python</h3>
+    <h3>13.4 Export Python</h3>
     <p>L'export Python genere un script contenant :</p>
     <ul>
         <li>Les donnees sous forme de tableaux numpy</li>
@@ -1323,7 +1629,7 @@ plt.show()</code></pre>
         <li>Les ajustements de courbes</li>
     </ul>
 
-    <h3>12.5 Compatibilite FizziQ mobile</h3>
+    <h3>13.5 Compatibilite FizziQ mobile</h3>
     <p>Les fichiers .fizziq sont compatibles avec l'application mobile FizziQ :</p>
     <ul>
         <li>Commencez une experience sur smartphone (mesures de terrain)</li>
@@ -1332,7 +1638,7 @@ plt.show()</code></pre>
         <li>Ou inversement : preparez un protocole sur ordinateur et executez-le sur mobile</li>
     </ul>
 
-    <h3>12.6 Confidentialite</h3>
+    <h3>13.6 Confidentialite</h3>
     <div class="info-box">
         <strong>Donnees locales :</strong> Tous les fichiers sont stockes localement sur votre ordinateur. Aucun compte n'est requis. Les donnees des eleves restent privees et confidentielles.
     </div>
@@ -1340,9 +1646,9 @@ plt.show()</code></pre>
 
 <!-- ==================== DEPANNAGE ==================== -->
 <section id="depannage">
-    <h2>13. Depannage</h2>
+    <h2>14. Depannage</h2>
 
-    <h3>13.1 Problemes frequents</h3>
+    <h3>14.1 Problemes frequents</h3>
     <table>
         <tr><th>Probleme</th><th>Solution</th></tr>
         <tr><td>Le microphone ne fonctionne pas</td><td>Autorisez l'acces au micro dans les parametres du navigateur (cadenas dans la barre d'adresse)</td></tr>
@@ -1355,7 +1661,7 @@ plt.show()</code></pre>
         <tr><td>Formules LaTeX ne s'affichent pas</td><td>Verifiez la syntaxe, utilisez les exemples fournis</td></tr>
     </table>
 
-    <h3>13.2 Navigateurs recommandes</h3>
+    <h3>14.2 Navigateurs recommandes</h3>
     <p>Pour une experience optimale :</p>
     <ul>
         <li><strong>Chrome</strong> (version 89+) : toutes les fonctionnalites</li>
@@ -1364,7 +1670,7 @@ plt.show()</code></pre>
         <li><strong>Safari</strong> : audio, video, simulations (pas de Bluetooth/USB)</li>
     </ul>
 
-    <h3>13.3 Chromebook</h3>
+    <h3>14.3 Chromebook</h3>
     <p>FizziQ Web fonctionne parfaitement sur Chromebook :</p>
     <ul>
         <li>Utilisez Chrome (installe par defaut)</li>
@@ -1372,7 +1678,7 @@ plt.show()</code></pre>
         <li>Ideal pour les etablissements equipes de Chromebooks</li>
     </ul>
 
-    <h3>13.4 Performances</h3>
+    <h3>14.4 Performances</h3>
     <p>Si l'application est lente :</p>
     <ul>
         <li>Fermez les onglets inutiles</li>
@@ -1381,7 +1687,7 @@ plt.show()</code></pre>
         <li>Limitez le nombre de points dans les simulations</li>
     </ul>
 
-    <h3>13.5 Support</h3>
+    <h3>14.5 Support</h3>
     <p>Pour toute question : <a href="mailto:contact@fizziq.org">contact@fizziq.org</a></p>
     <p>Documentation complete : <a href="https://www.fizziq.org/post/documentation-fizziq-web" target="_blank">fizziq.org/post/documentation-fizziq-web</a></p>
 </section>
