@@ -1272,91 +1272,256 @@ def energie_cinetique(m, v):
     <p>Le <strong>rapport final</strong> est l'aboutissement du travail experimental. Il permet a l'eleve de rediger un compte rendu scientifique complet en integrant les elements du cahier d'experiences : tableaux, graphiques, photos, texte et formules mathematiques.</p>
 
     <div class="info-box">
-        <strong>Partager son travail :</strong> FizziQ Web propose trois grandes fonctionnalites : <strong>Experimenter</strong> (mesures, simulations), <strong>Analyser</strong> (cahier d'experiences, tableaux) et <strong>Partager</strong> (rapport final exportable en PDF).
+        <strong>Partager son travail :</strong> FizziQ Web propose trois grandes fonctionnalites : <strong>Experimenter</strong> (mesures, simulations), <strong>Analyser</strong> (cahier d'experiences, tableaux) et <strong>Partager</strong> (rapport final exportable en PDF ou Word).
     </div>
+
+    <p>La creation d'un rapport se fait en deux etapes :</p>
+    <ol class="steps">
+        <li><strong>Enrichir le cahier d'experiences</strong> : ajouter du texte, des photos, organiser les fiches</li>
+        <li><strong>Creer le rapport final</strong> : mettre en forme avec l'editeur de texte, puis exporter</li>
+    </ol>
 
     <div class="image-container">
         <img src="../../images/fizziq-web/Screen_share_FizziQ_Web.png" alt="Rapport final FizziQ Web avec formules LaTeX" loading="lazy">
         <figcaption>Rapport final avec graphique, image et formule mathematique</figcaption>
     </div>
 
-    <h3>10.1 Acces au rapport</h3>
+    <!-- PARTIE 1 : Enrichir le cahier -->
+    <h3>10.1 Enrichir le cahier d'experiences</h3>
+    <p>Avant de creer le rapport final, enrichissez votre cahier d'experiences avec du texte explicatif et des photos.</p>
+
+    <h4>Ajouter du texte a une fiche</h4>
     <ol class="steps">
-        <li>Depuis le cahier, cliquez sur <strong>Editer le rapport</strong></li>
+        <li>Ouvrez la fiche concernee dans le cahier d'experiences</li>
+        <li>Cliquez sur <strong>Editer</strong> en haut a droite de la fiche</li>
+        <li>Redigez votre texte dans la zone de texte</li>
+        <li>Cliquez sur <strong>Valider</strong> pour sauvegarder</li>
+    </ol>
+
+    <div class="tip-box">
+        <strong>Conseil :</strong> Utilisez le texte pour decrire le protocole, expliquer les observations ou noter des remarques importantes.
+    </div>
+
+    <h4>Ajouter des photos</h4>
+    <ol class="steps">
+        <li>Depuis le cahier d'experiences, cliquez sur <strong>+ Ajouter une observation</strong></li>
+        <li>Selectionnez <strong>Photo</strong></li>
+        <li>Choisissez une image depuis votre ordinateur ou prenez une photo avec la webcam</li>
+        <li>Ajoutez eventuellement un texte descriptif</li>
+    </ol>
+
+    <h4>Modifier le titre d'une fiche</h4>
+    <ol class="steps">
+        <li>Cliquez sur le titre de la fiche</li>
+        <li>Modifiez le texte</li>
+        <li>Appuyez sur <strong>Entree</strong> pour valider</li>
+    </ol>
+
+    <h4>Organiser les fiches</h4>
+    <p>Les fiches apparaissent dans le rapport dans l'ordre ou elles sont disposees dans le cahier :</p>
+    <ul>
+        <li><strong>Deplacer</strong> : faites glisser une fiche pour changer sa position</li>
+        <li><strong>Supprimer</strong> : cliquez sur la corbeille pour retirer une fiche inutile</li>
+        <li><strong>Dupliquer</strong> : creez une copie pour faire des variations</li>
+    </ul>
+
+    <!-- PARTIE 2 : Creer le rapport -->
+    <h3>10.2 Acceder a l'editeur de rapport</h3>
+    <ol class="steps">
+        <li>Depuis le cahier d'experiences, cliquez sur <strong>Editer le rapport</strong></li>
         <li>Ou allez dans <strong>Partager</strong> → <strong>Rapport final</strong></li>
     </ol>
 
-    <h3>10.2 Integrer des elements du cahier</h3>
-    <p>Le panneau lateral gauche affiche toutes les observations du cahier d'experiences :</p>
-    <ol class="steps">
-        <li>Reperez l'observation souhaitee (tableau, graphique, image...)</li>
-        <li>Cliquez sur <strong>+ Ajouter</strong></li>
-        <li>L'element est insere dans le rapport a la position du curseur</li>
-    </ol>
-
-    <div class="tip-box">
-        <strong>Conseil :</strong> Organisez bien votre cahier d'experiences avant de rediger le rapport. Chaque observation peut etre facilement integree.
-    </div>
-
-    <h3>10.3 Rediger le texte</h3>
+    <h3>10.3 Interface de l'editeur</h3>
+    <p>L'editeur de rapport se compose de trois zones :</p>
     <ul>
-        <li><strong>Formatage</strong> : gras, italique, souligne</li>
-        <li><strong>Taille de police</strong> : 8pt a 72pt</li>
-        <li><strong>Alignement</strong> : gauche, centre, droite, justifie</li>
-        <li><strong>Listes</strong> : a puces ou numerotees</li>
+        <li><strong>Zone centrale</strong> : le rapport en cours de redaction</li>
+        <li><strong>Barre laterale gauche</strong> : trois boutons pour inserer des elements</li>
+        <li><strong>Barre d'outils contextuelle</strong> : apparait lors de la selection de texte</li>
     </ul>
 
-    <h3>10.4 Inserer des formules mathematiques</h3>
-    <p>Le rapport supporte la syntaxe LaTeX pour les formules :</p>
-
+    <h4>Barre laterale : les 3 boutons d'insertion</h4>
     <table>
-        <tr><th>Code LaTeX</th><th>Resultat</th></tr>
-        <tr><td><code>E = \frac{1}{2}mv^2</code></td><td>E = ½mv²</td></tr>
-        <tr><td><code>T = 2\pi\sqrt{\frac{L}{g}}</code></td><td>T = 2π√(L/g)</td></tr>
-        <tr><td><code>\Delta t = t_2 - t_1</code></td><td>Δt = t₂ - t₁</td></tr>
-        <tr><td><code>a = \frac{dv}{dt}</code></td><td>a = dv/dt</td></tr>
-        <tr><td><code>F = ma</code></td><td>F = ma</td></tr>
+        <tr><th>Bouton</th><th>Fonction</th><th>Description</th></tr>
+        <tr>
+            <td><strong>Texte</strong></td>
+            <td>Ajouter une zone de texte</td>
+            <td>Insere un bloc de texte vide que vous pouvez editer librement</td>
+        </tr>
+        <tr>
+            <td><strong>Image</strong></td>
+            <td>Inserer une image</td>
+            <td>Ouvre un selecteur pour choisir une image depuis votre ordinateur</td>
+        </tr>
+        <tr>
+            <td><strong>Observations</strong></td>
+            <td>Integrer depuis le cahier</td>
+            <td>Affiche la liste des fiches du cahier d'experiences. Cliquez sur une fiche pour l'inserer dans le rapport.</td>
+        </tr>
     </table>
 
     <div class="info-box">
-        <strong>Reconnaissance automatique :</strong> L'editeur detecte automatiquement les formules et les convertit en rendu mathematique professionnel.
+        <strong>Integration automatique :</strong> Lorsque vous inserez une observation, le tableau, le graphique et le texte associes sont automatiquement inclus dans le rapport.
     </div>
 
-    <h3>10.5 Inserer des images</h3>
+    <h3>10.4 Mettre en forme le texte</h3>
+    <p>Selectionnez du texte pour faire apparaitre la barre d'outils contextuelle :</p>
     <ul>
-        <li><strong>Photos</strong> : depuis l'ordinateur ou la camera</li>
-        <li><strong>Captures d'ecran</strong> : des simulations, des mesures</li>
-        <li><strong>Schemas</strong> : dispositifs experimentaux</li>
+        <li><strong>Taille de police</strong> : de 8pt a 72pt</li>
+        <li><strong>Gras</strong> (B) : met le texte en gras</li>
+        <li><strong>Italique</strong> (I) : met le texte en italique</li>
+        <li><strong>Alignement</strong> : gauche, centre, droite, justifie</li>
+        <li><strong>Formule</strong> (Σ) : insere une formule mathematique LaTeX</li>
     </ul>
 
-    <h3>10.6 Structure d'un rapport</h3>
-    <p>Un rapport scientifique typique comprend :</p>
+    <h3>10.5 Inserer des formules mathematiques</h3>
+    <p>FizziQ Web supporte la syntaxe LaTeX pour les formules scientifiques. Deux methodes d'insertion :</p>
+
+    <h4>Methode 1 : Bouton Σ (recommande)</h4>
+    <ol class="steps">
+        <li>Placez le curseur a l'endroit souhaite</li>
+        <li>Cliquez sur le bouton <strong>Σ</strong> dans la barre d'outils</li>
+        <li>Saisissez votre formule en syntaxe LaTeX</li>
+        <li>Cliquez sur <strong>Inserer</strong></li>
+    </ol>
+
+    <h4>Methode 2 : Syntaxe directe avec $...$</h4>
+    <p>Tapez directement dans le texte :</p>
     <ul>
-        <li><strong>Titre</strong> : nom de l'experience</li>
-        <li><strong>Objectif</strong> : ce qu'on cherche a demontrer</li>
-        <li><strong>Protocole</strong> : description du dispositif et de la methode</li>
-        <li><strong>Mesures</strong> : tableaux de donnees (depuis le cahier)</li>
-        <li><strong>Graphiques</strong> : visualisation des resultats (depuis le cahier)</li>
-        <li><strong>Analyse</strong> : interpretation, ajustement de courbes, formules</li>
-        <li><strong>Conclusion</strong> : validation ou non de l'hypothese</li>
+        <li><code>$E = mc^2$</code> pour une formule en ligne</li>
+        <li>La formule est automatiquement convertie en rendu mathematique</li>
     </ul>
 
-    <h3>10.7 Exporter le rapport</h3>
-    <p>Le rapport peut etre exporte en plusieurs formats :</p>
+    <h4>Exemples de formules LaTeX</h4>
+    <table>
+        <tr><th>Code LaTeX</th><th>Resultat</th><th>Utilisation</th></tr>
+        <tr><td><code>E = \frac{1}{2}mv^2</code></td><td>E = ½mv²</td><td>Energie cinetique</td></tr>
+        <tr><td><code>T = 2\pi\sqrt{\frac{L}{g}}</code></td><td>T = 2π√(L/g)</td><td>Periode du pendule</td></tr>
+        <tr><td><code>\Delta t = t_2 - t_1</code></td><td>Δt = t₂ - t₁</td><td>Intervalle de temps</td></tr>
+        <tr><td><code>a = \frac{dv}{dt}</code></td><td>a = dv/dt</td><td>Acceleration</td></tr>
+        <tr><td><code>F = ma</code></td><td>F = ma</td><td>2eme loi de Newton</td></tr>
+        <tr><td><code>v = \sqrt{v_x^2 + v_y^2}</code></td><td>v = √(vx² + vy²)</td><td>Norme de la vitesse</td></tr>
+        <tr><td><code>\lambda = \frac{c}{f}</code></td><td>λ = c/f</td><td>Longueur d'onde</td></tr>
+    </table>
+
+    <div class="tip-box">
+        <strong>Astuce LaTeX :</strong> Utilisez <code>\frac{a}{b}</code> pour les fractions, <code>\sqrt{x}</code> pour les racines carrees, <code>x^2</code> pour les exposants et <code>x_i</code> pour les indices.
+    </div>
+
+    <h3>10.6 Inserer des images</h3>
+    <ol class="steps">
+        <li>Cliquez sur le bouton <strong>Image</strong> dans la barre laterale</li>
+        <li>Selectionnez une image depuis votre ordinateur</li>
+        <li>L'image est inseree a la position du curseur</li>
+        <li>Redimensionnez-la en tirant sur les coins si necessaire</li>
+    </ol>
+
+    <p>Types d'images utiles :</p>
     <ul>
-        <li><strong>PDF</strong> : format ideal pour l'impression et le partage</li>
-        <li><strong>Image</strong> : capture du rapport en PNG</li>
+        <li><strong>Photos du dispositif</strong> : montage experimental</li>
+        <li><strong>Captures d'ecran</strong> : simulations, mesures</li>
+        <li><strong>Schemas</strong> : dessins explicatifs</li>
+        <li><strong>Chronophotographies</strong> : analyse de mouvement</li>
+    </ul>
+
+    <h3>10.7 Integrer les observations du cahier</h3>
+    <ol class="steps">
+        <li>Cliquez sur le bouton <strong>Observations</strong> dans la barre laterale</li>
+        <li>La liste de toutes vos fiches du cahier s'affiche</li>
+        <li>Cliquez sur la fiche souhaitee pour l'inserer</li>
+        <li>Le tableau, le graphique et le texte sont automatiquement ajoutes</li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Lien dynamique :</strong> Si vous modifiez une fiche dans le cahier d'experiences, les changements seront refletes dans le rapport (tant que vous n'avez pas finalise).
+    </div>
+
+    <h3>10.8 Structure d'un rapport scientifique</h3>
+    <p>Un rapport scientifique de qualite comprend generalement :</p>
+    <table>
+        <tr><th>Section</th><th>Contenu</th></tr>
+        <tr><td><strong>Titre</strong></td><td>Nom de l'experience, date, auteur(s)</td></tr>
+        <tr><td><strong>Objectif</strong></td><td>Ce qu'on cherche a demontrer ou mesurer</td></tr>
+        <tr><td><strong>Protocole</strong></td><td>Description du dispositif et de la methode (avec photo/schema)</td></tr>
+        <tr><td><strong>Mesures</strong></td><td>Tableaux de donnees brutes (depuis le cahier)</td></tr>
+        <tr><td><strong>Graphiques</strong></td><td>Representation visuelle des resultats</td></tr>
+        <tr><td><strong>Analyse</strong></td><td>Interpretation, calculs, ajustement de courbes, formules</td></tr>
+        <tr><td><strong>Incertitudes</strong></td><td>Discussion des sources d'erreur</td></tr>
+        <tr><td><strong>Conclusion</strong></td><td>Validation ou non de l'hypothese, reponse a la problematique</td></tr>
+    </table>
+
+    <!-- PARTIE 3 : Finaliser et exporter -->
+    <h3>10.9 Finaliser le rapport</h3>
+    <p>Avant d'exporter, vous devez <strong>finaliser</strong> votre rapport :</p>
+    <ol class="steps">
+        <li>Verifiez que tous les elements sont bien places</li>
+        <li>Relisez le texte pour corriger les erreurs</li>
+        <li>Cliquez sur le bouton <strong>Finaliser</strong></li>
+    </ol>
+
+    <div class="warning-box">
+        <strong>Attention :</strong> Une fois finalise, le rapport ne peut plus etre modifie. Vous pouvez toutefois le "definaliser" pour apporter des corrections si necessaire.
+    </div>
+
+    <h3>10.10 Exporter le rapport</h3>
+    <p>Une fois finalise, plusieurs formats d'export sont disponibles :</p>
+
+    <h4>Export PDF (recommande)</h4>
+    <ol class="steps">
+        <li>Cliquez sur <strong>Exporter en PDF</strong></li>
+        <li>Le fichier PDF est genere et telecharge</li>
+        <li>Ideal pour l'impression et le partage par email</li>
+    </ol>
+
+    <h4>Export Word (.docx)</h4>
+    <ol class="steps">
+        <li>Cliquez sur <strong>Exporter en Word</strong></li>
+        <li>Un fichier .docx est genere</li>
+        <li>Vous pouvez l'ouvrir et le modifier dans Microsoft Word, Google Docs ou LibreOffice</li>
+    </ol>
+
+    <h4>Fichier FizziQ (.fiz)</h4>
+    <p>Le fichier .fiz contient l'integralite de votre travail :</p>
+    <ul>
+        <li>Le cahier d'experiences complet</li>
+        <li>Tous les tableaux et graphiques</li>
+        <li>Le rapport final</li>
+        <li>Les images inserees</li>
     </ul>
 
     <ol class="steps">
-        <li>Cliquez sur <strong>Exporter</strong> dans la barre d'outils</li>
-        <li>Choisissez le format (PDF recommande)</li>
-        <li>Le fichier est telecharge sur votre ordinateur</li>
+        <li>Allez dans <strong>Partager</strong> → <strong>Exporter le fichier</strong></li>
+        <li>Un fichier .fiz est telecharge</li>
+        <li>Ce fichier peut etre reimporte dans FizziQ Web pour continuer le travail</li>
     </ol>
 
     <div class="tip-box">
-        <strong>Avant d'exporter :</strong> Relisez votre rapport, verifiez que tous les elements sont bien inseres et que la mise en page est correcte.
+        <strong>Conseil :</strong> Conservez toujours une copie du fichier .fiz comme sauvegarde de votre travail.
     </div>
+
+    <!-- FAQ -->
+    <h3>10.11 Questions frequentes sur le rapport</h3>
+
+    <h4>Puis-je modifier le rapport apres l'avoir finalise ?</h4>
+    <p>Oui, cliquez sur <strong>Definaliser</strong> pour revenir en mode edition. Vous devrez refinaliser avant de pouvoir exporter a nouveau.</p>
+
+    <h4>Comment changer l'ordre des elements dans le rapport ?</h4>
+    <p>Cliquez sur un element et faites-le glisser a la position souhaitee. Vous pouvez egalement reorganiser les fiches dans le cahier d'experiences avant de les inserer.</p>
+
+    <h4>Ma formule LaTeX ne s'affiche pas correctement</h4>
+    <p>Verifiez la syntaxe LaTeX. Les erreurs courantes sont : accolades manquantes, backslash oublie devant les commandes (\frac, \sqrt...), ou espaces en trop.</p>
+
+    <h4>L'export PDF est-il de bonne qualite pour l'impression ?</h4>
+    <p>Oui, le PDF genere est en haute resolution, adapte a l'impression papier.</p>
+
+    <h4>Puis-je inserer plusieurs graphiques de la meme fiche ?</h4>
+    <p>Lorsque vous inserez une observation, tous les graphiques associes sont automatiquement inclus. Pour n'en inserer qu'un seul, dupliquez la fiche dans le cahier et supprimez les graphiques non desires.</p>
+
+    <h4>Comment ajouter une legende sous une image ?</h4>
+    <p>Inserez une zone de texte juste sous l'image, reduisez la taille de police et centrez le texte pour creer une legende.</p>
+
+    <h4>Le rapport conserve-t-il les couleurs a l'export ?</h4>
+    <p>Oui, les couleurs des graphiques, du texte et des images sont preservees dans les exports PDF et Word.</p>
 </section>
 
 <!-- ==================== OUTILS ==================== -->
