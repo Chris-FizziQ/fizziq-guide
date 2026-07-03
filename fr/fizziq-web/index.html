@@ -356,6 +356,8 @@
         <li><a href="#rapport" style="color: #F57C00;">Rapport</a></li>
         <li><a href="#export" style="color: #F57C00;">Export</a></li>
         <li><a href="#outils" style="color: #F57C00;">Outils</a></li>
+        <li style="color: #666; font-weight: 600;">|</li>
+        <li><a href="#reglages">Reglages</a></li>
         <li><a href="#depannage">Depannage</a></li>
         <li><a href="#annexe-microcontroleurs">Annexe</a></li>
     </ul>
@@ -1814,11 +1816,122 @@ plt.show()</code></pre>
     </ul>
 </section>
 
+<!-- ==================== REGLAGES ==================== -->
+<section id="reglages">
+    <h2>13. Reglages</h2>
+
+    <p>Les reglages permettent de configurer et personnaliser FizziQ Web selon vos besoins : langue, outils accessibles, parametres avances et partage de configuration.</p>
+
+    <h3>13.1 Acceder aux reglages</h3>
+    <p>Dans la <strong>barre laterale gauche</strong>, cliquez sur <strong>Reglages</strong>. La page d'accueil des reglages presente trois sections :</p>
+    <table>
+        <tr><th>Section</th><th>Description</th></tr>
+        <tr><td><strong>Langue</strong></td><td>Choisir la langue de l'interface</td></tr>
+        <tr><td><strong>Personnalisation</strong></td><td>Configurer les outils accessibles (mode restreint)</td></tr>
+        <tr><td><strong>Parametres</strong></td><td>Ajuster les parametres avances</td></tr>
+    </table>
+
+    <h3>13.2 Changer la langue</h3>
+    <p>FizziQ Web est disponible en <strong>21 langues</strong> : francais, anglais, espagnol, portugais, allemand, italien, neerlandais, suedois, norvegien, danois, finnois, hongrois, estonien, polonais, roumain, ukrainien, russe, turc, arabe, malgache.</p>
+    <ol class="steps">
+        <li>Dans les reglages, cliquez sur <strong>Langue</strong></li>
+        <li>Selectionnez la langue souhaitee dans la liste</li>
+        <li>L'interface se met a jour automatiquement</li>
+    </ol>
+    <div class="tip-box">
+        <strong>Langue du systeme :</strong> Par defaut, FizziQ Web utilise la langue de votre navigateur. Pour revenir a ce comportement automatique, selectionnez "Langue du systeme".
+    </div>
+
+    <h3>13.3 Personnalisation (Mode restreint)</h3>
+    <p>Le mode restreint permet aux enseignants de <strong>simplifier l'interface</strong> pour leurs eleves en n'affichant que les outils necessaires a une activite.</p>
+
+    <h4>Deux modes d'affichage</h4>
+    <table>
+        <tr><th>Mode</th><th>Description</th></tr>
+        <tr><td><strong>Tout afficher</strong></td><td>Tous les outils sont accessibles (mode par defaut)</td></tr>
+        <tr><td><strong>Mode personnalise</strong></td><td>Seuls les outils selectionnes sont visibles</td></tr>
+    </table>
+
+    <h4>Activer le mode personnalise</h4>
+    <ol class="steps">
+        <li>Dans les reglages, cliquez sur <strong>Personnalisation</strong></li>
+        <li>Cliquez sur <strong>Mode personnalise</strong></li>
+        <li><strong>Cochez</strong> les outils a rendre accessibles</li>
+        <li><strong>Decochez</strong> les outils a masquer</li>
+    </ol>
+
+    <h4>Outils disponibles</h4>
+    <p><strong>General :</strong> Cahier d'experiences, Mes cahiers, Rapport final</p>
+    <p><strong>Experimenter :</strong> Analyse Audio, Analyse Video, Chronophotographie, Capteurs Externes, Saisie de donnees</p>
+    <p><strong>Simulations :</strong> Ondes sur un lac, Balistique, Centrifugeuse, Pendule, Plan incline, Ressort, Circuit electrique, Gaz parfait, Optique, Trois corps</p>
+    <p><strong>Outils :</strong> Editeur de texte, Tableur, Python, Calculatrice, Synthetiseur de sons, Synthetiseur de couleur, Video chronophotographie</p>
+
+    <div class="info-box">
+        <strong>Exemple - TP sur la chute libre :</strong> Activez uniquement Cahier d'experiences, Analyse Video, Tableur et Rapport final. Les eleves ne voient que ces 4 outils et ne sont pas distraits par les autres fonctionnalites.
+    </div>
+
+    <h3>13.4 Partager une configuration</h3>
+    <p>Les enseignants peuvent <strong>generer un lien</strong> pour que leurs eleves accedent directement a une configuration personnalisee.</p>
+    <ol class="steps">
+        <li>Configurez le <strong>Mode personnalise</strong> avec les outils souhaites</li>
+        <li>Cliquez sur <strong>Generer un lien</strong></li>
+        <li>Copiez le lien avec le bouton <strong>Copier</strong></li>
+        <li>Partagez le lien avec vos eleves (email, ENT, QR code...)</li>
+    </ol>
+    <p>Quand un eleve ouvre le lien, FizziQ Web se charge automatiquement avec la configuration personnalisee.</p>
+
+    <div class="tip-box">
+        <strong>Astuce QR Code :</strong> Generez le lien, utilisez un generateur de QR code en ligne, puis projetez ou imprimez le QR code pour vos eleves.
+    </div>
+
+    <h3>13.5 Parametres avances</h3>
+    <p>Dans les reglages, cliquez sur <strong>Parametres</strong> pour acceder aux options avancees.</p>
+
+    <h4>Ajustement cinematique (quadratique)</h4>
+    <ul>
+        <li><strong>Active</strong> : Les calculs de vitesse et acceleration utilisent une interpolation quadratique sur 3 points (recommande)</li>
+        <li><strong>Desactive</strong> : Calcul par differences finies simples</li>
+    </ul>
+
+    <h4>Vitesse de connexion USB (Baud Rate)</h4>
+    <p>Configure la vitesse de communication avec les capteurs externes USB (FizziQ Connect, Arduino).</p>
+    <table>
+        <tr><th>Baud Rate</th><th>Description</th></tr>
+        <tr><td>9600</td><td>Tres lent, tres stable</td></tr>
+        <tr><td>57600</td><td>Assez rapide</td></tr>
+        <tr><td><strong>115200</strong></td><td>Rapide (recommande, valeur par defaut)</td></tr>
+        <tr><td>230400 - 921600</td><td>Tres rapide a maximum</td></tr>
+    </table>
+    <p><strong>En cas de problemes :</strong> Donnees corrompues → reduisez le Baud Rate. Donnees trop lentes → augmentez le Baud Rate.</p>
+
+    <h3>13.6 Configuration de l'assistant IA</h3>
+    <p>FizziQ Web integre un assistant IA pour aider les utilisateurs. Dans les reglages, depliez la section <strong>Chat AI</strong> pour configurer :</p>
+    <table>
+        <tr><th>Modele</th><th>Description</th></tr>
+        <tr><td><strong>OpenAI GPT-5 mini</strong></td><td>Rapide, concis, efficace</td></tr>
+        <tr><td><strong>Mistral AI Small</strong></td><td>Modele europeen, detaille et complet</td></tr>
+    </table>
+
+    <h3>13.7 Sauvegarde des reglages</h3>
+    <div class="info-box">
+        <strong>Stockage local :</strong> Les reglages sont stockes dans votre navigateur (localStorage). Ils persistent entre les sessions sur le meme appareil. Pour reinitialiser, effacez les donnees du site dans les parametres de votre navigateur.
+    </div>
+
+    <h3>13.8 Configurations types pour les enseignants</h3>
+    <table>
+        <tr><th>Type de TP</th><th>Outils recommandes</th></tr>
+        <tr><td><strong>Mecanique</strong></td><td>Analyse Video + Tableur + Rapport final</td></tr>
+        <tr><td><strong>Acoustique</strong></td><td>Analyse Audio + Tableur + Rapport final</td></tr>
+        <tr><td><strong>Capteurs externes</strong></td><td>Capteurs Externes + Tableur + Rapport final</td></tr>
+        <tr><td><strong>Simulation</strong></td><td>Une simulation + Tableur + Rapport final</td></tr>
+    </table>
+</section>
+
 <!-- ==================== DEPANNAGE ==================== -->
 <section id="depannage">
-    <h2>13. Depannage</h2>
+    <h2>14. Depannage</h2>
 
-    <h3>13.1 Problemes frequents</h3>
+    <h3>14.1 Problemes frequents</h3>
     <table>
         <tr><th>Probleme</th><th>Solution</th></tr>
         <tr><td>Le microphone ne fonctionne pas</td><td>Autorisez l'acces au micro dans les parametres du navigateur (cadenas dans la barre d'adresse)</td></tr>
@@ -1831,7 +1944,7 @@ plt.show()</code></pre>
         <tr><td>Formules LaTeX ne s'affichent pas</td><td>Verifiez la syntaxe, utilisez les exemples fournis</td></tr>
     </table>
 
-    <h3>13.2 Navigateurs recommandes</h3>
+    <h3>14.2 Navigateurs recommandes</h3>
     <p>Pour une experience optimale :</p>
     <ul>
         <li><strong>Chrome</strong> (version 89+) : toutes les fonctionnalites</li>
@@ -1840,7 +1953,7 @@ plt.show()</code></pre>
         <li><strong>Safari</strong> : audio, video, simulations (pas de Bluetooth/USB)</li>
     </ul>
 
-    <h3>13.3 Chromebook</h3>
+    <h3>14.3 Chromebook</h3>
     <p>FizziQ Web fonctionne parfaitement sur Chromebook :</p>
     <ul>
         <li>Utilisez Chrome (installe par defaut)</li>
@@ -1848,7 +1961,7 @@ plt.show()</code></pre>
         <li>Ideal pour les etablissements equipes de Chromebooks</li>
     </ul>
 
-    <h3>13.4 Performances</h3>
+    <h3>14.4 Performances</h3>
     <p>Si l'application est lente :</p>
     <ul>
         <li>Fermez les onglets inutiles</li>
@@ -1857,7 +1970,7 @@ plt.show()</code></pre>
         <li>Limitez le nombre de points dans les simulations</li>
     </ul>
 
-    <h3>13.5 Support</h3>
+    <h3>14.5 Support</h3>
     <p>Pour toute question : <a href="mailto:contact@fizziq.org">contact@fizziq.org</a></p>
     <p>Documentation complete : <a href="https://www.fizziq.org/post/documentation-fizziq-web" target="_blank">fizziq.org/post/documentation-fizziq-web</a></p>
 </section>
