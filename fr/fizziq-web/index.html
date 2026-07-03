@@ -1174,59 +1174,160 @@
 <section id="tableur">
     <h2>10. Tableur scientifique</h2>
 
-    <p>Le <strong>tableur scientifique</strong> permet de creer et manipuler des donnees, d'effectuer des calculs et de generer des graphiques.</p>
+    <p>Le <strong>tableur scientifique</strong> est un outil puissant pour organiser, analyser et visualiser vos donnees experimentales. Il fonctionne avec des colonnes appelees <strong>grandeurs</strong> qui contiennent vos mesures et calculs.</p>
+
+    <div class="info-box">
+        <strong>Caracteristiques :</strong> Jusqu'a 20 colonnes, formules automatiques (derivees, statistiques), graphiques avec 5 courbes et 6 types d'interpolation, export CSV, integration Python.
+    </div>
 
     <h3>10.1 Acces au tableur</h3>
+    <p><strong>Tableur autonome :</strong></p>
+    <ol class="steps">
+        <li>Cliquez sur <strong>Outils</strong> → <strong>Tableur</strong></li>
+        <li>Un tableau vierge s'ouvre avec barre d'outils complete</li>
+        <li>Sauvegarde en CSV possible, export vers n'importe quel cahier</li>
+    </ol>
+
+    <p><strong>Tableau integre au cahier :</strong></p>
+    <ol class="steps">
+        <li>Ouvrez votre cahier d'experience</li>
+        <li>Cliquez sur <strong>+</strong> → <strong>Tableau de donnees</strong></li>
+        <li>Sauvegarde automatique avec le cahier, inclus dans l'export PDF</li>
+    </ol>
+
+    <h3>10.2 Les grandeurs (colonnes)</h3>
+    <p>Chaque colonne represente une grandeur avec :</p>
     <ul>
-        <li>Depuis <strong>Experimenter</strong> → <strong>Tableau de donnees</strong></li>
-        <li>Ou directement depuis le cahier d'experiences</li>
+        <li><strong>Nom</strong> : ex. Temps, Distance, Vitesse</li>
+        <li><strong>Unite</strong> (optionnelle) : entre parentheses (m, s, m/s...)</li>
+        <li><strong>Type</strong> : saisie manuelle ou calculee</li>
+        <li><strong>Decimales</strong> : 0 a 6 pour l'affichage</li>
     </ul>
 
-    <h3>10.2 Structure du tableur</h3>
+    <p><strong>Creer une grandeur :</strong> Cliquez sur <strong>+ nouvelle grandeur</strong> a droite des colonnes.</p>
+
+    <h3>10.3 Saisie des donnees</h3>
+    <p><strong>Formats acceptes :</strong></p>
     <ul>
-        <li><strong>Jusqu'a trois colonnes</strong> de donnees</li>
-        <li><strong>Types de cellules</strong> : valeurs numeriques, texte, formules</li>
-        <li><strong>En-tetes</strong> : nom de la grandeur et unite</li>
+        <li>Nombres entiers : <code>42</code>, <code>-15</code></li>
+        <li>Decimaux : <code>3.14</code> ou <code>3,14</code> (virgule convertie automatiquement)</li>
+        <li>Notation scientifique : <code>1.5e-3</code>, <code>6.02e23</code></li>
     </ul>
 
-    <h3>10.3 Formules disponibles</h3>
-    <p>Le tableur supporte de nombreuses fonctions mathematiques et statistiques :</p>
+    <p><strong>Navigation :</strong> Tab (droite), Shift+Tab (gauche), Entree (valider et descendre), Echap (annuler).</p>
+
+    <h3>10.4 Les formules</h3>
+    <p>Toutes les formules commencent par <code>=</code> et utilisent les noms de colonnes comme variables.</p>
+
+    <h4>Operateurs</h4>
+    <table>
+        <tr><th>Operateur</th><th>Exemple</th></tr>
+        <tr><td><code>+</code> <code>-</code> <code>*</code> <code>/</code></td><td><code>=Distance/Temps</code></td></tr>
+        <tr><td><code>^</code> (puissance)</td><td><code>=v^2</code></td></tr>
+        <tr><td>Multiplication implicite</td><td><code>=0.5mv²</code> equivaut a <code>=0.5*m*v^2</code></td></tr>
+    </table>
 
     <h4>Fonctions mathematiques</h4>
-    <ul>
-        <li><code>sin(x)</code>, <code>cos(x)</code>, <code>tan(x)</code> : fonctions trigonometriques</li>
-        <li><code>sqrt(x)</code> : racine carree</li>
-        <li><code>exp(x)</code> : exponentielle</li>
-        <li><code>ln(x)</code>, <code>log(x)</code> : logarithmes</li>
-        <li><code>abs(x)</code> : valeur absolue</li>
-        <li><code>pow(x, n)</code> : puissance</li>
-    </ul>
+    <table>
+        <tr><th>Fonction</th><th>Description</th><th>Exemple</th></tr>
+        <tr><td><code>sin(x)</code>, <code>cos(x)</code>, <code>tan(x)</code></td><td>Trigonometrie (radians)</td><td><code>=sin(angle)</code></td></tr>
+        <tr><td><code>asin(x)</code>, <code>acos(x)</code>, <code>atan(x)</code></td><td>Fonctions inverses</td><td><code>=atan(pente)</code></td></tr>
+        <tr><td><code>sqrt(x)</code></td><td>Racine carree</td><td><code>=sqrt(distance)</code></td></tr>
+        <tr><td><code>ln(x)</code>, <code>log(x)</code></td><td>Logarithmes naturel et base 10</td><td><code>=ln(concentration)</code></td></tr>
+        <tr><td><code>exp(x)</code></td><td>Exponentielle e^x</td><td><code>=exp(-t/tau)</code></td></tr>
+        <tr><td><code>abs(x)</code></td><td>Valeur absolue</td><td><code>=abs(delta)</code></td></tr>
+    </table>
+    <p><strong>Constantes :</strong> <code>pi</code> (3.14159...), <code>e</code> (2.71828...)</p>
 
     <h4>Fonctions statistiques</h4>
+    <table>
+        <tr><th>Fonction</th><th>Description</th></tr>
+        <tr><td><code>somme(colonne)</code> ou <code>sum(colonne)</code></td><td>Somme de toute la colonne</td></tr>
+        <tr><td><code>moyenne(colonne)</code> ou <code>average(colonne)</code></td><td>Moyenne de la colonne</td></tr>
+        <tr><td><code>ecartype(colonne)</code> ou <code>stdev(colonne)</code></td><td>Ecart-type de la colonne</td></tr>
+    </table>
+
+    <h4>Fonctions de derivation</h4>
+    <table>
+        <tr><th>Fonction</th><th>Description</th><th>Exemple</th></tr>
+        <tr><td><code>diff(y, x)</code></td><td>Derivee premiere dy/dx</td><td><code>=diff(position, temps)</code> → vitesse</td></tr>
+        <tr><td><code>diff2(y, x)</code></td><td>Derivee seconde d²y/dx²</td><td><code>=diff2(position, temps)</code> → acceleration</td></tr>
+    </table>
+    <p>Note : premiere et derniere ligne affichent <code>#N/A</code> (pas assez de points).</p>
+
+    <h4>Reference a d'autres lignes</h4>
+    <table>
+        <tr><th>Fonction</th><th>Description</th></tr>
+        <tr><td><code>prec(colonne)</code> ou <code>prev(colonne)</code></td><td>Valeur de la ligne precedente</td></tr>
+        <tr><td><code>suiv(colonne)</code> ou <code>next(colonne)</code></td><td>Valeur de la ligne suivante</td></tr>
+    </table>
+    <p>Exemple : <code>=position - prec(position)</code> calcule la difference entre deux mesures.</p>
+
+    <h3>10.5 Les graphiques</h3>
+    <p>Cliquez sur l'icone <strong>graphique</strong> dans la barre d'outils pour basculer entre tableau et graphique.</p>
+
+    <h4>Configuration (3 onglets)</h4>
+
+    <p><strong>Onglet Donnees :</strong></p>
     <ul>
-        <li><code>moyenne()</code> : moyenne des valeurs</li>
-        <li><code>ecart_type()</code> : ecart-type</li>
-        <li><code>min()</code>, <code>max()</code> : extrema</li>
-        <li><code>somme()</code> : somme des valeurs</li>
+        <li><strong>Axe X</strong> : choisissez une colonne ou "Indice" (1, 2, 3...)</li>
+        <li><strong>Axes Y</strong> : ajoutez jusqu'a <strong>5 courbes</strong></li>
     </ul>
 
-    <h3>10.4 Colonnes calculees</h3>
-    <p>Ajoutez une colonne calculee a partir des autres colonnes :</p>
-    <ol class="steps">
-        <li>Cliquez sur <strong>Ajouter une colonne</strong></li>
-        <li>Selectionnez <strong>Colonne calculee</strong></li>
-        <li>Entrez la formule (ex: <code>v = dx/dt</code>)</li>
-        <li>La colonne est calculee automatiquement</li>
-    </ol>
+    <p><strong>Onglet Affichage :</strong></p>
+    <table>
+        <tr><th>Type de marqueurs</th><th>Description</th></tr>
+        <tr><td>Cercles seuls</td><td>Points sans lignes (defaut)</td></tr>
+        <tr><td>Cercles + lignes</td><td>Points relies</td></tr>
+        <tr><td>Lignes seules</td><td>Courbe continue</td></tr>
+    </table>
 
-    <h3>10.5 Generation de graphiques</h3>
-    <p>A partir des donnees du tableur :</p>
-    <ol class="steps">
-        <li>Selectionnez les colonnes a representer</li>
-        <li>Cliquez sur <strong>Generer un graphique</strong></li>
-        <li>Choisissez le type de graphique (courbe, nuage de points, histogramme)</li>
-        <li>Le graphique est ajoute au cahier</li>
-    </ol>
+    <table>
+        <tr><th>Interpolation</th><th>Equation</th><th>Utilisation</th></tr>
+        <tr><td>Lineaire</td><td>y = ax + b</td><td>Loi lineaire, proportionnalite</td></tr>
+        <tr><td>Polynomiale degre 2</td><td>y = ax² + bx + c</td><td>Chute libre, parabole</td></tr>
+        <tr><td>Polynomiale degre 3</td><td>y = ax³ + bx² + cx + d</td><td>Courbes complexes</td></tr>
+        <tr><td>Exponentielle</td><td>y = a × e^(bx)</td><td>Decroissance radioactive, RC</td></tr>
+        <tr><td>Puissance</td><td>y = a × x^b</td><td>Loi de puissance</td></tr>
+    </table>
+
+    <p><strong>Onglet Echelles :</strong> Ajustement automatique ou echelles manuelles (Min/Max).</p>
+
+    <h3>10.6 Integration avec Python</h3>
+    <p>Definissez des fonctions dans l'interpreteur Python et utilisez-les dans le tableur :</p>
+    <pre><code># Dans Python
+def energie_cinetique(m, v):
+    return 0.5 * m * v * v
+
+# Dans le tableur
+=energie_cinetique(masse, vitesse)</code></pre>
+
+    <h3>10.7 Import/Export</h3>
+    <ul>
+        <li><strong>Export CSV</strong> : bouton Exporter → fichier avec separateur point-virgule</li>
+        <li><strong>Import CSV</strong> : bouton Ouvrir → detection automatique du format</li>
+        <li><strong>Export vers cahier</strong> : copie le tableau comme nouvelle observation</li>
+        <li><strong>Export graphique</strong> : PNG ou insertion dans l'editeur</li>
+    </ul>
+
+    <h3>10.8 Messages d'erreur</h3>
+    <table>
+        <tr><th>Message</th><th>Signification</th></tr>
+        <tr><td><code>#N/A</code></td><td>Valeur non disponible (normal pour diff() en bord)</td></tr>
+        <tr><td><code>#ERR:COL</code></td><td>Colonne non trouvee (verifiez l'orthographe)</td></tr>
+        <tr><td><code>#ERR:POINTS</code></td><td>Pas assez de points pour diff()</td></tr>
+        <tr><td><code>#ERR:VALEUR</code></td><td>Cellule ne contient pas un nombre</td></tr>
+    </table>
+
+    <h3>10.9 Raccourcis clavier</h3>
+    <table>
+        <tr><th>Raccourci</th><th>Action</th></tr>
+        <tr><td>Tab / Shift+Tab</td><td>Cellule suivante / precedente</td></tr>
+        <tr><td>Entree</td><td>Valider et descendre</td></tr>
+        <tr><td>Ctrl+Z / Ctrl+Y</td><td>Annuler / Retablir (50 actions)</td></tr>
+        <tr><td>Ctrl+C / Ctrl+V</td><td>Copier / Coller</td></tr>
+        <tr><td>Suppr</td><td>Effacer le contenu</td></tr>
+    </table>
 </section>
 
 <!-- ==================== OUTILS ==================== -->
