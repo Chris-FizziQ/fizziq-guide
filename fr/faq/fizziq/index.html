@@ -105,6 +105,30 @@
                     "@type": "Answer",
                     "text": "Le cahier d'expériences est l'espace central de FizziQ où vous organisez vos travaux scientifiques. Il contient vos mesures sous forme de graphiques, tableaux, photos et textes. Vous pouvez créer plusieurs expériences et les exporter."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Quels capteurs sont disponibles dans FizziQ ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FizziQ propose plus de 50 instruments : accéléromètre (3 axes), gyroscope, magnétomètre, sonomètre, analyseur de fréquence, spectrographe, luxmètre, colorimètre, GPS, baromètre, boussole, inclinomètre, podomètre. Avec FizziQ Connect, ajoutez température, pH, CO2, conductivité et plus."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Dans quelles langues FizziQ est-il disponible ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FizziQ est disponible en 20 langues : français, anglais, espagnol, portugais, allemand, italien, néerlandais, suédois, norvégien, danois, finnois, hongrois, estonien, roumain, ukrainien, russe, turc, arabe et malgache."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment connecter des capteurs externes à FizziQ ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Utilisez le boîtier FizziQ Connect. Allumez-le, allez dans Mesures > Capteurs externes, appuyez sur Rechercher, puis sélectionnez votre boîtier. Les capteurs disponibles (température, pH, CO2, conductivité, etc.) apparaissent dans le menu des instruments."
+                }
             }
         ]
     }
@@ -484,6 +508,285 @@
             <div class="faq-answer">
                 Dans le cahier, appuyez sur un graphique pour l'ouvrir en plein écran. Utilisez le <strong>zoom</strong> (pincement) pour examiner les détails. Appuyez sur un point pour voir ses coordonnées exactes. Vous pouvez aussi ajuster les axes, ajouter une courbe de tendance, et mesurer des intervalles.
                 <br><br><a href="../../../fr/fizziq/#donnees-capteurs">→ Voir le guide complet sur l'analyse</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Quels capteurs sont disponibles dans FizziQ ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                FizziQ propose plus de <strong>50 instruments de mesure</strong> organisés par catégorie :
+                <br><br>
+                <strong>• Microphone :</strong> Sonomètre, fréquence, amplitude (oscilloscope), spectrographe
+                <br><strong>• Accéléromètre :</strong> Accélération linéaire X/Y/Z, avec gravité, absolue
+                <br><strong>• Gyroscope :</strong> Vitesse de rotation (roulis, tangage, lacet)
+                <br><strong>• GPS :</strong> Latitude, longitude, altitude, vitesse
+                <br><strong>• Magnétomètre :</strong> Champ magnétique (intensité et composantes)
+                <br><strong>• Boussole/Inclinomètre :</strong> Direction, angles d'inclinaison
+                <br><strong>• Luxmètre/Colorimètre :</strong> Éclairement, couleurs (RGB, HSL)
+                <br><strong>• Baromètre :</strong> Pression atmosphérique
+                <br><strong>• Podomètre :</strong> Compteur de pas
+                <br><br>
+                <strong>Note :</strong> Les capteurs disponibles dépendent de votre appareil. FizziQ détecte automatiquement les capteurs présents.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment utiliser le sonomètre et l'analyseur de fréquence ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Le microphone du smartphone permet plusieurs types de mesures acoustiques :
+                <br><br>
+                <strong>Sonomètre :</strong> Mesure le niveau sonore en décibels (0-110 dB)
+                <br><strong>Fréquence dominante :</strong> Identifie la fréquence principale (50-10000 Hz). Idéal pour accorder un instrument.
+                <br><strong>Amplitude (oscilloscope) :</strong> Visualise la forme d'onde du signal audio en temps réel
+                <br><strong>Spectrographe :</strong> Affiche le spectre fréquentiel (FFT) pour analyser les harmoniques
+                <br><br>
+                <strong>Exemples d'expériences :</strong> Mesurer la pollution sonore, étudier la voix humaine, comparer sons purs et sons complexes, identifier des notes de musique.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment fonctionne l'accéléromètre ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                L'accéléromètre mesure les accélérations subies par le téléphone selon 3 axes :
+                <br><br>
+                <strong>• X :</strong> Avant-arrière
+                <br><strong>• Y :</strong> Gauche-droite
+                <br><strong>• Z :</strong> Haut-bas
+                <br><br>
+                <strong>Modes disponibles :</strong>
+                <br>• <strong>Linéaire :</strong> Sans la gravité (0 au repos)
+                <br>• <strong>Avec gravité :</strong> Inclut g (≈9,81 m/s² verticalement au repos)
+                <br>• <strong>Absolu :</strong> Dans le référentiel terrestre (indépendant de l'orientation)
+                <br><br>
+                <strong>Exemples :</strong> Chute libre, oscillations d'un pendule, étude d'un mouvement en ascenseur.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment utiliser le GPS dans FizziQ ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Le GPS fournit plusieurs mesures :
+                <br><br>
+                <strong>• Latitude :</strong> Position nord-sud (-90° à +90°)
+                <br><strong>• Longitude :</strong> Position est-ouest (-180° à +180°)
+                <br><strong>• Altitude :</strong> Hauteur par rapport au niveau de la mer (m)
+                <br><strong>• Vitesse GPS :</strong> Vitesse de déplacement (m/s ou km/h)
+                <br><strong>• Précision :</strong> Incertitude de la position (m)
+                <br><br>
+                <strong>Exemples :</strong> Tracer une randonnée, mesurer la vitesse d'un véhicule, étudier les variations d'altitude.
+                <br><br>
+                <strong>Note :</strong> Activez la localisation dans les paramètres de votre téléphone et autorisez FizziQ à y accéder.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment mesurer un champ magnétique ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Le <strong>magnétomètre</strong> mesure le champ magnétique en microteslas (µT) :
+                <br><br>
+                <strong>• Norme :</strong> Intensité totale du champ
+                <br><strong>• X, Y, Z :</strong> Composantes selon chaque axe
+                <br><strong>• Angle :</strong> Direction du champ horizontal
+                <br><br>
+                <strong>Valeur terrestre :</strong> 25 à 65 µT selon la localisation
+                <br><br>
+                <strong>Exemples :</strong> Détecter un aimant, mesurer le champ autour d'un fil électrique, cartographier le champ terrestre.
+                <br><br>
+                <strong>Calibration :</strong> Si les mesures semblent incorrectes, calibrez le magnétomètre dans Réglages > Calibration en faisant tourner le téléphone en forme de 8.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment fonctionne le luxmètre et le colorimètre ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <strong>Luxmètre :</strong> Mesure l'éclairement lumineux en lux (0 à 100 000+ lux)
+                <br>• Nuit sans lune : 0,001 lux
+                <br>• Éclairage intérieur : 300-500 lux
+                <br>• Plein soleil : 100 000 lux
+                <br><br>
+                <strong>Colorimètre :</strong> Analyse les couleurs via la caméra
+                <br>• <strong>Nom :</strong> Identification de la couleur
+                <br>• <strong>HSL :</strong> Teinte (0-360°), Saturation (0-100%), Luminosité
+                <br>• <strong>RGB :</strong> Composantes Rouge, Vert, Bleu (0-255)
+                <br>• <strong>Absorbance :</strong> Pour la spectrophotométrie
+                <br><br>
+                <strong>Conseil :</strong> Activez la LED dans Réglages > Caméra pour éclairer l'échantillon de manière constante.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment connecter des capteurs externes (FizziQ Connect) ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Le boîtier <strong>FizziQ Connect</strong> permet d'ajouter des capteurs externes :
+                <br><br>
+                <ol style="margin: 0.75rem 0; padding-left: 1.2rem;">
+                    <li>Allumez le boîtier FizziQ Connect</li>
+                    <li>Dans FizziQ, allez dans <strong>Mesures > Capteurs externes</strong></li>
+                    <li>Appuyez sur <strong>Rechercher</strong></li>
+                    <li>Sélectionnez votre boîtier dans la liste</li>
+                    <li>Les capteurs connectés apparaissent dans le menu</li>
+                </ol>
+                <br>
+                <strong>Capteurs disponibles :</strong> Température, pH, conductivité, CO2, humidité, force, distance ultrason, ECG...
+                <br><br><a href="../fizziq-connect/">→ Voir la FAQ FizziQ Connect</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment utiliser le synthétiseur de sons ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Le synthétiseur permet de générer des sons de fréquence précise :
+                <br><br>
+                <ol style="margin: 0.75rem 0; padding-left: 1.2rem;">
+                    <li>Allez dans <strong>Outils > Synthétiseur</strong></li>
+                    <li>Choisissez la <strong>fréquence</strong> (20 à 20000 Hz)</li>
+                    <li>Sélectionnez la <strong>forme d'onde</strong> : sinusoïdale, carrée, triangulaire, dent de scie</li>
+                    <li>Appuyez sur <strong>Play</strong> pour jouer le son</li>
+                </ol>
+                <br>
+                <strong>Exemples :</strong> Étudier les battements, créer des interférences, tester l'audition, accorder un instrument.
+                <br><br>
+                FizziQ propose aussi une <strong>bibliothèque de sons</strong> avec des diapasons et instruments de référence.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Quelles autorisations sont nécessaires pour FizziQ ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                FizziQ demande les autorisations suivantes selon les capteurs utilisés :
+                <br><br>
+                <table style="width:100%; font-size:0.9rem; border-collapse:collapse;">
+                    <tr><td style="padding:0.3rem; border-bottom:1px solid #eee;"><strong>Microphone</strong></td><td style="padding:0.3rem; border-bottom:1px solid #eee;">Sonomètre, analyseur de fréquence, oscilloscope</td></tr>
+                    <tr><td style="padding:0.3rem; border-bottom:1px solid #eee;"><strong>Caméra</strong></td><td style="padding:0.3rem; border-bottom:1px solid #eee;">Colorimètre, photos, analyse cinématique</td></tr>
+                    <tr><td style="padding:0.3rem; border-bottom:1px solid #eee;"><strong>Localisation</strong></td><td style="padding:0.3rem; border-bottom:1px solid #eee;">GPS (latitude, longitude, altitude, vitesse)</td></tr>
+                    <tr><td style="padding:0.3rem; border-bottom:1px solid #eee;"><strong>Stockage</strong></td><td style="padding:0.3rem; border-bottom:1px solid #eee;">Sauvegarde des cahiers et exports</td></tr>
+                    <tr><td style="padding:0.3rem;"><strong>Bluetooth</strong></td><td style="padding:0.3rem;">Connexion aux capteurs FizziQ Connect</td></tr>
+                </table>
+                <br>
+                <strong>Note :</strong> Ces autorisations sont demandées lors de la première utilisation de chaque fonctionnalité.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Dans quelles langues FizziQ est-il disponible ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                FizziQ est disponible en <strong>20 langues</strong> :
+                <br><br>
+                Français, anglais, espagnol, portugais, allemand, italien, néerlandais, suédois, norvégien, danois, finnois, hongrois, estonien, roumain, ukrainien, russe, turc, arabe et malgache.
+                <br><br>
+                Pour changer la langue : <strong>Réglages > Paramètres > Langue</strong>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment changer la fréquence d'échantillonnage ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                La fréquence d'échantillonnage détermine le nombre de mesures par seconde :
+                <br><br>
+                <strong>Pour modifier :</strong> Réglages > Données > Fréquence d'échantillonnage
+                <br><br>
+                <strong>Fréquences maximales par capteur :</strong>
+                <br>• Microphone (oscilloscope) : jusqu'à 40 000 Hz
+                <br>• Accéléromètre/Gyroscope : 50-100 Hz
+                <br>• Colorimètre : 20-40 Hz
+                <br>• GPS/Baromètre : 1 Hz
+                <br><br>
+                <strong>Conseil :</strong> Une fréquence élevée donne plus de détails mais réduit la durée d'enregistrement (max 5000 points).
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Quelle est la durée maximale d'enregistrement ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                FizziQ peut enregistrer jusqu'à <strong>5000 points de données</strong> par enregistrement. La durée dépend de la fréquence :
+                <br><br>
+                • À 100 Hz : 50 secondes
+                <br>• À 10 Hz : 500 secondes (≈ 8 minutes)
+                <br>• À 1 Hz : 5000 secondes (≈ 83 minutes)
+                <br><br>
+                <strong>Conseil :</strong> Pour les enregistrements longs, réduisez la fréquence d'échantillonnage dans Réglages > Données.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment partager une activité avec mes élèves ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Plusieurs méthodes pour partager une activité :
+                <br><br>
+                <strong>1. QR Code :</strong>
+                <br>• Créez votre activité dans le cahier
+                <br>• Appuyez sur Partager > Générer QR Code
+                <br>• Affichez le QR code au tableau, les élèves le scannent
+                <br><br>
+                <strong>2. Fichier .fizziq :</strong>
+                <br>• Exportez l'activité (Partager > Fichier FizziQ)
+                <br>• Envoyez par email, ENT ou AirDrop
+                <br><br>
+                <strong>3. Bibliothèque FizziQ :</strong>
+                <br>• Accédez aux activités partagées par la communauté
+                <br>• Onglet Activités > Bibliothèque
+                <br><br><a href="../activites/">→ Voir la FAQ Activités</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Quelles précautions de sécurité dois-je prendre ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <strong>Protégez votre appareil :</strong>
+                <br>• Utilisez une coque de protection
+                <br>• Évitez l'exposition aux liquides et températures extrêmes
+                <br>• Fixez solidement l'appareil lors des expériences de mouvement
+                <br><br>
+                <strong>Protégez les autres :</strong>
+                <br>• Ne lancez pas d'objets vers d'autres personnes
+                <br>• Prévenez l'entourage avant une expérience de mouvement
+                <br>• Dégagez l'espace de travail
+                <br><br>
+                <strong>Protégez-vous :</strong>
+                <br>• Pas de mesures dans des lieux dangereux (bord de route, hauteur)
+                <br>• Restez attentif à votre environnement
             </div>
         </div>
 
