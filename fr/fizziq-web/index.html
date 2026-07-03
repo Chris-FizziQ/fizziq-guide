@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode d'emploi FizziQ Web - Guide complet pour ordinateur</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Guide complet FizziQ Web : analysez le son, utilisez des simulations de physique, connectez FizziQ Connect. Application web gratuite pour les sciences au collège et lycée.">
+    <meta name="keywords" content="FizziQ Web, application sciences ordinateur, simulation physique, analyse audio, pendule simulation, circuit électrique, Chromebook sciences">
+    <meta name="author" content="FizziQ Labs">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://guide.fizziq.org/fr/fizziq-web/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Mode d'emploi FizziQ Web - Guide complet">
+    <meta property="og:description" content="Transformez votre ordinateur en laboratoire scientifique. Simulations, analyse audio, connexion FizziQ Connect.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://guide.fizziq.org/fr/fizziq-web/">
+    <meta property="og:site_name" content="FizziQ Labs">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Mode d'emploi FizziQ Web">
+    <meta name="twitter:description" content="Guide complet pour utiliser FizziQ Web sur ordinateur.">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "TechArticle",
+        "headline": "Mode d'emploi FizziQ Web - Guide complet",
+        "description": "Guide complet pour utiliser FizziQ Web, l'application web gratuite pour réaliser des expériences scientifiques sur ordinateur.",
+        "author": { "@type": "Organization", "name": "FizziQ Labs" },
+        "publisher": { "@type": "Organization", "name": "FizziQ Labs" },
+        "inLanguage": "fr-FR",
+        "isAccessibleForFree": true
+    }
+    </script>
+
+    <!-- Schema.org SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "FizziQ Web",
+        "description": "FizziQ Web est une application web gratuite qui transforme un ordinateur en laboratoire de sciences. Elle permet d'analyser le son, d'utiliser des simulations de physique (pendule, ressort, balistique, circuit électrique) et de se connecter à FizziQ Connect via Bluetooth ou USB.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web Browser (Chrome, Edge)",
+        "url": "https://fizziqweb.web.app",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+    }
+    </script>
+
+    <!-- Schema.org FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce que FizziQ Web ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FizziQ Web est une application web gratuite qui transforme votre ordinateur en laboratoire de sciences. Elle permet d'analyser le son, d'utiliser des simulations de physique et de se connecter à FizziQ Connect. Aucune installation requise, fonctionne dans le navigateur."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quel navigateur utiliser pour FizziQ Web ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Utilisez Chrome ou Edge pour toutes les fonctionnalités, notamment la connexion Bluetooth à FizziQ Connect. Firefox et Safari ne supportent pas le Bluetooth Web."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "FizziQ Web fonctionne-t-il sur Chromebook ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui, FizziQ Web fonctionne parfaitement sur Chromebook via le navigateur Chrome. C'est idéal pour les établissements équipés de Chromebooks."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary: #5E35B1;
+            --primary-light: #EDE7F6;
+            --secondary: #34A853;
+            --accent: #F5A623;
+            --danger: #DC3545;
+            --bg: #FAFAFA;
+            --bg-white: #FFFFFF;
+            --text: #222;
+            --text-muted: #666;
+            --border: #DDD;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        header h1 { font-size: 2rem; font-weight: 600; }
+        header .subtitle { font-size: 1rem; opacity: 0.9; margin-top: 0.3rem; }
+        header .url { font-size: 0.9rem; margin-top: 0.5rem; }
+        header .url a { color: #B39DDB; }
+
+        nav {
+            background: var(--bg-white);
+            padding: 0.5rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+            font-size: 12px;
+        }
+        nav ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+            list-style: none;
+            justify-content: center;
+        }
+        nav a {
+            padding: 0.3rem 0.6rem;
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        nav a:hover { background: var(--primary-light); }
+
+        main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        section {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            color: var(--primary);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.4rem;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        h3 {
+            color: var(--text);
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 1.2rem 0 0.5rem;
+            padding-top: 0.8rem;
+            border-top: 1px solid #EEE;
+        }
+        h3:first-of-type { border-top: none; padding-top: 0; }
+
+        h4 {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin: 0.8rem 0 0.4rem;
+        }
+
+        p { margin-bottom: 0.6rem; }
+
+        ul, ol { margin: 0.4rem 0 0.6rem 1.5rem; }
+        li { margin-bottom: 0.2rem; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.6rem 0;
+            font-size: 13px;
+        }
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 0.4rem 0.6rem;
+            text-align: left;
+            font-weight: 500;
+        }
+        td {
+            padding: 0.35rem 0.6rem;
+            border-bottom: 1px solid #EEE;
+        }
+        tr:hover td { background: #F5F5F5; }
+
+        .info-box, .warning-box, .tip-box {
+            padding: 0.6rem 0.8rem;
+            border-radius: 6px;
+            margin: 0.6rem 0;
+            font-size: 13px;
+            border-left: 4px solid;
+        }
+        .info-box { background: #E3F2FD; border-color: #1976D2; }
+        .warning-box { background: #FFF8E1; border-color: var(--accent); }
+        .tip-box { background: #E8F5E9; border-color: var(--secondary); }
+
+        code {
+            background: #F0F0F0;
+            padding: 0.15rem 0.4rem;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 12px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.8rem;
+            margin: 0.8rem 0;
+        }
+        .feature-card {
+            background: var(--primary-light);
+            padding: 0.8rem;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .feature-card .icon { font-size: 1.5rem; }
+        .feature-card h4 { font-size: 0.85rem; margin: 0.3rem 0 0; color: var(--primary); }
+        .feature-card p { font-size: 0.75rem; color: var(--text-muted); margin: 0.2rem 0 0; }
+
+        .steps { counter-reset: step; list-style: none; margin-left: 0; }
+        .steps li {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .steps li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 11px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            font-size: 12px;
+        }
+        footer a { color: #B39DDB; }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.5rem; }
+            section { padding: 1rem; }
+            nav { font-size: 11px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>FizziQ Web</h1>
+    <p class="subtitle">Mode d'emploi complet - Laboratoire scientifique sur ordinateur</p>
+    <p class="url">Accès : <a href="https://fizziqweb.web.app" target="_blank">fizziqweb.web.app</a></p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#demarrage">Prise en main</a></li>
+        <li><a href="#audio">Analyse audio</a></li>
+        <li><a href="#simulations">Simulations</a></li>
+        <li><a href="#fizziq-connect">FizziQ Connect</a></li>
+        <li><a href="#cahier">Cahier</a></li>
+        <li><a href="#outils">Outils</a></li>
+        <li><a href="#export">Export</a></li>
+        <li><a href="#depannage">Dépannage</a></li>
+    </ul>
+</nav>
+
+<main>
+
+<!-- ==================== INTRODUCTION ==================== -->
+<section id="introduction">
+    <h2>1. Introduction</h2>
+
+    <h3>1.1 Qu'est-ce que FizziQ Web ?</h3>
+    <p><strong>FizziQ Web</strong> est une application web gratuite qui transforme votre ordinateur en laboratoire de sciences. Elle permet de réaliser des expériences scientifiques, analyser des données et produire des comptes rendus directement depuis un navigateur.</p>
+
+    <div class="info-box">
+        <strong>Aucune installation requise</strong> : ouvrez simplement <a href="https://fizziqweb.web.app" target="_blank">fizziqweb.web.app</a> dans Chrome ou Edge.
+    </div>
+
+    <h3>1.2 Fonctionnalités principales</h3>
+    <div class="feature-grid">
+        <div class="feature-card">
+            <div class="icon">🎵</div>
+            <h4>Analyse audio</h4>
+            <p>Enregistrer, visualiser et analyser le son</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">⚙️</div>
+            <h4>Simulations</h4>
+            <p>Pendule, ressort, balistique, circuits</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🔌</div>
+            <h4>FizziQ Connect</h4>
+            <p>Capteurs externes via Bluetooth/USB</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📊</div>
+            <h4>Cahier d'expériences</h4>
+            <p>Graphiques, tableaux, export PDF</p>
+        </div>
+    </div>
+
+    <h3>1.3 Compatibilité navigateur</h3>
+    <table>
+        <tr><th>Navigateur</th><th>Analyse audio</th><th>Simulations</th><th>Bluetooth</th><th>USB</th></tr>
+        <tr><td><strong>Chrome</strong></td><td>Oui</td><td>Oui</td><td>Oui</td><td>Oui</td></tr>
+        <tr><td><strong>Edge</strong></td><td>Oui</td><td>Oui</td><td>Oui</td><td>Oui</td></tr>
+        <tr><td>Firefox</td><td>Oui</td><td>Oui</td><td>Non</td><td>Non</td></tr>
+        <tr><td>Safari</td><td>Oui</td><td>Oui</td><td>Non</td><td>Non</td></tr>
+    </table>
+
+    <div class="tip-box">
+        <strong>Recommandation :</strong> Utilisez <strong>Chrome</strong> ou <strong>Edge</strong> pour accéder à toutes les fonctionnalités, notamment la connexion Bluetooth avec FizziQ Connect.
+    </div>
+
+    <h3>1.4 Différences avec FizziQ mobile</h3>
+    <p>FizziQ Web est complémentaire à l'application mobile :</p>
+    <ul>
+        <li><strong>Pas de capteurs intégrés</strong> : un ordinateur n'a pas d'accéléromètre ou de GPS</li>
+        <li><strong>Analyse audio avancée</strong> : spectrogramme, spectre de fréquences plus détaillé</li>
+        <li><strong>Simulations de physique</strong> : pendule, ressort, balistique, circuits électriques, plan incliné</li>
+        <li><strong>Écran plus grand</strong> : idéal pour l'analyse de données et les graphiques</li>
+    </ul>
+</section>
+
+<!-- ==================== PRISE EN MAIN ==================== -->
+<section id="demarrage">
+    <h2>2. Prise en main</h2>
+
+    <h3>2.1 Accéder à FizziQ Web</h3>
+    <ol class="steps">
+        <li>Ouvrez votre navigateur <strong>Chrome</strong> ou <strong>Edge</strong></li>
+        <li>Allez sur <a href="https://fizziqweb.web.app" target="_blank"><strong>fizziqweb.web.app</strong></a></li>
+        <li>Cliquez sur <strong>Expérimenter</strong> pour accéder aux outils</li>
+    </ol>
+
+    <h3>2.2 Première mesure : analyser un son</h3>
+    <p>Voici comment réaliser votre première analyse audio :</p>
+    <ol class="steps">
+        <li>Cliquez sur <strong>Expérimenter</strong> → <strong>Analyse audio</strong></li>
+        <li>Cliquez sur <strong>Source Audio</strong> → <strong>Bibliothèque de sons</strong></li>
+        <li>Sélectionnez <strong>Diapason La 3</strong> (440 Hz)</li>
+        <li>Observez l'oscillogramme et le spectre de fréquences</li>
+        <li>Utilisez la molette ou les boutons <strong>Zoom</strong> pour voir les détails</li>
+        <li>Cliquez sur <strong>Ajouter au cahier</strong> pour exporter l'analyse</li>
+    </ol>
+
+    <div class="tip-box">
+        <strong>Conseil :</strong> Zoomez pour visualiser 10-20 oscillations complètes pour une observation claire du signal périodique.
+    </div>
+
+    <h3>2.3 Interface générale</h3>
+    <p>L'interface de FizziQ Web est organisée en plusieurs zones :</p>
+    <ul>
+        <li><strong>Menu principal</strong> : accès aux différents modules (Audio, Simulations, Cahier...)</li>
+        <li><strong>Zone de travail</strong> : visualisation des données et graphiques</li>
+        <li><strong>Panneau de contrôle</strong> : paramètres et boutons d'action (REC, START, STOP)</li>
+        <li><strong>Cahier d'expériences</strong> : organisation et export des résultats</li>
+    </ul>
+</section>
+
+<!-- ==================== ANALYSE AUDIO ==================== -->
+<section id="audio">
+    <h2>3. Analyse audio</h2>
+
+    <h3>3.1 Sources audio</h3>
+    <p>Vous pouvez analyser le son de plusieurs manières :</p>
+    <ul>
+        <li><strong>Enregistrer</strong> avec le microphone de l'ordinateur</li>
+        <li><strong>Charger un fichier</strong> audio (WAV, MP3, OGG, FLAC, M4A)</li>
+        <li><strong>Bibliothèque de sons</strong> intégrée (diapason, instruments, bruit blanc, sirène, effet Doppler)</li>
+    </ul>
+
+    <h3>3.2 Modes d'analyse</h3>
+    <table>
+        <tr><th>Mode</th><th>Affichage</th><th>Utilisation</th></tr>
+        <tr><td><strong>Amplitude</strong></td><td>Forme d'onde temporelle</td><td>Observer la structure du son, mesurer la période</td></tr>
+        <tr><td><strong>Niveau sonore (dB)</strong></td><td>Intensité en décibels</td><td>Mesurer le volume, comparer des sources</td></tr>
+        <tr><td><strong>Fréquence fondamentale</strong></td><td>Fréquence principale (Hz)</td><td>Identifier une note, accorder un instrument</td></tr>
+        <tr><td><strong>Spectre</strong></td><td>Fréquences à un instant</td><td>Analyser les harmoniques, le timbre</td></tr>
+        <tr><td><strong>Spectrogramme</strong></td><td>Évolution temps-fréquence</td><td>Sons complexes, mélodies, voix</td></tr>
+    </table>
+
+    <h3>3.3 Lecture du spectrogramme</h3>
+    <p>Le spectrogramme utilise un code couleur :</p>
+    <ul>
+        <li><strong>Noir</strong> : silence</li>
+        <li><strong>Bleu</strong> : faible intensité</li>
+        <li><strong>Jaune</strong> : intensité moyenne</li>
+        <li><strong>Rouge</strong> : intensité maximale</li>
+    </ul>
+
+    <h3>3.4 Export des données</h3>
+    <p>Selon le mode d'analyse, vous pouvez exporter :</p>
+    <ul>
+        <li><strong>Mode Amplitude</strong> : Temps (s), Amplitude</li>
+        <li><strong>Mode Fréquence</strong> : Temps (s), Fréquence (Hz)</li>
+        <li><strong>Mode Spectre</strong> : Fréquence (Hz), Magnitude</li>
+        <li><strong>Spectrogramme</strong> : tableau de données ou image</li>
+    </ul>
+</section>
+
+<!-- ==================== SIMULATIONS ==================== -->
+<section id="simulations">
+    <h2>4. Simulations de physique</h2>
+
+    <p>FizziQ Web propose plusieurs simulations interactives qui génèrent des données exploitables dans le cahier d'expériences.</p>
+
+    <h3>4.1 Simulation du pendule</h3>
+    <p><strong>Objectif :</strong> Étudier le mouvement oscillatoire d'un pendule simple.</p>
+
+    <h4>Paramètres</h4>
+    <table>
+        <tr><th>Paramètre</th><th>Plage</th><th>Par défaut</th></tr>
+        <tr><td>Longueur du pendule</td><td>0.2 - 5.0 m</td><td>2.0 m</td></tr>
+        <tr><td>Angle initial</td><td>5° - 85°</td><td>30°</td></tr>
+    </table>
+
+    <h4>Grandeurs mesurables</h4>
+    <ul>
+        <li>Accélération tangentielle : a<sub>t</sub> = -g sin(θ)</li>
+        <li>Accélération centripète : a<sub>n</sub> = L ω²</li>
+        <li>Angle θ en fonction du temps</li>
+    </ul>
+
+    <h4>Utilisation</h4>
+    <ol class="steps">
+        <li>Réglez la <strong>longueur</strong> et l'<strong>angle initial</strong></li>
+        <li>Cliquez sur <strong>REC</strong> puis <strong>START</strong> pour enregistrer</li>
+        <li>Les données sont automatiquement ajoutées au cahier</li>
+    </ol>
+
+    <div class="tip-box">
+        <strong>Activité suggérée :</strong> Vérifiez la formule de la période T = 2π√(L/g) en mesurant la période pour différentes longueurs.
+    </div>
+
+    <h3>4.2 Simulation oscillateur à ressort</h3>
+    <p><strong>Objectif :</strong> Étudier les oscillations d'un système masse-ressort.</p>
+
+    <h4>Paramètres</h4>
+    <table>
+        <tr><th>Paramètre</th><th>Plage</th><th>Par défaut</th></tr>
+        <tr><td>Raideur du ressort (k)</td><td>1 - 100 N/m</td><td>20 N/m</td></tr>
+        <tr><td>Masse</td><td>0.1 - 5.0 kg</td><td>0.5 kg</td></tr>
+        <tr><td>Amplitude initiale</td><td>0.05 - 1.0 m</td><td>0.3 m</td></tr>
+        <tr><td>Amortissement</td><td>0 - 2.0 N·s/m</td><td>0</td></tr>
+    </table>
+
+    <h4>Grandeurs mesurables</h4>
+    <ul>
+        <li>Position (élongation) x</li>
+        <li>Vitesse dx/dt</li>
+        <li>Accélération a = -(k/m)x - (b/m)v</li>
+    </ul>
+
+    <h3>4.3 Simulation balistique</h3>
+    <p><strong>Objectif :</strong> Étudier la trajectoire d'un projectile.</p>
+
+    <h4>Paramètres</h4>
+    <table>
+        <tr><th>Paramètre</th><th>Plage</th><th>Par défaut</th></tr>
+        <tr><td>Vitesse initiale (v₀)</td><td>10 - 100 m/s</td><td>50 m/s</td></tr>
+        <tr><td>Angle de tir (α)</td><td>15° - 85°</td><td>45°</td></tr>
+        <tr><td>Résistance de l'air</td><td>Activable</td><td>Désactivée</td></tr>
+    </table>
+
+    <h4>Équations (sans frottements)</h4>
+    <ul>
+        <li>Position horizontale : x(t) = v₀ cos(α) t</li>
+        <li>Position verticale : y(t) = v₀ sin(α) t − ½ g t²</li>
+        <li>Portée maximale à 45° : R = v₀² sin(2α) / g</li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>Activité suggérée :</strong> Déterminez l'angle optimal pour une portée maximale en comparant différents angles de tir.
+    </div>
+
+    <h3>4.4 Simulation circuit électrique</h3>
+    <p><strong>Objectif :</strong> Construire et analyser des circuits électriques en série.</p>
+
+    <h4>Composants disponibles</h4>
+    <ul>
+        <li><strong>Sources</strong> : pile (tension continue), générateur AC (tension variable)</li>
+        <li><strong>Éléments</strong> : fils, résistances, lampes, interrupteurs, diodes</li>
+        <li><strong>Instruments</strong> : ampèremètre (en série), voltmètre (en dérivation)</li>
+    </ul>
+
+    <h4>Construction d'un circuit</h4>
+    <ol class="steps">
+        <li>Cliquez sur un composant dans la barre d'outils</li>
+        <li>Déplacez-le dans la zone de travail</li>
+        <li>Connectez les bornes en les faisant glisser</li>
+        <li>Le circuit fonctionne dès qu'il est fermé</li>
+    </ol>
+
+    <div class="info-box">
+        <strong>Loi d'Ohm :</strong> Vérifiez que U = R × I en mesurant tension et intensité avec différentes résistances.
+    </div>
+
+    <h3>4.5 Simulation plan incliné</h3>
+    <p><strong>Objectif :</strong> Étudier le mouvement rectiligne uniformément accéléré.</p>
+
+    <h4>Paramètres</h4>
+    <table>
+        <tr><th>Paramètre</th><th>Plage</th><th>Par défaut</th></tr>
+        <tr><td>Angle d'inclinaison</td><td>5° - 90°</td><td>30°</td></tr>
+        <tr><td>Distance à parcourir</td><td>1 - 10 m</td><td>10 m</td></tr>
+    </table>
+
+    <h4>Physique</h4>
+    <ul>
+        <li>Accélération : a = g sin(θ)</li>
+        <li>À 90° : mouvement = chute libre</li>
+        <li>Principe de Galilée : ralentir la chute libre pour mieux l'observer</li>
+    </ul>
+</section>
+
+<!-- ==================== FIZZIQ CONNECT ==================== -->
+<section id="fizziq-connect">
+    <h2>5. Connexion FizziQ Connect</h2>
+
+    <p><strong>FizziQ Connect</strong> est un boîtier permettant de connecter des capteurs externes (température, CO2, pH...) à FizziQ Web.</p>
+
+    <h3>5.1 Connexion Bluetooth</h3>
+    <p><strong>Avantages :</strong> sans fil, mobilité, mesures de terrain.</p>
+
+    <div class="warning-box">
+        <strong>Navigateur requis :</strong> Chrome 79+ ou Edge 79+ uniquement. Firefox et Safari ne supportent pas le Bluetooth Web.
+    </div>
+
+    <h4>Étapes de connexion</h4>
+    <ol class="steps">
+        <li>Allumez FizziQ Connect et vérifiez que le Bluetooth est activé</li>
+        <li>Ouvrez FizziQ Web dans <strong>Chrome</strong> ou <strong>Edge</strong></li>
+        <li>Cliquez sur le menu → <strong>FizziQ Connect</strong> ou <strong>Bluetooth</strong></li>
+        <li>Cliquez sur <strong>Connecter</strong></li>
+        <li>Sélectionnez votre boîtier dans la liste</li>
+        <li>Cliquez sur <strong>Associer</strong></li>
+    </ol>
+
+    <h3>5.2 Connexion USB</h3>
+    <p><strong>Avantages :</strong> connexion stable, mesures longue durée, débogage.</p>
+
+    <div class="warning-box">
+        <strong>Important :</strong> Fermez toutes les applications utilisant le port série (Arduino IDE, PlatformIO, Putty...) avant de connecter.
+    </div>
+
+    <h4>Étapes de connexion</h4>
+    <ol class="steps">
+        <li>Allumez FizziQ Connect</li>
+        <li>Connectez-le à l'ordinateur avec un câble USB-C <strong>de données</strong></li>
+        <li>Ouvrez FizziQ Web</li>
+        <li>Cliquez sur le menu → <strong>USB Serial</strong> ou <strong>FizziQ Connect USB</strong></li>
+        <li>Sélectionnez le port correspondant</li>
+        <li>Cliquez sur <strong>Connecter</strong></li>
+    </ol>
+
+    <h3>5.3 Dépannage connexion</h3>
+    <table>
+        <tr><th>Problème</th><th>Solution</th></tr>
+        <tr><td>Fenêtre Bluetooth ne s'ouvre pas</td><td>Utilisez Chrome ou Edge, vérifiez HTTPS</td></tr>
+        <tr><td>FizziQ Connect n'apparaît pas</td><td>Vérifiez qu'il est allumé et à portée (~10m)</td></tr>
+        <tr><td>Connexion échoue</td><td>Redémarrez le boîtier, rechargez la page</td></tr>
+        <tr><td>Pas de données après connexion</td><td>Vérifiez que les capteurs sont branchés</td></tr>
+        <tr><td>Port USB non détecté</td><td>Fermez Arduino IDE et autres apps série</td></tr>
+    </table>
+
+    <div class="tip-box">
+        <strong>Bonnes pratiques :</strong>
+        <ul>
+            <li>Chargez le boîtier avant la séance</li>
+            <li>Testez la connexion avant l'arrivée des élèves</li>
+            <li>Utilisez un câble USB de qualité (câble de données, pas juste de charge)</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ==================== CAHIER D'EXPERIENCES ==================== -->
+<section id="cahier">
+    <h2>6. Cahier d'expériences</h2>
+
+    <h3>6.1 Présentation</h3>
+    <p>Le <strong>cahier d'expériences</strong> est l'espace central où vous organisez vos données, graphiques et observations.</p>
+
+    <h3>6.2 Fonctionnalités</h3>
+    <ul>
+        <li><strong>Tableaux de données</strong> : créer et manipuler des données</li>
+        <li><strong>Colonnes calculées</strong> : ajouter des grandeurs dérivées</li>
+        <li><strong>Graphiques</strong> : visualiser les relations entre grandeurs</li>
+        <li><strong>Ajustement de courbes</strong> : modélisation mathématique</li>
+        <li><strong>Photos et texte</strong> : documenter l'expérience</li>
+        <li><strong>Formules scientifiques</strong> : écrire des équations</li>
+    </ul>
+
+    <h3>6.3 Ajouter des données</h3>
+    <p>Les données peuvent provenir de :</p>
+    <ul>
+        <li>L'analyse audio (export vers le cahier)</li>
+        <li>Les simulations (enregistrement automatique)</li>
+        <li>FizziQ Connect (capteurs externes)</li>
+        <li>Saisie manuelle</li>
+    </ul>
+</section>
+
+<!-- ==================== OUTILS ==================== -->
+<section id="outils">
+    <h2>7. Outils supplémentaires</h2>
+
+    <h3>7.1 Outils disponibles</h3>
+    <ul>
+        <li><strong>Tableur scientifique</strong> : manipulation et calculs sur les données</li>
+        <li><strong>Interpréteur Python</strong> : programmation pour analyses avancées</li>
+        <li><strong>Calculatrice</strong> : calculs rapides</li>
+        <li><strong>Synthétiseur de sons</strong> : générer des fréquences précises</li>
+        <li><strong>Synthétiseur de couleurs</strong> : outils RGB</li>
+        <li><strong>Convertisseur vidéo → chronophotographie</strong> : extraire des images d'une vidéo</li>
+    </ul>
+
+    <h3>7.2 Éditeur de texte scientifique</h3>
+    <p>L'éditeur permet d'écrire du texte avec des formules mathématiques pour documenter vos expériences.</p>
+</section>
+
+<!-- ==================== EXPORT ==================== -->
+<section id="export">
+    <h2>8. Export des données</h2>
+
+    <h3>8.1 Formats disponibles</h3>
+    <table>
+        <tr><th>Format</th><th>Usage</th></tr>
+        <tr><td><strong>PDF</strong></td><td>Rapport complet avec graphiques et texte</td></tr>
+        <tr><td><strong>CSV</strong></td><td>Données brutes pour Excel, Google Sheets</td></tr>
+        <tr><td><strong>Python</strong></td><td>Code pour analyse avancée</td></tr>
+        <tr><td><strong>Image</strong></td><td>Graphiques et spectrogrammes</td></tr>
+    </table>
+
+    <h3>8.2 Compatibilité FizziQ mobile</h3>
+    <p>Les fichiers FizziQ Web sont compatibles avec l'application mobile FizziQ. Vous pouvez commencer une expérience sur smartphone et continuer l'analyse sur ordinateur.</p>
+
+    <h3>8.3 Confidentialité</h3>
+    <div class="info-box">
+        <strong>Données locales :</strong> Tous les fichiers sont stockés localement sur votre ordinateur. Aucun compte n'est requis. Les données des élèves restent privées et confidentielles.
+    </div>
+</section>
+
+<!-- ==================== DEPANNAGE ==================== -->
+<section id="depannage">
+    <h2>9. Dépannage</h2>
+
+    <h3>9.1 Problèmes fréquents</h3>
+    <table>
+        <tr><th>Problème</th><th>Solution</th></tr>
+        <tr><td>Le microphone ne fonctionne pas</td><td>Autorisez l'accès au micro dans les paramètres du navigateur</td></tr>
+        <tr><td>Bluetooth non disponible</td><td>Utilisez Chrome ou Edge, vérifiez que le Bluetooth est activé sur l'ordinateur</td></tr>
+        <tr><td>Les simulations sont lentes</td><td>Fermez les autres onglets, vérifiez les performances de l'ordinateur</td></tr>
+        <tr><td>Export PDF vide</td><td>Vérifiez que le cahier contient des données</td></tr>
+        <tr><td>FizziQ Connect non détecté en USB</td><td>Utilisez un câble USB de données, fermez Arduino IDE</td></tr>
+    </table>
+
+    <h3>9.2 Navigateurs recommandés</h3>
+    <p>Pour une expérience optimale :</p>
+    <ul>
+        <li><strong>Chrome</strong> (version 89+) : toutes les fonctionnalités</li>
+        <li><strong>Edge</strong> (version 89+) : toutes les fonctionnalités</li>
+        <li>Évitez Firefox et Safari pour les fonctionnalités Bluetooth/USB</li>
+    </ul>
+
+    <h3>9.3 Support</h3>
+    <p>Pour toute question : <a href="mailto:contact@fizziq.org">contact@fizziq.org</a></p>
+</section>
+
+</main>
+
+<footer>
+    <p>
+        <a href="https://fizziqweb.web.app" target="_blank">fizziqweb.web.app</a> ·
+        <a href="https://www.fizziq.org" target="_blank">fizziq.org</a> ·
+        <a href="mailto:contact@fizziq.org">contact@fizziq.org</a>
+    </p>
+    <p style="margin-top: 0.5rem; opacity: 0.7;">© 2025 FizziQ Labs · Guide FizziQ Web</p>
+</footer>
+
+</body>
+</html>
