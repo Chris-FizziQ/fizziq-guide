@@ -459,7 +459,7 @@
         </div>
         <div class="feature-card">
             <div class="icon">📊</div>
-            <h4>Tableur scientifique</h4>
+            <h4>Tableaux de donnees</h4>
             <p>Donnees, formules, graphiques</p>
         </div>
         <div class="feature-card">
@@ -1168,25 +1168,21 @@
 <section id="tableaux">
     <h2 style="border-color: #388E3C;">9. Tableaux et graphiques <span style="font-size: 0.7em; color: #388E3C; font-weight: normal;">- Analyser</span></h2>
 
-    <p>Le <strong>tableur scientifique</strong> est un outil puissant pour organiser, analyser et visualiser vos donnees experimentales. Il fonctionne avec des colonnes appelees <strong>grandeurs</strong> qui contiennent vos mesures et calculs.</p>
+    <p>Les donnees capturees sont representees sous forme de <strong>tableaux</strong>. Chaque tableau contient des colonnes appelees <strong>grandeurs</strong> (temps, distance, vitesse...) et permet de consulter, modifier ou enrichir les donnees experimentales.</p>
 
     <div class="info-box">
-        <strong>Caracteristiques :</strong> Jusqu'a 20 colonnes, formules automatiques (derivees, statistiques), graphiques avec 5 courbes et 6 types d'interpolation, export CSV, integration Python.
+        <strong>Possibilites :</strong> Consulter les donnees, ajouter ou supprimer des lignes, creer des colonnes calculees (formules), definir les unites, generer des graphiques avec interpolation, exporter en CSV ou vers Python.
     </div>
 
-    <h3>9.1 Acces</h3>
-    <p><strong>Tableur autonome :</strong></p>
-    <ol class="steps">
-        <li>Cliquez sur <strong>Outils</strong> → <strong>Tableur</strong></li>
-        <li>Un tableau vierge s'ouvre avec barre d'outils complete</li>
-        <li>Sauvegarde en CSV possible, export vers n'importe quel cahier</li>
-    </ol>
+    <h3>9.1 Acces aux tableaux</h3>
+    <p><strong>Tableau dans le cahier d'experiences :</strong></p>
+    <p>Chaque fois que vous capturez des donnees (analyse audio, video, simulation, capteur externe...), un tableau est automatiquement cree dans le cahier d'experiences. Vous pouvez l'ouvrir pour consulter et modifier les donnees.</p>
 
-    <p><strong>Tableau integre au cahier :</strong></p>
+    <p><strong>Creer un tableau vierge :</strong></p>
     <ol class="steps">
-        <li>Ouvrez votre cahier d'experience</li>
+        <li>Ouvrez votre cahier d'experiences</li>
         <li>Cliquez sur <strong>+</strong> → <strong>Tableau de donnees</strong></li>
-        <li>Sauvegarde automatique avec le cahier, inclus dans l'export PDF</li>
+        <li>Saisissez vos donnees manuellement</li>
     </ol>
 
     <h3>9.2 Les grandeurs (colonnes)</h3>
@@ -1288,12 +1284,12 @@
     <p><strong>Onglet Echelles :</strong> Ajustement automatique ou echelles manuelles (Min/Max).</p>
 
     <h3>9.6 Integration avec Python</h3>
-    <p>Definissez des fonctions dans l'interpreteur Python et utilisez-les dans le tableur :</p>
+    <p>Definissez des fonctions dans l'interpreteur Python et utilisez-les dans les tableaux :</p>
     <pre><code># Dans Python
 def energie_cinetique(m, v):
     return 0.5 * m * v * v
 
-# Dans le tableur
+# Dans le tableau (formule de colonne)
 =energie_cinetique(masse, vitesse)</code></pre>
 
     <h3>9.7 Import/Export</h3>
