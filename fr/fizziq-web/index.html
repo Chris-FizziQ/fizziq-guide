@@ -343,16 +343,20 @@
     <ul>
         <li><a href="#introduction">Introduction</a></li>
         <li><a href="#demarrage">Prise en main</a></li>
-        <li><a href="#audio">Analyse audio</a></li>
-        <li><a href="#video">Analyse video</a></li>
-        <li><a href="#chronophotographies">Chronophotographies</a></li>
-        <li><a href="#simulations">Simulations</a></li>
-        <li><a href="#capteurs-externes">Capteurs externes</a></li>
-        <li><a href="#cahier">Cahier</a></li>
-        <li><a href="#tableaux">Tableaux et graphiques</a></li>
-        <li><a href="#rapport">Rapport final</a></li>
+        <li style="color: #1976D2; font-weight: 600;">|</li>
+        <li><a href="#audio" style="color: #1976D2;">Audio</a></li>
+        <li><a href="#video" style="color: #1976D2;">Video</a></li>
+        <li><a href="#chronophotographies" style="color: #1976D2;">Chrono</a></li>
+        <li><a href="#simulations" style="color: #1976D2;">Simulations</a></li>
+        <li><a href="#capteurs-externes" style="color: #1976D2;">Capteurs</a></li>
+        <li style="color: #388E3C; font-weight: 600;">|</li>
+        <li><a href="#cahier" style="color: #388E3C;">Cahier</a></li>
+        <li><a href="#tableaux" style="color: #388E3C;">Tableaux</a></li>
+        <li style="color: #F57C00; font-weight: 600;">|</li>
+        <li><a href="#rapport" style="color: #F57C00;">Rapport</a></li>
+        <li><a href="#export" style="color: #F57C00;">Export</a></li>
+        <li style="color: #666; font-weight: 600;">|</li>
         <li><a href="#outils">Outils</a></li>
-        <li><a href="#export">Export</a></li>
         <li><a href="#depannage">Depannage</a></li>
         <li><a href="#annexe-microcontroleurs">Annexe</a></li>
     </ul>
@@ -365,13 +369,68 @@
     <h2>1. Introduction</h2>
 
     <h3>1.1 Qu'est-ce que FizziQ Web ?</h3>
-    <p><strong>FizziQ Web</strong> est une application web gratuite qui transforme votre ordinateur en laboratoire de sciences complet. Elle permet de realiser des experiences scientifiques, analyser des sons et des videos, utiliser des simulations de physique, et produire des comptes rendus professionnels directement depuis un navigateur.</p>
+    <p><strong>FizziQ Web</strong> est une application web gratuite qui accompagne les eleves tout au long de leur demarche scientifique experimentale. De la capture des donnees jusqu'a la communication des resultats, FizziQ Web fournit tous les outils necessaires pour mener une seance d'experimentation complete sur ordinateur.</p>
 
     <div class="info-box">
         <strong>Aucune installation requise</strong> : ouvrez simplement <a href="https://fizziqweb.web.app" target="_blank">fizziqweb.web.app</a> dans Chrome, Edge, Firefox ou Safari.
     </div>
 
-    <h3>1.2 Fonctionnalites principales</h3>
+    <h3>1.2 Les trois piliers de FizziQ Web</h3>
+    <p>FizziQ Web est organise autour de trois grandes fonctionnalites qui correspondent aux trois etapes de la demarche scientifique :</p>
+
+    <div class="feature-grid" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="feature-card" style="background: #E3F2FD; border: 2px solid #1976D2;">
+            <div class="icon">🔬</div>
+            <h4 style="color: #1976D2;">1. Experimenter</h4>
+            <p>Capturer des donnees</p>
+        </div>
+        <div class="feature-card" style="background: #E8F5E9; border: 2px solid #388E3C;">
+            <div class="icon">📊</div>
+            <h4 style="color: #388E3C;">2. Analyser</h4>
+            <p>Organiser et comprendre</p>
+        </div>
+        <div class="feature-card" style="background: #FFF3E0; border: 2px solid #F57C00;">
+            <div class="icon">📝</div>
+            <h4 style="color: #F57C00;">3. Partager</h4>
+            <p>Communiquer ses resultats</p>
+        </div>
+    </div>
+
+    <h4>Experimenter : capturer les donnees</h4>
+    <p>FizziQ Web propose cinq sources de donnees, toutes compatibles entre elles :</p>
+    <ul>
+        <li><strong>Analyse audio</strong> : enregistrement et analyse du son via le micro de l'ordinateur (niveau sonore, frequence, spectre, spectrogramme)</li>
+        <li><strong>Analyse cinematique</strong> : pointage de videos et de chronophotographies pour etudier les mouvements (positions, vitesses, accelerations)</li>
+        <li><strong>Capteurs externes</strong> : connexion a FizziQ Connect ou a des microcontroleurs (Arduino, micro:bit) via Bluetooth ou USB</li>
+        <li><strong>Saisie manuelle</strong> : creation de tableaux de donnees remplis par l'eleve</li>
+        <li><strong>Simulations</strong> : experiences virtuelles (pendule, ressort, balistique, circuits, ondes, gaz ideal...) generant des donnees exploitables</li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>Donnees unifiees :</strong> Quelle que soit la source (experience reelle, capteur ou simulation), les donnees sont au meme format et peuvent etre analysees avec les memes outils.
+    </div>
+
+    <h4>Analyser : organiser et comprendre les donnees</h4>
+    <p>Toutes les donnees capturees arrivent dans le <strong>cahier d'experiences</strong> sous forme de fiches d'observation. L'eleve peut :</p>
+    <ul>
+        <li>Organiser ses donnees dans des <strong>tableaux</strong></li>
+        <li>Ajouter des colonnes et creer des <strong>grandeurs calculees</strong> (formules)</li>
+        <li>Definir les <strong>unites</strong> de chaque grandeur</li>
+        <li>Creer des <strong>graphiques</strong> avec differentes echelles</li>
+        <li>Realiser des <strong>modelisations</strong> et ajustements de courbes</li>
+    </ul>
+
+    <h4>Partager : communiquer ses resultats</h4>
+    <p>Une fois l'analyse terminee, l'eleve peut creer un <strong>rapport final</strong> qui synthetise sa recherche :</p>
+    <ul>
+        <li>Redaction de texte explicatif</li>
+        <li>Insertion de photos et schemas</li>
+        <li>Integration des tableaux et graphiques du cahier d'experiences</li>
+        <li>Ajout de formules mathematiques (syntaxe LaTeX)</li>
+        <li>Export en <strong>PDF</strong>, <strong>Word</strong> ou <strong>image</strong></li>
+    </ul>
+
+    <h3>1.3 Fonctionnalites detaillees</h3>
     <div class="feature-grid">
         <div class="feature-card">
             <div class="icon">🎵</div>
@@ -405,7 +464,7 @@
         </div>
         <div class="feature-card">
             <div class="icon">📝</div>
-            <h4>Editeur de documents</h4>
+            <h4>Editeur de rapport</h4>
             <p>Rapports avec formules LaTeX</p>
         </div>
         <div class="feature-card">
@@ -504,7 +563,7 @@
 
 <!-- ==================== ANALYSE AUDIO ==================== -->
 <section id="audio">
-    <h2>3. Analyse audio</h2>
+    <h2 style="border-color: #1976D2;">3. Analyse audio <span style="font-size: 0.7em; color: #1976D2; font-weight: normal;">- Experimenter</span></h2>
 
     <div class="image-container">
         <picture>
@@ -582,7 +641,7 @@
 
 <!-- ==================== ANALYSE VIDEO ==================== -->
 <section id="video">
-    <h2>4. Analyse video</h2>
+    <h2 style="border-color: #1976D2;">4. Analyse video <span style="font-size: 0.7em; color: #1976D2; font-weight: normal;">- Experimenter</span></h2>
 
     <p>FizziQ Web integre un module complet d'analyse video cinematique, permettant d'etudier le mouvement d'objets a partir de videos.</p>
 
@@ -674,7 +733,7 @@
 
 <!-- ==================== CHRONOPHOTOGRAPHIES ==================== -->
 <section id="chronophotographies">
-    <h2>5. Chronophotographies</h2>
+    <h2 style="border-color: #1976D2;">5. Chronophotographies <span style="font-size: 0.7em; color: #1976D2; font-weight: normal;">- Experimenter</span></h2>
 
     <p>Une <strong>chronophotographie</strong> est une image montrant les positions successives d'un objet en mouvement, superposees sur une seule image. FizziQ Web permet d'analyser ces images et aussi de les creer a partir de videos.</p>
 
@@ -721,7 +780,7 @@
 
 <!-- ==================== SIMULATIONS ==================== -->
 <section id="simulations">
-    <h2>6. Simulations de physique</h2>
+    <h2 style="border-color: #1976D2;">6. Simulations de physique <span style="font-size: 0.7em; color: #1976D2; font-weight: normal;">- Experimenter</span></h2>
 
     <p>FizziQ Web propose huit simulations interactives qui generent des donnees exploitables dans le cahier d'experiences. Chaque simulation permet de placer des capteurs virtuels et d'enregistrer les mesures en temps reel.</p>
 
@@ -921,7 +980,7 @@
 
 <!-- ==================== CAPTEURS EXTERNES ==================== -->
 <section id="capteurs-externes">
-    <h2>7. Capteurs externes (FizziQ Connect, Arduino, micro:bit...)</h2>
+    <h2 style="border-color: #1976D2;">7. Capteurs externes <span style="font-size: 0.7em; color: #1976D2; font-weight: normal;">- Experimenter</span></h2>
 
     <p>FizziQ Web permet de connecter des <strong>capteurs externes</strong> pour realiser des mesures physiques reelles. Deux possibilites s'offrent a vous :</p>
 
@@ -1035,7 +1094,7 @@
 
 <!-- ==================== CAHIER D'EXPERIENCES ==================== -->
 <section id="cahier">
-    <h2>8. Cahier d'experiences</h2>
+    <h2 style="border-color: #388E3C;">8. Cahier d'experiences <span style="font-size: 0.7em; color: #388E3C; font-weight: normal;">- Analyser</span></h2>
 
     <h3>8.1 Presentation</h3>
     <p>Le <strong>cahier d'experiences</strong> est l'espace central ou vous organisez vos donnees, graphiques et observations. Toutes les mesures (audio, video, simulations, capteurs) y sont automatiquement ajoutees.</p>
@@ -1107,7 +1166,7 @@
 
 <!-- ==================== TABLEAUX ET GRAPHIQUES ==================== -->
 <section id="tableaux">
-    <h2>9. Tableaux et graphiques</h2>
+    <h2 style="border-color: #388E3C;">9. Tableaux et graphiques <span style="font-size: 0.7em; color: #388E3C; font-weight: normal;">- Analyser</span></h2>
 
     <p>Le <strong>tableur scientifique</strong> est un outil puissant pour organiser, analyser et visualiser vos donnees experimentales. Il fonctionne avec des colonnes appelees <strong>grandeurs</strong> qui contiennent vos mesures et calculs.</p>
 
@@ -1267,13 +1326,22 @@ def energie_cinetique(m, v):
 
 <!-- ==================== RAPPORT FINAL ==================== -->
 <section id="rapport">
-    <h2>10. Rapport final</h2>
+    <h2 style="border-color: #F57C00;">10. Rapport final <span style="font-size: 0.7em; color: #F57C00; font-weight: normal;">- Partager</span></h2>
 
-    <p>Le <strong>rapport final</strong> est l'aboutissement du travail experimental. Il permet a l'eleve de rediger un compte rendu scientifique complet en integrant les elements du cahier d'experiences : tableaux, graphiques, photos, texte et formules mathematiques.</p>
+    <p>Le <strong>rapport final</strong> est le troisieme pilier de FizziQ Web : <strong>Partager</strong>. Apres avoir capture des donnees (<em>Experimenter</em>) et les avoir organisees et comprises (<em>Analyser</em>), l'eleve peut maintenant communiquer ses resultats en creant un document scientifique complet.</p>
 
-    <div class="info-box">
-        <strong>Partager son travail :</strong> FizziQ Web propose trois grandes fonctionnalites : <strong>Experimenter</strong> (mesures, simulations), <strong>Analyser</strong> (cahier d'experiences, tableaux) et <strong>Partager</strong> (rapport final exportable en PDF ou Word).
+    <div class="info-box" style="background: #FFF3E0; border-color: #F57C00;">
+        <strong>L'aboutissement de la demarche scientifique :</strong> Le rapport final permet a l'eleve de synthetiser sa recherche en integrant tous les elements de son cahier d'experiences : tableaux de donnees, graphiques, photos du dispositif, texte explicatif et formules mathematiques.
     </div>
+
+    <p>L'editeur de rapport de FizziQ Web est concu pour etre <strong>simple et efficace</strong>. L'eleve peut :</p>
+    <ul>
+        <li>Rediger du texte avec mise en forme (titres, gras, italique...)</li>
+        <li>Inserer des images et des photos</li>
+        <li>Integrer directement les fiches de son cahier d'experiences (tableaux et graphiques)</li>
+        <li>Ajouter des formules mathematiques en syntaxe LaTeX</li>
+        <li>Exporter le rapport en PDF, Word ou image pour le partager avec l'enseignant</li>
+    </ul>
 
     <p>La creation d'un rapport se fait en deux etapes :</p>
     <ol class="steps">
@@ -1621,7 +1689,7 @@ plt.show()</code></pre>
 
 <!-- ==================== EXPORT ==================== -->
 <section id="export">
-    <h2>12. Export des donnees</h2>
+    <h2 style="border-color: #F57C00;">12. Export des donnees <span style="font-size: 0.7em; color: #F57C00; font-weight: normal;">- Partager</span></h2>
 
     <h3>12.1 Formats disponibles</h3>
     <table>
