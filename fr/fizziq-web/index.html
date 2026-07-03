@@ -1687,34 +1687,46 @@ plt.show()</code></pre>
 <section id="export">
     <h2 style="border-color: #F57C00;">12. Export des donnees <span style="font-size: 0.7em; color: #F57C00; font-weight: normal;">- Partager</span></h2>
 
-    <h3>12.1 Formats disponibles</h3>
+    <p>FizziQ Web permet d'exporter les donnees a <strong>deux niveaux</strong> : au niveau d'une observation individuelle, ou au niveau du rapport final complet.</p>
+
+    <h3>12.1 Export d'une observation (carte du cahier)</h3>
+    <p>Depuis le cahier d'experiences, vous pouvez exporter chaque carte d'observation individuellement :</p>
+    <ol class="steps">
+        <li>Ouvrez la carte d'observation dans le cahier</li>
+        <li>Cliquez sur le bouton <strong>Exporter</strong></li>
+        <li>Choisissez le format d'export</li>
+    </ol>
+
+    <h4>Formats disponibles pour une observation</h4>
     <table>
-        <tr><th>Format</th><th>Extension</th><th>Usage</th></tr>
-        <tr><td><strong>PDF</strong></td><td>.pdf</td><td>Rapport complet avec graphiques et texte, impression</td></tr>
-        <tr><td><strong>CSV</strong></td><td>.csv</td><td>Donnees brutes pour Excel, Google Sheets, LibreOffice</td></tr>
-        <tr><td><strong>Excel</strong></td><td>.xlsx</td><td>Donnees formatees pour Microsoft Excel</td></tr>
-        <tr><td><strong>Python</strong></td><td>.py</td><td>Code Python avec les donnees pour analyse avancee</td></tr>
-        <tr><td><strong>Image</strong></td><td>.png</td><td>Graphiques et spectrogrammes</td></tr>
-        <tr><td><strong>FizziQ</strong></td><td>.fizziq</td><td>Projet complet, compatible avec FizziQ mobile</td></tr>
+        <tr><th>Format</th><th>Description</th><th>Usage</th></tr>
+        <tr>
+            <td><strong>CSV</strong></td>
+            <td>Fichier tableur (.csv)</td>
+            <td>Ouvrir les donnees dans Excel, Google Sheets, LibreOffice</td>
+        </tr>
+        <tr>
+            <td><strong>Python</strong></td>
+            <td>Script Python (.py)</td>
+            <td>Analyse avancee avec numpy, matplotlib</td>
+        </tr>
+        <tr>
+            <td><strong>Image</strong></td>
+            <td>Image PNG</td>
+            <td>Sauvegarder un graphique ou un tableau</td>
+        </tr>
+        <tr>
+            <td><strong>QR Code</strong></td>
+            <td>Code QR contenant les donnees</td>
+            <td>Transferer les donnees vers FizziQ sur smartphone</td>
+        </tr>
     </table>
 
-    <h3>12.2 Export PDF</h3>
-    <ol class="steps">
-        <li>Ouvrez l'editeur de documents</li>
-        <li>Verifiez la mise en page</li>
-        <li>Cliquez sur <strong>Exporter en PDF</strong></li>
-        <li>Le fichier est telecharge</li>
-    </ol>
+    <div class="tip-box">
+        <strong>Echange avec FizziQ mobile :</strong> Le QR Code permet d'echanger des donnees entre FizziQ Web et l'application FizziQ sur smartphone. Scannez le QR Code avec FizziQ mobile pour recuperer les donnees de l'observation.
+    </div>
 
-    <h3>12.3 Export des donnees (CSV/Excel)</h3>
-    <ol class="steps">
-        <li>Dans le cahier, selectionnez le tableau de donnees</li>
-        <li>Cliquez sur <strong>Exporter</strong></li>
-        <li>Choisissez le format (CSV ou Excel)</li>
-        <li>Le fichier est telecharge</li>
-    </ol>
-
-    <h3>12.4 Export Python</h3>
+    <h4>Export Python</h4>
     <p>L'export Python genere un script contenant :</p>
     <ul>
         <li>Les donnees sous forme de tableaux numpy</li>
@@ -1722,16 +1734,45 @@ plt.show()</code></pre>
         <li>Les ajustements de courbes</li>
     </ul>
 
-    <h3>12.5 Compatibilite FizziQ mobile</h3>
-    <p>Les fichiers .fizziq sont compatibles avec l'application mobile FizziQ :</p>
-    <ul>
-        <li>Commencez une experience sur smartphone (mesures de terrain)</li>
-        <li>Exportez le fichier .fizziq</li>
-        <li>Ouvrez-le dans FizziQ Web pour l'analyse detaillee</li>
-        <li>Ou inversement : preparez un protocole sur ordinateur et executez-le sur mobile</li>
-    </ul>
+    <h3>12.2 Export du rapport final</h3>
+    <p>Pour partager l'ensemble de votre travail experimental, utilisez le rapport final :</p>
+    <ol class="steps">
+        <li>Creez votre rapport en integrant les observations du cahier</li>
+        <li>Cliquez sur <strong>Finaliser</strong></li>
+        <li>Choisissez le format d'export</li>
+    </ol>
 
-    <h3>12.6 Confidentialite</h3>
+    <h4>Formats disponibles pour le rapport</h4>
+    <table>
+        <tr><th>Format</th><th>Description</th><th>Usage</th></tr>
+        <tr>
+            <td><strong>PDF</strong></td>
+            <td>Document PDF</td>
+            <td>Impression, envoi par email, archivage</td>
+        </tr>
+        <tr>
+            <td><strong>Word</strong></td>
+            <td>Document Word (.docx)</td>
+            <td>Modification dans Microsoft Word, Google Docs, LibreOffice</td>
+        </tr>
+    </table>
+
+    <h3>12.3 Resume des exports</h3>
+    <table>
+        <tr><th>Niveau</th><th>Acces</th><th>Formats</th></tr>
+        <tr>
+            <td><strong>Observation</strong></td>
+            <td>Bouton Exporter sur une carte du cahier</td>
+            <td>CSV, Python, Image, QR Code</td>
+        </tr>
+        <tr>
+            <td><strong>Rapport final</strong></td>
+            <td>Bouton Finaliser puis Exporter</td>
+            <td>PDF, Word</td>
+        </tr>
+    </table>
+
+    <h3>12.4 Confidentialite</h3>
     <div class="info-box">
         <strong>Donnees locales :</strong> Tous les fichiers sont stockes localement sur votre ordinateur. Aucun compte n'est requis. Les donnees des eleves restent privees et confidentielles.
     </div>
