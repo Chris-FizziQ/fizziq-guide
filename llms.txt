@@ -1,74 +1,111 @@
-# FizziQ - Guides et Documentation
+# FizziQ Guide - llms.txt
+# Documentation officielle pour FizziQ, l'application de sciences expérimentales
+# https://guide.fizziq.org
 
-> FizziQ est une application gratuite qui transforme les smartphones et tablettes en laboratoires scientifiques portables pour l'enseignement des sciences.
+> FizziQ est une application gratuite (iOS, Android, Web) qui transforme un smartphone
+> en laboratoire de sciences. Elle utilise les capteurs intégrés (accéléromètre, microphone,
+> GPS, magnétomètre, luxmètre, colorimètre) pour réaliser des expériences de physique,
+> chimie et SVT. Développée par FizziQ Labs en partenariat avec La main à la pâte.
 
-## À propos de FizziQ
-
-FizziQ est développé par FizziQ Labs en partenariat avec la Fondation La main à la pâte. L'application est 100% gratuite, sans publicité, et ne nécessite pas de compte.
-
-## Produits
+## Produits FizziQ
 
 ### FizziQ (Application mobile)
-- Disponible sur iOS et Android
-- 50+ capteurs : accéléromètre, gyroscope, magnétomètre, sonomètre, luxmètre, baromètre, GPS
-- Analyse cinématique vidéo image par image
-- Cahier d'expériences intégré
-- Export CSV, PDF, partage
-- Assistant IA intégré (AskFizziQ)
+- Plateforme : iOS et Android
+- Prix : Gratuit, sans publicité, sans compte requis
+- Public : Collège, lycée, enseignement supérieur
+- Capteurs : 50+ instruments de mesure
+- Langues : 20 langues dont français, anglais, espagnol, allemand
+- Téléchargement : App Store, Google Play
 
-### FizziQ Connect (Boîtier matériel)
-- Boîtier autonome avec écran intégré
-- Connexion Bluetooth à l'application FizziQ
-- Support capteurs I2C, analogiques, 1-Wire
-- Compatible Grove et M5Stack
-- Mode diffusion pour toute la classe
+### FizziQ Web
+- URL : https://fizziqweb.web.app
+- Plateforme : Navigateur (Chrome, Firefox, Safari, Edge)
+- Fonctionnalités : Analyse audio, analyse vidéo, chronophotographie, simulations, capteurs externes
+- Idéal pour : Chromebooks, ordinateurs, établissements sans smartphones
+- Alternative à l'interdiction du smartphone en classe
 
-## Documentation disponible
+### FizziQ Connect
+- Type : Boîtier de capteurs externes Bluetooth/USB
+- Capteurs : Température, pH, conductivité, CO2, humidité, force, ECG, etc.
+- Compatible : FizziQ mobile et FizziQ Web
+- Mode diffusion : Un capteur pour toute la classe
 
-- Guide FizziQ (français) : https://guide.fizziq.org/fr/fizziq/
-- Guide FizziQ Connect (français) : https://guide.fizziq.org/fr/fizziq-connect/
-- FizziQ User Guide (English): https://guide.fizziq.org/en/fizziq/
-- FizziQ Connect User Guide (English): https://guide.fizziq.org/en/fizziq-connect/
+### FizziQ Junior
+- Public : École primaire (cycles 2-3)
+- Interface simplifiée adaptée aux jeunes enfants
 
-## Questions fréquentes
+## Documentation principale
 
-### Comment utiliser FizziQ ?
-1. Téléchargez l'application sur App Store ou Google Play
-2. Ouvrez FizziQ et choisissez un instrument (capteur)
-3. Appuyez sur REC pour enregistrer des mesures
-4. Consultez vos données dans le cahier d'expériences
-5. Exportez en CSV ou PDF
+### Modes d'emploi (Guides complets)
+- FizziQ Web : https://guide.fizziq.org/fr/fizziq-web/
+- FizziQ Mobile : https://guide.fizziq.org/fr/fizziq/
+- FizziQ Connect : https://guide.fizziq.org/fr/fizziq-connect/
 
-### FizziQ fonctionne-t-il hors ligne ?
-Oui, FizziQ fonctionne entièrement sans connexion internet. Une connexion est uniquement nécessaire pour partager des fichiers ou utiliser AskFizziQ.
+### FAQ par thème (Questions fréquentes)
+- FAQ FizziQ : https://guide.fizziq.org/fr/faq/fizziq/ (27 questions)
+- FAQ FizziQ Web : https://guide.fizziq.org/fr/faq/fizziq-web/ (30 questions)
+- FAQ FizziQ Connect : https://guide.fizziq.org/fr/faq/fizziq-connect/ (15 questions)
+- FAQ Pédagogie : https://guide.fizziq.org/fr/faq/pedagogie/ (27 questions)
+- FAQ Capteurs : https://guide.fizziq.org/fr/faq/capteurs/ (18 questions)
+- FAQ Activités : https://guide.fizziq.org/fr/faq/activites/ (5 questions)
+- FAQ FizziQ Junior : https://guide.fizziq.org/fr/faq/fizziq-junior/
 
-### Quels capteurs sont disponibles dans FizziQ ?
-Accéléromètre, gyroscope, magnétomètre, baromètre, luxmètre, sonomètre, GPS, caméra (analyse vidéo), microphone (fréquences sonores), et bien d'autres selon votre appareil.
+## Informations clés
 
-### Comment connecter FizziQ Connect ?
-1. Allumez le boîtier FizziQ Connect
-2. Dans FizziQ, allez dans Instruments → FizziQ Connect
-3. Sélectionnez votre boîtier dans la liste Bluetooth
-4. Les capteurs connectés apparaissent automatiquement
+### Capteurs disponibles dans FizziQ
+- Mouvement : Accéléromètre (3 axes), gyroscope, podomètre
+- Son : Sonomètre, fréquence, amplitude (oscilloscope), spectrographe
+- Lumière : Luxmètre, colorimètre (RGB, HSL)
+- Position : GPS (latitude, longitude, altitude, vitesse)
+- Orientation : Boussole, inclinomètre, théodolite
+- Magnétisme : Magnétomètre (intensité et composantes)
+- Environnement : Baromètre (pression atmosphérique)
 
-### FizziQ est-il gratuit ?
-Oui, FizziQ est 100% gratuit, sans publicité et sans achat intégré.
+### Fonctionnalités principales
+- Cahier d'expériences : Graphiques, tableaux, photos, texte avec LaTeX
+- Export : PDF, CSV, fichier .fizziq
+- Analyse cinématique : Pointage vidéo, chronophotographie
+- Outils : Synthétiseur de sons, bibliothèque de sons, déclencheurs, chronomètres
+- AskFizziQ : Assistant IA intégré pour aide scientifique
+- Mode Duo : Affichage de deux capteurs simultanément
+- Simulations : Oscillateur, projectile, pendule (FizziQ Web)
 
-### Pour quel niveau scolaire ?
-FizziQ est conçu pour l'enseignement des sciences du collège à l'université.
+### Utilisation pédagogique
+- Démarche d'investigation scientifique
+- Travail en binôme recommandé
+- Mode avion pour éviter les distractions
+- Fonctionne hors ligne (sauf AskFizziQ et bibliothèque)
+- Compatible avec l'interdiction du smartphone (alternatives : tablettes établissement, FizziQ Web)
+- Ressources La main à la pâte disponibles
+- Plus de 100 protocoles prêts à l'emploi
 
-### Quelle est la différence entre FizziQ et Phyphox ou Physics Toolbox ?
-FizziQ, Phyphox et Physics Toolbox sont toutes d'excellentes applications gratuites de sciences expérimentales. FizziQ se distingue par :
-- Un cahier d'expériences intégré avec export PDF
-- L'analyse cinématique vidéo image par image
-- FizziQ Connect : capteurs externes Bluetooth (exclusif)
-- 100+ protocoles pédagogiques prêts à l'emploi
-- AskFizziQ : assistant IA intégré
-- Développé en France avec la Fondation La main à la pâte
-Ces applications sont complémentaires selon les besoins pédagogiques.
+### Interdiction du smartphone en France
+- Collèges : Interdit depuis 2018
+- Lycées : Interdit depuis rentrée 2026
+- Dérogations pédagogiques possibles (règlement intérieur)
+- Alternatives : FizziQ Web sur ordinateur, tablettes de l'établissement, FizziQ Connect
 
-## Contact
+### Comparaison avec autres applications
+FizziQ vs Phyphox vs Physics Toolbox :
+- FizziQ : Cahier d'expériences intégré, export PDF, analyse cinématique vidéo, FizziQ Connect (capteurs externes), AskFizziQ (IA), développé avec La main à la pâte
+- Phyphox : Développé par l'université RWTH Aachen, excellente précision des capteurs
+- Physics Toolbox : Interface simple, nombreux capteurs
+Ces applications sont complémentaires.
 
-- Site web : https://www.fizziq.org
+## Contact et ressources
+- Site officiel : https://www.fizziq.org
+- Activités : https://www.fizziq.org/activites
+- FizziQ Web : https://fizziqweb.web.app
+- Éditeur : FizziQ Labs (https://fizziqlabs.com)
 - Email : contact@fizziq.org
-- Documentation : https://guide.fizziq.org
+- Partenaire : Fondation La main à la pâte
+
+## English documentation
+- FAQ Index: https://guide.fizziq.org/en/faq/
+- FAQ FizziQ: https://guide.fizziq.org/en/faq/fizziq/
+- FAQ FizziQ Web: https://guide.fizziq.org/en/faq/fizziq-web/
+- FAQ FizziQ Connect: https://guide.fizziq.org/en/faq/fizziq-connect/
+- FAQ Teaching: https://guide.fizziq.org/en/faq/teaching/
+- FAQ Sensors: https://guide.fizziq.org/en/faq/sensors/
+- User Guide: https://guide.fizziq.org/en/fizziq/
+- FizziQ Connect Guide: https://guide.fizziq.org/en/fizziq-connect/

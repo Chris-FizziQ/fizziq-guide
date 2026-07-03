@@ -1,81 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- Page d'accueil -->
   <url>
     <loc>https://guide.fizziq.org/</loc>
-    <lastmod>2025-07-02</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://guide.fizziq.org/fr/fizziq/</loc>
-    <lastmod>2025-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://guide.fizziq.org/fr/fizziq-connect/</loc>
-    <lastmod>2025-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+
+  <!-- ==================== FRANÇAIS - Modes d'emploi ==================== -->
   <url>
     <loc>https://guide.fizziq.org/fr/fizziq-web/</loc>
-    <lastmod>2025-07-03</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
+
   <url>
-    <loc>https://guide.fizziq.org/en/fizziq/</loc>
-    <lastmod>2025-07-02</lastmod>
+    <loc>https://guide.fizziq.org/fr/fizziq/</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/fizziq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/fizziq/"/>
   </url>
+
   <url>
-    <loc>https://guide.fizziq.org/en/fizziq-connect/</loc>
-    <lastmod>2025-07-02</lastmod>
+    <loc>https://guide.fizziq.org/fr/fizziq-connect/</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/fizziq-connect/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/fizziq-connect/"/>
   </url>
+
+  <!-- ==================== FRANÇAIS - FAQ ==================== -->
   <url>
     <loc>https://guide.fizziq.org/fr/faq/</loc>
-    <lastmod>2025-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/"/>
   </url>
+
   <url>
     <loc>https://guide.fizziq.org/fr/faq/fizziq/</loc>
-    <lastmod>2025-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/fizziq/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/fizziq/"/>
   </url>
+
+  <url>
+    <loc>https://guide.fizziq.org/fr/faq/fizziq-web/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/fizziq-web/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/fizziq-web/"/>
+  </url>
+
   <url>
     <loc>https://guide.fizziq.org/fr/faq/fizziq-connect/</loc>
-    <lastmod>2025-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/fizziq-connect/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/fizziq-connect/"/>
   </url>
-  <url>
-    <loc>https://guide.fizziq.org/fr/faq/capteurs/</loc>
-    <lastmod>2025-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://guide.fizziq.org/fr/faq/activites/</loc>
-    <lastmod>2025-07-02</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
   <url>
     <loc>https://guide.fizziq.org/fr/faq/pedagogie/</loc>
-    <lastmod>2025-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/pedagogie/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/teaching/"/>
   </url>
+
+  <url>
+    <loc>https://guide.fizziq.org/fr/faq/capteurs/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/capteurs/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/sensors/"/>
+  </url>
+
+  <url>
+    <loc>https://guide.fizziq.org/fr/faq/activites/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/activites/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/activities/"/>
+  </url>
+
+  <url>
+    <loc>https://guide.fizziq.org/fr/faq/fizziq-junior/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/fizziq-junior/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/fizziq-junior/"/>
+  </url>
+
+  <!-- ==================== ENGLISH - User Guides ==================== -->
+  <url>
+    <loc>https://guide.fizziq.org/en/fizziq/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/fizziq/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/fizziq/"/>
+  </url>
+
+  <url>
+    <loc>https://guide.fizziq.org/en/fizziq-connect/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/fizziq-connect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/fizziq-connect/"/>
+  </url>
+
+  <!-- ==================== ENGLISH - FAQ ==================== -->
   <url>
     <loc>https://guide.fizziq.org/en/faq/</loc>
-    <lastmod>2025-07-02</lastmod>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/"/>
+  </url>
+
+  <url>
+    <loc>https://guide.fizziq.org/en/faq/fizziq/</loc>
+    <lastmod>2026-07-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/fizziq/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/fizziq/"/>
   </url>
+
+  <url>
+    <loc>https://guide.fizziq.org/en/faq/fizziq-web/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/fizziq-web/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/fizziq-web/"/>
+  </url>
+
+  <url>
+    <loc>https://guide.fizziq.org/en/faq/fizziq-connect/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/fizziq-connect/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/fizziq-connect/"/>
+  </url>
+
+  <url>
+    <loc>https://guide.fizziq.org/en/faq/teaching/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/teaching/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/pedagogie/"/>
+  </url>
+
+  <url>
+    <loc>https://guide.fizziq.org/en/faq/sensors/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/sensors/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/capteurs/"/>
+  </url>
+
+  <url>
+    <loc>https://guide.fizziq.org/en/faq/activities/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/activities/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/activites/"/>
+  </url>
+
+  <url>
+    <loc>https://guide.fizziq.org/en/faq/fizziq-junior/</loc>
+    <lastmod>2026-07-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://guide.fizziq.org/en/faq/fizziq-junior/"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://guide.fizziq.org/fr/faq/fizziq-junior/"/>
+  </url>
+
 </urlset>
