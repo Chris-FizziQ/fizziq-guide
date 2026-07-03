@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mode d'emploi FizziQ Web - Guide complet pour ordinateur</title>
+    <title>Mode d'emploi FizziQ Web - Guide complet du laboratoire scientifique sur ordinateur</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Guide complet FizziQ Web : analysez le son, utilisez des simulations de physique, connectez FizziQ Connect. Application web gratuite pour les sciences au collège et lycée.">
-    <meta name="keywords" content="FizziQ Web, application sciences ordinateur, simulation physique, analyse audio, pendule simulation, circuit électrique, Chromebook sciences">
+    <meta name="description" content="Guide complet FizziQ Web : analysez le son, les vidéos, utilisez des simulations de physique, connectez FizziQ Connect, créez des rapports scientifiques. Application web gratuite pour les sciences au collège et lycée.">
+    <meta name="keywords" content="FizziQ Web, application sciences ordinateur, simulation physique, analyse audio, analyse vidéo, cinématique, pendule simulation, circuit électrique, Chromebook sciences, chronophotographie">
     <meta name="author" content="FizziQ Labs">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://guide.fizziq.org/fr/fizziq-web/">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Mode d'emploi FizziQ Web - Guide complet">
-    <meta property="og:description" content="Transformez votre ordinateur en laboratoire scientifique. Simulations, analyse audio, connexion FizziQ Connect.">
+    <meta property="og:description" content="Transformez votre ordinateur en laboratoire scientifique. Simulations, analyse audio et vidéo, connexion FizziQ Connect.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://guide.fizziq.org/fr/fizziq-web/">
     <meta property="og:site_name" content="FizziQ Labs">
@@ -25,17 +25,19 @@
     <meta name="twitter:title" content="Mode d'emploi FizziQ Web">
     <meta name="twitter:description" content="Guide complet pour utiliser FizziQ Web sur ordinateur.">
 
-    <!-- Schema.org -->
+    <!-- Schema.org TechArticle -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "TechArticle",
         "headline": "Mode d'emploi FizziQ Web - Guide complet",
-        "description": "Guide complet pour utiliser FizziQ Web, l'application web gratuite pour réaliser des expériences scientifiques sur ordinateur.",
+        "description": "Guide complet pour utiliser FizziQ Web, l'application web gratuite pour réaliser des expériences scientifiques sur ordinateur. Analyse audio, analyse vidéo, simulations de physique, cahier d'expériences.",
         "author": { "@type": "Organization", "name": "FizziQ Labs" },
         "publisher": { "@type": "Organization", "name": "FizziQ Labs" },
         "inLanguage": "fr-FR",
-        "isAccessibleForFree": true
+        "isAccessibleForFree": true,
+        "learningResourceType": "Guide pratique",
+        "educationalLevel": ["Collège", "Lycée", "Enseignement supérieur"]
     }
     </script>
 
@@ -45,9 +47,9 @@
         "@context": "https://schema.org",
         "@type": "SoftwareApplication",
         "name": "FizziQ Web",
-        "description": "FizziQ Web est une application web gratuite qui transforme un ordinateur en laboratoire de sciences. Elle permet d'analyser le son, d'utiliser des simulations de physique (pendule, ressort, balistique, circuit électrique) et de se connecter à FizziQ Connect via Bluetooth ou USB.",
+        "description": "FizziQ Web est une application web gratuite qui transforme un ordinateur en laboratoire de sciences. Elle permet d'analyser le son et les vidéos, d'utiliser des simulations de physique (pendule, ressort, balistique, circuit électrique, ondes, gaz idéal) et de se connecter à FizziQ Connect via Bluetooth ou USB.",
         "applicationCategory": "EducationalApplication",
-        "operatingSystem": "Web Browser (Chrome, Edge)",
+        "operatingSystem": "Web Browser (Chrome, Edge, Firefox, Safari)",
         "url": "https://fizziqweb.web.app",
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
     }
@@ -64,7 +66,7 @@
                 "name": "Qu'est-ce que FizziQ Web ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "FizziQ Web est une application web gratuite qui transforme votre ordinateur en laboratoire de sciences. Elle permet d'analyser le son, d'utiliser des simulations de physique et de se connecter à FizziQ Connect. Aucune installation requise, fonctionne dans le navigateur."
+                    "text": "FizziQ Web est une application web gratuite qui transforme votre ordinateur en laboratoire de sciences. Elle permet d'analyser le son et les vidéos, d'utiliser des simulations de physique et de se connecter à FizziQ Connect. Aucune installation requise, fonctionne dans le navigateur."
                 }
             },
             {
@@ -72,7 +74,7 @@
                 "name": "Quel navigateur utiliser pour FizziQ Web ?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Utilisez Chrome ou Edge pour toutes les fonctionnalités, notamment la connexion Bluetooth à FizziQ Connect. Firefox et Safari ne supportent pas le Bluetooth Web."
+                    "text": "Utilisez Chrome ou Edge pour toutes les fonctionnalités, notamment la connexion Bluetooth à FizziQ Connect. Firefox et Safari supportent l'analyse audio et vidéo mais pas le Bluetooth Web."
                 }
             },
             {
@@ -81,6 +83,14 @@
                 "acceptedAnswer": {
                     "@type": "Answer",
                     "text": "Oui, FizziQ Web fonctionne parfaitement sur Chromebook via le navigateur Chrome. C'est idéal pour les établissements équipés de Chromebooks."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Peut-on analyser des vidéos avec FizziQ Web ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui, FizziQ Web permet d'importer des vidéos, de pointer les positions image par image, et de calculer automatiquement les positions, vitesses et accélérations pour l'analyse cinématique."
                 }
             }
         ]
@@ -231,7 +241,7 @@
 
         .feature-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 0.8rem;
             margin: 0.8rem 0;
         }
@@ -269,6 +279,24 @@
             font-size: 11px;
         }
 
+        .image-container {
+            margin: 0.8rem 0;
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .image-container figcaption {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 0.4rem;
+            font-style: italic;
+        }
+
         footer {
             background: #333;
             color: white;
@@ -290,7 +318,7 @@
 <header>
     <h1>FizziQ Web</h1>
     <p class="subtitle">Mode d'emploi complet - Laboratoire scientifique sur ordinateur</p>
-    <p class="url">Accès : <a href="https://fizziqweb.web.app" target="_blank">fizziqweb.web.app</a></p>
+    <p class="url">Acces : <a href="https://fizziqweb.web.app" target="_blank">fizziqweb.web.app</a></p>
 </header>
 
 <nav>
@@ -298,12 +326,16 @@
         <li><a href="#introduction">Introduction</a></li>
         <li><a href="#demarrage">Prise en main</a></li>
         <li><a href="#audio">Analyse audio</a></li>
+        <li><a href="#video">Analyse video</a></li>
+        <li><a href="#chronophotographies">Chronophotographies</a></li>
         <li><a href="#simulations">Simulations</a></li>
         <li><a href="#fizziq-connect">FizziQ Connect</a></li>
         <li><a href="#cahier">Cahier</a></li>
+        <li><a href="#editeur">Editeur de documents</a></li>
+        <li><a href="#tableur">Tableur</a></li>
         <li><a href="#outils">Outils</a></li>
         <li><a href="#export">Export</a></li>
-        <li><a href="#depannage">Dépannage</a></li>
+        <li><a href="#depannage">Depannage</a></li>
     </ul>
 </nav>
 
@@ -314,402 +346,1044 @@
     <h2>1. Introduction</h2>
 
     <h3>1.1 Qu'est-ce que FizziQ Web ?</h3>
-    <p><strong>FizziQ Web</strong> est une application web gratuite qui transforme votre ordinateur en laboratoire de sciences. Elle permet de réaliser des expériences scientifiques, analyser des données et produire des comptes rendus directement depuis un navigateur.</p>
+    <p><strong>FizziQ Web</strong> est une application web gratuite qui transforme votre ordinateur en laboratoire de sciences complet. Elle permet de realiser des experiences scientifiques, analyser des sons et des videos, utiliser des simulations de physique, et produire des comptes rendus professionnels directement depuis un navigateur.</p>
 
     <div class="info-box">
-        <strong>Aucune installation requise</strong> : ouvrez simplement <a href="https://fizziqweb.web.app" target="_blank">fizziqweb.web.app</a> dans Chrome ou Edge.
+        <strong>Aucune installation requise</strong> : ouvrez simplement <a href="https://fizziqweb.web.app" target="_blank">fizziqweb.web.app</a> dans Chrome, Edge, Firefox ou Safari.
     </div>
 
-    <h3>1.2 Fonctionnalités principales</h3>
+    <h3>1.2 Fonctionnalites principales</h3>
     <div class="feature-grid">
         <div class="feature-card">
             <div class="icon">🎵</div>
             <h4>Analyse audio</h4>
-            <p>Enregistrer, visualiser et analyser le son</p>
+            <p>Oscillogramme, spectre, spectrogramme</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🎬</div>
+            <h4>Analyse video</h4>
+            <p>Pointage, cinematique, trajectoires</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📷</div>
+            <h4>Chronophotographies</h4>
+            <p>Import et analyse de mouvements</p>
         </div>
         <div class="feature-card">
             <div class="icon">⚙️</div>
             <h4>Simulations</h4>
-            <p>Pendule, ressort, balistique, circuits</p>
+            <p>Pendule, ressort, ondes, gaz...</p>
         </div>
         <div class="feature-card">
             <div class="icon">🔌</div>
             <h4>FizziQ Connect</h4>
-            <p>Capteurs externes via Bluetooth/USB</p>
+            <p>Capteurs externes Bluetooth/USB</p>
         </div>
         <div class="feature-card">
             <div class="icon">📊</div>
-            <h4>Cahier d'expériences</h4>
-            <p>Graphiques, tableaux, export PDF</p>
+            <h4>Tableur scientifique</h4>
+            <p>Donnees, formules, graphiques</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">📝</div>
+            <h4>Editeur de documents</h4>
+            <p>Rapports avec formules LaTeX</p>
+        </div>
+        <div class="feature-card">
+            <div class="icon">🐍</div>
+            <h4>Python</h4>
+            <p>Interpreteur integre</p>
         </div>
     </div>
 
-    <h3>1.3 Compatibilité navigateur</h3>
+    <h3>1.3 Compatibilite navigateur</h3>
     <table>
-        <tr><th>Navigateur</th><th>Analyse audio</th><th>Simulations</th><th>Bluetooth</th><th>USB</th></tr>
-        <tr><td><strong>Chrome</strong></td><td>Oui</td><td>Oui</td><td>Oui</td><td>Oui</td></tr>
-        <tr><td><strong>Edge</strong></td><td>Oui</td><td>Oui</td><td>Oui</td><td>Oui</td></tr>
-        <tr><td>Firefox</td><td>Oui</td><td>Oui</td><td>Non</td><td>Non</td></tr>
-        <tr><td>Safari</td><td>Oui</td><td>Oui</td><td>Non</td><td>Non</td></tr>
+        <tr><th>Navigateur</th><th>Audio</th><th>Video</th><th>Simulations</th><th>Bluetooth</th><th>USB</th></tr>
+        <tr><td><strong>Chrome</strong></td><td>Oui</td><td>Oui</td><td>Oui</td><td>Oui</td><td>Oui</td></tr>
+        <tr><td><strong>Edge</strong></td><td>Oui</td><td>Oui</td><td>Oui</td><td>Oui</td><td>Oui</td></tr>
+        <tr><td>Firefox</td><td>Oui</td><td>Oui</td><td>Oui</td><td>Non</td><td>Non</td></tr>
+        <tr><td>Safari</td><td>Oui</td><td>Oui</td><td>Oui</td><td>Non</td><td>Non</td></tr>
     </table>
 
     <div class="tip-box">
-        <strong>Recommandation :</strong> Utilisez <strong>Chrome</strong> ou <strong>Edge</strong> pour accéder à toutes les fonctionnalités, notamment la connexion Bluetooth avec FizziQ Connect.
+        <strong>Recommandation :</strong> Utilisez <strong>Chrome</strong> ou <strong>Edge</strong> pour acceder a toutes les fonctionnalites, notamment la connexion Bluetooth avec FizziQ Connect.
     </div>
 
-    <h3>1.4 Différences avec FizziQ mobile</h3>
-    <p>FizziQ Web est complémentaire à l'application mobile :</p>
+    <h3>1.4 Differences avec FizziQ mobile</h3>
+    <p>FizziQ Web est complementaire a l'application mobile :</p>
     <ul>
-        <li><strong>Pas de capteurs intégrés</strong> : un ordinateur n'a pas d'accéléromètre ou de GPS</li>
-        <li><strong>Analyse audio avancée</strong> : spectrogramme, spectre de fréquences plus détaillé</li>
-        <li><strong>Simulations de physique</strong> : pendule, ressort, balistique, circuits électriques, plan incliné</li>
-        <li><strong>Écran plus grand</strong> : idéal pour l'analyse de données et les graphiques</li>
+        <li><strong>Pas de capteurs integres</strong> : un ordinateur n'a pas d'accelerometre ou de GPS (utilisez FizziQ Connect pour les capteurs externes)</li>
+        <li><strong>Analyse audio avancee</strong> : spectrogramme haute resolution, analyse detaillee</li>
+        <li><strong>Analyse video complete</strong> : pointage cinematique, calcul des vitesses et accelerations</li>
+        <li><strong>Simulations de physique</strong> : pendule, ressort, balistique, circuits, ondes, gaz ideal, plan incline, centrifuge</li>
+        <li><strong>Ecran plus grand</strong> : ideal pour l'analyse de donnees, les graphiques et les rapports</li>
+        <li><strong>Editeur de documents</strong> : rapports scientifiques avec formules LaTeX</li>
     </ul>
+
+    <h3>1.5 Confidentialite et gratuité</h3>
+    <div class="info-box">
+        <strong>Donnees locales :</strong> Tous les fichiers sont stockes localement sur votre ordinateur. Aucun compte n'est requis. Les donnees des eleves restent privees et confidentielles. FizziQ Web est entierement gratuit.
+    </div>
 </section>
 
 <!-- ==================== PRISE EN MAIN ==================== -->
 <section id="demarrage">
     <h2>2. Prise en main</h2>
 
-    <h3>2.1 Accéder à FizziQ Web</h3>
+    <h3>2.1 Acceder a FizziQ Web</h3>
     <ol class="steps">
         <li>Ouvrez votre navigateur <strong>Chrome</strong> ou <strong>Edge</strong></li>
         <li>Allez sur <a href="https://fizziqweb.web.app" target="_blank"><strong>fizziqweb.web.app</strong></a></li>
-        <li>Cliquez sur <strong>Expérimenter</strong> pour accéder aux outils</li>
+        <li>Cliquez sur <strong>Experimenter</strong> pour acceder aux outils</li>
     </ol>
 
-    <h3>2.2 Première mesure : analyser un son</h3>
-    <p>Voici comment réaliser votre première analyse audio :</p>
+    <h3>2.2 Interface generale</h3>
+
+    <div class="image-container">
+        <picture>
+            <source srcset="../../images/fizziq-web/Ecran FizziQ Web 2.png.avif" type="image/avif">
+            <img src="../../images/fizziq-web/Ecran FizziQ Web 2.png.avif" alt="Interface generale FizziQ Web" loading="lazy">
+        </picture>
+        <figcaption>Interface de FizziQ Web avec menu lateral</figcaption>
+    </div>
+
+    <p>L'interface de FizziQ Web est organisee autour d'un menu lateral gauche :</p>
+    <ul>
+        <li><strong>Accueil</strong> : page d'accueil et acces rapide</li>
+        <li><strong>Experimenter</strong> : acces aux modules d'analyse et de simulation
+            <ul>
+                <li>Analyse audio</li>
+                <li>Analyse video</li>
+                <li>Chronophotographies</li>
+                <li>Capteurs externes (FizziQ Connect)</li>
+                <li>Tableau de donnees</li>
+                <li>Simulations</li>
+            </ul>
+        </li>
+        <li><strong>Analyser</strong> : outils d'analyse des donnees</li>
+        <li><strong>Partager</strong> : partage d'ecran et export</li>
+        <li><strong>Decouvrir</strong> : activites et ressources pedagogiques</li>
+        <li><strong>Outils</strong> : outils complementaires (calculatrice, synthetiseur...)</li>
+        <li><strong>Reglages</strong> : parametres de l'application</li>
+    </ul>
+
+    <h3>2.3 Premiere mesure : analyser un son</h3>
+    <p>Voici comment realiser votre premiere analyse audio :</p>
     <ol class="steps">
-        <li>Cliquez sur <strong>Expérimenter</strong> → <strong>Analyse audio</strong></li>
-        <li>Cliquez sur <strong>Source Audio</strong> → <strong>Bibliothèque de sons</strong></li>
-        <li>Sélectionnez <strong>Diapason La 3</strong> (440 Hz)</li>
-        <li>Observez l'oscillogramme et le spectre de fréquences</li>
-        <li>Utilisez la molette ou les boutons <strong>Zoom</strong> pour voir les détails</li>
+        <li>Cliquez sur <strong>Experimenter</strong> → <strong>Analyse audio</strong></li>
+        <li>Cliquez sur <strong>Source Audio</strong> → <strong>Bibliotheque de sons</strong></li>
+        <li>Selectionnez <strong>Diapason La 3</strong> (440 Hz)</li>
+        <li>Observez l'oscillogramme et le spectre de frequences</li>
+        <li>Utilisez la molette ou les boutons <strong>Zoom</strong> pour voir les details</li>
         <li>Cliquez sur <strong>Ajouter au cahier</strong> pour exporter l'analyse</li>
     </ol>
 
     <div class="tip-box">
-        <strong>Conseil :</strong> Zoomez pour visualiser 10-20 oscillations complètes pour une observation claire du signal périodique.
+        <strong>Conseil :</strong> Zoomez pour visualiser 10-20 oscillations completes pour une observation claire du signal periodique.
     </div>
-
-    <h3>2.3 Interface générale</h3>
-    <p>L'interface de FizziQ Web est organisée en plusieurs zones :</p>
-    <ul>
-        <li><strong>Menu principal</strong> : accès aux différents modules (Audio, Simulations, Cahier...)</li>
-        <li><strong>Zone de travail</strong> : visualisation des données et graphiques</li>
-        <li><strong>Panneau de contrôle</strong> : paramètres et boutons d'action (REC, START, STOP)</li>
-        <li><strong>Cahier d'expériences</strong> : organisation et export des résultats</li>
-    </ul>
 </section>
 
 <!-- ==================== ANALYSE AUDIO ==================== -->
 <section id="audio">
     <h2>3. Analyse audio</h2>
 
+    <div class="image-container">
+        <picture>
+            <source srcset="../../images/fizziq-web/Capture d'écran 2025-09-04 à 06_42_47.png.avif" type="image/avif">
+            <img src="../../images/fizziq-web/Capture d'écran 2025-09-04 à 06_42_47.png.avif" alt="Analyse audio FizziQ Web - oscillogramme et spectre" loading="lazy">
+        </picture>
+        <figcaption>Analyse audio : oscillogramme et spectre de frequences</figcaption>
+    </div>
+
     <h3>3.1 Sources audio</h3>
-    <p>Vous pouvez analyser le son de plusieurs manières :</p>
+    <p>Vous pouvez analyser le son de plusieurs manieres :</p>
     <ul>
         <li><strong>Enregistrer</strong> avec le microphone de l'ordinateur</li>
         <li><strong>Charger un fichier</strong> audio (WAV, MP3, OGG, FLAC, M4A)</li>
-        <li><strong>Bibliothèque de sons</strong> intégrée (diapason, instruments, bruit blanc, sirène, effet Doppler)</li>
+        <li><strong>Bibliotheque de sons</strong> integree</li>
+    </ul>
+
+    <h4>Bibliotheque de sons</h4>
+    <p>La bibliotheque integree propose de nombreux sons pedagogiques :</p>
+    <ul>
+        <li><strong>Diapason 440 Hz</strong> : son pur de reference</li>
+        <li><strong>Instruments de musique</strong> : piano, guitare, flute, violon...</li>
+        <li><strong>Bruit blanc</strong> : toutes les frequences</li>
+        <li><strong>Sirene</strong> : variation de frequence</li>
+        <li><strong>Effet Doppler</strong> : demonstration du decalage de frequence</li>
+        <li><strong>Cloches de Risset</strong> : illusion auditive de montee infinie</li>
+        <li><strong>Battements</strong> : interference de deux frequences proches</li>
     </ul>
 
     <h3>3.2 Modes d'analyse</h3>
     <table>
         <tr><th>Mode</th><th>Affichage</th><th>Utilisation</th></tr>
-        <tr><td><strong>Amplitude</strong></td><td>Forme d'onde temporelle</td><td>Observer la structure du son, mesurer la période</td></tr>
-        <tr><td><strong>Niveau sonore (dB)</strong></td><td>Intensité en décibels</td><td>Mesurer le volume, comparer des sources</td></tr>
-        <tr><td><strong>Fréquence fondamentale</strong></td><td>Fréquence principale (Hz)</td><td>Identifier une note, accorder un instrument</td></tr>
-        <tr><td><strong>Spectre</strong></td><td>Fréquences à un instant</td><td>Analyser les harmoniques, le timbre</td></tr>
-        <tr><td><strong>Spectrogramme</strong></td><td>Évolution temps-fréquence</td><td>Sons complexes, mélodies, voix</td></tr>
+        <tr><td><strong>Amplitude</strong></td><td>Forme d'onde temporelle (oscillogramme)</td><td>Observer la structure du son, mesurer la periode</td></tr>
+        <tr><td><strong>Niveau sonore (dB)</strong></td><td>Intensite en decibels</td><td>Mesurer le volume, comparer des sources</td></tr>
+        <tr><td><strong>Frequence fondamentale</strong></td><td>Frequence principale (Hz)</td><td>Identifier une note, accorder un instrument</td></tr>
+        <tr><td><strong>Spectre</strong></td><td>Frequences a un instant</td><td>Analyser les harmoniques, le timbre</td></tr>
+        <tr><td><strong>Spectrogramme</strong></td><td>Evolution temps-frequence</td><td>Sons complexes, melodies, voix, effet Doppler</td></tr>
     </table>
 
     <h3>3.3 Lecture du spectrogramme</h3>
-    <p>Le spectrogramme utilise un code couleur :</p>
+    <p>Le spectrogramme affiche l'evolution du spectre de frequences dans le temps. C'est un outil puissant pour analyser des sons complexes.</p>
+    <p>Code couleur :</p>
     <ul>
         <li><strong>Noir</strong> : silence</li>
-        <li><strong>Bleu</strong> : faible intensité</li>
-        <li><strong>Jaune</strong> : intensité moyenne</li>
-        <li><strong>Rouge</strong> : intensité maximale</li>
+        <li><strong>Bleu</strong> : faible intensite</li>
+        <li><strong>Jaune</strong> : intensite moyenne</li>
+        <li><strong>Rouge</strong> : intensite maximale</li>
     </ul>
 
-    <h3>3.4 Export des données</h3>
+    <h4>Exemples d'utilisation du spectrogramme</h4>
+    <ul>
+        <li><strong>Melodie</strong> : observer les notes successives</li>
+        <li><strong>Voix</strong> : analyser les formants et les harmoniques</li>
+        <li><strong>Effet Doppler</strong> : visualiser le decalage de frequence</li>
+        <li><strong>Instruments</strong> : comparer les timbres</li>
+    </ul>
+
+    <h3>3.4 Outils de mesure</h3>
+    <ul>
+        <li><strong>Curseur interactif</strong> : cliquez sur le graphique pour mesurer un point precis</li>
+        <li><strong>Zoom</strong> : molette ou boutons +/- pour agrandir</li>
+        <li><strong>Synchronisation</strong> : lecture audio synchronisee avec l'affichage</li>
+        <li><strong>Affichage min/max</strong> : visualiser l'enveloppe du signal</li>
+    </ul>
+
+    <h3>3.5 Export des donnees audio</h3>
     <p>Selon le mode d'analyse, vous pouvez exporter :</p>
     <ul>
         <li><strong>Mode Amplitude</strong> : Temps (s), Amplitude</li>
-        <li><strong>Mode Fréquence</strong> : Temps (s), Fréquence (Hz)</li>
-        <li><strong>Mode Spectre</strong> : Fréquence (Hz), Magnitude</li>
-        <li><strong>Spectrogramme</strong> : tableau de données ou image</li>
+        <li><strong>Mode Frequence</strong> : Temps (s), Frequence (Hz)</li>
+        <li><strong>Mode Spectre</strong> : Frequence (Hz), Magnitude</li>
+        <li><strong>Spectrogramme</strong> : tableau de donnees ou image</li>
+    </ul>
+</section>
+
+<!-- ==================== ANALYSE VIDEO ==================== -->
+<section id="video">
+    <h2>4. Analyse video</h2>
+
+    <p>FizziQ Web integre un module complet d'analyse video cinematique, permettant d'etudier le mouvement d'objets a partir de videos.</p>
+
+    <div class="image-container">
+        <picture>
+            <source srcset="../../images/fizziq-web/Capture d'écran 2025-09-04 à 06_13_edited.png-2.avif" type="image/avif">
+            <img src="../../images/fizziq-web/Capture d'écran 2025-09-04 à 06_13_edited.png-2.avif" alt="Analyse video cinematique FizziQ Web" loading="lazy">
+        </picture>
+        <figcaption>Pointage video et analyse cinematique</figcaption>
+    </div>
+
+    <h3>4.1 Import de videos</h3>
+    <p>Formats supportes : MP4, WebM, MOV, AVI et la plupart des formats video courants.</p>
+    <ol class="steps">
+        <li>Cliquez sur <strong>Experimenter</strong> → <strong>Analyse video</strong></li>
+        <li>Cliquez sur <strong>Charger une video</strong></li>
+        <li>Selectionnez votre fichier video</li>
+        <li>La video s'affiche dans l'interface de pointage</li>
+    </ol>
+
+    <h3>4.2 Calibration de l'echelle</h3>
+    <p>Avant de pointer, vous devez calibrer l'echelle pour convertir les pixels en metres :</p>
+    <ol class="steps">
+        <li>Cliquez sur <strong>Calibrer l'echelle</strong></li>
+        <li>Cliquez sur les deux extremites d'un objet de reference (regle, metre...)</li>
+        <li>Entrez la longueur reelle de l'objet</li>
+        <li>L'echelle est definie pour toute l'analyse</li>
+    </ol>
+
+    <div class="tip-box">
+        <strong>Conseil :</strong> Utilisez un objet de reference bien visible et perpendiculaire a la camera pour une calibration precise.
+    </div>
+
+    <h3>4.3 Pointage des positions</h3>
+    <p>Le pointage consiste a relever la position d'un objet image par image :</p>
+    <ol class="steps">
+        <li>Selectionnez le <strong>point a suivre</strong> (centre de l'objet)</li>
+        <li>Cliquez sur l'objet dans la premiere image</li>
+        <li>Avancez a l'image suivante (bouton ou fleche)</li>
+        <li>Cliquez sur la nouvelle position de l'objet</li>
+        <li>Repetez jusqu'a la fin du mouvement</li>
+    </ol>
+
+    <h3>4.4 Grandeurs calculees automatiquement</h3>
+    <p>A partir des positions pointees, FizziQ Web calcule automatiquement :</p>
+    <table>
+        <tr><th>Grandeur</th><th>Symbole</th><th>Description</th></tr>
+        <tr><td>Position x</td><td>x(t)</td><td>Position horizontale en fonction du temps</td></tr>
+        <tr><td>Position y</td><td>y(t)</td><td>Position verticale en fonction du temps</td></tr>
+        <tr><td>Vitesse v<sub>x</sub></td><td>v<sub>x</sub>(t)</td><td>Composante horizontale de la vitesse</td></tr>
+        <tr><td>Vitesse v<sub>y</sub></td><td>v<sub>y</sub>(t)</td><td>Composante verticale de la vitesse</td></tr>
+        <tr><td>Vitesse</td><td>v(t)</td><td>Norme de la vitesse</td></tr>
+        <tr><td>Acceleration a<sub>x</sub></td><td>a<sub>x</sub>(t)</td><td>Composante horizontale de l'acceleration</td></tr>
+        <tr><td>Acceleration a<sub>y</sub></td><td>a<sub>y</sub>(t)</td><td>Composante verticale de l'acceleration</td></tr>
+        <tr><td>Acceleration</td><td>a(t)</td><td>Norme de l'acceleration</td></tr>
+        <tr><td>Angle</td><td>θ(t)</td><td>Angle de rotation (pour les mouvements de rotation)</td></tr>
+        <tr><td>Energie cinetique</td><td>E<sub>c</sub>(t)</td><td>½mv² (si la masse est definie)</td></tr>
+        <tr><td>Energie potentielle</td><td>E<sub>p</sub>(t)</td><td>mgh (si la masse est definie)</td></tr>
+    </table>
+
+    <h3>4.5 Methodes de calcul</h3>
+    <p>FizziQ Web propose plusieurs methodes pour calculer les derivees (vitesse, acceleration) :</p>
+    <ul>
+        <li><strong>Interpolation lineaire</strong> : methode simple, adaptee aux mouvements lents</li>
+        <li><strong>Interpolation quadratique</strong> : methode plus precise, reduit le bruit</li>
+        <li><strong>Lissage</strong> : attenuation du bruit de mesure</li>
+    </ul>
+
+    <h3>4.6 Exemples d'experiences video</h3>
+    <ul>
+        <li><strong>Chute libre</strong> : verifier a = g ≈ 9.8 m/s²</li>
+        <li><strong>Lancer parabolique</strong> : etudier la trajectoire, verifier v<sub>x</sub> = cste</li>
+        <li><strong>Mouvement circulaire</strong> : analyser la rotation, calculer l'acceleration centripete</li>
+        <li><strong>Oscillations</strong> : etudier un pendule ou un ressort filme</li>
+        <li><strong>Chocs</strong> : verifier la conservation de la quantite de mouvement</li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>Conseils pour de bonnes videos :</strong>
+        <ul>
+            <li>Camera fixe sur trepied</li>
+            <li>Fond uniforme contrastant avec l'objet</li>
+            <li>Bon eclairage</li>
+            <li>Objet de reference visible pour la calibration</li>
+            <li>Frequence d'image elevee (60 fps ou plus pour les mouvements rapides)</li>
+        </ul>
+    </div>
+</section>
+
+<!-- ==================== CHRONOPHOTOGRAPHIES ==================== -->
+<section id="chronophotographies">
+    <h2>5. Chronophotographies</h2>
+
+    <p>Une <strong>chronophotographie</strong> est une image montrant les positions successives d'un objet en mouvement, superposees sur une seule image. FizziQ Web permet d'analyser ces images et aussi de les creer a partir de videos.</p>
+
+    <h3>5.1 Import d'une chronophotographie</h3>
+    <ol class="steps">
+        <li>Cliquez sur <strong>Experimenter</strong> → <strong>Chronophotographies</strong></li>
+        <li>Cliquez sur <strong>Charger une image</strong></li>
+        <li>Selectionnez votre fichier image (PNG, JPG...)</li>
+        <li>Calibrez l'echelle comme pour la video</li>
+        <li>Pointez les positions successives de l'objet</li>
+    </ol>
+
+    <h3>5.2 Creer une chronophotographie a partir d'une video</h3>
+    <p>FizziQ Web peut convertir une video en chronophotographie :</p>
+    <ol class="steps">
+        <li>Allez dans <strong>Outils</strong> → <strong>Convertisseur video → chronophotographie</strong></li>
+        <li>Chargez votre video</li>
+        <li>Selectionnez l'intervalle de temps entre les images</li>
+        <li>Choisissez le nombre d'images a superposer</li>
+        <li>Exportez l'image resultante</li>
+    </ol>
+
+    <h3>5.3 Analyse cinematique</h3>
+    <p>L'analyse d'une chronophotographie donne les memes grandeurs que l'analyse video :</p>
+    <ul>
+        <li>Positions x(t) et y(t)</li>
+        <li>Vitesses v<sub>x</sub>(t) et v<sub>y</sub>(t)</li>
+        <li>Accelerations a<sub>x</sub>(t) et a<sub>y</sub>(t)</li>
+        <li>Trajectoire dans le plan (x, y)</li>
+    </ul>
+
+    <div class="info-box">
+        <strong>Avantage des chronophotographies :</strong> Elles permettent de visualiser instantanement le mouvement complet et d'identifier facilement les zones d'acceleration ou de ralentissement.
+    </div>
+
+    <h3>5.4 Exemples de chronophotographies</h3>
+    <ul>
+        <li><strong>Balle en chute libre</strong> : espacement croissant (acceleration)</li>
+        <li><strong>Mouvement uniforme</strong> : espacement constant</li>
+        <li><strong>Projectile</strong> : parabole visible</li>
+        <li><strong>Rebond</strong> : analyse des phases avant et apres le choc</li>
     </ul>
 </section>
 
 <!-- ==================== SIMULATIONS ==================== -->
 <section id="simulations">
-    <h2>4. Simulations de physique</h2>
+    <h2>6. Simulations de physique</h2>
 
-    <p>FizziQ Web propose plusieurs simulations interactives qui génèrent des données exploitables dans le cahier d'expériences.</p>
+    <p>FizziQ Web propose huit simulations interactives qui generent des donnees exploitables dans le cahier d'experiences. Chaque simulation permet de placer des capteurs virtuels et d'enregistrer les mesures en temps reel.</p>
 
-    <h3>4.1 Simulation du pendule</h3>
-    <p><strong>Objectif :</strong> Étudier le mouvement oscillatoire d'un pendule simple.</p>
+    <h3>6.1 Simulation du pendule</h3>
+    <p><strong>Objectif :</strong> Etudier le mouvement oscillatoire d'un pendule simple.</p>
 
-    <h4>Paramètres</h4>
+    <h4>Parametres</h4>
     <table>
-        <tr><th>Paramètre</th><th>Plage</th><th>Par défaut</th></tr>
+        <tr><th>Parametre</th><th>Plage</th><th>Par defaut</th></tr>
         <tr><td>Longueur du pendule</td><td>0.2 - 5.0 m</td><td>2.0 m</td></tr>
         <tr><td>Angle initial</td><td>5° - 85°</td><td>30°</td></tr>
     </table>
 
     <h4>Grandeurs mesurables</h4>
     <ul>
-        <li>Accélération tangentielle : a<sub>t</sub> = -g sin(θ)</li>
-        <li>Accélération centripète : a<sub>n</sub> = L ω²</li>
+        <li>Acceleration tangentielle : a<sub>t</sub> = -g sin(θ)</li>
+        <li>Acceleration centripete : a<sub>n</sub> = L ω²</li>
         <li>Angle θ en fonction du temps</li>
+        <li>Vitesse angulaire ω</li>
+        <li>Energie cinetique et potentielle</li>
     </ul>
 
     <h4>Utilisation</h4>
     <ol class="steps">
-        <li>Réglez la <strong>longueur</strong> et l'<strong>angle initial</strong></li>
+        <li>Reglez la <strong>longueur</strong> et l'<strong>angle initial</strong></li>
+        <li>Placez les capteurs virtuels souhaites</li>
         <li>Cliquez sur <strong>REC</strong> puis <strong>START</strong> pour enregistrer</li>
-        <li>Les données sont automatiquement ajoutées au cahier</li>
+        <li>Cliquez sur <strong>STOP</strong> pour arreter</li>
+        <li>Les donnees sont automatiquement ajoutees au cahier</li>
     </ol>
 
     <div class="tip-box">
-        <strong>Activité suggérée :</strong> Vérifiez la formule de la période T = 2π√(L/g) en mesurant la période pour différentes longueurs.
+        <strong>Activite suggeree :</strong> Verifiez la formule de la periode T = 2π√(L/g) en mesurant la periode pour differentes longueurs.
     </div>
 
-    <h3>4.2 Simulation oscillateur à ressort</h3>
-    <p><strong>Objectif :</strong> Étudier les oscillations d'un système masse-ressort.</p>
+    <h3>6.2 Simulation oscillateur a ressort</h3>
+    <p><strong>Objectif :</strong> Etudier les oscillations d'un systeme masse-ressort.</p>
 
-    <h4>Paramètres</h4>
+    <h4>Parametres</h4>
     <table>
-        <tr><th>Paramètre</th><th>Plage</th><th>Par défaut</th></tr>
+        <tr><th>Parametre</th><th>Plage</th><th>Par defaut</th></tr>
         <tr><td>Raideur du ressort (k)</td><td>1 - 100 N/m</td><td>20 N/m</td></tr>
         <tr><td>Masse</td><td>0.1 - 5.0 kg</td><td>0.5 kg</td></tr>
         <tr><td>Amplitude initiale</td><td>0.05 - 1.0 m</td><td>0.3 m</td></tr>
-        <tr><td>Amortissement</td><td>0 - 2.0 N·s/m</td><td>0</td></tr>
+        <tr><td>Amortissement</td><td>0 - 2.0 N.s/m</td><td>0</td></tr>
     </table>
 
     <h4>Grandeurs mesurables</h4>
     <ul>
-        <li>Position (élongation) x</li>
+        <li>Position (elongation) x</li>
         <li>Vitesse dx/dt</li>
-        <li>Accélération a = -(k/m)x - (b/m)v</li>
-    </ul>
-
-    <h3>4.3 Simulation balistique</h3>
-    <p><strong>Objectif :</strong> Étudier la trajectoire d'un projectile.</p>
-
-    <h4>Paramètres</h4>
-    <table>
-        <tr><th>Paramètre</th><th>Plage</th><th>Par défaut</th></tr>
-        <tr><td>Vitesse initiale (v₀)</td><td>10 - 100 m/s</td><td>50 m/s</td></tr>
-        <tr><td>Angle de tir (α)</td><td>15° - 85°</td><td>45°</td></tr>
-        <tr><td>Résistance de l'air</td><td>Activable</td><td>Désactivée</td></tr>
-    </table>
-
-    <h4>Équations (sans frottements)</h4>
-    <ul>
-        <li>Position horizontale : x(t) = v₀ cos(α) t</li>
-        <li>Position verticale : y(t) = v₀ sin(α) t − ½ g t²</li>
-        <li>Portée maximale à 45° : R = v₀² sin(2α) / g</li>
+        <li>Acceleration a = -(k/m)x - (b/m)v</li>
+        <li>Energie cinetique et potentielle elastique</li>
     </ul>
 
     <div class="tip-box">
-        <strong>Activité suggérée :</strong> Déterminez l'angle optimal pour une portée maximale en comparant différents angles de tir.
+        <strong>Activite suggeree :</strong> Decouvrez la relation T = 2π√(m/k) en faisant varier la masse et la raideur.
     </div>
 
-    <h3>4.4 Simulation circuit électrique</h3>
-    <p><strong>Objectif :</strong> Construire et analyser des circuits électriques en série.</p>
+    <h3>6.3 Simulation balistique</h3>
+    <p><strong>Objectif :</strong> Etudier la trajectoire d'un projectile.</p>
+
+    <h4>Parametres</h4>
+    <table>
+        <tr><th>Parametre</th><th>Plage</th><th>Par defaut</th></tr>
+        <tr><td>Vitesse initiale (v₀)</td><td>10 - 100 m/s</td><td>50 m/s</td></tr>
+        <tr><td>Angle de tir (α)</td><td>15° - 85°</td><td>45°</td></tr>
+        <tr><td>Masse du projectile</td><td>0.1 - 10 kg</td><td>1 kg</td></tr>
+        <tr><td>Resistance de l'air</td><td>Activable</td><td>Desactivee</td></tr>
+    </table>
+
+    <h4>Equations (sans frottements)</h4>
+    <ul>
+        <li>Position horizontale : x(t) = v₀ cos(α) t</li>
+        <li>Position verticale : y(t) = v₀ sin(α) t - ½ g t²</li>
+        <li>Portee maximale a 45° : R = v₀² sin(2α) / g</li>
+    </ul>
+
+    <h4>Avec resistance de l'air</h4>
+    <p>Activez la trainee pour observer :</p>
+    <ul>
+        <li>Reduction de la portee</li>
+        <li>Asymetrie de la trajectoire</li>
+        <li>Dependance avec la masse</li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>Activite suggeree :</strong> Determinez l'angle optimal pour une portee maximale, avec et sans resistance de l'air.
+    </div>
+
+    <h3>6.4 Simulation circuit electrique</h3>
+    <p><strong>Objectif :</strong> Construire et analyser des circuits electriques.</p>
 
     <h4>Composants disponibles</h4>
     <ul>
-        <li><strong>Sources</strong> : pile (tension continue), générateur AC (tension variable)</li>
-        <li><strong>Éléments</strong> : fils, résistances, lampes, interrupteurs, diodes</li>
-        <li><strong>Instruments</strong> : ampèremètre (en série), voltmètre (en dérivation)</li>
+        <li><strong>Sources</strong> : pile (tension continue), generateur AC (tension variable)</li>
+        <li><strong>Elements</strong> : fils, resistances, lampes, interrupteurs, diodes</li>
+        <li><strong>Instruments</strong> : amperemetre (en serie), voltmetre (en derivation)</li>
     </ul>
 
     <h4>Construction d'un circuit</h4>
     <ol class="steps">
         <li>Cliquez sur un composant dans la barre d'outils</li>
-        <li>Déplacez-le dans la zone de travail</li>
+        <li>Deplacez-le dans la zone de travail</li>
         <li>Connectez les bornes en les faisant glisser</li>
-        <li>Le circuit fonctionne dès qu'il est fermé</li>
+        <li>Le circuit fonctionne des qu'il est ferme</li>
     </ol>
 
     <div class="info-box">
-        <strong>Loi d'Ohm :</strong> Vérifiez que U = R × I en mesurant tension et intensité avec différentes résistances.
+        <strong>Loi d'Ohm :</strong> Verifiez que U = R × I en mesurant tension et intensite avec differentes resistances.
     </div>
 
-    <h3>4.5 Simulation plan incliné</h3>
-    <p><strong>Objectif :</strong> Étudier le mouvement rectiligne uniformément accéléré.</p>
+    <h3>6.5 Simulation plan incline</h3>
+    <p><strong>Objectif :</strong> Etudier le mouvement rectiligne uniformement accelere.</p>
 
-    <h4>Paramètres</h4>
+    <h4>Parametres</h4>
     <table>
-        <tr><th>Paramètre</th><th>Plage</th><th>Par défaut</th></tr>
+        <tr><th>Parametre</th><th>Plage</th><th>Par defaut</th></tr>
         <tr><td>Angle d'inclinaison</td><td>5° - 90°</td><td>30°</td></tr>
-        <tr><td>Distance à parcourir</td><td>1 - 10 m</td><td>10 m</td></tr>
+        <tr><td>Distance a parcourir</td><td>1 - 10 m</td><td>10 m</td></tr>
+        <tr><td>Coefficient de frottement</td><td>0 - 1</td><td>0</td></tr>
     </table>
 
     <h4>Physique</h4>
     <ul>
-        <li>Accélération : a = g sin(θ)</li>
-        <li>À 90° : mouvement = chute libre</li>
-        <li>Principe de Galilée : ralentir la chute libre pour mieux l'observer</li>
+        <li>Acceleration : a = g sin(θ) - μ g cos(θ)</li>
+        <li>A 90° : mouvement = chute libre</li>
+        <li>Principe de Galilee : ralentir la chute libre pour mieux l'observer</li>
     </ul>
+
+    <h3>6.6 Simulation ondes sur un lac</h3>
+    <p><strong>Objectif :</strong> Etudier la propagation des ondes a la surface de l'eau.</p>
+
+    <div class="image-container">
+        <img src="../../images/fizziq-web/Simulations_FizziqWeb.png" alt="Simulation ondes sur un lac - FizziQ Web" loading="lazy">
+        <figcaption>Simulation des ondes avec source et flotteurs</figcaption>
+    </div>
+
+    <h4>Parametres</h4>
+    <table>
+        <tr><th>Parametre</th><th>Plage</th><th>Par defaut</th></tr>
+        <tr><td>Frequence</td><td>0.1 - 5 Hz</td><td>1 Hz</td></tr>
+        <tr><td>Amplitude</td><td>1 - 100 cm</td><td>100 cm</td></tr>
+        <tr><td>Vitesse de propagation</td><td>0.5 - 5 m/s</td><td>2 m/s</td></tr>
+    </table>
+
+    <h4>Fonctionnalites</h4>
+    <ul>
+        <li><strong>Source</strong> : genere les ondes</li>
+        <li><strong>Flotteurs</strong> : mesurent la hauteur de l'eau a leur position</li>
+        <li><strong>Mode tableau</strong> : affiche les donnees des flotteurs</li>
+        <li><strong>Animation des flotteurs</strong> : controle individuel du mouvement</li>
+    </ul>
+
+    <h4>Phenomenes observables</h4>
+    <ul>
+        <li>Propagation circulaire des ondes</li>
+        <li>Relation λ = v / f (longueur d'onde = vitesse / frequence)</li>
+        <li>Dephasage entre deux points</li>
+        <li>Interference (avec plusieurs sources)</li>
+    </ul>
+
+    <h3>6.7 Simulation gaz ideal</h3>
+    <p><strong>Objectif :</strong> Etudier les lois des gaz parfaits.</p>
+
+    <h4>Parametres</h4>
+    <table>
+        <tr><th>Parametre</th><th>Description</th></tr>
+        <tr><td>Volume</td><td>Volume du recipient (modifiable par piston)</td></tr>
+        <tr><td>Temperature</td><td>Temperature du gaz</td></tr>
+        <tr><td>Nombre de particules</td><td>Quantite de matiere</td></tr>
+    </table>
+
+    <h4>Lois verifiables</h4>
+    <ul>
+        <li><strong>Loi de Boyle-Mariotte</strong> : PV = constante (a T constante)</li>
+        <li><strong>Loi de Gay-Lussac</strong> : P/T = constante (a V constant)</li>
+        <li><strong>Loi de Charles</strong> : V/T = constante (a P constante)</li>
+        <li><strong>Equation d'etat</strong> : PV = nRT</li>
+    </ul>
+
+    <h3>6.8 Simulation centrifuge</h3>
+    <p><strong>Objectif :</strong> Etudier le mouvement circulaire et les forces centrifuges.</p>
+
+    <h4>Grandeurs mesurables</h4>
+    <ul>
+        <li>Vitesse angulaire ω</li>
+        <li>Acceleration centripete a<sub>c</sub> = ω²R</li>
+        <li>Force centrifuge apparente F = mω²R</li>
+        <li>Periode de rotation T = 2π/ω</li>
+    </ul>
+
+    <div class="tip-box">
+        <strong>Activite suggeree :</strong> Etudiez la relation entre la vitesse de rotation et l'acceleration ressentie.
+    </div>
 </section>
 
 <!-- ==================== FIZZIQ CONNECT ==================== -->
 <section id="fizziq-connect">
-    <h2>5. Connexion FizziQ Connect</h2>
+    <h2>7. Connexion FizziQ Connect</h2>
 
-    <p><strong>FizziQ Connect</strong> est un boîtier permettant de connecter des capteurs externes (température, CO2, pH...) à FizziQ Web.</p>
+    <p><strong>FizziQ Connect</strong> est un boitier d'acquisition de donnees (ExAO) permettant de connecter des capteurs externes a FizziQ Web. Base sur le microcontroleur ESP32, il utilise des capteurs standards Grove.</p>
 
-    <h3>5.1 Connexion Bluetooth</h3>
-    <p><strong>Avantages :</strong> sans fil, mobilité, mesures de terrain.</p>
+    <h3>7.1 Capteurs compatibles</h3>
+    <table>
+        <tr><th>Type</th><th>Capteurs</th></tr>
+        <tr><td>Temperature</td><td>Sonde de temperature, thermocouple</td></tr>
+        <tr><td>Pression</td><td>Capteur de pression atmospherique, manometre</td></tr>
+        <tr><td>Lumiere</td><td>Luxmetre, capteur UV</td></tr>
+        <tr><td>Qualite de l'air</td><td>Capteur CO2, capteur de particules</td></tr>
+        <tr><td>Distance</td><td>Capteur ultrason, capteur infrarouge</td></tr>
+        <tr><td>Electricite</td><td>Sonde de tension, sonde d'intensite</td></tr>
+        <tr><td>Analogique</td><td>Tout capteur analogique (y compris ceux fabriques par les eleves)</td></tr>
+    </table>
+
+    <h3>7.2 Connexion Bluetooth</h3>
+    <p><strong>Avantages :</strong> sans fil, mobilite, mesures de terrain.</p>
 
     <div class="warning-box">
         <strong>Navigateur requis :</strong> Chrome 79+ ou Edge 79+ uniquement. Firefox et Safari ne supportent pas le Bluetooth Web.
     </div>
 
-    <h4>Étapes de connexion</h4>
+    <h4>Etapes de connexion</h4>
     <ol class="steps">
-        <li>Allumez FizziQ Connect et vérifiez que le Bluetooth est activé</li>
+        <li>Allumez FizziQ Connect et verifiez que le Bluetooth est active</li>
         <li>Ouvrez FizziQ Web dans <strong>Chrome</strong> ou <strong>Edge</strong></li>
-        <li>Cliquez sur le menu → <strong>FizziQ Connect</strong> ou <strong>Bluetooth</strong></li>
-        <li>Cliquez sur <strong>Connecter</strong></li>
-        <li>Sélectionnez votre boîtier dans la liste</li>
+        <li>Cliquez sur <strong>Experimenter</strong> → <strong>Capteurs externes</strong></li>
+        <li>Cliquez sur <strong>Bluetooth</strong></li>
+        <li>Selectionnez votre boitier dans la liste</li>
         <li>Cliquez sur <strong>Associer</strong></li>
+        <li>Les capteurs detectes s'affichent automatiquement</li>
     </ol>
 
-    <h3>5.2 Connexion USB</h3>
-    <p><strong>Avantages :</strong> connexion stable, mesures longue durée, débogage.</p>
+    <h3>7.3 Connexion USB</h3>
+    <p><strong>Avantages :</strong> connexion stable, mesures longue duree, pas de batterie.</p>
 
     <div class="warning-box">
-        <strong>Important :</strong> Fermez toutes les applications utilisant le port série (Arduino IDE, PlatformIO, Putty...) avant de connecter.
+        <strong>Important :</strong> Fermez toutes les applications utilisant le port serie (Arduino IDE, PlatformIO, Putty...) avant de connecter.
     </div>
 
-    <h4>Étapes de connexion</h4>
+    <h4>Etapes de connexion</h4>
     <ol class="steps">
         <li>Allumez FizziQ Connect</li>
-        <li>Connectez-le à l'ordinateur avec un câble USB-C <strong>de données</strong></li>
+        <li>Connectez-le a l'ordinateur avec un cable USB-C <strong>de donnees</strong></li>
         <li>Ouvrez FizziQ Web</li>
-        <li>Cliquez sur le menu → <strong>USB Serial</strong> ou <strong>FizziQ Connect USB</strong></li>
-        <li>Sélectionnez le port correspondant</li>
+        <li>Cliquez sur <strong>Experimenter</strong> → <strong>Capteurs externes</strong></li>
+        <li>Cliquez sur <strong>USB Serial</strong></li>
+        <li>Selectionnez le port correspondant</li>
         <li>Cliquez sur <strong>Connecter</strong></li>
     </ol>
 
-    <h3>5.3 Dépannage connexion</h3>
+    <h3>7.4 Enregistrement des mesures</h3>
+    <ol class="steps">
+        <li>Une fois connecte, selectionnez les capteurs a utiliser</li>
+        <li>Cliquez sur <strong>REC</strong> pour commencer l'enregistrement</li>
+        <li>Les donnees s'affichent en temps reel</li>
+        <li>Cliquez sur <strong>STOP</strong> pour arreter</li>
+        <li>Les donnees sont ajoutees au cahier d'experiences</li>
+    </ol>
+
+    <div class="image-container">
+        <picture>
+            <source srcset="../../images/fizziq-web/Experience_Photosynthese.png.avif" type="image/avif">
+            <img src="../../images/fizziq-web/Experience_Photosynthese.png.avif" alt="Experience de photosynthese avec FizziQ Connect" loading="lazy">
+        </picture>
+        <figcaption>Exemple d'experience : mesure de la photosynthese avec capteur CO2</figcaption>
+    </div>
+
+    <h3>7.5 Depannage connexion</h3>
     <table>
-        <tr><th>Problème</th><th>Solution</th></tr>
-        <tr><td>Fenêtre Bluetooth ne s'ouvre pas</td><td>Utilisez Chrome ou Edge, vérifiez HTTPS</td></tr>
-        <tr><td>FizziQ Connect n'apparaît pas</td><td>Vérifiez qu'il est allumé et à portée (~10m)</td></tr>
-        <tr><td>Connexion échoue</td><td>Redémarrez le boîtier, rechargez la page</td></tr>
-        <tr><td>Pas de données après connexion</td><td>Vérifiez que les capteurs sont branchés</td></tr>
-        <tr><td>Port USB non détecté</td><td>Fermez Arduino IDE et autres apps série</td></tr>
+        <tr><th>Probleme</th><th>Solution</th></tr>
+        <tr><td>Fenetre Bluetooth ne s'ouvre pas</td><td>Utilisez Chrome ou Edge, verifiez HTTPS</td></tr>
+        <tr><td>FizziQ Connect n'apparait pas</td><td>Verifiez qu'il est allume et a portee (~10m)</td></tr>
+        <tr><td>Connexion echoue</td><td>Redemarrez le boitier, rechargez la page</td></tr>
+        <tr><td>Pas de donnees apres connexion</td><td>Verifiez que les capteurs sont branches</td></tr>
+        <tr><td>Port USB non detecte</td><td>Fermez Arduino IDE et autres apps serie</td></tr>
+        <tr><td>Cable USB ne fonctionne pas</td><td>Utilisez un cable de donnees, pas juste de charge</td></tr>
     </table>
 
     <div class="tip-box">
         <strong>Bonnes pratiques :</strong>
         <ul>
-            <li>Chargez le boîtier avant la séance</li>
-            <li>Testez la connexion avant l'arrivée des élèves</li>
-            <li>Utilisez un câble USB de qualité (câble de données, pas juste de charge)</li>
+            <li>Chargez le boitier avant la seance</li>
+            <li>Testez la connexion avant l'arrivee des eleves</li>
+            <li>Utilisez un cable USB de qualite (cable de donnees)</li>
+            <li>Verifiez la reconnaissance automatique des capteurs</li>
         </ul>
     </div>
 </section>
 
 <!-- ==================== CAHIER D'EXPERIENCES ==================== -->
 <section id="cahier">
-    <h2>6. Cahier d'expériences</h2>
+    <h2>8. Cahier d'experiences</h2>
 
-    <h3>6.1 Présentation</h3>
-    <p>Le <strong>cahier d'expériences</strong> est l'espace central où vous organisez vos données, graphiques et observations.</p>
+    <h3>8.1 Presentation</h3>
+    <p>Le <strong>cahier d'experiences</strong> est l'espace central ou vous organisez vos donnees, graphiques et observations. Toutes les mesures (audio, video, simulations, capteurs) y sont automatiquement ajoutees.</p>
 
-    <h3>6.2 Fonctionnalités</h3>
+    <div class="image-container">
+        <picture>
+            <source srcset="../../images/fizziq-web/Cahier FizziQ Web.png.avif" type="image/avif">
+            <img src="../../images/fizziq-web/Cahier FizziQ Web.png.avif" alt="Cahier d'experiences FizziQ Web" loading="lazy">
+        </picture>
+        <figcaption>Cahier d'experiences avec observations et graphiques</figcaption>
+    </div>
+
+    <h3>8.2 Structure du cahier</h3>
+    <p>Le cahier est organise en <strong>observations</strong> numerotees :</p>
     <ul>
-        <li><strong>Tableaux de données</strong> : créer et manipuler des données</li>
-        <li><strong>Colonnes calculées</strong> : ajouter des grandeurs dérivées</li>
-        <li><strong>Graphiques</strong> : visualiser les relations entre grandeurs</li>
-        <li><strong>Ajustement de courbes</strong> : modélisation mathématique</li>
-        <li><strong>Photos et texte</strong> : documenter l'expérience</li>
-        <li><strong>Formules scientifiques</strong> : écrire des équations</li>
+        <li>Chaque observation peut contenir des donnees, des graphiques, des images, du texte</li>
+        <li>Les observations peuvent etre reordonnees par glisser-deposer</li>
+        <li>Cliquez sur <strong>+ Ajouter</strong> pour inserer une observation dans le document</li>
     </ul>
 
-    <h3>6.3 Ajouter des données</h3>
-    <p>Les données peuvent provenir de :</p>
+    <h3>8.3 Types de contenus</h3>
     <ul>
-        <li>L'analyse audio (export vers le cahier)</li>
-        <li>Les simulations (enregistrement automatique)</li>
-        <li>FizziQ Connect (capteurs externes)</li>
-        <li>Saisie manuelle</li>
+        <li><strong>Tableaux de donnees</strong> : donnees brutes des mesures</li>
+        <li><strong>Graphiques</strong> : visualisation des relations entre grandeurs</li>
+        <li><strong>Images</strong> : captures d'ecran, photos, spectrogrammes</li>
+        <li><strong>Texte</strong> : commentaires, analyses, conclusions</li>
+        <li><strong>Formules</strong> : equations mathematiques (voir editeur de documents)</li>
     </ul>
+
+    <h3>8.4 Manipulation des donnees</h3>
+    <ul>
+        <li><strong>Selection des variables</strong> : choisissez quelles colonnes afficher</li>
+        <li><strong>Colonnes calculees</strong> : ajoutez des grandeurs derivees (formules)</li>
+        <li><strong>Tri et filtrage</strong> : organisez les donnees</li>
+        <li><strong>Copier-coller</strong> : vers Excel, Google Sheets...</li>
+    </ul>
+
+    <h3>8.5 Graphiques</h3>
+    <p>Les graphiques sont generes automatiquement a partir des donnees :</p>
+    <ul>
+        <li><strong>Courbes</strong> : evolution temporelle, relations entre grandeurs</li>
+        <li><strong>Nuages de points</strong> : donnees discretes</li>
+        <li><strong>Histogrammes</strong> : distribution statistique</li>
+    </ul>
+
+    <h4>Options de graphiques</h4>
+    <ul>
+        <li>Selection des axes X et Y</li>
+        <li>Echelle lineaire ou logarithmique</li>
+        <li>Ajout de courbes de tendance (modelisation)</li>
+        <li>Legende et titre</li>
+    </ul>
+
+    <h3>8.6 Modelisation et ajustement de courbes</h3>
+    <p>FizziQ Web permet d'ajuster des modeles mathematiques aux donnees :</p>
+    <table>
+        <tr><th>Modele</th><th>Equation</th><th>Utilisation</th></tr>
+        <tr><td>Lineaire</td><td>y = ax + b</td><td>Mouvement uniforme, loi d'Ohm</td></tr>
+        <tr><td>Quadratique</td><td>y = ax² + bx + c</td><td>Chute libre, projectile</td></tr>
+        <tr><td>Exponentiel</td><td>y = a·e<sup>bx</sup></td><td>Decroissance radioactive, RC</td></tr>
+        <tr><td>Sinusoidal</td><td>y = A·sin(ωt + φ)</td><td>Oscillations, ondes</td></tr>
+        <tr><td>Puissance</td><td>y = a·x<sup>n</sup></td><td>Lois de puissance</td></tr>
+    </table>
+
+    <div class="tip-box">
+        <strong>Conseil :</strong> L'equation ajustee s'affiche avec ses parametres, permettant de verifier les lois physiques.
+    </div>
+</section>
+
+<!-- ==================== EDITEUR DE DOCUMENTS ==================== -->
+<section id="editeur">
+    <h2>9. Editeur de documents</h2>
+
+    <p>L'<strong>editeur de documents</strong> permet de creer des rapports scientifiques complets, integrant texte, formules mathematiques, graphiques et images.</p>
+
+    <div class="image-container">
+        <img src="../../images/fizziq-web/Screen_share_FizziQ_Web.png" alt="Editeur de documents FizziQ Web avec formules LaTeX" loading="lazy">
+        <figcaption>Editeur de documents avec graphique, image et formule mathematique</figcaption>
+    </div>
+
+    <h3>9.1 Acces a l'editeur</h3>
+    <ol class="steps">
+        <li>Depuis le cahier, cliquez sur <strong>Editer le document</strong></li>
+        <li>Ou allez dans <strong>Analyser</strong> → <strong>Editeur de documents</strong></li>
+    </ol>
+
+    <h3>9.2 Fonctionnalites de l'editeur</h3>
+    <ul>
+        <li><strong>Formatage du texte</strong> : gras, italique, souligne</li>
+        <li><strong>Taille de police</strong> : selection de la taille (8pt - 72pt)</li>
+        <li><strong>Alignement</strong> : gauche, centre, droite, justifie</li>
+        <li><strong>Insertion d'images</strong> : photos, captures d'ecran, graphiques</li>
+        <li><strong>Formules mathematiques</strong> : editeur LaTeX integre</li>
+        <li><strong>Insertion d'observations</strong> : depuis le panneau lateral</li>
+    </ul>
+
+    <h3>9.3 Formules mathematiques (LaTeX)</h3>
+    <p>L'editeur supporte la syntaxe LaTeX pour les formules :</p>
+
+    <h4>Exemples de formules</h4>
+    <table>
+        <tr><th>Code LaTeX</th><th>Resultat</th></tr>
+        <tr><td><code>f(x) = ax^2 + bx + c</code></td><td>f(x) = ax² + bx + c</td></tr>
+        <tr><td><code>E = \frac{1}{2}mv^2</code></td><td>E = ½mv²</td></tr>
+        <tr><td><code>T = 2\pi\sqrt{\frac{L}{g}}</code></td><td>T = 2π√(L/g)</td></tr>
+        <tr><td><code>\Delta t = t_2 - t_1</code></td><td>Δt = t₂ - t₁</td></tr>
+        <tr><td><code>a = \frac{dv}{dt}</code></td><td>a = dv/dt</td></tr>
+    </table>
+
+    <div class="info-box">
+        <strong>Reconnaissance automatique :</strong> L'editeur detecte automatiquement les formules et les convertit en rendu mathematique professionnel.
+    </div>
+
+    <h3>9.4 Integration des observations</h3>
+    <p>Le panneau lateral gauche affiche toutes les observations du cahier :</p>
+    <ol class="steps">
+        <li>Reperer l'observation souhaitee (numero)</li>
+        <li>Cliquer sur <strong>+ Ajouter</strong></li>
+        <li>L'observation (graphique, tableau, image) est inseree dans le document</li>
+    </ol>
+
+    <h3>9.5 Exemple de rapport</h3>
+    <p>Un rapport scientifique typique comprend :</p>
+    <ul>
+        <li><strong>Titre</strong> : nom de l'experience</li>
+        <li><strong>Objectif</strong> : ce qu'on cherche a montrer</li>
+        <li><strong>Protocole</strong> : description de l'experience</li>
+        <li><strong>Mesures</strong> : tableaux de donnees</li>
+        <li><strong>Graphiques</strong> : visualisation des resultats</li>
+        <li><strong>Analyse</strong> : ajustement de courbes, formules</li>
+        <li><strong>Conclusion</strong> : validation ou non de l'hypothese</li>
+    </ul>
+</section>
+
+<!-- ==================== TABLEUR ==================== -->
+<section id="tableur">
+    <h2>10. Tableur scientifique</h2>
+
+    <p>Le <strong>tableur scientifique</strong> permet de creer et manipuler des donnees, d'effectuer des calculs et de generer des graphiques.</p>
+
+    <h3>10.1 Acces au tableur</h3>
+    <ul>
+        <li>Depuis <strong>Experimenter</strong> → <strong>Tableau de donnees</strong></li>
+        <li>Ou directement depuis le cahier d'experiences</li>
+    </ul>
+
+    <h3>10.2 Structure du tableur</h3>
+    <ul>
+        <li><strong>Jusqu'a trois colonnes</strong> de donnees</li>
+        <li><strong>Types de cellules</strong> : valeurs numeriques, texte, formules</li>
+        <li><strong>En-tetes</strong> : nom de la grandeur et unite</li>
+    </ul>
+
+    <h3>10.3 Formules disponibles</h3>
+    <p>Le tableur supporte de nombreuses fonctions mathematiques et statistiques :</p>
+
+    <h4>Fonctions mathematiques</h4>
+    <ul>
+        <li><code>sin(x)</code>, <code>cos(x)</code>, <code>tan(x)</code> : fonctions trigonometriques</li>
+        <li><code>sqrt(x)</code> : racine carree</li>
+        <li><code>exp(x)</code> : exponentielle</li>
+        <li><code>ln(x)</code>, <code>log(x)</code> : logarithmes</li>
+        <li><code>abs(x)</code> : valeur absolue</li>
+        <li><code>pow(x, n)</code> : puissance</li>
+    </ul>
+
+    <h4>Fonctions statistiques</h4>
+    <ul>
+        <li><code>moyenne()</code> : moyenne des valeurs</li>
+        <li><code>ecart_type()</code> : ecart-type</li>
+        <li><code>min()</code>, <code>max()</code> : extrema</li>
+        <li><code>somme()</code> : somme des valeurs</li>
+    </ul>
+
+    <h3>10.4 Colonnes calculees</h3>
+    <p>Ajoutez une colonne calculee a partir des autres colonnes :</p>
+    <ol class="steps">
+        <li>Cliquez sur <strong>Ajouter une colonne</strong></li>
+        <li>Selectionnez <strong>Colonne calculee</strong></li>
+        <li>Entrez la formule (ex: <code>v = dx/dt</code>)</li>
+        <li>La colonne est calculee automatiquement</li>
+    </ol>
+
+    <h3>10.5 Generation de graphiques</h3>
+    <p>A partir des donnees du tableur :</p>
+    <ol class="steps">
+        <li>Selectionnez les colonnes a representer</li>
+        <li>Cliquez sur <strong>Generer un graphique</strong></li>
+        <li>Choisissez le type de graphique (courbe, nuage de points, histogramme)</li>
+        <li>Le graphique est ajoute au cahier</li>
+    </ol>
 </section>
 
 <!-- ==================== OUTILS ==================== -->
 <section id="outils">
-    <h2>7. Outils supplémentaires</h2>
+    <h2>11. Outils supplementaires</h2>
 
-    <h3>7.1 Outils disponibles</h3>
+    <h3>11.1 Calculatrice scientifique</h3>
+    <p>Une calculatrice complete pour les calculs rapides :</p>
     <ul>
-        <li><strong>Tableur scientifique</strong> : manipulation et calculs sur les données</li>
-        <li><strong>Interpréteur Python</strong> : programmation pour analyses avancées</li>
-        <li><strong>Calculatrice</strong> : calculs rapides</li>
-        <li><strong>Synthétiseur de sons</strong> : générer des fréquences précises</li>
-        <li><strong>Synthétiseur de couleurs</strong> : outils RGB</li>
-        <li><strong>Convertisseur vidéo → chronophotographie</strong> : extraire des images d'une vidéo</li>
+        <li>Operations de base (+, -, ×, ÷)</li>
+        <li>Fonctions scientifiques (sin, cos, tan, log, exp...)</li>
+        <li>Constantes physiques (π, e, c, g...)</li>
+        <li>Historique des calculs</li>
     </ul>
 
-    <h3>7.2 Éditeur de texte scientifique</h3>
-    <p>L'éditeur permet d'écrire du texte avec des formules mathématiques pour documenter vos expériences.</p>
+    <h3>11.2 Synthetiseur de sons</h3>
+    <p>Generez des sons de frequences precises :</p>
+    <ul>
+        <li><strong>Frequence</strong> : 20 Hz - 20 000 Hz</li>
+        <li><strong>Forme d'onde</strong> : sinusoidale, carree, triangulaire, dent de scie</li>
+        <li><strong>Volume</strong> : reglable</li>
+        <li><strong>Battements</strong> : deux frequences simultanees</li>
+    </ul>
+
+    <h4>Utilisations pedagogiques</h4>
+    <ul>
+        <li>Etude des frequences audibles</li>
+        <li>Phenomene de battements</li>
+        <li>Accord d'instruments</li>
+        <li>Effet Doppler (avec deplacement de la source)</li>
+    </ul>
+
+    <h3>11.3 Synthetiseur de couleurs (RGB)</h3>
+    <p>Melangez les couleurs primaires de la lumiere :</p>
+    <ul>
+        <li><strong>Curseurs RGB</strong> : Rouge, Vert, Bleu (0-255)</li>
+        <li><strong>Affichage</strong> : couleur resultante</li>
+        <li><strong>Codes</strong> : valeurs RGB et hexadecimales</li>
+    </ul>
+
+    <h4>Utilisations pedagogiques</h4>
+    <ul>
+        <li>Synthese additive des couleurs</li>
+        <li>Codage des couleurs en informatique</li>
+        <li>Couleurs complementaires</li>
+    </ul>
+
+    <h3>11.4 Convertisseur video → chronophotographie</h3>
+    <p>Transformez une video en image chronophotographique :</p>
+    <ol class="steps">
+        <li>Chargez une video</li>
+        <li>Definissez l'intervalle entre les images</li>
+        <li>Choisissez le nombre d'images a superposer</li>
+        <li>Ajustez la transparence</li>
+        <li>Exportez l'image resultante</li>
+    </ol>
+
+    <h3>11.5 Interpreteur Python</h3>
+    <p>Un environnement Python integre pour les analyses avancees :</p>
+    <ul>
+        <li><strong>Editeur de code</strong> : coloration syntaxique</li>
+        <li><strong>Bibliotheques</strong> : numpy, matplotlib disponibles</li>
+        <li><strong>Import des donnees</strong> : acces aux donnees du cahier</li>
+        <li><strong>Export</strong> : graphiques et resultats vers le cahier</li>
+    </ul>
+
+    <h4>Exemple de script</h4>
+    <pre><code>import numpy as np
+import matplotlib.pyplot as plt
+
+# Donnees du cahier
+t = np.array([0, 0.1, 0.2, 0.3, 0.4])
+y = np.array([0, 0.05, 0.20, 0.44, 0.78])
+
+# Ajustement quadratique
+coeffs = np.polyfit(t, y, 2)
+print(f"Acceleration: {2*coeffs[0]:.2f} m/s²")
+
+# Graphique
+plt.plot(t, y, 'o', label='Mesures')
+t_fit = np.linspace(0, 0.4, 100)
+y_fit = np.polyval(coeffs, t_fit)
+plt.plot(t_fit, y_fit, '-', label='Ajustement')
+plt.xlabel('Temps (s)')
+plt.ylabel('Position (m)')
+plt.legend()
+plt.show()</code></pre>
+
+    <h3>11.6 Partage d'ecran</h3>
+    <p>Projetez FizziQ Web pour toute la classe :</p>
+    <ul>
+        <li>Affichage plein ecran</li>
+        <li>Mode presentation</li>
+        <li>Synchronisation avec les appareils des eleves</li>
+    </ul>
 </section>
 
 <!-- ==================== EXPORT ==================== -->
 <section id="export">
-    <h2>8. Export des données</h2>
+    <h2>12. Export des donnees</h2>
 
-    <h3>8.1 Formats disponibles</h3>
+    <h3>12.1 Formats disponibles</h3>
     <table>
-        <tr><th>Format</th><th>Usage</th></tr>
-        <tr><td><strong>PDF</strong></td><td>Rapport complet avec graphiques et texte</td></tr>
-        <tr><td><strong>CSV</strong></td><td>Données brutes pour Excel, Google Sheets</td></tr>
-        <tr><td><strong>Python</strong></td><td>Code pour analyse avancée</td></tr>
-        <tr><td><strong>Image</strong></td><td>Graphiques et spectrogrammes</td></tr>
+        <tr><th>Format</th><th>Extension</th><th>Usage</th></tr>
+        <tr><td><strong>PDF</strong></td><td>.pdf</td><td>Rapport complet avec graphiques et texte, impression</td></tr>
+        <tr><td><strong>CSV</strong></td><td>.csv</td><td>Donnees brutes pour Excel, Google Sheets, LibreOffice</td></tr>
+        <tr><td><strong>Excel</strong></td><td>.xlsx</td><td>Donnees formatees pour Microsoft Excel</td></tr>
+        <tr><td><strong>Python</strong></td><td>.py</td><td>Code Python avec les donnees pour analyse avancee</td></tr>
+        <tr><td><strong>Image</strong></td><td>.png</td><td>Graphiques et spectrogrammes</td></tr>
+        <tr><td><strong>FizziQ</strong></td><td>.fizziq</td><td>Projet complet, compatible avec FizziQ mobile</td></tr>
     </table>
 
-    <h3>8.2 Compatibilité FizziQ mobile</h3>
-    <p>Les fichiers FizziQ Web sont compatibles avec l'application mobile FizziQ. Vous pouvez commencer une expérience sur smartphone et continuer l'analyse sur ordinateur.</p>
+    <h3>12.2 Export PDF</h3>
+    <ol class="steps">
+        <li>Ouvrez l'editeur de documents</li>
+        <li>Verifiez la mise en page</li>
+        <li>Cliquez sur <strong>Exporter en PDF</strong></li>
+        <li>Le fichier est telecharge</li>
+    </ol>
 
-    <h3>8.3 Confidentialité</h3>
+    <h3>12.3 Export des donnees (CSV/Excel)</h3>
+    <ol class="steps">
+        <li>Dans le cahier, selectionnez le tableau de donnees</li>
+        <li>Cliquez sur <strong>Exporter</strong></li>
+        <li>Choisissez le format (CSV ou Excel)</li>
+        <li>Le fichier est telecharge</li>
+    </ol>
+
+    <h3>12.4 Export Python</h3>
+    <p>L'export Python genere un script contenant :</p>
+    <ul>
+        <li>Les donnees sous forme de tableaux numpy</li>
+        <li>Le code pour generer les graphiques</li>
+        <li>Les ajustements de courbes</li>
+    </ul>
+
+    <h3>12.5 Compatibilite FizziQ mobile</h3>
+    <p>Les fichiers .fizziq sont compatibles avec l'application mobile FizziQ :</p>
+    <ul>
+        <li>Commencez une experience sur smartphone (mesures de terrain)</li>
+        <li>Exportez le fichier .fizziq</li>
+        <li>Ouvrez-le dans FizziQ Web pour l'analyse detaillee</li>
+        <li>Ou inversement : preparez un protocole sur ordinateur et executez-le sur mobile</li>
+    </ul>
+
+    <h3>12.6 Confidentialite</h3>
     <div class="info-box">
-        <strong>Données locales :</strong> Tous les fichiers sont stockés localement sur votre ordinateur. Aucun compte n'est requis. Les données des élèves restent privées et confidentielles.
+        <strong>Donnees locales :</strong> Tous les fichiers sont stockes localement sur votre ordinateur. Aucun compte n'est requis. Les donnees des eleves restent privees et confidentielles.
     </div>
 </section>
 
 <!-- ==================== DEPANNAGE ==================== -->
 <section id="depannage">
-    <h2>9. Dépannage</h2>
+    <h2>13. Depannage</h2>
 
-    <h3>9.1 Problèmes fréquents</h3>
+    <h3>13.1 Problemes frequents</h3>
     <table>
-        <tr><th>Problème</th><th>Solution</th></tr>
-        <tr><td>Le microphone ne fonctionne pas</td><td>Autorisez l'accès au micro dans les paramètres du navigateur</td></tr>
-        <tr><td>Bluetooth non disponible</td><td>Utilisez Chrome ou Edge, vérifiez que le Bluetooth est activé sur l'ordinateur</td></tr>
-        <tr><td>Les simulations sont lentes</td><td>Fermez les autres onglets, vérifiez les performances de l'ordinateur</td></tr>
-        <tr><td>Export PDF vide</td><td>Vérifiez que le cahier contient des données</td></tr>
-        <tr><td>FizziQ Connect non détecté en USB</td><td>Utilisez un câble USB de données, fermez Arduino IDE</td></tr>
+        <tr><th>Probleme</th><th>Solution</th></tr>
+        <tr><td>Le microphone ne fonctionne pas</td><td>Autorisez l'acces au micro dans les parametres du navigateur (cadenas dans la barre d'adresse)</td></tr>
+        <tr><td>La camera ne fonctionne pas</td><td>Autorisez l'acces a la camera, fermez les autres applications l'utilisant</td></tr>
+        <tr><td>Bluetooth non disponible</td><td>Utilisez Chrome ou Edge, verifiez que le Bluetooth est active sur l'ordinateur</td></tr>
+        <tr><td>Les simulations sont lentes</td><td>Fermez les autres onglets, verifiez les performances de l'ordinateur</td></tr>
+        <tr><td>Export PDF vide</td><td>Verifiez que le cahier contient des donnees, utilisez l'editeur de documents</td></tr>
+        <tr><td>FizziQ Connect non detecte en USB</td><td>Utilisez un cable USB de donnees, fermez Arduino IDE</td></tr>
+        <tr><td>Video ne charge pas</td><td>Verifiez le format (MP4, WebM recommandes), taille du fichier</td></tr>
+        <tr><td>Formules LaTeX ne s'affichent pas</td><td>Verifiez la syntaxe, utilisez les exemples fournis</td></tr>
     </table>
 
-    <h3>9.2 Navigateurs recommandés</h3>
-    <p>Pour une expérience optimale :</p>
+    <h3>13.2 Navigateurs recommandes</h3>
+    <p>Pour une experience optimale :</p>
     <ul>
-        <li><strong>Chrome</strong> (version 89+) : toutes les fonctionnalités</li>
-        <li><strong>Edge</strong> (version 89+) : toutes les fonctionnalités</li>
-        <li>Évitez Firefox et Safari pour les fonctionnalités Bluetooth/USB</li>
+        <li><strong>Chrome</strong> (version 89+) : toutes les fonctionnalites</li>
+        <li><strong>Edge</strong> (version 89+) : toutes les fonctionnalites</li>
+        <li><strong>Firefox</strong> : audio, video, simulations (pas de Bluetooth/USB)</li>
+        <li><strong>Safari</strong> : audio, video, simulations (pas de Bluetooth/USB)</li>
     </ul>
 
-    <h3>9.3 Support</h3>
+    <h3>13.3 Chromebook</h3>
+    <p>FizziQ Web fonctionne parfaitement sur Chromebook :</p>
+    <ul>
+        <li>Utilisez Chrome (installe par defaut)</li>
+        <li>Toutes les fonctionnalites sont disponibles</li>
+        <li>Ideal pour les etablissements equipes de Chromebooks</li>
+    </ul>
+
+    <h3>13.4 Performances</h3>
+    <p>Si l'application est lente :</p>
+    <ul>
+        <li>Fermez les onglets inutiles</li>
+        <li>Videz le cache du navigateur</li>
+        <li>Reduisez la taille des videos importees</li>
+        <li>Limitez le nombre de points dans les simulations</li>
+    </ul>
+
+    <h3>13.5 Support</h3>
     <p>Pour toute question : <a href="mailto:contact@fizziq.org">contact@fizziq.org</a></p>
+    <p>Documentation complete : <a href="https://www.fizziq.org/post/documentation-fizziq-web" target="_blank">fizziq.org/post/documentation-fizziq-web</a></p>
 </section>
 
 </main>
