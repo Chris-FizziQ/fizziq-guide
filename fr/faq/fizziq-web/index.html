@@ -5,15 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ FizziQ Web - Questions sur la version navigateur</title>
 
-    <meta name="description" content="Questions fréquentes sur FizziQ Web : la version navigateur de FizziQ pour Chromebook et ordinateurs.">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Questions frequentes sur FizziQ Web : utilisation sur ordinateur et Chromebook, analyse audio et video, simulations, capteurs externes, export PDF.">
+    <meta name="keywords" content="FizziQ Web, FAQ, Chromebook, analyse video, simulation physique, capteurs, rapport scientifique">
+    <meta name="author" content="FizziQ Labs">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://guide.fizziq.org/fr/faq/fizziq-web/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="FAQ FizziQ Web - Application web de sciences">
+    <meta property="og:description" content="Comment utiliser FizziQ Web pour des experiences scientifiques sur ordinateur ? Reponses aux questions frequentes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://guide.fizziq.org/fr/faq/fizziq-web/">
+    <meta property="og:site_name" content="FizziQ Guide">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Schema.org: FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Qu'est-ce que FizziQ Web ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "FizziQ Web est une application web gratuite qui transforme votre ordinateur en laboratoire de sciences. Elle permet d'analyser des sons et des videos, d'utiliser des simulations de physique, de connecter des capteurs externes et de creer des rapports scientifiques. Accessible sur fizziqweb.web.app sans installation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quel navigateur utiliser pour FizziQ Web ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Utilisez Chrome ou Edge pour acceder a toutes les fonctionnalites, notamment la connexion Bluetooth avec FizziQ Connect. Firefox et Safari supportent l'analyse audio et video mais pas le Bluetooth Web."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "FizziQ Web fonctionne-t-il sur Chromebook ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Oui, FizziQ Web fonctionne parfaitement sur Chromebook via le navigateur Chrome. C'est ideal pour les etablissements equipes de Chromebooks car aucune installation n'est requise."
+                }
+            }
+        ]
+    }
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        :root { --brand: #3E5488; --accent: #DD7A43; --ink: #242A3D; --text-light: #5C6278; --soft-blue: #EAEFF8; --page-bg: #FBF8F3; --card-bg: #FFFFFF; --card-border: rgba(41,49,79,0.09); }
+        :root { --brand: #5E35B1; --accent: #F5A623; --ink: #242A3D; --text-light: #5C6278; --soft-purple: #EDE7F6; --page-bg: #FBF8F3; --card-bg: #FFFFFF; --card-border: rgba(41,49,79,0.09); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Figtree, system-ui, sans-serif; color: var(--ink); background: var(--page-bg); line-height: 1.6; min-height: 100vh; display: flex; flex-direction: column; }
         h1, h2, h3 { font-family: 'Bricolage Grotesque', sans-serif; }
@@ -21,21 +67,25 @@
         .header .icon { font-size: 3rem; margin-bottom: 0.5rem; }
         .header h1 { font-size: clamp(1.8rem, 4vw, 2.5rem); font-weight: 800; margin-bottom: 0.5rem; }
         .header p { font-size: 1rem; opacity: 0.9; }
-        .nav-bar { background: var(--soft-blue); padding: 0.8rem 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+        .nav-bar { background: var(--soft-purple); padding: 0.8rem 1.5rem; display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
         .nav-bar a { color: var(--brand); text-decoration: none; font-weight: 500; font-size: 0.9rem; }
         .nav-bar a:hover { text-decoration: underline; }
         .main { flex: 1; max-width: 800px; margin: 0 auto; padding: 2rem 1.5rem; width: 100%; }
+        .section-title { font-size: 1.1rem; color: var(--brand); margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--soft-purple); }
+        .section-title:first-of-type { margin-top: 0; }
         .faq-list { display: flex; flex-direction: column; gap: 0.75rem; }
         .faq-item { background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 12px; overflow: hidden; }
         .faq-question { width: 100%; padding: 1.2rem 1.5rem; background: none; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; font-family: inherit; font-size: 1rem; font-weight: 600; color: var(--ink); transition: background 0.2s; }
-        .faq-question:hover { background: var(--soft-blue); }
+        .faq-question:hover { background: var(--soft-purple); }
         .faq-question .chevron { font-size: 1.2rem; color: var(--brand); transition: transform 0.3s; }
         .faq-item.open .faq-question .chevron { transform: rotate(180deg); }
         .faq-answer { display: none; padding: 0 1.5rem 1.5rem; color: var(--text-light); line-height: 1.7; }
         .faq-item.open .faq-answer { display: block; }
         .faq-answer strong { color: var(--ink); }
-        .coming-soon { background: var(--soft-blue); padding: 2rem; border-radius: 12px; text-align: center; margin-top: 2rem; }
-        .coming-soon p { color: var(--text-light); }
+        .faq-answer code { background: #f0f0f0; padding: 0.15rem 0.4rem; border-radius: 4px; font-size: 0.9em; }
+        .faq-answer ul { margin: 0.5rem 0 0.5rem 1.5rem; }
+        .guide-link { display: inline-block; margin-top: 1.5rem; padding: 0.8rem 1.5rem; background: var(--brand); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; }
+        .guide-link:hover { opacity: 0.9; }
         footer { background: var(--ink); color: rgba(255,255,255,0.7); text-align: center; padding: 2rem 1.5rem; font-size: 0.9rem; }
         footer a { color: rgba(255,255,255,0.9); text-decoration: none; }
     </style>
@@ -45,43 +95,444 @@
 <header class="header">
     <div class="icon">🌐</div>
     <h1>FAQ FizziQ Web</h1>
-    <p>La version navigateur de FizziQ</p>
+    <p>30 questions sur la version navigateur de FizziQ</p>
 </header>
 
 <nav class="nav-bar">
-    <a href="../">← Toutes les FAQ</a>
+    <a href="../">Toutes les FAQ</a>
     <a href="../fizziq/">FizziQ App</a>
     <a href="../fizziq-connect/">FizziQ Connect</a>
+    <a href="../../fizziq-web/">Mode d'emploi complet</a>
 </nav>
 
 <main class="main">
+
+    <!-- SECTION 1: QUESTIONS DE BASE -->
+    <h2 class="section-title">Questions de base</h2>
     <div class="faq-list">
 
         <div class="faq-item">
             <button class="faq-question">
-                Qu'est-ce que FizziQ Web ?
+                1. Qu'est-ce que FizziQ Web ?
                 <span class="chevron">▼</span>
             </button>
             <div class="faq-answer">
-                <strong>FizziQ Web</strong> est la version navigateur de FizziQ, accessible depuis n'importe quel ordinateur sans installation. Idéal pour les Chromebooks et les environnements où l'installation d'applications n'est pas possible. Accédez à FizziQ Web sur <strong>web.fizziq.org</strong>.
+                <strong>FizziQ Web</strong> est une application web gratuite qui transforme votre ordinateur en laboratoire de sciences. Elle permet d'analyser des sons et des videos, d'utiliser des simulations de physique, de connecter des capteurs externes (FizziQ Connect, Arduino, micro:bit) et de creer des rapports scientifiques complets.
                 <br><br>
-                FizziQ Web offre la plupart des fonctionnalités de l'application mobile : accès aux capteurs de l'ordinateur (microphone, caméra), cahier d'expériences, analyse de données, et connexion aux boîtiers FizziQ Connect via Bluetooth.
+                FizziQ Web accompagne les eleves dans toute leur demarche scientifique : <strong>Experimenter</strong> (capturer des donnees), <strong>Analyser</strong> (organiser et comprendre) et <strong>Partager</strong> (communiquer les resultats).
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                2. Comment acceder a FizziQ Web ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Ouvrez simplement votre navigateur et allez sur <strong>fizziqweb.web.app</strong>. Aucune installation n'est requise, aucun compte a creer. L'application se charge directement dans le navigateur.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                3. Quel navigateur dois-je utiliser ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <strong>Chrome</strong> ou <strong>Edge</strong> sont recommandes pour acceder a toutes les fonctionnalites, notamment la connexion Bluetooth avec FizziQ Connect et la connexion USB avec Arduino/micro:bit.
+                <br><br>
+                Firefox et Safari supportent l'analyse audio, l'analyse video et les simulations, mais pas les connexions Bluetooth et USB.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                4. FizziQ Web est-il gratuit ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <strong>Oui, FizziQ Web est entierement gratuit.</strong> Aucun abonnement, aucune publicite, aucune limitation de fonctionnalites. Toutes les fonctionnalites sont accessibles a tous.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                5. Faut-il creer un compte ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <strong>Non, aucun compte n'est requis.</strong> Vos donnees sont stockees localement dans votre navigateur. C'est une garantie de confidentialite pour les donnees des eleves.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                6. FizziQ Web fonctionne-t-il sur Chromebook ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <strong>Oui, parfaitement.</strong> FizziQ Web est ideal pour les etablissements equipes de Chromebooks. Il fonctionne directement dans le navigateur Chrome sans aucune installation. Toutes les fonctionnalites sont disponibles, y compris la connexion Bluetooth avec FizziQ Connect.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                7. Mes donnees sont-elles stockees en ligne ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <strong>Non, toutes les donnees restent sur votre ordinateur.</strong> FizziQ Web ne transmet aucune donnee a des serveurs externes. Les fichiers sont stockes localement dans le navigateur (localStorage). Pour conserver votre travail, exportez-le en fichier .fizziq ou en PDF.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                8. Comment changer la langue de l'interface ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Cliquez sur <strong>Reglages</strong> dans la barre laterale gauche, puis sur <strong>Langue</strong>. FizziQ Web est disponible en 21 langues : francais, anglais, espagnol, allemand, portugais, italien, et bien d'autres.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                9. Quelle est la difference avec l'application mobile FizziQ ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <strong>FizziQ mobile</strong> utilise les capteurs integres du smartphone (accelerometre, GPS, magnetometre...). <strong>FizziQ Web</strong> n'a pas acces a ces capteurs mais offre :
+                <ul>
+                    <li>Analyse audio avancee (spectrogramme haute resolution)</li>
+                    <li>Analyse video complete (pointage cinematique)</li>
+                    <li>Simulations de physique (pendule, ressort, circuits...)</li>
+                    <li>Editeur de rapport avec formules LaTeX</li>
+                    <li>Ecran plus grand pour l'analyse</li>
+                </ul>
+                Les deux applications sont complementaires et peuvent echanger des donnees via QR Code.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                10. Puis-je utiliser FizziQ Web hors ligne ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                FizziQ Web necessite une connexion internet pour le chargement initial. Une fois charge, certaines fonctionnalites peuvent fonctionner hors ligne, mais il est recommande de rester connecte pour une experience optimale.
             </div>
         </div>
 
     </div>
 
-    <div class="coming-soon">
-        <h3>Plus de questions à venir</h3>
-        <p>Cette section sera enrichie prochainement avec plus de questions sur FizziQ Web.</p>
+    <!-- SECTION 2: EXPERIMENTER -->
+    <h2 class="section-title">Experimenter - Capturer des donnees</h2>
+    <div class="faq-list">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                11. Comment analyser un son avec FizziQ Web ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <ol>
+                    <li>Cliquez sur <strong>Experimenter</strong> → <strong>Analyse audio</strong></li>
+                    <li>Autorisez l'acces au microphone si demande</li>
+                    <li>Choisissez le mode d'affichage : oscillogramme, spectre ou spectrogramme</li>
+                    <li>Appuyez sur <strong>Enregistrer</strong> pour capturer les donnees</li>
+                </ol>
+                Vous pouvez aussi importer un fichier audio existant.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                12. Comment analyser une video (cinematique) ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <ol>
+                    <li>Cliquez sur <strong>Experimenter</strong> → <strong>Analyse video</strong></li>
+                    <li>Importez une video depuis votre ordinateur</li>
+                    <li>Definissez l'echelle avec une reference connue</li>
+                    <li>Pointez la position de l'objet image par image</li>
+                </ol>
+                FizziQ Web calcule automatiquement les positions, vitesses et accelerations.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                13. Comment importer une chronophotographie ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Cliquez sur <strong>Experimenter</strong> → <strong>Chronophotographie</strong>, puis importez votre image. Vous pouvez aussi creer une chronophotographie a partir d'une video en utilisant l'outil <strong>Outils</strong> → <strong>Video chronophotographie</strong>.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                14. Quelles simulations sont disponibles ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                FizziQ Web propose 10 simulations de physique :
+                <ul>
+                    <li><strong>Pendule</strong> : oscillations, periode, amortissement</li>
+                    <li><strong>Ressort</strong> : oscillations harmoniques</li>
+                    <li><strong>Balistique</strong> : trajectoire de projectiles</li>
+                    <li><strong>Plan incline</strong> : mouvement avec frottement</li>
+                    <li><strong>Centrifugeuse</strong> : forces centrifuges</li>
+                    <li><strong>Circuit electrique</strong> : circuits RC, RL, RLC</li>
+                    <li><strong>Ondes sur un lac</strong> : propagation, interferences</li>
+                    <li><strong>Gaz parfait</strong> : thermodynamique PV=nRT</li>
+                    <li><strong>Optique</strong> : lentilles et miroirs</li>
+                    <li><strong>Trois corps</strong> : gravitation</li>
+                </ul>
+                Toutes les simulations generent des donnees exploitables comme une vraie experience.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                15. Comment connecter FizziQ Connect en Bluetooth ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <ol>
+                    <li>Utilisez <strong>Chrome</strong> ou <strong>Edge</strong></li>
+                    <li>Allumez votre boitier FizziQ Connect</li>
+                    <li>Cliquez sur <strong>Experimenter</strong> → <strong>Capteurs externes</strong></li>
+                    <li>Cliquez sur <strong>Bluetooth</strong></li>
+                    <li>Selectionnez votre boitier dans la liste</li>
+                </ol>
+                Les capteurs connectes apparaissent automatiquement.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                16. Comment connecter un Arduino ou micro:bit ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <ol>
+                    <li>Programmez votre microcontroleur pour envoyer des donnees au format <code>FZ0:capteur:valeur</code></li>
+                    <li>Branchez-le en USB avec un cable de donnees</li>
+                    <li>Fermez l'IDE Arduino/MakeCode</li>
+                    <li>Cliquez sur <strong>Experimenter</strong> → <strong>Capteurs externes</strong> → <strong>USB Serial</strong></li>
+                    <li>Selectionnez le port USB</li>
+                </ol>
+                Consultez le mode d'emploi complet pour les exemples de code.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                17. Comment saisir des donnees manuellement ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Ouvrez votre cahier d'experiences, cliquez sur <strong>+</strong> → <strong>Tableau de donnees</strong>. Un tableau vierge apparait. Ajoutez des colonnes (grandeurs), definissez les unites et saisissez vos valeurs.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                18. Les donnees des differentes sources sont-elles compatibles ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <strong>Oui, c'est un point cle de FizziQ Web.</strong> Quelle que soit la source (analyse audio, video, capteur externe, saisie manuelle ou simulation), les donnees sont au meme format et peuvent etre analysees avec les memes outils (tableaux, graphiques, formules).
+            </div>
+        </div>
+
     </div>
+
+    <!-- SECTION 3: ANALYSER -->
+    <h2 class="section-title">Analyser - Tableaux et graphiques</h2>
+    <div class="faq-list">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                19. Comment creer un graphique ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Ouvrez un tableau de donnees dans le cahier, puis cliquez sur l'onglet <strong>Graphique</strong>. Selectionnez les colonnes pour l'axe X et l'axe Y. Vous pouvez afficher jusqu'a 5 courbes simultanement et choisir parmi 6 types d'interpolation.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                20. Comment ajouter une colonne calculee ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Dans un tableau, cliquez sur <strong>+ nouvelle grandeur</strong>. Donnez un nom a la colonne et entrez une formule commencant par <code>=</code>. Par exemple : <code>=Distance/Temps</code> pour calculer une vitesse.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                21. Quelles formules puis-je utiliser dans les tableaux ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                FizziQ Web supporte :
+                <ul>
+                    <li><strong>Operateurs</strong> : +, -, *, /, ^ (puissance)</li>
+                    <li><strong>Fonctions</strong> : sin, cos, tan, sqrt, ln, log, exp, abs</li>
+                    <li><strong>Constantes</strong> : pi, e</li>
+                    <li><strong>Statistiques</strong> : somme(), moyenne(), ecartype()</li>
+                    <li><strong>Derivation</strong> : derivee(), derivee2()</li>
+                </ul>
+                Utilisez les noms de colonnes comme variables : <code>=0.5*masse*vitesse^2</code>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                22. Comment faire une modelisation de courbe ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Dans l'onglet Graphique, cliquez sur <strong>Interpolation</strong> et choisissez le type : lineaire, quadratique, exponentielle, sinusoidale... FizziQ Web calcule automatiquement les coefficients et affiche l'equation.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                23. Puis-je utiliser Python dans FizziQ Web ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Oui ! Allez dans <strong>Outils</strong> → <strong>Python</strong>. L'interpreteur integre supporte numpy et matplotlib. Vous pouvez definir des fonctions Python et les utiliser dans les formules des tableaux.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                24. Comment exporter mes donnees en CSV ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Ouvrez la carte d'observation dans le cahier, cliquez sur <strong>Exporter</strong>, puis selectionnez <strong>CSV</strong>. Le fichier peut etre ouvert dans Excel, Google Sheets ou LibreOffice.
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SECTION 4: PARTAGER -->
+    <h2 class="section-title">Partager - Rapport et export</h2>
+    <div class="faq-list">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                25. Comment creer un rapport final ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                <ol>
+                    <li>Enrichissez votre cahier avec du texte et des photos</li>
+                    <li>Cliquez sur <strong>Editer le rapport</strong></li>
+                    <li>Ajoutez du texte, des images, des formules</li>
+                    <li>Inserez les observations du cahier (tableaux et graphiques)</li>
+                    <li>Cliquez sur <strong>Finaliser</strong></li>
+                </ol>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                26. Comment inserer des formules mathematiques (LaTeX) ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Dans l'editeur de rapport, cliquez sur le bouton <strong>Σ</strong> ou tapez directement entre dollars : <code>$E = mc^2$</code>. Exemples utiles :
+                <ul>
+                    <li><code>$\frac{a}{b}$</code> pour une fraction</li>
+                    <li><code>$\sqrt{x}$</code> pour une racine carree</li>
+                    <li><code>$x^2$</code> pour un exposant</li>
+                    <li><code>$\Delta t$</code> pour le symbole delta</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                27. Comment exporter en PDF ou Word ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Une fois le rapport finalise, cliquez sur <strong>Exporter en PDF</strong> ou <strong>Exporter en Word</strong>. Le fichier est telecharge sur votre ordinateur. Le PDF est ideal pour l'impression, le Word pour des modifications ulterieures.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                28. Comment partager des donnees avec FizziQ mobile ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Exportez une observation en <strong>QR Code</strong>. Ouvrez FizziQ sur votre smartphone et scannez le QR code pour recuperer les donnees. C'est pratique pour transferer des mesures entre ordinateur et telephone.
+            </div>
+        </div>
+
+    </div>
+
+    <!-- SECTION 5: AVANCE -->
+    <h2 class="section-title">Configuration avancee</h2>
+    <div class="faq-list">
+
+        <div class="faq-item">
+            <button class="faq-question">
+                29. Comment configurer le mode restreint pour mes eleves ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Le mode restreint permet de n'afficher que les outils necessaires a une activite :
+                <ol>
+                    <li>Allez dans <strong>Reglages</strong> → <strong>Personnalisation</strong></li>
+                    <li>Activez le <strong>Mode personnalise</strong></li>
+                    <li>Cochez uniquement les outils utiles (ex: Analyse Video, Tableur, Rapport)</li>
+                </ol>
+                Les eleves ne voient que ces outils et ne sont pas distraits par les autres.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                30. Comment partager une configuration personnalisee ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Apres avoir configure le mode restreint :
+                <ol>
+                    <li>Cliquez sur <strong>Generer un lien</strong></li>
+                    <li>Copiez le lien</li>
+                    <li>Partagez-le avec vos eleves (email, ENT, QR code)</li>
+                </ol>
+                Quand les eleves ouvrent le lien, FizziQ Web se charge automatiquement avec votre configuration. C'est ideal pour preparer une seance de TP.
+            </div>
+        </div>
+
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="../../fizziq-web/" class="guide-link">Consulter le mode d'emploi complet</a>
+    </div>
+
 </main>
 
 <footer>
     <p>
+        <a href="https://fizziqweb.web.app" target="_blank">fizziqweb.web.app</a> ·
         <a href="https://www.fizziq.org" target="_blank">fizziq.org</a> ·
         <a href="mailto:contact@fizziq.org">contact@fizziq.org</a>
     </p>
+    <p style="margin-top: 0.5rem; opacity: 0.6;">© 2025 FizziQ Labs</p>
 </footer>
 
 <script>
