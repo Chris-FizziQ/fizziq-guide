@@ -1687,7 +1687,12 @@ plt.show()</code></pre>
 <section id="export">
     <h2 style="border-color: #F57C00;">12. Export des donnees <span style="font-size: 0.7em; color: #F57C00; font-weight: normal;">- Partager</span></h2>
 
-    <p>FizziQ Web permet d'exporter les donnees a <strong>deux niveaux</strong> : au niveau d'une observation individuelle, ou au niveau du rapport final complet.</p>
+    <p>FizziQ Web permet d'exporter les donnees a <strong>trois niveaux</strong> :</p>
+    <ul>
+        <li><strong>Une observation</strong> : exporter une carte individuelle du cahier</li>
+        <li><strong>Le cahier complet</strong> : exporter l'ensemble des observations</li>
+        <li><strong>Le rapport final</strong> : exporter le document de synthese</li>
+    </ul>
 
     <h3>12.1 Export d'une observation (carte du cahier)</h3>
     <p>Depuis le cahier d'experiences, vous pouvez exporter chaque carte d'observation individuellement :</p>
@@ -1734,7 +1739,34 @@ plt.show()</code></pre>
         <li>Les ajustements de courbes</li>
     </ul>
 
-    <h3>12.2 Export du rapport final</h3>
+    <h3>12.2 Export du cahier d'experiences complet</h3>
+    <p>Pour exporter l'ensemble du cahier d'experiences :</p>
+    <ol class="steps">
+        <li>Remontez tout en haut du cahier d'experiences</li>
+        <li>Cliquez sur le bouton <strong>Exporter</strong></li>
+        <li>Choisissez le format d'export</li>
+    </ol>
+
+    <h4>Formats disponibles pour le cahier complet</h4>
+    <table>
+        <tr><th>Format</th><th>Description</th><th>Usage</th></tr>
+        <tr>
+            <td><strong>PDF</strong></td>
+            <td>Document PDF avec toutes les observations</td>
+            <td>Impression, archivage. Options de mise en page (nombre de colonnes...)</td>
+        </tr>
+        <tr>
+            <td><strong>Fichier FizziQ</strong></td>
+            <td>Fichier .fizziq</td>
+            <td>Sauvegarde complete, reimportation ulterieure dans FizziQ Web</td>
+        </tr>
+    </table>
+
+    <div class="tip-box">
+        <strong>Sauvegarde :</strong> Le fichier .fizziq contient l'integralite de votre travail (observations, tableaux, graphiques, textes). Conservez-le pour pouvoir reprendre votre travail plus tard ou le partager avec un collegue.
+    </div>
+
+    <h3>12.3 Export du rapport final</h3>
     <p>Pour partager l'ensemble de votre travail experimental, utilisez le rapport final :</p>
     <ol class="steps">
         <li>Creez votre rapport en integrant les observations du cahier</li>
@@ -1757,22 +1789,27 @@ plt.show()</code></pre>
         </tr>
     </table>
 
-    <h3>12.3 Resume des exports</h3>
+    <h3>12.4 Resume des exports</h3>
     <table>
         <tr><th>Niveau</th><th>Acces</th><th>Formats</th></tr>
         <tr>
-            <td><strong>Observation</strong></td>
-            <td>Bouton Exporter sur une carte du cahier</td>
+            <td><strong>Une observation</strong></td>
+            <td>Bouton Exporter sur une carte</td>
             <td>CSV, Python, Image, QR Code</td>
         </tr>
         <tr>
+            <td><strong>Cahier complet</strong></td>
+            <td>Bouton Exporter en haut du cahier</td>
+            <td>PDF, Fichier FizziQ</td>
+        </tr>
+        <tr>
             <td><strong>Rapport final</strong></td>
-            <td>Bouton Finaliser puis Exporter</td>
+            <td>Finaliser puis Exporter</td>
             <td>PDF, Word</td>
         </tr>
     </table>
 
-    <h3>12.4 Confidentialite</h3>
+    <h3>12.5 Confidentialite</h3>
     <div class="info-box">
         <strong>Donnees locales :</strong> Tous les fichiers sont stockes localement sur votre ordinateur. Aucun compte n'est requis. Les donnees des eleves restent privees et confidentielles.
     </div>
