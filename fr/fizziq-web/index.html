@@ -349,8 +349,8 @@
         <li><a href="#simulations">Simulations</a></li>
         <li><a href="#capteurs-externes">Capteurs externes</a></li>
         <li><a href="#cahier">Cahier</a></li>
-        <li><a href="#editeur">Editeur de documents</a></li>
-        <li><a href="#tableur">Tableur</a></li>
+        <li><a href="#tableaux">Tableaux et graphiques</a></li>
+        <li><a href="#rapport">Rapport final</a></li>
         <li><a href="#outils">Outils</a></li>
         <li><a href="#export">Export</a></li>
         <li><a href="#depannage">Depannage</a></li>
@@ -1105,74 +1105,9 @@
     </div>
 </section>
 
-<!-- ==================== EDITEUR DE DOCUMENTS ==================== -->
-<section id="editeur">
-    <h2>9. Editeur de documents</h2>
-
-    <p>L'<strong>editeur de documents</strong> permet de creer des rapports scientifiques complets, integrant texte, formules mathematiques, graphiques et images.</p>
-
-    <div class="image-container">
-        <img src="../../images/fizziq-web/Screen_share_FizziQ_Web.png" alt="Editeur de documents FizziQ Web avec formules LaTeX" loading="lazy">
-        <figcaption>Editeur de documents avec graphique, image et formule mathematique</figcaption>
-    </div>
-
-    <h3>9.1 Acces a l'editeur</h3>
-    <ol class="steps">
-        <li>Depuis le cahier, cliquez sur <strong>Editer le document</strong></li>
-        <li>Ou allez dans <strong>Analyser</strong> → <strong>Editeur de documents</strong></li>
-    </ol>
-
-    <h3>9.2 Fonctionnalites de l'editeur</h3>
-    <ul>
-        <li><strong>Formatage du texte</strong> : gras, italique, souligne</li>
-        <li><strong>Taille de police</strong> : selection de la taille (8pt - 72pt)</li>
-        <li><strong>Alignement</strong> : gauche, centre, droite, justifie</li>
-        <li><strong>Insertion d'images</strong> : photos, captures d'ecran, graphiques</li>
-        <li><strong>Formules mathematiques</strong> : editeur LaTeX integre</li>
-        <li><strong>Insertion d'observations</strong> : depuis le panneau lateral</li>
-    </ul>
-
-    <h3>9.3 Formules mathematiques (LaTeX)</h3>
-    <p>L'editeur supporte la syntaxe LaTeX pour les formules :</p>
-
-    <h4>Exemples de formules</h4>
-    <table>
-        <tr><th>Code LaTeX</th><th>Resultat</th></tr>
-        <tr><td><code>f(x) = ax^2 + bx + c</code></td><td>f(x) = ax² + bx + c</td></tr>
-        <tr><td><code>E = \frac{1}{2}mv^2</code></td><td>E = ½mv²</td></tr>
-        <tr><td><code>T = 2\pi\sqrt{\frac{L}{g}}</code></td><td>T = 2π√(L/g)</td></tr>
-        <tr><td><code>\Delta t = t_2 - t_1</code></td><td>Δt = t₂ - t₁</td></tr>
-        <tr><td><code>a = \frac{dv}{dt}</code></td><td>a = dv/dt</td></tr>
-    </table>
-
-    <div class="info-box">
-        <strong>Reconnaissance automatique :</strong> L'editeur detecte automatiquement les formules et les convertit en rendu mathematique professionnel.
-    </div>
-
-    <h3>9.4 Integration des observations</h3>
-    <p>Le panneau lateral gauche affiche toutes les observations du cahier :</p>
-    <ol class="steps">
-        <li>Reperer l'observation souhaitee (numero)</li>
-        <li>Cliquer sur <strong>+ Ajouter</strong></li>
-        <li>L'observation (graphique, tableau, image) est inseree dans le document</li>
-    </ol>
-
-    <h3>9.5 Exemple de rapport</h3>
-    <p>Un rapport scientifique typique comprend :</p>
-    <ul>
-        <li><strong>Titre</strong> : nom de l'experience</li>
-        <li><strong>Objectif</strong> : ce qu'on cherche a montrer</li>
-        <li><strong>Protocole</strong> : description de l'experience</li>
-        <li><strong>Mesures</strong> : tableaux de donnees</li>
-        <li><strong>Graphiques</strong> : visualisation des resultats</li>
-        <li><strong>Analyse</strong> : ajustement de courbes, formules</li>
-        <li><strong>Conclusion</strong> : validation ou non de l'hypothese</li>
-    </ul>
-</section>
-
-<!-- ==================== TABLEUR ==================== -->
-<section id="tableur">
-    <h2>10. Tableur scientifique</h2>
+<!-- ==================== TABLEAUX ET GRAPHIQUES ==================== -->
+<section id="tableaux">
+    <h2>9. Tableaux et graphiques</h2>
 
     <p>Le <strong>tableur scientifique</strong> est un outil puissant pour organiser, analyser et visualiser vos donnees experimentales. Il fonctionne avec des colonnes appelees <strong>grandeurs</strong> qui contiennent vos mesures et calculs.</p>
 
@@ -1180,7 +1115,7 @@
         <strong>Caracteristiques :</strong> Jusqu'a 20 colonnes, formules automatiques (derivees, statistiques), graphiques avec 5 courbes et 6 types d'interpolation, export CSV, integration Python.
     </div>
 
-    <h3>10.1 Acces au tableur</h3>
+    <h3>9.1 Acces</h3>
     <p><strong>Tableur autonome :</strong></p>
     <ol class="steps">
         <li>Cliquez sur <strong>Outils</strong> → <strong>Tableur</strong></li>
@@ -1195,7 +1130,7 @@
         <li>Sauvegarde automatique avec le cahier, inclus dans l'export PDF</li>
     </ol>
 
-    <h3>10.2 Les grandeurs (colonnes)</h3>
+    <h3>9.2 Les grandeurs (colonnes)</h3>
     <p>Chaque colonne represente une grandeur avec :</p>
     <ul>
         <li><strong>Nom</strong> : ex. Temps, Distance, Vitesse</li>
@@ -1206,7 +1141,7 @@
 
     <p><strong>Creer une grandeur :</strong> Cliquez sur <strong>+ nouvelle grandeur</strong> a droite des colonnes.</p>
 
-    <h3>10.3 Saisie des donnees</h3>
+    <h3>9.3 Saisie des donnees</h3>
     <p><strong>Formats acceptes :</strong></p>
     <ul>
         <li>Nombres entiers : <code>42</code>, <code>-15</code></li>
@@ -1216,7 +1151,7 @@
 
     <p><strong>Navigation :</strong> Tab (droite), Shift+Tab (gauche), Entree (valider et descendre), Echap (annuler).</p>
 
-    <h3>10.4 Les formules</h3>
+    <h3>9.4 Les formules</h3>
     <p>Toutes les formules commencent par <code>=</code> et utilisent les noms de colonnes comme variables.</p>
 
     <h4>Operateurs</h4>
@@ -1263,7 +1198,7 @@
     </table>
     <p>Exemple : <code>=position - prec(position)</code> calcule la difference entre deux mesures.</p>
 
-    <h3>10.5 Les graphiques</h3>
+    <h3>9.5 Les graphiques</h3>
     <p>Cliquez sur l'icone <strong>graphique</strong> dans la barre d'outils pour basculer entre tableau et graphique.</p>
 
     <h4>Configuration (3 onglets)</h4>
@@ -1293,7 +1228,7 @@
 
     <p><strong>Onglet Echelles :</strong> Ajustement automatique ou echelles manuelles (Min/Max).</p>
 
-    <h3>10.6 Integration avec Python</h3>
+    <h3>9.6 Integration avec Python</h3>
     <p>Definissez des fonctions dans l'interpreteur Python et utilisez-les dans le tableur :</p>
     <pre><code># Dans Python
 def energie_cinetique(m, v):
@@ -1302,7 +1237,7 @@ def energie_cinetique(m, v):
 # Dans le tableur
 =energie_cinetique(masse, vitesse)</code></pre>
 
-    <h3>10.7 Import/Export</h3>
+    <h3>9.7 Import/Export</h3>
     <ul>
         <li><strong>Export CSV</strong> : bouton Exporter → fichier avec separateur point-virgule</li>
         <li><strong>Import CSV</strong> : bouton Ouvrir → detection automatique du format</li>
@@ -1310,7 +1245,7 @@ def energie_cinetique(m, v):
         <li><strong>Export graphique</strong> : PNG ou insertion dans l'editeur</li>
     </ul>
 
-    <h3>10.8 Messages d'erreur</h3>
+    <h3>9.8 Messages d'erreur</h3>
     <table>
         <tr><th>Message</th><th>Signification</th></tr>
         <tr><td><code>#N/A</code></td><td>Valeur non disponible (normal pour diff() en bord)</td></tr>
@@ -1319,7 +1254,7 @@ def energie_cinetique(m, v):
         <tr><td><code>#ERR:VALEUR</code></td><td>Cellule ne contient pas un nombre</td></tr>
     </table>
 
-    <h3>10.9 Raccourcis clavier</h3>
+    <h3>9.9 Raccourcis clavier</h3>
     <table>
         <tr><th>Raccourci</th><th>Action</th></tr>
         <tr><td>Tab / Shift+Tab</td><td>Cellule suivante / precedente</td></tr>
@@ -1328,6 +1263,100 @@ def energie_cinetique(m, v):
         <tr><td>Ctrl+C / Ctrl+V</td><td>Copier / Coller</td></tr>
         <tr><td>Suppr</td><td>Effacer le contenu</td></tr>
     </table>
+</section>
+
+<!-- ==================== RAPPORT FINAL ==================== -->
+<section id="rapport">
+    <h2>10. Rapport final</h2>
+
+    <p>Le <strong>rapport final</strong> est l'aboutissement du travail experimental. Il permet a l'eleve de rediger un compte rendu scientifique complet en integrant les elements du cahier d'experiences : tableaux, graphiques, photos, texte et formules mathematiques.</p>
+
+    <div class="info-box">
+        <strong>Partager son travail :</strong> FizziQ Web propose trois grandes fonctionnalites : <strong>Experimenter</strong> (mesures, simulations), <strong>Analyser</strong> (cahier d'experiences, tableaux) et <strong>Partager</strong> (rapport final exportable en PDF).
+    </div>
+
+    <div class="image-container">
+        <img src="../../images/fizziq-web/Screen_share_FizziQ_Web.png" alt="Rapport final FizziQ Web avec formules LaTeX" loading="lazy">
+        <figcaption>Rapport final avec graphique, image et formule mathematique</figcaption>
+    </div>
+
+    <h3>10.1 Acces au rapport</h3>
+    <ol class="steps">
+        <li>Depuis le cahier, cliquez sur <strong>Editer le rapport</strong></li>
+        <li>Ou allez dans <strong>Partager</strong> → <strong>Rapport final</strong></li>
+    </ol>
+
+    <h3>10.2 Integrer des elements du cahier</h3>
+    <p>Le panneau lateral gauche affiche toutes les observations du cahier d'experiences :</p>
+    <ol class="steps">
+        <li>Reperez l'observation souhaitee (tableau, graphique, image...)</li>
+        <li>Cliquez sur <strong>+ Ajouter</strong></li>
+        <li>L'element est insere dans le rapport a la position du curseur</li>
+    </ol>
+
+    <div class="tip-box">
+        <strong>Conseil :</strong> Organisez bien votre cahier d'experiences avant de rediger le rapport. Chaque observation peut etre facilement integree.
+    </div>
+
+    <h3>10.3 Rediger le texte</h3>
+    <ul>
+        <li><strong>Formatage</strong> : gras, italique, souligne</li>
+        <li><strong>Taille de police</strong> : 8pt a 72pt</li>
+        <li><strong>Alignement</strong> : gauche, centre, droite, justifie</li>
+        <li><strong>Listes</strong> : a puces ou numerotees</li>
+    </ul>
+
+    <h3>10.4 Inserer des formules mathematiques</h3>
+    <p>Le rapport supporte la syntaxe LaTeX pour les formules :</p>
+
+    <table>
+        <tr><th>Code LaTeX</th><th>Resultat</th></tr>
+        <tr><td><code>E = \frac{1}{2}mv^2</code></td><td>E = ½mv²</td></tr>
+        <tr><td><code>T = 2\pi\sqrt{\frac{L}{g}}</code></td><td>T = 2π√(L/g)</td></tr>
+        <tr><td><code>\Delta t = t_2 - t_1</code></td><td>Δt = t₂ - t₁</td></tr>
+        <tr><td><code>a = \frac{dv}{dt}</code></td><td>a = dv/dt</td></tr>
+        <tr><td><code>F = ma</code></td><td>F = ma</td></tr>
+    </table>
+
+    <div class="info-box">
+        <strong>Reconnaissance automatique :</strong> L'editeur detecte automatiquement les formules et les convertit en rendu mathematique professionnel.
+    </div>
+
+    <h3>10.5 Inserer des images</h3>
+    <ul>
+        <li><strong>Photos</strong> : depuis l'ordinateur ou la camera</li>
+        <li><strong>Captures d'ecran</strong> : des simulations, des mesures</li>
+        <li><strong>Schemas</strong> : dispositifs experimentaux</li>
+    </ul>
+
+    <h3>10.6 Structure d'un rapport</h3>
+    <p>Un rapport scientifique typique comprend :</p>
+    <ul>
+        <li><strong>Titre</strong> : nom de l'experience</li>
+        <li><strong>Objectif</strong> : ce qu'on cherche a demontrer</li>
+        <li><strong>Protocole</strong> : description du dispositif et de la methode</li>
+        <li><strong>Mesures</strong> : tableaux de donnees (depuis le cahier)</li>
+        <li><strong>Graphiques</strong> : visualisation des resultats (depuis le cahier)</li>
+        <li><strong>Analyse</strong> : interpretation, ajustement de courbes, formules</li>
+        <li><strong>Conclusion</strong> : validation ou non de l'hypothese</li>
+    </ul>
+
+    <h3>10.7 Exporter le rapport</h3>
+    <p>Le rapport peut etre exporte en plusieurs formats :</p>
+    <ul>
+        <li><strong>PDF</strong> : format ideal pour l'impression et le partage</li>
+        <li><strong>Image</strong> : capture du rapport en PNG</li>
+    </ul>
+
+    <ol class="steps">
+        <li>Cliquez sur <strong>Exporter</strong> dans la barre d'outils</li>
+        <li>Choisissez le format (PDF recommande)</li>
+        <li>Le fichier est telecharge sur votre ordinateur</li>
+    </ol>
+
+    <div class="tip-box">
+        <strong>Avant d'exporter :</strong> Relisez votre rapport, verifiez que tous les elements sont bien inseres et que la mise en page est correcte.
+    </div>
 </section>
 
 <!-- ==================== OUTILS ==================== -->
