@@ -355,8 +355,7 @@
         <li style="color: #F57C00; font-weight: 600;">|</li>
         <li><a href="#rapport" style="color: #F57C00;">Rapport</a></li>
         <li><a href="#export" style="color: #F57C00;">Export</a></li>
-        <li style="color: #666; font-weight: 600;">|</li>
-        <li><a href="#outils">Outils</a></li>
+        <li><a href="#outils" style="color: #F57C00;">Outils</a></li>
         <li><a href="#depannage">Depannage</a></li>
         <li><a href="#annexe-microcontroleurs">Annexe</a></li>
     </ul>
@@ -1588,104 +1587,9 @@ def energie_cinetique(m, v):
     <p>Oui, les couleurs des graphiques, du texte et des images sont preservees dans les exports PDF et Word.</p>
 </section>
 
-<!-- ==================== OUTILS ==================== -->
-<section id="outils">
-    <h2>11. Outils supplementaires</h2>
-
-    <h3>11.1 Calculatrice scientifique</h3>
-    <p>Une calculatrice complete pour les calculs rapides :</p>
-    <ul>
-        <li>Operations de base (+, -, ×, ÷)</li>
-        <li>Fonctions scientifiques (sin, cos, tan, log, exp...)</li>
-        <li>Constantes physiques (π, e, c, g...)</li>
-        <li>Historique des calculs</li>
-    </ul>
-
-    <h3>11.2 Synthetiseur de sons</h3>
-    <p>Generez des sons de frequences precises :</p>
-    <ul>
-        <li><strong>Frequence</strong> : 20 Hz - 20 000 Hz</li>
-        <li><strong>Forme d'onde</strong> : sinusoidale, carree, triangulaire, dent de scie</li>
-        <li><strong>Volume</strong> : reglable</li>
-        <li><strong>Battements</strong> : deux frequences simultanees</li>
-    </ul>
-
-    <h4>Utilisations pedagogiques</h4>
-    <ul>
-        <li>Etude des frequences audibles</li>
-        <li>Phenomene de battements</li>
-        <li>Accord d'instruments</li>
-        <li>Effet Doppler (avec deplacement de la source)</li>
-    </ul>
-
-    <h3>11.3 Synthetiseur de couleurs (RGB)</h3>
-    <p>Melangez les couleurs primaires de la lumiere :</p>
-    <ul>
-        <li><strong>Curseurs RGB</strong> : Rouge, Vert, Bleu (0-255)</li>
-        <li><strong>Affichage</strong> : couleur resultante</li>
-        <li><strong>Codes</strong> : valeurs RGB et hexadecimales</li>
-    </ul>
-
-    <h4>Utilisations pedagogiques</h4>
-    <ul>
-        <li>Synthese additive des couleurs</li>
-        <li>Codage des couleurs en informatique</li>
-        <li>Couleurs complementaires</li>
-    </ul>
-
-    <h3>11.4 Convertisseur video → chronophotographie</h3>
-    <p>Transformez une video en image chronophotographique :</p>
-    <ol class="steps">
-        <li>Chargez une video</li>
-        <li>Definissez l'intervalle entre les images</li>
-        <li>Choisissez le nombre d'images a superposer</li>
-        <li>Ajustez la transparence</li>
-        <li>Exportez l'image resultante</li>
-    </ol>
-
-    <h3>11.5 Interpreteur Python</h3>
-    <p>Un environnement Python integre pour les analyses avancees :</p>
-    <ul>
-        <li><strong>Editeur de code</strong> : coloration syntaxique</li>
-        <li><strong>Bibliotheques</strong> : numpy, matplotlib disponibles</li>
-        <li><strong>Import des donnees</strong> : acces aux donnees du cahier</li>
-        <li><strong>Export</strong> : graphiques et resultats vers le cahier</li>
-    </ul>
-
-    <h4>Exemple de script</h4>
-    <pre><code>import numpy as np
-import matplotlib.pyplot as plt
-
-# Donnees du cahier
-t = np.array([0, 0.1, 0.2, 0.3, 0.4])
-y = np.array([0, 0.05, 0.20, 0.44, 0.78])
-
-# Ajustement quadratique
-coeffs = np.polyfit(t, y, 2)
-print(f"Acceleration: {2*coeffs[0]:.2f} m/s²")
-
-# Graphique
-plt.plot(t, y, 'o', label='Mesures')
-t_fit = np.linspace(0, 0.4, 100)
-y_fit = np.polyval(coeffs, t_fit)
-plt.plot(t_fit, y_fit, '-', label='Ajustement')
-plt.xlabel('Temps (s)')
-plt.ylabel('Position (m)')
-plt.legend()
-plt.show()</code></pre>
-
-    <h3>11.6 Partage d'ecran</h3>
-    <p>Projetez FizziQ Web pour toute la classe :</p>
-    <ul>
-        <li>Affichage plein ecran</li>
-        <li>Mode presentation</li>
-        <li>Synchronisation avec les appareils des eleves</li>
-    </ul>
-</section>
-
 <!-- ==================== EXPORT ==================== -->
 <section id="export">
-    <h2 style="border-color: #F57C00;">12. Export des donnees <span style="font-size: 0.7em; color: #F57C00; font-weight: normal;">- Partager</span></h2>
+    <h2 style="border-color: #F57C00;">11. Export des donnees <span style="font-size: 0.7em; color: #F57C00; font-weight: normal;">- Partager</span></h2>
 
     <p>FizziQ Web permet d'exporter les donnees a <strong>trois niveaux</strong> :</p>
     <ul>
@@ -1694,7 +1598,7 @@ plt.show()</code></pre>
         <li><strong>Le rapport final</strong> : exporter le document de synthese</li>
     </ul>
 
-    <h3>12.1 Export d'une observation (carte du cahier)</h3>
+    <h3>11.1 Export d'une observation (carte du cahier)</h3>
     <p>Depuis le cahier d'experiences, vous pouvez exporter chaque carte d'observation individuellement :</p>
     <ol class="steps">
         <li>Ouvrez la carte d'observation dans le cahier</li>
@@ -1739,7 +1643,7 @@ plt.show()</code></pre>
         <li>Les ajustements de courbes</li>
     </ul>
 
-    <h3>12.2 Export du cahier d'experiences complet</h3>
+    <h3>11.2 Export du cahier d'experiences complet</h3>
     <p>Pour exporter l'ensemble du cahier d'experiences :</p>
     <ol class="steps">
         <li>Remontez tout en haut du cahier d'experiences</li>
@@ -1766,7 +1670,7 @@ plt.show()</code></pre>
         <strong>Sauvegarde :</strong> Le fichier .fizziq contient l'integralite de votre travail (observations, tableaux, graphiques, textes). Conservez-le pour pouvoir reprendre votre travail plus tard ou le partager avec un collegue.
     </div>
 
-    <h3>12.3 Export du rapport final</h3>
+    <h3>11.3 Export du rapport final</h3>
     <p>Pour partager l'ensemble de votre travail experimental, utilisez le rapport final :</p>
     <ol class="steps">
         <li>Creez votre rapport en integrant les observations du cahier</li>
@@ -1789,7 +1693,7 @@ plt.show()</code></pre>
         </tr>
     </table>
 
-    <h3>12.4 Resume des exports</h3>
+    <h3>11.4 Resume des exports</h3>
     <table>
         <tr><th>Niveau</th><th>Acces</th><th>Formats</th></tr>
         <tr>
@@ -1809,10 +1713,105 @@ plt.show()</code></pre>
         </tr>
     </table>
 
-    <h3>12.5 Confidentialite</h3>
+    <h3>11.5 Confidentialite</h3>
     <div class="info-box">
         <strong>Donnees locales :</strong> Tous les fichiers sont stockes localement sur votre ordinateur. Aucun compte n'est requis. Les donnees des eleves restent privees et confidentielles.
     </div>
+</section>
+
+<!-- ==================== OUTILS ==================== -->
+<section id="outils">
+    <h2>12. Outils supplementaires</h2>
+
+    <h3>12.1 Calculatrice scientifique</h3>
+    <p>Une calculatrice complete pour les calculs rapides :</p>
+    <ul>
+        <li>Operations de base (+, -, ×, ÷)</li>
+        <li>Fonctions scientifiques (sin, cos, tan, log, exp...)</li>
+        <li>Constantes physiques (π, e, c, g...)</li>
+        <li>Historique des calculs</li>
+    </ul>
+
+    <h3>12.2 Synthetiseur de sons</h3>
+    <p>Generez des sons de frequences precises :</p>
+    <ul>
+        <li><strong>Frequence</strong> : 20 Hz - 20 000 Hz</li>
+        <li><strong>Forme d'onde</strong> : sinusoidale, carree, triangulaire, dent de scie</li>
+        <li><strong>Volume</strong> : reglable</li>
+        <li><strong>Battements</strong> : deux frequences simultanees</li>
+    </ul>
+
+    <h4>Utilisations pedagogiques</h4>
+    <ul>
+        <li>Etude des frequences audibles</li>
+        <li>Phenomene de battements</li>
+        <li>Accord d'instruments</li>
+        <li>Effet Doppler (avec deplacement de la source)</li>
+    </ul>
+
+    <h3>12.3 Synthetiseur de couleurs (RGB)</h3>
+    <p>Melangez les couleurs primaires de la lumiere :</p>
+    <ul>
+        <li><strong>Curseurs RGB</strong> : Rouge, Vert, Bleu (0-255)</li>
+        <li><strong>Affichage</strong> : couleur resultante</li>
+        <li><strong>Codes</strong> : valeurs RGB et hexadecimales</li>
+    </ul>
+
+    <h4>Utilisations pedagogiques</h4>
+    <ul>
+        <li>Synthese additive des couleurs</li>
+        <li>Codage des couleurs en informatique</li>
+        <li>Couleurs complementaires</li>
+    </ul>
+
+    <h3>12.4 Convertisseur video → chronophotographie</h3>
+    <p>Transformez une video en image chronophotographique :</p>
+    <ol class="steps">
+        <li>Chargez une video</li>
+        <li>Definissez l'intervalle entre les images</li>
+        <li>Choisissez le nombre d'images a superposer</li>
+        <li>Ajustez la transparence</li>
+        <li>Exportez l'image resultante</li>
+    </ol>
+
+    <h3>12.5 Interpreteur Python</h3>
+    <p>Un environnement Python integre pour les analyses avancees :</p>
+    <ul>
+        <li><strong>Editeur de code</strong> : coloration syntaxique</li>
+        <li><strong>Bibliotheques</strong> : numpy, matplotlib disponibles</li>
+        <li><strong>Import des donnees</strong> : acces aux donnees du cahier</li>
+        <li><strong>Export</strong> : graphiques et resultats vers le cahier</li>
+    </ul>
+
+    <h4>Exemple de script</h4>
+    <pre><code>import numpy as np
+import matplotlib.pyplot as plt
+
+# Donnees du cahier
+t = np.array([0, 0.1, 0.2, 0.3, 0.4])
+y = np.array([0, 0.05, 0.20, 0.44, 0.78])
+
+# Ajustement quadratique
+coeffs = np.polyfit(t, y, 2)
+print(f"Acceleration: {2*coeffs[0]:.2f} m/s²")
+
+# Graphique
+plt.plot(t, y, 'o', label='Mesures')
+t_fit = np.linspace(0, 0.4, 100)
+y_fit = np.polyval(coeffs, t_fit)
+plt.plot(t_fit, y_fit, '-', label='Ajustement')
+plt.xlabel('Temps (s)')
+plt.ylabel('Position (m)')
+plt.legend()
+plt.show()</code></pre>
+
+    <h3>12.6 Partage d'ecran</h3>
+    <p>Projetez FizziQ Web pour toute la classe :</p>
+    <ul>
+        <li>Affichage plein ecran</li>
+        <li>Mode presentation</li>
+        <li>Synchronisation avec les appareils des eleves</li>
+    </ul>
 </section>
 
 <!-- ==================== DEPANNAGE ==================== -->
