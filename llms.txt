@@ -97,7 +97,7 @@ Ces applications sont complémentaires.
 - Activités : https://www.fizziq.org/activites
 - FizziQ Web : https://fizziqweb.web.app
 - Éditeur : FizziQ Labs (https://fizziqlabs.com)
-- Email : contact@fizziq.org
+- Email : info@fizziqlab.org
 - Partenaire : Fondation La main à la pâte
 
 ## English documentation
