@@ -102,6 +102,14 @@
                     "@type": "Answer",
                     "text": "Oui, FizziQ Connect peut fonctionner de manière autonome. L'écran intégré affiche les mesures en temps réel. La connexion Bluetooth au smartphone est optionnelle."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Comment utiliser la sonde DS18B20 avec des capteurs I2C ?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pour utiliser simultanément la sonde DS18B20 et des capteurs I2C, modifiez le câblage : la ligne jaune doit être câblée sur la broche SCL au lieu de SDA. Cela évite les conflits entre les protocoles One-Wire et I2C. FizziQ Connect accepte les deux configurations."
+                }
             }
         ]
     }
@@ -422,6 +430,21 @@
             <div class="faq-answer">
                 Activez le <strong>mode Diffusion</strong> sur le boîtier. Tous les élèves peuvent alors se connecter au même boîtier depuis leur smartphone FizziQ et voir les mesures en temps réel. L'enseignant manipule le capteur pendant que chaque élève visualise les données.
                 <br><br><a href="../../../fr/fizziq-connect/#modes-diffusion">→ Voir le guide complet</a>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <button class="faq-question">
+                Comment utiliser la sonde DS18B20 avec des capteurs I2C ?
+                <span class="chevron">▼</span>
+            </button>
+            <div class="faq-answer">
+                Pour utiliser simultanément la sonde de température DS18B20 et des capteurs I2C, il faut <strong>modifier le câblage</strong> de la sonde :<br><br>
+                • La <strong>ligne jaune</strong> doit être câblée sur la broche <strong>SCL</strong> au lieu de SDA<br>
+                • Cela évite les conflits entre le protocole One-Wire et I2C<br>
+                • FizziQ Connect accepte les deux configurations (standard et modifiée)<br><br>
+                Cette modification permet de connecter une ou plusieurs sondes en parallèle d'autres capteurs I2C.
+                <br><br><a href="../../../fr/fizziq-connect/#modification-sonde">→ Voir les instructions détaillées avec schéma</a>
             </div>
         </div>
 
